@@ -32,6 +32,54 @@
   <resetMask>0xFFFFFFFF</resetMask>
 
   <peripherals>
+    <!-- CLIC -->
+    <!-- Ref: https://github.com/riscv/riscv-fast-interrupt/blob/master/clic.adoc -->
+    <!-- Ref: k210-pac/k210.svd -->
+    <peripheral>
+      <name>CLIC</name>
+      <description>RISC-V Core-Local Interrupt Controller</description>
+      <groupName>CLIC</groupName>
+      <baseAddress>0x02000000</baseAddress> <!-- src: bl602/bl602_std/RISCV/Core/Include/clic.h -->
+      <registers>
+        <register>
+          <size>8</size>
+          <name>cliccfg</name>
+          <description>CLIC Configuration</description>
+          <addressOffset>0x0000</addressOffset>
+          <fields>
+            <!-- reserved bit WARL 0 [7:7] -->
+            <field>
+              <name>nmbits</name>
+              <description>specifies how many bits of actual registers are implemented in clicintattr[i].mode to represent an input i's privilege mode.</description>
+              <bitRange>[6:5]</bitRange>
+            </field>
+            <field>
+              <name>nlbits</name>
+              <description>indicates how many upper bits in clicintctl[i] are assigned to encode the interrupt level. Valid values are 0—​8.</description>
+              <bitRange>[4:1]</bitRange>
+            </field>
+            <field>
+              <name>nvbits</name>
+              <description>specifies whether the selective interrupt hardware vectoring feature is implemented or not.</description>
+              <bitRange>[0:0]</bitRange>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <size>64</size>
+          <name>clicinfo</name>
+          <description>CLIC Information</description>
+          <addressOffset>0x0004</addressOffset>
+          <fields>
+            <!-- reserved bit WARL 0 [31:25] -->
+            <!-- TODO -->
+          </fields>
+        </register>
+        <!-- TODO: all CLIC registers and fields -->
+      </registers>
+    </peripheral>
+    <!-- PLIC -->
+
     <!-- TODO: all peripherals -->
     
   </peripherals>
