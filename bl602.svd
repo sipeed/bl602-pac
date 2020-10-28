@@ -1,6 +1,25 @@
+<!--
+  Copyright (c) 2020 Sipeed Co.,Ltd.
+  bl602-pac is licensed under Mulan PSL v2.
+  You can use this software according to the terms and conditions of the Mulan PSL v2.
+  You may obtain a copy of Mulan PSL v2 at:
+
+    http://license.coscl.org.cn/MulanPSL2
+
+  THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+  EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+  MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+  See the Mulan PSL v2 for more details.
+-->
+<!-- 
+  bl602.svd: handwritten SVD file for svd2rust to generate PAC crate code.
+  This file is for svd2rust to generate, but not intended for debugging using SVD tools.
+  If you want to debug a program using the PAC crate, debug on target ELF file 
+  the PAC, HAL and your application are compiled into.
+-->
 <?xml version="1.0" encoding="utf-8"?>
 <device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
-  <vendor>Bouffalo Lab</vendor>
+  <vendor>Bouffalo Lab</vendor> <!-- The trademark here mentioned belongs to its owners -->
   <name>BL602</name>
   <version>1.0</version>
   <description>BL602 Wi-Fi + BLE combo chipset</description>
@@ -14,6 +33,6 @@
 
   <peripherals>
     <!-- TODO: all peripherals -->
-      
+    
   </peripherals>
 </device>
