@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
+  <vendor>Bouffalo Lab</vendor>
+  <name>BL602</name>
+  <version>1.0</version>
+  <description>BL602 Wi-Fi + BLE combo chipset</description>
+
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <size>32</size>
+  <access>read-write</access>
+  <resetValue>0x00000000</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+
+  <peripherals>
+    <!-- TODO: all peripherals -->
+      
+  </peripherals>
+</device>
