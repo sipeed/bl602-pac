@@ -32,6 +32,265 @@
   <resetMask>0xFFFFFFFF</resetMask>
 
   <peripherals>
+    <!-- GLB -->
+    <peripheral>
+      <name>GLB</name>
+      <description>GLB (todo)</description>
+      <baseAddress>0x40000000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- RF -->
+    <peripheral>
+      <name>RF</name>
+      <description>RF (todo)</description>
+      <baseAddress>0x40001000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- GPIP -->
+    <peripheral>
+      <name>GPIP</name>
+      <description>GPIP (todo)</description>
+      <baseAddress>0x40002000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- SEC_DBG -->
+    <peripheral>
+      <name>SEC_DBG</name>
+      <description>SEC_DBG (todo)</description>
+      <baseAddress>0x40003000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- SEC_ENG -->
+    <peripheral>
+      <name>SEC_ENG</name>
+      <description>SEC_ENG (todo)</description>
+      <baseAddress>0x40004000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- TZC_SEC -->
+    <peripheral>
+      <name>TZC_SEC</name>
+      <description>TZC_SEC (todo)</description>
+      <baseAddress>0x40005000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- TZC_NSEC -->
+    <peripheral>
+      <name>TZC_NSEC</name>
+      <description>TZC_NSEC (todo)</description>
+      <baseAddress>0x40006000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- EF_DATA -->
+    <peripheral>
+      <name>EF_DATA</name>
+      <description>EF_DATA (todo)</description>
+      <baseAddress>0x40007000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- EF_CTRL -->
+    <peripheral>
+      <name>EF_CTRL</name>
+      <description>EF_CTRL (todo)</description>
+      <baseAddress>0x40007000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- CCI -->
+    <peripheral>
+      <name>CCI</name>
+      <description>CCI (todo)</description>
+      <baseAddress>0x40008000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- L1C -->
+    <peripheral>
+      <name>L1C</name>
+      <description>L1C (todo)</description>
+      <baseAddress>0x40009000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- UART0 -->
+    <peripheral>
+      <name>UART0</name>
+      <description>UART0 (todo)</description>
+      <groupName>UART</groupName>
+      <baseAddress>0x4000A000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- UART1 -->
+    <peripheral derivedFrom="UART0">
+        <name>UART1</name>
+        <description>Universal Asynchronous Receiver-Transmitter 1</description>
+        <groupName>UART</groupName>
+        <baseAddress>0x4000A100</baseAddress>
+    </peripheral>
+
+    <!-- SPI -->
+    <peripheral>
+      <name>SPI</name>
+      <description>SPI (todo)</description>
+      <baseAddress>0x4000A200</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- I2C -->
+    <peripheral>
+      <name>I2C</name>
+      <description>I2C (todo)</description>
+      <baseAddress>0x4000A300</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- PWM -->
+    <peripheral>
+      <name>PWM</name>
+      <description>PWM (todo)</description>
+      <baseAddress>0x4000A400</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- TIMER -->
+    <peripheral>
+      <name>TIMER</name>
+      <description>TIMER (todo)</description>
+      <baseAddress>0x4000A500</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- IR -->
+    <peripheral>
+      <name>IR</name>
+      <description>IR (todo)</description>
+      <baseAddress>0x4000A600</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- SF_CTRL -->
+    <peripheral>
+      <name>SF_CTRL</name>
+      <description>SF_CTRL (todo)</description>
+      <baseAddress>0x4000B000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- SF_CTRL_BUF -->
+    <peripheral>
+      <name>SF_CTRL_BUF</name>
+      <description>SF_CTRL_BUF (todo)</description>
+      <baseAddress>0x4000B700</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- DMA -->
+    <peripheral>
+      <name>DMA</name>
+      <description>DMA (todo)</description>
+      <baseAddress>0x4000C000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- SDU -->
+    <peripheral>
+      <name>SDU</name>
+      <description>SDU (todo)</description>
+      <baseAddress>0x4000D000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- PDS -->
+    <peripheral>
+      <name>PDS</name>
+      <description>PDS (todo)</description>
+      <baseAddress>0x4000E000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- HBN -->
+    <peripheral>
+      <name>HBN</name>
+      <description>HBN (todo)</description>
+      <baseAddress>0x4000F000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- AON -->
+    <peripheral>
+      <name>AON</name>
+      <description>AON (todo)</description>
+      <baseAddress>0x4000F000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
+    <!-- HBN_RAM -->
+    <peripheral>
+      <name>HBN_RAM</name>
+      <description>HBN_RAM (todo)</description>
+      <baseAddress>0x40010000</baseAddress>
+      <registers>
+        
+      </registers>
+    </peripheral>
+
     <!-- CLIC -->
     <!-- Ref: https://github.com/riscv/riscv-fast-interrupt/blob/master/clic.adoc -->
     <!-- Ref: k210-pac/k210.svd -->
