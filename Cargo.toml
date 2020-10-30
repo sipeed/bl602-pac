@@ -1,13 +1,26 @@
 [package]
 name = "bl602-pac"
+description = "Embedded Rust's Peripheral Access Crate for BL602 RISC-V WiFi microcontroller"
 version = "0.1.0"
 authors = ["Sipeed Co.,Ltd. <support@sipeed.com>", "luojia65 <me@luojia.cc>"]
 edition = "2018"
+repository = "https://github.com/sipeed/bl602-pac"
+documentation = "https://docs.rs/bl602-pac"
+license = "MIT OR MulanPSL-2.0"
+readme = "README.md"
+keywords = ["riscv", "bl602", "pac"]
+categories = ["embedded", "hardware-support", "no-std"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-riscv = "*"
-riscv-rt = "*"
-bare-metal = "*"
-vcell = "*"
+riscv = "0.6.0"
+bare-metal = "1.0.0"
+vcell = "0.1.2"
+
+[dependencies.riscv-rt]
+optional = true
+version = "0.8.0"
+
+[features]
+rt = ["riscv-rt"]
