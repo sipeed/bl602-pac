@@ -21,19 +21,20 @@
     e.g. run program in RAM or other possible values.
 */
 
-/* Ref: bl602/bl602/evb/ld/flash.ld */
-
 _max_hart_id = 0;
 
 MEMORY
 {
     ROM   (rxai!w) : ORIGIN = 0x21015000, LENGTH = 44K
-    FLASH (rxai!w) : ORIGIN = 0x23000000, LENGTH = 4M
-    /* put itcm, dtcm and OCRAM together */
-    RAM_TCM  (wxa) : ORIGIN = 0x4200C000, LENGTH = (16K + 16K + 48K + 64K)
-    /* leave 8K left for BLE */
-    RAM_WIFI (wxa) : ORIGIN = 0x42030000, LENGTH = 104K
+    FLASH (rxai!w) : ORIGIN = 0x23000000, LENGTH = 16M
+    RAM_TCM  (wxa) : ORIGIN = 0x42008000, LENGTH = 272K
+    RAM_WIFI (wxa) : ORIGIN = 0x42020000, LENGTH = 104K
 }
+
+/* 
+    BL602's memory is remapped into many addresses.
+    e.g. TCM is mapped to 0x22008000, 0x32008000, 0x42008000 and 0x52008000.
+*/
 
 REGION_ALIAS("REGION_TEXT", FLASH);
 REGION_ALIAS("REGION_RODATA", FLASH);
