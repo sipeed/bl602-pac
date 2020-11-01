@@ -26,7 +26,7 @@ _max_hart_id = 0;
 MEMORY
 {
     ROM   (rxai!w) : ORIGIN = 0x21015000, LENGTH = 44K
-    FLASH (rxai!w) : ORIGIN = 0x23000000, LENGTH = 16M
+    FLASH (rxai!w) : ORIGIN = 0x23000000, LENGTH = 2M
     RAM_TCM  (wxa) : ORIGIN = 0x42008000, LENGTH = 272K
     RAM_WIFI (wxa) : ORIGIN = 0x42020000, LENGTH = 104K
 }
