@@ -16,10 +16,10 @@
 		</cpu> -->
 		<peripherals>
 			<peripheral>
-				<name>glb</name>
-				<description>glb.</description>
+				<name>GLB</name>
+				<description>Global register</description>
 				<baseAddress>0x40000000</baseAddress>
-				<groupName>glb</groupName>
+				<groupName>GLB</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -30,11 +30,12 @@
 				<registers>
 					<register>
 						<name>clk_cfg0</name>
-						<description>clk_cfg0.</description>
+						<description>Clock configuration for processor and bus</description>
 						<addressOffset>0x0</addressOffset>
 						<fields>
 							<field>
 								<name>glb_id</name>
+								<access>read-only</access>
 								<lsb>28</lsb>
 								<msb>31</msb>
 							</field>
@@ -50,11 +51,13 @@
 							</field>
 							<field>
 								<name>reg_bclk_div</name>
+								<description>Base clock divider</description>
 								<lsb>16</lsb>
 								<msb>23</msb>
 							</field>
 							<field>
 								<name>reg_hclk_div</name>
+								<description>MCU clock divider</description>
 								<lsb>8</lsb>
 								<msb>15</msb>
 							</field>
@@ -65,16 +68,19 @@
 							</field>
 							<field>
 								<name>reg_pll_sel</name>
+								<description>PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)</description>
 								<lsb>4</lsb>
 								<msb>5</msb>
 							</field>
 							<field>
 								<name>reg_bclk_en</name>
+								<description>Base clock enable</description>
 								<lsb>3</lsb>
 								<msb>3</msb>
 							</field>
 							<field>
 								<name>reg_hclk_en</name>
+								<description>MCU clock enable</description>
 								<lsb>2</lsb>
 								<msb>2</msb>
 							</field>
@@ -85,6 +91,7 @@
 							</field>
 							<field>
 								<name>reg_pll_en</name>
+								<description>PLL enable</description>
 								<lsb>0</lsb>
 								<msb>0</msb>
 							</field>
@@ -97,6 +104,7 @@
 						<fields>
 							<field>
 								<name>ble_en</name>
+								<description>Bluetooth clock enable</description>
 								<lsb>24</lsb>
 								<msb>24</msb>
 							</field>
@@ -107,11 +115,13 @@
 							</field>
 							<field>
 								<name>wifi_mac_wt_div</name>
+								<description>WiFi encryption clock divider</description>
 								<lsb>4</lsb>
 								<msb>7</msb>
 							</field>
 							<field>
 								<name>wifi_mac_core_div</name>
+								<description>WiFi core clock divider (0: 80MHz, 1: 40MHz)</description>
 								<lsb>0</lsb>
 								<msb>3</msb>
 							</field>
@@ -119,7 +129,7 @@
 					</register>
 					<register>
 						<name>clk_cfg2</name>
-						<description>clk_cfg2.</description>
+						<description>Clock configuration for UART and Flash</description>
 						<addressOffset>0x8</addressOffset>
 						<fields>
 							<field>
@@ -176,7 +186,7 @@
 					</register>
 					<register>
 						<name>clk_cfg3</name>
-						<description>clk_cfg3.</description>
+						<description>Clock configuration for I2C and SPI</description>
 						<addressOffset>0xC</addressOffset>
 						<fields>
 							<field>
@@ -608,6 +618,7 @@
 							</field>
 							<field>
 								<name>bmx_err_addr_dis</name>
+								<description>BMX address monitor disable</description>
 								<lsb>0</lsb>
 								<msb>0</msb>
 							</field>
@@ -854,7 +865,7 @@
 					</register>
 					<register>
 						<name>GPADC_32M_SRC_CTRL</name>
-						<description>GPADC_32M_SRC_CTRL.</description>
+						<description>Clock configuration for GPADC</description>
 						<addressOffset>0xA4</addressOffset>
 						<fields>
 							<field>
@@ -1062,7 +1073,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL0</name>
-						<description>GPIO_CFGCTL0.</description>
+						<description>GPIO0, GPIO1 configuration</description>
 						<addressOffset>0x100</addressOffset>
 						<fields>
 							<field>
@@ -1139,7 +1150,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL1</name>
-						<description>GPIO_CFGCTL1.</description>
+						<description>GPIO2, GPIO3 configuration</description>
 						<addressOffset>0x104</addressOffset>
 						<fields>
 							<field>
@@ -1216,7 +1227,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL2</name>
-						<description>GPIO_CFGCTL2.</description>
+						<description>GPIO4, GPIO5 configuration</description>
 						<addressOffset>0x108</addressOffset>
 						<fields>
 							<field>
@@ -1293,7 +1304,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL3</name>
-						<description>GPIO_CFGCTL3.</description>
+						<description>GPIO6, GPIO7 configuration</description>
 						<addressOffset>0x10C</addressOffset>
 						<fields>
 							<field>
@@ -1360,7 +1371,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL4</name>
-						<description>GPIO_CFGCTL4.</description>
+						<description>GPIO8, GPIO9 configuration</description>
 						<addressOffset>0x110</addressOffset>
 						<fields>
 							<field>
@@ -1427,7 +1438,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL5</name>
-						<description>GPIO_CFGCTL5.</description>
+						<description>GPIO10, GPIO11 configuration</description>
 						<addressOffset>0x114</addressOffset>
 						<fields>
 							<field>
@@ -1494,7 +1505,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL6</name>
-						<description>GPIO_CFGCTL6.</description>
+						<description>GPIO12, GPIO13 configuration</description>
 						<addressOffset>0x118</addressOffset>
 						<fields>
 							<field>
@@ -1561,7 +1572,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL7</name>
-						<description>GPIO_CFGCTL7.</description>
+						<description>GPIO14, GPIO15 configuration</description>
 						<addressOffset>0x11C</addressOffset>
 						<fields>
 							<field>
@@ -1628,7 +1639,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL8</name>
-						<description>GPIO_CFGCTL8.</description>
+						<description>GPIO16, GPIO17 configuration</description>
 						<addressOffset>0x120</addressOffset>
 						<fields>
 							<field>
@@ -1695,7 +1706,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL9</name>
-						<description>GPIO_CFGCTL9.</description>
+						<description>GPIO18, GPIO19 configuration</description>
 						<addressOffset>0x124</addressOffset>
 						<fields>
 							<field>
@@ -1762,7 +1773,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL10</name>
-						<description>GPIO_CFGCTL10.</description>
+						<description>GPIO20, GPIO21 configuration</description>
 						<addressOffset>0x128</addressOffset>
 						<fields>
 							<field>
@@ -1829,7 +1840,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL11</name>
-						<description>GPIO_CFGCTL11.</description>
+						<description>GPIO22, GPIO23 configuration</description>
 						<addressOffset>0x12C</addressOffset>
 						<fields>
 							<field>
@@ -1891,7 +1902,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL12</name>
-						<description>GPIO_CFGCTL12.</description>
+						<description>GPIO24, GPIO25 configuration</description>
 						<addressOffset>0x130</addressOffset>
 						<fields>
 							<field>
@@ -1948,7 +1959,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL13</name>
-						<description>GPIO_CFGCTL13.</description>
+						<description>GPIO26, GPIO27 configuration</description>
 						<addressOffset>0x134</addressOffset>
 						<fields>
 							<field>
@@ -2005,7 +2016,7 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL14</name>
-						<description>GPIO_CFGCTL14.</description>
+						<description>GPIO28 configuration</description>
 						<addressOffset>0x138</addressOffset>
 						<fields>
 							<field>
@@ -3041,8 +3052,8 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>rf</name>
-				<description>rf.</description>
+				<name>RF</name>
+				<description>RF.</description>
 				<baseAddress>0x40001000</baseAddress>
 				<groupName>rf</groupName>
 				<size>32</size>
@@ -8063,10 +8074,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>gpip</name>
-				<description>gpip.</description>
+				<name>GPIP</name>
+				<description>Universal DAC/ADC/ACOMP interface control</description>
 				<baseAddress>0x40002000</baseAddress>
-				<groupName>gpip</groupName>
+				<groupName>GPIP</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -8285,10 +8296,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>sec_dbg</name>
-				<description>sec_dbg.</description>
+				<name>SEC_DBG</name>
+				<description>SEC_DBG.</description>
 				<baseAddress>0x40003000</baseAddress>
-				<groupName>sec_dbg</groupName>
+				<groupName>SEC_DBG</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -8426,10 +8437,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>sec_eng</name>
-				<description>sec_eng.</description>
+				<name>SEC_ENG</name>
+				<description>SEC_ENG.</description>
 				<baseAddress>0x40004000</baseAddress>
-				<groupName>sec_eng</groupName>
+				<groupName>SEC_ENG</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -9914,10 +9925,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>tzc_sec</name>
-				<description>tzc_sec.</description>
+				<name>TZC_SEC</name>
+				<description>TZC_SEC.</description>
 				<baseAddress>0x40005000</baseAddress>
-				<groupName>tzc_sec</groupName>
+				<groupName>TZC_SEC</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -10089,10 +10100,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>tzc_nsec</name>
-				<description>tzc_nsec.</description>
+				<name>TZC_NSEC</name>
+				<description>TZC_NSEC.</description>
 				<baseAddress>0x40006000</baseAddress>
-				<groupName>tzc_nsec</groupName>
+				<groupName>TZC_NSEC</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -10264,10 +10275,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>ef_data_0</name>
-				<description>ef_data_0.</description>
+				<name>EF_DATA_0</name>
+				<description>eFuse memory control</description>
 				<baseAddress>0x40007000</baseAddress>
-				<groupName>ef_data_0</groupName>
+				<groupName>EF_DATA_0</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -10853,10 +10864,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>ef_data_1</name>
-				<description>ef_data_1.</description>
+				<name>EF_DATA_1</name>
+				<description>EF_DATA_1.</description>
 				<baseAddress>0x40007000</baseAddress>
-				<groupName>ef_data_1</groupName>
+				<groupName>EF_DATA_1</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -11165,10 +11176,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>ef_ctrl</name>
-				<description>ef_ctrl.</description>
+				<name>EF_CTRL</name>
+				<description>EF_CTRL.</description>
 				<baseAddress>0x40007000</baseAddress>
-				<groupName>ef_ctrl</groupName>
+				<groupName>EF_CTRL</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -11777,10 +11788,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>cci</name>
-				<description>cci.</description>
+				<name>CCI</name>
+				<description>CCI.</description>
 				<baseAddress>0x40008000</baseAddress>
-				<groupName>cci</groupName>
+				<groupName>CCI</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -11902,10 +11913,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>l1c</name>
-				<description>l1c.</description>
+				<name>L1C</name>
+				<description>Cache control</description>
 				<baseAddress>0x40009000</baseAddress>
-				<groupName>l1c</groupName>
+				<groupName>L1C</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -12110,10 +12121,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>uart</name>
-				<description>uart.</description>
+				<name>UART</name>
+				<description>UART control</description>
 				<baseAddress>0x4000A000</baseAddress>
-				<groupName>uart</groupName>
+				<groupName>UART</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -12639,10 +12650,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>spi</name>
-				<description>spi.</description>
+				<name>SPI</name>
+				<description>SPI master / slave control</description>
 				<baseAddress>0x4000A200</baseAddress>
-				<groupName>spi</groupName>
+				<groupName>SPI</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -13021,10 +13032,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>i2c</name>
-				<description>i2c.</description>
+				<name>I2C</name>
+				<description>I2C control</description>
 				<baseAddress>0x4000A300</baseAddress>
-				<groupName>i2c</groupName>
+				<groupName>I2C</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -13438,10 +13449,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>pwm</name>
-				<description>pwm.</description>
+				<name>PWM</name>
+				<description>Pulse width modulation control</description>
 				<baseAddress>0x4000A400</baseAddress>
-				<groupName>pwm</groupName>
+				<groupName>PWM</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -14005,10 +14016,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>timer</name>
-				<description>timer.</description>
+				<name>TIMER</name>
+				<description>Timer control</description>
 				<baseAddress>0x4000A500</baseAddress>
-				<groupName>timer</groupName>
+				<groupName>TIMER</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -14577,10 +14588,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>ir</name>
-				<description>ir.</description>
+				<name>IR</name>
+				<description>Infrared remote control</description>
 				<baseAddress>0x4000A600</baseAddress>
-				<groupName>ir</groupName>
+				<groupName>IR</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -15026,10 +15037,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>cks</name>
-				<description>cks.</description>
-				<baseAddress>0x4000A000</baseAddress>
-				<groupName>cks</groupName>
+				<name>CKS</name>
+				<description>Checksum engine</description>
+				<baseAddress>0x4000A700</baseAddress>
+				<groupName>CKS</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -15045,6 +15056,7 @@
 						<fields>
 							<field>
 								<name>cr_cks_byte_swap</name>
+								<description>Endianness (0: little endian, 1: big endian)</description>
 								<lsb>1</lsb>
 								<msb>1</msb>
 							</field>
@@ -15057,7 +15069,7 @@
 					</register>
 					<register>
 						<name>data_in</name>
-						<description>data_in.</description>
+						<description>Checksum data in</description>
 						<addressOffset>0x4</addressOffset>
 						<fields>
 							<field>
@@ -15069,7 +15081,7 @@
 					</register>
 					<register>
 						<name>cks_out</name>
-						<description>cks_out.</description>
+						<description>Checksum value out</description>
 						<addressOffset>0x8</addressOffset>
 						<fields>
 							<field>
@@ -15082,10 +15094,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>sf_ctrl</name>
-				<description>sf_ctrl.</description>
+				<name>SF_CTRL</name>
+				<description>Flash control</description>
 				<baseAddress>0x4000B000</baseAddress>
-				<groupName>sf_ctrl</groupName>
+				<groupName>SF_CTRL</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -15289,7 +15301,7 @@
 								<msb>24</msb>
 							</field>
 							<field>
-								<name>sf_if_0_dat_rw  </name>
+								<name>sf_if_0_dat_rw</name>
 								<lsb>23</lsb>
 								<msb>23</msb>
 							</field>
@@ -15385,7 +15397,7 @@
 								<msb>24</msb>
 							</field>
 							<field>
-								<name>sf_if_1_dat_rw  </name>
+								<name>sf_if_1_dat_rw</name>
 								<lsb>23</lsb>
 								<msb>23</msb>
 							</field>
@@ -15975,7 +15987,7 @@
 								<msb>24</msb>
 							</field>
 							<field>
-								<name>sf_if_2_dat_rw  </name>
+								<name>sf_if_2_dat_rw</name>
 								<lsb>23</lsb>
 								<msb>23</msb>
 							</field>
@@ -16663,10 +16675,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>dma</name>
-				<description>dma.</description>
+				<name>DMA</name>
+				<description>DMA control</description>
 				<baseAddress>0x4000C000</baseAddress>
-				<groupName>dma</groupName>
+				<groupName>DMA</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -17421,10 +17433,10 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>pds</name>
-				<description>pds.</description>
+				<name>PDS</name>
+				<description>Sleep control (power-down sleep)</description>
 				<baseAddress>0x4000E000</baseAddress>
-				<groupName>pds</groupName>
+				<groupName>PDS</groupName>
 				<size>32</size>
 				<access>read-write</access>
 				<addressBlock>
@@ -18213,7 +18225,7 @@
 			</peripheral>
 			<peripheral>
 				<name>HBN</name>
-				<description>HBN.</description>
+				<description>Deep Sleep Control (Hibernation)</description>
 				<baseAddress>0x4000F000</baseAddress>
 				<groupName>HBN</groupName>
 				<size>32</size>
