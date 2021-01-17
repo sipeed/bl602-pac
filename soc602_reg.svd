@@ -5147,26 +5147,13 @@
 								<name>reg_gpio_0_i</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
-								<description>Input register for GPIO0.</description>
-								<enumeratedValues>
-									<name>GPIO0Input</name>
-									<enumeratedValue>
-										<name>disabled</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>enabled</name>
-										<value>1</value>
-									</enumeratedValue>
-								</enumeratedValues>
 							</field>
 						</fields>
 					</register>
 					<register>
 						<name>GPIO_CFGCTL31</name>
-						<description>GPIO_CFGCTL31.</description>
+						<description>Reserved according to SDK.</description>
 						<addressOffset>0x184</addressOffset>
-						<fields/>
 					</register>
 					<register>
 						<name>GPIO_CFGCTL32</name>
