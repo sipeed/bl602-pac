@@ -1080,71 +1080,291 @@
 								<name>real_gpio_1_func_sel</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_gpio_1_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1FunctionSelect</name>
+									<enumeratedValue>
+										<name>SDIO_CMD</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SF_D2</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG1</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH1</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_1</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>ATEST_IP</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_1</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDI</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_pu</name>
 								<lsb>20</lsb>
 								<msb>20</msb>
+								<description>Pull Up Resistor for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1PullUpResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_ie</name>
 								<lsb>16</lsb>
 								<msb>16</msb>
+								<description>Input enable for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1InputEnabled</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>real_gpio_0_func_sel</name>
 								<lsb>12</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_gpio_0_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO0.</description>
+								<enumeratedValues>
+									<name>GPIO0FunctionSelect</name>
+									<enumeratedValue>
+										<name>SDIO_CLK</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SF_D1</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG0</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH0</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_0</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>ATEST_IN</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_0</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TMS</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO0.</description>
+								<enumeratedValues>
+									<name>GPIO0PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_pu</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<description>Pull Up Resistor for GPIO0.</description>
+								<enumeratedValues>
+									<name>GPIO0PullUpResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control for GPIO0.</description>
+								<enumeratedValues>
+								    <name>GPIO0Driving</name>
+								    <enumeratedValue>
+									<name>disabled</name>
+									<value>0</value>
+								</enumeratedValue>
+								<enumeratedValue>
+									<name>enabled</name>
+									<value>1</value>
+								</enumeratedValue>
+							</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO0.</description>
+								<enumeratedValues>
+									<name>GPIO0Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_ie</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<description>GPIO0 input enable.</description>
+								<enumeratedValues>
+									<name>GPIO0InputEnabled</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 						</fields>
 					</register>
@@ -1162,6 +1382,51 @@
 								<name>reg_gpio_3_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO3.</description>
+								<enumeratedValues>
+									<name>GPIO3FunctionSelect</name>
+									<enumeratedValue>
+										<name>SDIO_DAT1</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_SCLK</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG3</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH3</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_3</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>ATEST_QP</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_3</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDO</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_3_pd</name>
@@ -1197,6 +1462,55 @@
 								<name>reg_gpio_2_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO2.</description>
+								<enumeratedValues>
+									<name>GPIO2FunctionSelect</name>
+									<enumeratedValue>
+										<name>SDIO_DAT0</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SF_D3</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_SS</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG2</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH2</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_2</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>ATEST_QN</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_2</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TCK</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_2_pd</name>
@@ -1239,6 +1553,51 @@
 								<name>reg_gpio_5_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO5.</description>
+								<enumeratedValues>
+									<name>GPIO5FunctionSelect</name>
+									<enumeratedValue>
+										<name>SDIO_DAT3</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG5</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH0</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_1</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH4</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_5</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDI</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_5_pd</name>
@@ -1274,6 +1633,51 @@
 								<name>reg_gpio_4_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO4.</description>
+								<enumeratedValues>
+									<name>GPIO4FunctionSelect</name>
+									<enumeratedValue>
+										<name>SDIO_DAT2</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MISO_SPI_MOSI</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG4</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH4</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_0</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH1</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_4</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TMS</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_4_pd</name>
@@ -1311,6 +1715,43 @@
 								<name>reg_gpio_7_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO7.</description>
+								<enumeratedValues>
+									<name>GPIO7FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_SCLK</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG7</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH2</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_3</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_7</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDO</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_7_pd</name>
@@ -1341,6 +1782,47 @@
 								<name>reg_gpio_6_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO6.</description>
+								<enumeratedValues>
+									<name>GPIO6FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_SS</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG6</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH1</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_2</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH5</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_6</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TCK</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_6_pd</name>
@@ -1378,6 +1860,47 @@
 								<name>reg_gpio_9_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO9.</description>
+								<enumeratedValues>
+									<name>GPIO9FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG1</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH4</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_1</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH6_GPIP_CH7</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_9</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDI</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_9_pd</name>
@@ -1408,6 +1931,43 @@
 								<name>reg_gpio_8_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO8.</description>
+								<enumeratedValues>
+									<name>GPIO8FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_MISO_SPI_MOSI</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG0</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH3</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_0</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_8</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TMS</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_8_pd</name>
@@ -1445,6 +2005,47 @@
 								<name>reg_gpio_11_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO11.</description>
+								<enumeratedValues>
+									<name>GPIO11FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_SCLK</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG3</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH1</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_3</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>IRLED_OUT_GPIP_CH10</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_11</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDO</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_11_pd</name>
@@ -1475,6 +2076,47 @@
 								<name>reg_gpio_10_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO10.</description>
+								<enumeratedValues>
+									<name>GPIO10FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_SS</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG2</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH0</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_2</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>MICBIAS_GPIP_CH8_GPIP_CH9</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_10</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TCK</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_10_pd</name>
@@ -1512,6 +2154,47 @@
 								<name>reg_gpio_13_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO13.</description>
+								<enumeratedValues>
+									<name>GPIO13FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG5</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH3</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_1</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH3</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_13</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDI</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_13_pd</name>
@@ -1542,6 +2225,47 @@
 								<name>reg_gpio_12_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO12.</description>
+								<enumeratedValues>
+									<name>GPIO12FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_MISO_SPI_MOSI</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG4</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH2</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_0</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH0_GPADC_VREF_EXT</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_12</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TMS</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_12_pd</name>
@@ -1579,6 +2303,47 @@
 								<name>reg_gpio_15_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO15.</description>
+								<enumeratedValues>
+									<name>GPIO15FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_SCLK</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG7</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH0</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_3</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PSW_IRRCV_OUT_GPIP_CH11</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_15</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDO</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_15_pd</name>
@@ -1609,6 +2374,47 @@
 								<name>reg_gpio_14_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO14.</description>
+								<enumeratedValues>
+									<name>GPIO14FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_SS</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG6</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH4</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_2</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GPIP_CH2</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_14</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TCK</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_14_pd</name>
@@ -1646,6 +2452,51 @@
 								<name>reg_gpio_17_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO17.</description>
+								<enumeratedValues>
+									<name>GPIO17FunctionSelect</name>
+									<enumeratedValue>
+										<name>SF_D3</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG1</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH2</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_1</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PMIP_DC_TP_OUT</name>
+										<value>10</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_17</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDI</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_17_pd</name>
@@ -1676,6 +2527,43 @@
 								<name>reg_gpio_16_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO16.</description>
+								<enumeratedValues>
+									<name>GPIO16FunctionSelect</name>
+									<enumeratedValue>
+										<name>SPI_MISO_SPI_MOSI</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG0</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH1</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_0</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_16</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TMS</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_16_pd</name>
@@ -1713,6 +2601,47 @@
 								<name>reg_gpio_19_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO19.</description>
+								<enumeratedValues>
+									<name>GPIO19FunctionSelect</name>
+									<enumeratedValue>
+										<name>SF_D1</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_SCLK</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG3</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH4</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_3</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_19</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDO</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_19_pd</name>
@@ -1743,6 +2672,47 @@
 								<name>reg_gpio_18_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO18.</description>
+								<enumeratedValues>
+									<name>GPIO18FunctionSelect</name>
+									<enumeratedValue>
+										<name>SF_D2</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_SS</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG2</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH3</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_2</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_18</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TCK</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_18_pd</name>
@@ -1780,6 +2750,47 @@
 								<name>reg_gpio_21_func_sel</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<description>Function select for GPIO21.</description>
+								<enumeratedValues>
+									<name>GPIO21FunctionSelect</name>
+									<enumeratedValue>
+										<name>SF_CS</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MOSI_SPI_MISO</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SDA</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG5</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH1</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_1</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_21</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TDI</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_21_pd</name>
@@ -1810,6 +2821,47 @@
 								<name>reg_gpio_20_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO20.</description>
+								<enumeratedValues>
+									<name>GPIO20FunctionSelect</name>
+									<enumeratedValue>
+										<name>SF_D0</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_MISO_SPI_MOSI</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG4</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH0</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_0</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_20</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TMS</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_20_pd</name>
@@ -1872,6 +2924,47 @@
 								<name>reg_gpio_22_func_sel</name>
 								<lsb>8</lsb>
 								<msb>11</msb>
+								<description>Function select for GPIO22.</description>
+								<enumeratedValues>
+									<name>GPIO22FunctionSelect</name>
+									<enumeratedValue>
+										<name>SF_CLK_OUT</name>
+										<value>2</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SPI_SS</name>
+										<value>4</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>I2C_SCL</name>
+										<value>6</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>UART_SIG6</name>
+										<value>7</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>PWM_CH2</name>
+										<value>8</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>FEM_GPIO_2</name>
+										<value>9</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>SWGPIO_22</name>
+										<value>11</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>E21_TCK</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>reserved</name>
+										<description>Reserved values. Do not use.</description>
+										<isDefault>true</isDefault>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_22_pd</name>
