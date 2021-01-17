@@ -130,7 +130,7 @@ impl<'a> BMX_ERR_DEC_W<'a> {
         self.w
     }
 }
-#[doc = "Field `bmx_err_addr_dis` reader - "]
+#[doc = "Field `bmx_err_addr_dis` reader - BMX address monitor disable"]
 pub struct BMX_ERR_ADDR_DIS_R(crate::FieldReader<bool, bool>);
 impl BMX_ERR_ADDR_DIS_R {
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl core::ops::Deref for BMX_ERR_ADDR_DIS_R {
         &self.0
     }
 }
-#[doc = "Field `bmx_err_addr_dis` writer - "]
+#[doc = "Field `bmx_err_addr_dis` writer - BMX address monitor disable"]
 pub struct BMX_ERR_ADDR_DIS_W<'a> {
     w: &'a mut W,
 }
@@ -182,7 +182,7 @@ impl R {
     pub fn bmx_err_dec(&self) -> BMX_ERR_DEC_R {
         BMX_ERR_DEC_R::new(((self.bits >> 4) & 0x01) != 0)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 0 - BMX address monitor disable"]
     #[inline(always)]
     pub fn bmx_err_addr_dis(&self) -> BMX_ERR_ADDR_DIS_R {
         BMX_ERR_ADDR_DIS_R::new((self.bits & 0x01) != 0)
@@ -204,7 +204,7 @@ impl W {
     pub fn bmx_err_dec(&mut self) -> BMX_ERR_DEC_W {
         BMX_ERR_DEC_W { w: self }
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 0 - BMX address monitor disable"]
     #[inline(always)]
     pub fn bmx_err_addr_dis(&mut self) -> BMX_ERR_ADDR_DIS_W {
         BMX_ERR_ADDR_DIS_W { w: self }

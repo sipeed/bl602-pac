@@ -29,6 +29,7 @@ pub trait Resettable: RegisterSpec {
     fn reset_value() -> Self::Ux;
 }
 #[doc = " This structure provides volatile access to registers."]
+#[repr(transparent)]
 pub struct Reg<REG: RegisterSpec> {
     register: vcell::VolatileCell<REG::Ux>,
     _marker: marker::PhantomData<REG>,

@@ -238,7 +238,7 @@ impl<'a> SF_IF_2_DAT_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `sf_if_2_dat_rw  ` reader - "]
+#[doc = "Field `sf_if_2_dat_rw` reader - "]
 pub struct SF_IF_2_DAT_RW_R(crate::FieldReader<bool, bool>);
 impl SF_IF_2_DAT_RW_R {
     pub(crate) fn new(bits: bool) -> Self {
@@ -252,7 +252,7 @@ impl core::ops::Deref for SF_IF_2_DAT_RW_R {
         &self.0
     }
 }
-#[doc = "Field `sf_if_2_dat_rw  ` writer - "]
+#[doc = "Field `sf_if_2_dat_rw` writer - "]
 pub struct SF_IF_2_DAT_RW_W<'a> {
     w: &'a mut W,
 }

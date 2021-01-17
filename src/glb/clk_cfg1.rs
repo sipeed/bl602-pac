@@ -32,7 +32,7 @@ impl core::convert::From<crate::W<CLK_CFG1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ble_en` reader - "]
+#[doc = "Field `ble_en` reader - Bluetooth clock enable"]
 pub struct BLE_EN_R(crate::FieldReader<bool, bool>);
 impl BLE_EN_R {
     pub(crate) fn new(bits: bool) -> Self {
@@ -46,7 +46,7 @@ impl core::ops::Deref for BLE_EN_R {
         &self.0
     }
 }
-#[doc = "Field `ble_en` writer - "]
+#[doc = "Field `ble_en` writer - Bluetooth clock enable"]
 pub struct BLE_EN_W<'a> {
     w: &'a mut W,
 }
@@ -94,7 +94,7 @@ impl<'a> BLE_CLK_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `wifi_mac_wt_div` reader - "]
+#[doc = "Field `wifi_mac_wt_div` reader - WiFi encryption clock divider"]
 pub struct WIFI_MAC_WT_DIV_R(crate::FieldReader<u8, u8>);
 impl WIFI_MAC_WT_DIV_R {
     pub(crate) fn new(bits: u8) -> Self {
@@ -108,7 +108,7 @@ impl core::ops::Deref for WIFI_MAC_WT_DIV_R {
         &self.0
     }
 }
-#[doc = "Field `wifi_mac_wt_div` writer - "]
+#[doc = "Field `wifi_mac_wt_div` writer - WiFi encryption clock divider"]
 pub struct WIFI_MAC_WT_DIV_W<'a> {
     w: &'a mut W,
 }
@@ -120,7 +120,7 @@ impl<'a> WIFI_MAC_WT_DIV_W<'a> {
         self.w
     }
 }
-#[doc = "Field `wifi_mac_core_div` reader - "]
+#[doc = "Field `wifi_mac_core_div` reader - WiFi core clock divider (0: 80MHz, 1: 40MHz)"]
 pub struct WIFI_MAC_CORE_DIV_R(crate::FieldReader<u8, u8>);
 impl WIFI_MAC_CORE_DIV_R {
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl core::ops::Deref for WIFI_MAC_CORE_DIV_R {
         &self.0
     }
 }
-#[doc = "Field `wifi_mac_core_div` writer - "]
+#[doc = "Field `wifi_mac_core_div` writer - WiFi core clock divider (0: 80MHz, 1: 40MHz)"]
 pub struct WIFI_MAC_CORE_DIV_W<'a> {
     w: &'a mut W,
 }
@@ -147,7 +147,7 @@ impl<'a> WIFI_MAC_CORE_DIV_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 24"]
+    #[doc = "Bit 24 - Bluetooth clock enable"]
     #[inline(always)]
     pub fn ble_en(&self) -> BLE_EN_R {
         BLE_EN_R::new(((self.bits >> 24) & 0x01) != 0)
@@ -157,19 +157,19 @@ impl R {
     pub fn ble_clk_sel(&self) -> BLE_CLK_SEL_R {
         BLE_CLK_SEL_R::new(((self.bits >> 16) & 0x3f) as u8)
     }
-    #[doc = "Bits 4:7"]
+    #[doc = "Bits 4:7 - WiFi encryption clock divider"]
     #[inline(always)]
     pub fn wifi_mac_wt_div(&self) -> WIFI_MAC_WT_DIV_R {
         WIFI_MAC_WT_DIV_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:3"]
+    #[doc = "Bits 0:3 - WiFi core clock divider (0: 80MHz, 1: 40MHz)"]
     #[inline(always)]
     pub fn wifi_mac_core_div(&self) -> WIFI_MAC_CORE_DIV_R {
         WIFI_MAC_CORE_DIV_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 24"]
+    #[doc = "Bit 24 - Bluetooth clock enable"]
     #[inline(always)]
     pub fn ble_en(&mut self) -> BLE_EN_W {
         BLE_EN_W { w: self }
@@ -179,12 +179,12 @@ impl W {
     pub fn ble_clk_sel(&mut self) -> BLE_CLK_SEL_W {
         BLE_CLK_SEL_W { w: self }
     }
-    #[doc = "Bits 4:7"]
+    #[doc = "Bits 4:7 - WiFi encryption clock divider"]
     #[inline(always)]
     pub fn wifi_mac_wt_div(&mut self) -> WIFI_MAC_WT_DIV_W {
         WIFI_MAC_WT_DIV_W { w: self }
     }
-    #[doc = "Bits 0:3"]
+    #[doc = "Bits 0:3 - WiFi core clock divider (0: 80MHz, 1: 40MHz)"]
     #[inline(always)]
     pub fn wifi_mac_core_div(&mut self) -> WIFI_MAC_CORE_DIV_W {
         WIFI_MAC_CORE_DIV_W { w: self }
