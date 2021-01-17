@@ -1377,6 +1377,7 @@
 								<name>real_gpio_3_func_sel</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_gpio_3_func_sel</name>
@@ -1457,6 +1458,7 @@
 								<name>real_gpio_2_func_sel</name>
 								<lsb>12</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_gpio_2_func_sel</name>
@@ -1548,6 +1550,7 @@
 								<name>real_gpio_5_func_sel</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_gpio_5_func_sel</name>
@@ -1628,6 +1631,7 @@
 								<name>real_gpio_4_func_sel</name>
 								<lsb>12</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_gpio_4_func_sel</name>
