@@ -5958,9 +5958,8 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL35</name>
-						<description>GPIO_CFGCTL35.</description>
+						<description>Reserved according to SDK.</description>
 						<addressOffset>0x194</addressOffset>
-						<fields/>
 					</register>
 					<register>
 						<name>GPIO_INT_MASK1</name>
