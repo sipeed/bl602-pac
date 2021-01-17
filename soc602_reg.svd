@@ -3053,7 +3053,7 @@
 			</peripheral>
 			<peripheral>
 				<name>RF</name>
-				<description>RF.</description>
+				<description>RF control</description>
 				<baseAddress>0x40001000</baseAddress>
 				<groupName>rf</groupName>
 				<size>32</size>
@@ -10276,7 +10276,7 @@
 			</peripheral>
 			<peripheral>
 				<name>EF_DATA_0</name>
-				<description>eFuse memory control</description>
+				<description>EF_DATA_0</description>
 				<baseAddress>0x40007000</baseAddress>
 				<groupName>EF_DATA_0</groupName>
 				<size>32</size>
@@ -11177,7 +11177,7 @@
 			</peripheral>
 			<peripheral>
 				<name>EF_CTRL</name>
-				<description>EF_CTRL.</description>
+				<description>eFuse memory control</description>
 				<baseAddress>0x40007000</baseAddress>
 				<groupName>EF_CTRL</groupName>
 				<size>32</size>
@@ -18770,7 +18770,7 @@
 			</peripheral>
 			<peripheral>
 				<name>AON</name>
-				<description>AON.</description>
+				<description>Always-ON periherals</description>
 				<baseAddress>0x4000F800</baseAddress>
 				<groupName>AON</groupName>
 				<size>32</size>
