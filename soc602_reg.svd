@@ -1467,6 +1467,18 @@
 								<name>reg_gpio_3_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO3.</description>
+								<enumeratedValues>
+									<name>GPIO3Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_3_smt</name>
@@ -1576,6 +1588,18 @@
 								<name>reg_gpio_2_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO2.</description>
+								<enumeratedValues>
+									<name>GPIO2Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_2_smt</name>
@@ -1688,6 +1712,18 @@
 								<name>reg_gpio_5_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO5.</description>
+								<enumeratedValues>
+									<name>GPIO5Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_5_smt</name>
@@ -1793,6 +1829,18 @@
 								<name>reg_gpio_4_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO4.</description>
+								<enumeratedValues>
+									<name>GPIO4Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_4_smt</name>
@@ -1891,6 +1939,18 @@
 								<name>reg_gpio_7_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO7.</description>
+								<enumeratedValues>
+									<name>GPIO7Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_7_smt</name>
@@ -1986,6 +2046,18 @@
 								<name>reg_gpio_6_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO6.</description>
+								<enumeratedValues>
+									<name>GPIO6Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_6_smt</name>
@@ -2088,6 +2160,18 @@
 								<name>reg_gpio_9_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO9.</description>
+								<enumeratedValues>
+									<name>GPIO9Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_9_smt</name>
@@ -2179,6 +2263,18 @@
 								<name>reg_gpio_8_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO8.</description>
+								<enumeratedValues>
+									<name>GPIO8Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_8_smt</name>
@@ -2281,6 +2377,18 @@
 								<name>reg_gpio_11_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO11.</description>
+								<enumeratedValues>
+									<name>GPIO11Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_11_smt</name>
@@ -2376,6 +2484,18 @@
 								<name>reg_gpio_10_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO10.</description>
+								<enumeratedValues>
+									<name>GPIO10Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_10_smt</name>
@@ -2478,6 +2598,18 @@
 								<name>reg_gpio_13_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO13.</description>
+								<enumeratedValues>
+									<name>GPIO13Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_13_smt</name>
@@ -2573,6 +2705,18 @@
 								<name>reg_gpio_12_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO12.</description>
+								<enumeratedValues>
+									<name>GPIO12Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_12_smt</name>
@@ -2675,6 +2819,18 @@
 								<name>reg_gpio_15_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO15.</description>
+								<enumeratedValues>
+									<name>GPIO15Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_15_smt</name>
@@ -2770,6 +2926,18 @@
 								<name>reg_gpio_14_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO14.</description>
+								<enumeratedValues>
+									<name>GPIO14Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_14_smt</name>
@@ -2876,6 +3044,18 @@
 								<name>reg_gpio_17_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO17.</description>
+								<enumeratedValues>
+									<name>GPIO17Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_17_smt</name>
@@ -2967,6 +3147,18 @@
 								<name>reg_gpio_16_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO16.</description>
+								<enumeratedValues>
+									<name>GPIO16Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_16_smt</name>
@@ -3069,6 +3261,18 @@
 								<name>reg_gpio_19_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO19.</description>
+								<enumeratedValues>
+									<name>GPIO19Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_19_smt</name>
@@ -3164,6 +3368,18 @@
 								<name>reg_gpio_18_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO18.</description>
+								<enumeratedValues>
+									<name>GPIO18Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_18_smt</name>
@@ -3266,6 +3482,18 @@
 								<name>reg_gpio_21_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO21.</description>
+								<enumeratedValues>
+									<name>GPIO21Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_21_smt</name>
@@ -3361,6 +3589,18 @@
 								<name>reg_gpio_20_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO20.</description>
+								<enumeratedValues>
+									<name>GPIO20Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_20_smt</name>
@@ -3417,6 +3657,18 @@
 								<name>reg_gpio_23_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO23.</description>
+								<enumeratedValues>
+									<name>GPIO23Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_23_smt</name>
@@ -3512,6 +3764,18 @@
 								<name>reg_gpio_22_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO22.</description>
+								<enumeratedValues>
+									<name>GPIO22Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_22_smt</name>
@@ -3568,6 +3832,18 @@
 								<name>reg_gpio_25_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO25.</description>
+								<enumeratedValues>
+									<name>GPIO25Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_25_smt</name>
@@ -3617,6 +3893,18 @@
 								<name>reg_gpio_24_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO24.</description>
+								<enumeratedValues>
+									<name>GPIO24Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_24_smt</name>
@@ -3673,6 +3961,18 @@
 								<name>reg_gpio_27_drv</name>
 								<lsb>18</lsb>
 								<msb>19</msb>
+								<description>Driving control enabled for GPIO27.</description>
+								<enumeratedValues>
+									<name>GPIO27Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_27_smt</name>
@@ -3722,6 +4022,18 @@
 								<name>reg_gpio_26_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO26.</description>
+								<enumeratedValues>
+									<name>GPIO26Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_26_smt</name>
@@ -3778,6 +4090,18 @@
 								<name>reg_gpio_28_drv</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<description>Driving control enabled for GPIO28.</description>
+								<enumeratedValues>
+									<name>GPIO28Driving</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_28_smt</name>
