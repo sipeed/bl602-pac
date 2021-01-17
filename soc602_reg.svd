@@ -1433,6 +1433,18 @@
 								<name>reg_gpio_3_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO3.</description>
+								<enumeratedValues>
+									<name>GPIO3PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_3_pu</name>
@@ -1518,6 +1530,18 @@
 								<name>reg_gpio_2_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO2.</description>
+								<enumeratedValues>
+									<name>GPIO2PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_2_pu</name>
@@ -1606,6 +1630,18 @@
 								<name>reg_gpio_5_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO5.</description>
+								<enumeratedValues>
+									<name>GPIO5PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_5_pu</name>
@@ -1687,6 +1723,18 @@
 								<name>reg_gpio_4_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO4.</description>
+								<enumeratedValues>
+									<name>GPIO4PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_4_pu</name>
@@ -1761,6 +1809,18 @@
 								<name>reg_gpio_7_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO7.</description>
+								<enumeratedValues>
+									<name>GPIO7PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_7_pu</name>
@@ -1832,6 +1892,18 @@
 								<name>reg_gpio_6_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO6.</description>
+								<enumeratedValues>
+									<name>GPIO6PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_6_pu</name>
@@ -1910,6 +1982,18 @@
 								<name>reg_gpio_9_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO9.</description>
+								<enumeratedValues>
+									<name>GPIO9PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_9_pu</name>
@@ -1977,6 +2061,18 @@
 								<name>reg_gpio_8_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO8.</description>
+								<enumeratedValues>
+									<name>GPIO8PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_8_pu</name>
@@ -2055,6 +2151,18 @@
 								<name>reg_gpio_11_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO11.</description>
+								<enumeratedValues>
+									<name>GPIO11PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_11_pu</name>
@@ -2126,6 +2234,18 @@
 								<name>reg_gpio_10_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO10.</description>
+								<enumeratedValues>
+									<name>GPIO10PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_10_pu</name>
@@ -2204,6 +2324,18 @@
 								<name>reg_gpio_13_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO13.</description>
+								<enumeratedValues>
+									<name>GPIO13PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_13_pu</name>
@@ -2275,6 +2407,18 @@
 								<name>reg_gpio_12_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO12.</description>
+								<enumeratedValues>
+									<name>GPIO12PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_12_pu</name>
@@ -2353,6 +2497,18 @@
 								<name>reg_gpio_15_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO15.</description>
+								<enumeratedValues>
+									<name>GPIO15PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_15_pu</name>
@@ -2424,6 +2580,18 @@
 								<name>reg_gpio_14_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO14.</description>
+								<enumeratedValues>
+									<name>GPIO14PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_14_pu</name>
@@ -2506,6 +2674,18 @@
 								<name>reg_gpio_17_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO17.</description>
+								<enumeratedValues>
+									<name>GPIO17PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_17_pu</name>
@@ -2573,6 +2753,18 @@
 								<name>reg_gpio_16_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO16.</description>
+								<enumeratedValues>
+									<name>GPIO16PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_16_pu</name>
@@ -2651,6 +2843,18 @@
 								<name>reg_gpio_19_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO19.</description>
+								<enumeratedValues>
+									<name>GPIO19PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_19_pu</name>
@@ -2722,6 +2926,18 @@
 								<name>reg_gpio_18_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO18.</description>
+								<enumeratedValues>
+									<name>GPIO18PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_18_pu</name>
@@ -2800,6 +3016,18 @@
 								<name>reg_gpio_21_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO21.</description>
+								<enumeratedValues>
+									<name>GPIO21PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_21_pu</name>
@@ -2871,6 +3099,18 @@
 								<name>reg_gpio_20_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO20.</description>
+								<enumeratedValues>
+									<name>GPIO20PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_20_pu</name>
@@ -2903,6 +3143,18 @@
 								<name>reg_gpio_23_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO23.</description>
+								<enumeratedValues>
+									<name>GPIO23PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_23_pu</name>
@@ -2974,6 +3226,18 @@
 								<name>reg_gpio_22_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO22.</description>
+								<enumeratedValues>
+									<name>GPIO22PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_22_pu</name>
@@ -3006,6 +3270,18 @@
 								<name>reg_gpio_25_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO25.</description>
+								<enumeratedValues>
+									<name>GPIO25PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_25_pu</name>
@@ -3031,6 +3307,18 @@
 								<name>reg_gpio_24_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO24.</description>
+								<enumeratedValues>
+									<name>GPIO24PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_24_pu</name>
@@ -3063,6 +3351,18 @@
 								<name>reg_gpio_27_pd</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Pull Down Resistor for GPIO27.</description>
+								<enumeratedValues>
+									<name>GPIO27PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_27_pu</name>
@@ -3088,6 +3388,18 @@
 								<name>reg_gpio_26_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO26.</description>
+								<enumeratedValues>
+									<name>GPIO26PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_26_pu</name>
@@ -3120,6 +3432,18 @@
 								<name>reg_gpio_28_pd</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Pull Down Resistor for GPIO28.</description>
+								<enumeratedValues>
+									<name>GPIO28PullDownResistor</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_28_pu</name>
