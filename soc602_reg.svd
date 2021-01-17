@@ -5560,123 +5560,399 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL34</name>
-						<description>GPIO_CFGCTL34.</description>
+						<description>Output enable register for GPIO.</description>
 						<addressOffset>0x190</addressOffset>
 						<fields>
 							<field>
 								<name>reg_gpio_22_oe</name>
 								<lsb>22</lsb>
 								<msb>22</msb>
+								<description>Output enable register for GPIO22.</description>
+								<enumeratedValues>
+									<name>GPIO22OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_21_oe</name>
 								<lsb>21</lsb>
 								<msb>21</msb>
+								<description>Output enable register for GPIO21.</description>
+								<enumeratedValues>
+									<name>GPIO21OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_20_oe</name>
 								<lsb>20</lsb>
 								<msb>20</msb>
+								<description>Output enable register for GPIO20.</description>
+								<enumeratedValues>
+									<name>GPIO20OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_19_oe</name>
 								<lsb>19</lsb>
 								<msb>19</msb>
+								<description>Output enable register for GPIO19.</description>
+								<enumeratedValues>
+									<name>GPIO19OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_18_oe</name>
 								<lsb>18</lsb>
 								<msb>18</msb>
+								<description>Output enable register for GPIO18.</description>
+								<enumeratedValues>
+									<name>GPIO18OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_17_oe</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Output enable register for GPIO17.</description>
+								<enumeratedValues>
+									<name>GPIO17OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_16_oe</name>
 								<lsb>16</lsb>
 								<msb>16</msb>
+								<description>Output enable register for GPIO16.</description>
+								<enumeratedValues>
+									<name>GPIO16OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_15_oe</name>
 								<lsb>15</lsb>
 								<msb>15</msb>
+								<description>Output enable register for GPIO15.</description>
+								<enumeratedValues>
+									<name>GPIO15OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_14_oe</name>
 								<lsb>14</lsb>
 								<msb>14</msb>
+								<description>Output enable register for GPIO14.</description>
+								<enumeratedValues>
+									<name>GPIO14OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_13_oe</name>
 								<lsb>13</lsb>
 								<msb>13</msb>
+								<description>Output enable register for GPIO13.</description>
+								<enumeratedValues>
+									<name>GPIO13OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_12_oe</name>
 								<lsb>12</lsb>
 								<msb>12</msb>
+								<description>Output enable register for GPIO12.</description>
+								<enumeratedValues>
+									<name>GPIO12OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_11_oe</name>
 								<lsb>11</lsb>
 								<msb>11</msb>
+								<description>Output enable register for GPIO11.</description>
+								<enumeratedValues>
+									<name>GPIO11OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_10_oe</name>
 								<lsb>10</lsb>
 								<msb>10</msb>
+								<description>Output enable register for GPIO10.</description>
+								<enumeratedValues>
+									<name>GPIO10OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_9_oe</name>
 								<lsb>9</lsb>
 								<msb>9</msb>
+								<description>Output enable register for GPIO9.</description>
+								<enumeratedValues>
+									<name>GPIO9OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_8_oe</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<description>Output enable register for GPIO8.</description>
+								<enumeratedValues>
+									<name>GPIO8OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_7_oe</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<description>Output enable register for GPIO7.</description>
+								<enumeratedValues>
+									<name>GPIO7OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_6_oe</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<description>Output enable register for GPIO6.</description>
+								<enumeratedValues>
+									<name>GPIO6OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_5_oe</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<description>Output enable register for GPIO5.</description>
+								<enumeratedValues>
+									<name>GPIO5OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_4_oe</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<description>Output enable register for GPIO4.</description>
+								<enumeratedValues>
+									<name>GPIO4OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_3_oe</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<description>Output enable register for GPIO3.</description>
+								<enumeratedValues>
+									<name>GPIO3OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_2_oe</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<description>Output enable register for GPIO2.</description>
+								<enumeratedValues>
+									<name>GPIO2OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_oe</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Output enable register for GPIO1.</description>
+								<enumeratedValues>
+									<name>GPIO1OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_oe</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<description>Output enable register for GPIO0.</description>
+								<enumeratedValues>
+									<name>GPIO0OutputEnable</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 						</fields>
 					</register>
