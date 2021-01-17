@@ -1484,6 +1484,18 @@
 								<name>reg_gpio_3_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO3.</description>
+								<enumeratedValues>
+									<name>GPIO3Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_3_ie</name>
@@ -1605,6 +1617,18 @@
 								<name>reg_gpio_2_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO2.</description>
+								<enumeratedValues>
+									<name>GPIO2Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_2_ie</name>
@@ -1729,6 +1753,18 @@
 								<name>reg_gpio_5_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO5.</description>
+								<enumeratedValues>
+									<name>GPIO5Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_5_ie</name>
@@ -1846,6 +1882,18 @@
 								<name>reg_gpio_4_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO4.</description>
+								<enumeratedValues>
+									<name>GPIO4Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_4_ie</name>
@@ -1956,6 +2004,18 @@
 								<name>reg_gpio_7_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO7.</description>
+								<enumeratedValues>
+									<name>GPIO7Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_7_ie</name>
@@ -2063,6 +2123,18 @@
 								<name>reg_gpio_6_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO6.</description>
+								<enumeratedValues>
+									<name>GPIO6Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_6_ie</name>
@@ -2177,6 +2249,18 @@
 								<name>reg_gpio_9_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO9.</description>
+								<enumeratedValues>
+									<name>GPIO9Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_9_ie</name>
@@ -2280,6 +2364,18 @@
 								<name>reg_gpio_8_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO8.</description>
+								<enumeratedValues>
+									<name>GPIO8Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_8_ie</name>
@@ -2394,6 +2490,18 @@
 								<name>reg_gpio_11_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO11.</description>
+								<enumeratedValues>
+									<name>GPIO11Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_11_ie</name>
@@ -2501,6 +2609,18 @@
 								<name>reg_gpio_10_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO10.</description>
+								<enumeratedValues>
+									<name>GPIO10Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_10_ie</name>
@@ -2615,6 +2735,18 @@
 								<name>reg_gpio_13_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO13.</description>
+								<enumeratedValues>
+									<name>GPIO13Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_13_ie</name>
@@ -2722,6 +2854,18 @@
 								<name>reg_gpio_12_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO12.</description>
+								<enumeratedValues>
+									<name>GPIO12Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_12_ie</name>
@@ -2836,6 +2980,18 @@
 								<name>reg_gpio_15_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO15.</description>
+								<enumeratedValues>
+									<name>GPIO15Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_15_ie</name>
@@ -2943,6 +3099,18 @@
 								<name>reg_gpio_14_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO14.</description>
+								<enumeratedValues>
+									<name>GPIO14Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_14_ie</name>
@@ -3061,6 +3229,18 @@
 								<name>reg_gpio_17_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO17.</description>
+								<enumeratedValues>
+									<name>GPIO17Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_17_ie</name>
@@ -3164,6 +3344,18 @@
 								<name>reg_gpio_16_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO16.</description>
+								<enumeratedValues>
+									<name>GPIO16Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_16_ie</name>
@@ -3278,6 +3470,18 @@
 								<name>reg_gpio_19_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO19.</description>
+								<enumeratedValues>
+									<name>GPIO19Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_19_ie</name>
@@ -3385,6 +3589,18 @@
 								<name>reg_gpio_18_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO18.</description>
+								<enumeratedValues>
+									<name>GPIO18Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_18_ie</name>
@@ -3499,6 +3715,18 @@
 								<name>reg_gpio_21_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO21.</description>
+								<enumeratedValues>
+									<name>GPIO21Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_21_ie</name>
@@ -3606,6 +3834,18 @@
 								<name>reg_gpio_20_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO20.</description>
+								<enumeratedValues>
+									<name>GPIO20Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_20_ie</name>
@@ -3674,6 +3914,18 @@
 								<name>reg_gpio_23_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO23.</description>
+								<enumeratedValues>
+									<name>GPIO23Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_23_ie</name>
@@ -3781,6 +4033,18 @@
 								<name>reg_gpio_22_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO22.</description>
+								<enumeratedValues>
+									<name>GPIO22Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_22_ie</name>
@@ -3849,6 +4113,18 @@
 								<name>reg_gpio_25_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO25.</description>
+								<enumeratedValues>
+									<name>GPIO25Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_25_ie</name>
@@ -3910,6 +4186,18 @@
 								<name>reg_gpio_24_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO24.</description>
+								<enumeratedValues>
+									<name>GPIO24Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_24_ie</name>
@@ -3978,6 +4266,18 @@
 								<name>reg_gpio_27_smt</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<description>Schmitt trigger enabled for GPIO27.</description>
+								<enumeratedValues>
+									<name>GPIO27Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_27_ie</name>
@@ -4039,6 +4339,18 @@
 								<name>reg_gpio_26_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO26.</description>
+								<enumeratedValues>
+									<name>GPIO26Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_26_ie</name>
@@ -4107,6 +4419,18 @@
 								<name>reg_gpio_28_smt</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<description>Schmitt trigger enabled for GPIO28.</description>
+								<enumeratedValues>
+									<name>GPIO28Schmitt</name>
+									<enumeratedValue>
+										<name>disabled</name>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>enabled</name>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_28_ie</name>
