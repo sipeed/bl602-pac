@@ -5555,9 +5555,8 @@
 					</register>
 					<register>
 						<name>GPIO_CFGCTL33</name>
-						<description>GPIO_CFGCTL33.</description>
+						<description>Reserved according to SDK.</description>
 						<addressOffset>0x18C</addressOffset>
-						<fields/>
 					</register>
 					<register>
 						<name>GPIO_CFGCTL34</name>
