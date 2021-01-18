@@ -33,13 +33,13 @@ set -x
 rm -v -rf "${src_path}/"
 
 # Generate the new code
-mkdir src
+mkdir -v "${src_path}/"
 
 # Generate the Rust code from the SVD
 svd2rust -i $svd_path --target riscv
 
 # Split the single generated lib.rs file into Rust modules
-form -i lib.rs -o src/ && rm lib.rs
+form -i lib.rs -o "${src_path}/" && rm lib.rs
 
 # Reformat the code with rustfmt
 find "${src_path}/" -name \*.rs -exec rustfmt -v {} \;
