@@ -10283,7 +10283,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x80</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -10872,7 +10872,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x64</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -11184,7 +11184,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x218</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -12129,7 +12129,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x90</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -12658,7 +12658,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x90</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -13040,7 +13040,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x100</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -13457,7 +13457,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0xB8</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -14024,7 +14024,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0xC0</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -14596,7 +14596,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0xC8</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -15045,7 +15045,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x10</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
@@ -18777,7 +18777,7 @@
 				<access>read-write</access>
 				<addressBlock>
 					<offset>0</offset>
-					<size>0x1000</size>
+					<size>0x144</size>
 					<usage>registers</usage>
 				</addressBlock>
 				<registers>
