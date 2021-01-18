@@ -18771,7 +18771,7 @@
 			<peripheral>
 				<name>AON</name>
 				<description>Always-ON periherals</description>
-				<baseAddress>0x4000F800</baseAddress>
+				<baseAddress>0x40010000</baseAddress>
 				<groupName>AON</groupName>
 				<size>32</size>
 				<access>read-write</access>
@@ -18784,7 +18784,7 @@
 					<register>
 						<name>aon</name>
 						<description>aon.</description>
-						<addressOffset>0x800</addressOffset>
+						<addressOffset>0x000</addressOffset>
 						<fields>
 							<field>
 								<name>sw_pu_ldo11_rt</name>
@@ -18816,7 +18816,7 @@
 					<register>
 						<name>aon_common</name>
 						<description>aon_common.</description>
-						<addressOffset>0x804</addressOffset>
+						<addressOffset>0x004</addressOffset>
 						<fields>
 							<field>
 								<name>ten_cip_misc_aon</name>
@@ -18893,7 +18893,7 @@
 					<register>
 						<name>aon_misc</name>
 						<description>aon_misc.</description>
-						<addressOffset>0x808</addressOffset>
+						<addressOffset>0x008</addressOffset>
 						<fields>
 							<field>
 								<name>sw_wb_en_aon</name>
@@ -18910,7 +18910,7 @@
 					<register>
 						<name>bg_sys_top</name>
 						<description>bg_sys_top.</description>
-						<addressOffset>0x810</addressOffset>
+						<addressOffset>0x010</addressOffset>
 						<fields>
 							<field>
 								<name>bg_sys_start_ctrl_aon</name>
@@ -18932,7 +18932,7 @@
 					<register>
 						<name>dcdc18_top_0</name>
 						<description>dcdc18_top_0.</description>
-						<addressOffset>0x814</addressOffset>
+						<addressOffset>0x014</addressOffset>
 						<fields>
 							<field>
 								<name>dcdc18_rdy_aon</name>
@@ -18989,7 +18989,7 @@
 					<register>
 						<name>dcdc18_top_1</name>
 						<description>dcdc18_top_1.</description>
-						<addressOffset>0x818</addressOffset>
+						<addressOffset>0x018</addressOffset>
 						<fields>
 							<field>
 								<name>dcdc18_pulldown_aon</name>
@@ -19041,7 +19041,7 @@
 					<register>
 						<name>ldo11soc_and_dctest</name>
 						<description>ldo11soc_and_dctest.</description>
-						<addressOffset>0x81C</addressOffset>
+						<addressOffset>0x01C</addressOffset>
 						<fields>
 							<field>
 								<name>pmip_dc_tp_out_en_aon</name>
@@ -19103,7 +19103,7 @@
 					<register>
 						<name>psw_irrcv</name>
 						<description>psw_irrcv.</description>
-						<addressOffset>0x820</addressOffset>
+						<addressOffset>0x020</addressOffset>
 						<fields>
 							<field>
 								<name>pu_ir_psw_aon</name>
@@ -19115,7 +19115,7 @@
 					<register>
 						<name>rf_top_aon</name>
 						<description>rf_top_aon.</description>
-						<addressOffset>0x880</addressOffset>
+						<addressOffset>0x080</addressOffset>
 						<fields>
 							<field>
 								<name>ldo15rf_bypass_aon</name>
@@ -19182,7 +19182,7 @@
 					<register>
 						<name>xtal_cfg</name>
 						<description>xtal_cfg.</description>
-						<addressOffset>0x884</addressOffset>
+						<addressOffset>0x084</addressOffset>
 						<fields>
 							<field>
 								<name>xtal_rdy_sel_aon</name>
@@ -19249,7 +19249,7 @@
 					<register>
 						<name>tsen</name>
 						<description>tsen.</description>
-						<addressOffset>0x888</addressOffset>
+						<addressOffset>0x088</addressOffset>
 						<fields>
 							<field>
 								<name>xtal_rdy_int_sel_aon</name>
@@ -19281,7 +19281,7 @@
 					<register>
 						<name>acomp0_ctrl</name>
 						<description>acomp0_ctrl.</description>
-						<addressOffset>0x900</addressOffset>
+						<addressOffset>0x100</addressOffset>
 						<fields>
 							<field>
 								<name>acomp0_muxen</name>
@@ -19328,7 +19328,7 @@
 					<register>
 						<name>acomp1_ctrl</name>
 						<description>acomp1_ctrl.</description>
-						<addressOffset>0x904</addressOffset>
+						<addressOffset>0x104</addressOffset>
 						<fields>
 							<field>
 								<name>acomp1_muxen</name>
@@ -19375,7 +19375,7 @@
 					<register>
 						<name>acomp_ctrl</name>
 						<description>acomp_ctrl.</description>
-						<addressOffset>0x908</addressOffset>
+						<addressOffset>0x108</addressOffset>
 						<fields>
 							<field>
 								<name>acomp_reserved</name>
@@ -19427,7 +19427,7 @@
 					<register>
 						<name>gpadc_reg_cmd</name>
 						<description>gpadc_reg_cmd.</description>
-						<addressOffset>0x90C</addressOffset>
+						<addressOffset>0x10C</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_sen_test_en</name>
@@ -19519,7 +19519,7 @@
 					<register>
 						<name>gpadc_reg_config1</name>
 						<description>gpadc_reg_config1.</description>
-						<addressOffset>0x910</addressOffset>
+						<addressOffset>0x110</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_v18_sel</name>
@@ -19576,7 +19576,7 @@
 					<register>
 						<name>gpadc_reg_config2</name>
 						<description>gpadc_reg_config2.</description>
-						<addressOffset>0x914</addressOffset>
+						<addressOffset>0x114</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_tsvbe_low</name>
@@ -19668,7 +19668,7 @@
 					<register>
 						<name>gpadc_reg_scn_pos1</name>
 						<description>adc converation sequence 1</description>
-						<addressOffset>0x918</addressOffset>
+						<addressOffset>0x118</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_scan_pos_5</name>
@@ -19705,7 +19705,7 @@
 					<register>
 						<name>gpadc_reg_scn_pos2</name>
 						<description>adc converation sequence 2</description>
-						<addressOffset>0x91C</addressOffset>
+						<addressOffset>0x11C</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_scan_pos_11</name>
@@ -19742,7 +19742,7 @@
 					<register>
 						<name>gpadc_reg_scn_neg1</name>
 						<description>adc converation sequence 3</description>
-						<addressOffset>0x920</addressOffset>
+						<addressOffset>0x120</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_scan_neg_5</name>
@@ -19779,7 +19779,7 @@
 					<register>
 						<name>gpadc_reg_scn_neg2</name>
 						<description>adc converation sequence 4</description>
-						<addressOffset>0x924</addressOffset>
+						<addressOffset>0x124</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_scan_neg_11</name>
@@ -19816,7 +19816,7 @@
 					<register>
 						<name>gpadc_reg_status</name>
 						<description>gpadc_reg_status.</description>
-						<addressOffset>0x928</addressOffset>
+						<addressOffset>0x128</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_reserved</name>
@@ -19833,7 +19833,7 @@
 					<register>
 						<name>gpadc_reg_isr</name>
 						<description>gpadc_reg_isr.</description>
-						<addressOffset>0x92C</addressOffset>
+						<addressOffset>0x12C</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_pos_satur_mask</name>
@@ -19870,7 +19870,7 @@
 					<register>
 						<name>gpadc_reg_result</name>
 						<description>gpadc_reg_result.</description>
-						<addressOffset>0x930</addressOffset>
+						<addressOffset>0x130</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_data_out</name>
@@ -19882,7 +19882,7 @@
 					<register>
 						<name>gpadc_reg_raw_result</name>
 						<description>gpadc_reg_raw_result.</description>
-						<addressOffset>0x934</addressOffset>
+						<addressOffset>0x134</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_raw_data</name>
@@ -19894,7 +19894,7 @@
 					<register>
 						<name>gpadc_reg_define</name>
 						<description>gpadc_reg_define.</description>
-						<addressOffset>0x938</addressOffset>
+						<addressOffset>0x138</addressOffset>
 						<fields>
 							<field>
 								<name>gpadc_os_cal_data</name>
@@ -19906,7 +19906,7 @@
 					<register>
 						<name>hbncore_resv0</name>
 						<description>hbncore_resv0.</description>
-						<addressOffset>0x93C</addressOffset>
+						<addressOffset>0x13C</addressOffset>
 						<fields>
 							<field>
 								<name>hbncore_resv0_data</name>
@@ -19918,7 +19918,7 @@
 					<register>
 						<name>hbncore_resv1</name>
 						<description>hbncore_resv1.</description>
-						<addressOffset>0x940</addressOffset>
+						<addressOffset>0x140</addressOffset>
 						<fields>
 							<field>
 								<name>hbncore_resv1_data</name>
