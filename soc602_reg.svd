@@ -5963,7 +5963,7 @@
 					</register>
 					<register>
 						<name>GPIO_INT_MASK1</name>
-						<description>Interrupt masking register. The SDK limits the GPIO pins to &#60; 32 although the docs do not mention more than 28 GPIO pins.</description>
+						<description>Interrupt masking register. The SDK limits the GPIO pins to &lt; 32 although the docs do not mention more than 28 GPIO pins.</description>
 						<addressOffset>0x1A0</addressOffset>
 						<fields>
 							<field>
@@ -6463,7 +6463,7 @@
 					</register>
 					<register>
 						<name>GPIO_INT_STAT1</name>
-						<description>Interrupt status register. The SDK limits the GPIO pins to &#60; 32 although the docs do not mention more than 28 GPIO pins.</description>
+						<description>Interrupt status register. The SDK limits the GPIO pins to &lt; 32 although the docs do not mention more than 28 GPIO pins.</description>
 						<addressOffset>0x1A8</addressOffset>
 						<access>read-only</access>
 						<fields>
