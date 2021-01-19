@@ -32,7 +32,7 @@ impl core::convert::From<crate::W<CKS_CONFIG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `cr_cks_byte_swap` reader - "]
+#[doc = "Field `cr_cks_byte_swap` reader - Endianness (0: little endian, 1: big endian)"]
 pub struct CR_CKS_BYTE_SWAP_R(crate::FieldReader<bool, bool>);
 impl CR_CKS_BYTE_SWAP_R {
     pub(crate) fn new(bits: bool) -> Self {
@@ -46,7 +46,7 @@ impl core::ops::Deref for CR_CKS_BYTE_SWAP_R {
         &self.0
     }
 }
-#[doc = "Field `cr_cks_byte_swap` writer - "]
+#[doc = "Field `cr_cks_byte_swap` writer - Endianness (0: little endian, 1: big endian)"]
 pub struct CR_CKS_BYTE_SWAP_W<'a> {
     w: &'a mut W,
 }
@@ -105,7 +105,7 @@ impl<'a> CR_CKS_CLR_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 1"]
+    #[doc = "Bit 1 - Endianness (0: little endian, 1: big endian)"]
     #[inline(always)]
     pub fn cr_cks_byte_swap(&self) -> CR_CKS_BYTE_SWAP_R {
         CR_CKS_BYTE_SWAP_R::new(((self.bits >> 1) & 0x01) != 0)
@@ -117,7 +117,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 1"]
+    #[doc = "Bit 1 - Endianness (0: little endian, 1: big endian)"]
     #[inline(always)]
     pub fn cr_cks_byte_swap(&mut self) -> CR_CKS_BYTE_SWAP_W {
         CR_CKS_BYTE_SWAP_W { w: self }

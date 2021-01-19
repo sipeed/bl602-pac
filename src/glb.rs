@@ -1,13 +1,13 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - clk_cfg0."]
+    #[doc = "0x00 - Clock configuration for processor and bus"]
     pub clk_cfg0: crate::Reg<clk_cfg0::CLK_CFG0_SPEC>,
     #[doc = "0x04 - clk_cfg1."]
     pub clk_cfg1: crate::Reg<clk_cfg1::CLK_CFG1_SPEC>,
-    #[doc = "0x08 - clk_cfg2."]
+    #[doc = "0x08 - Clock configuration for UART and Flash"]
     pub clk_cfg2: crate::Reg<clk_cfg2::CLK_CFG2_SPEC>,
-    #[doc = "0x0c - clk_cfg3."]
+    #[doc = "0x0c - Clock configuration for I2C and SPI"]
     pub clk_cfg3: crate::Reg<clk_cfg3::CLK_CFG3_SPEC>,
     #[doc = "0x10 - swrst_cfg0."]
     pub swrst_cfg0: crate::Reg<swrst_cfg0::SWRST_CFG0_SPEC>,
@@ -60,7 +60,7 @@ pub struct RegisterBlock {
     #[doc = "0x90 - CPU_CLK_CFG."]
     pub cpu_clk_cfg: crate::Reg<cpu_clk_cfg::CPU_CLK_CFG_SPEC>,
     _reserved28: [u8; 16usize],
-    #[doc = "0xa4 - GPADC_32M_SRC_CTRL."]
+    #[doc = "0xa4 - Clock configuration for GPADC"]
     pub gpadc_32m_src_ctrl: crate::Reg<gpadc_32m_src_ctrl::GPADC_32M_SRC_CTRL_SPEC>,
     #[doc = "0xa8 - DIG32K_WAKEUP_CTRL."]
     pub dig32k_wakeup_ctrl: crate::Reg<dig32k_wakeup_ctrl::DIG32K_WAKEUP_CTRL_SPEC>,
@@ -81,35 +81,35 @@ pub struct RegisterBlock {
     #[doc = "0xe0 - debug."]
     pub debug: crate::Reg<debug::DEBUG_SPEC>,
     _reserved37: [u8; 28usize],
-    #[doc = "0x100 - GPIO_CFGCTL0."]
+    #[doc = "0x100 - GPIO0, GPIO1 configuration"]
     pub gpio_cfgctl0: crate::Reg<gpio_cfgctl0::GPIO_CFGCTL0_SPEC>,
-    #[doc = "0x104 - GPIO_CFGCTL1."]
+    #[doc = "0x104 - GPIO2, GPIO3 configuration"]
     pub gpio_cfgctl1: crate::Reg<gpio_cfgctl1::GPIO_CFGCTL1_SPEC>,
-    #[doc = "0x108 - GPIO_CFGCTL2."]
+    #[doc = "0x108 - GPIO4, GPIO5 configuration"]
     pub gpio_cfgctl2: crate::Reg<gpio_cfgctl2::GPIO_CFGCTL2_SPEC>,
-    #[doc = "0x10c - GPIO_CFGCTL3."]
+    #[doc = "0x10c - GPIO6, GPIO7 configuration"]
     pub gpio_cfgctl3: crate::Reg<gpio_cfgctl3::GPIO_CFGCTL3_SPEC>,
-    #[doc = "0x110 - GPIO_CFGCTL4."]
+    #[doc = "0x110 - GPIO8, GPIO9 configuration"]
     pub gpio_cfgctl4: crate::Reg<gpio_cfgctl4::GPIO_CFGCTL4_SPEC>,
-    #[doc = "0x114 - GPIO_CFGCTL5."]
+    #[doc = "0x114 - GPIO10, GPIO11 configuration"]
     pub gpio_cfgctl5: crate::Reg<gpio_cfgctl5::GPIO_CFGCTL5_SPEC>,
-    #[doc = "0x118 - GPIO_CFGCTL6."]
+    #[doc = "0x118 - GPIO12, GPIO13 configuration"]
     pub gpio_cfgctl6: crate::Reg<gpio_cfgctl6::GPIO_CFGCTL6_SPEC>,
-    #[doc = "0x11c - GPIO_CFGCTL7."]
+    #[doc = "0x11c - GPIO14, GPIO15 configuration"]
     pub gpio_cfgctl7: crate::Reg<gpio_cfgctl7::GPIO_CFGCTL7_SPEC>,
-    #[doc = "0x120 - GPIO_CFGCTL8."]
+    #[doc = "0x120 - GPIO16, GPIO17 configuration"]
     pub gpio_cfgctl8: crate::Reg<gpio_cfgctl8::GPIO_CFGCTL8_SPEC>,
-    #[doc = "0x124 - GPIO_CFGCTL9."]
+    #[doc = "0x124 - GPIO18, GPIO19 configuration"]
     pub gpio_cfgctl9: crate::Reg<gpio_cfgctl9::GPIO_CFGCTL9_SPEC>,
-    #[doc = "0x128 - GPIO_CFGCTL10."]
+    #[doc = "0x128 - GPIO20, GPIO21 configuration"]
     pub gpio_cfgctl10: crate::Reg<gpio_cfgctl10::GPIO_CFGCTL10_SPEC>,
-    #[doc = "0x12c - GPIO_CFGCTL11."]
+    #[doc = "0x12c - GPIO22, GPIO23 configuration"]
     pub gpio_cfgctl11: crate::Reg<gpio_cfgctl11::GPIO_CFGCTL11_SPEC>,
-    #[doc = "0x130 - GPIO_CFGCTL12."]
+    #[doc = "0x130 - GPIO24, GPIO25 configuration"]
     pub gpio_cfgctl12: crate::Reg<gpio_cfgctl12::GPIO_CFGCTL12_SPEC>,
-    #[doc = "0x134 - GPIO_CFGCTL13."]
+    #[doc = "0x134 - GPIO26, GPIO27 configuration"]
     pub gpio_cfgctl13: crate::Reg<gpio_cfgctl13::GPIO_CFGCTL13_SPEC>,
-    #[doc = "0x138 - GPIO_CFGCTL14."]
+    #[doc = "0x138 - GPIO28 configuration"]
     pub gpio_cfgctl14: crate::Reg<gpio_cfgctl14::GPIO_CFGCTL14_SPEC>,
     _reserved52: [u8; 68usize],
     #[doc = "0x180 - GPIO_CFGCTL30."]
@@ -164,7 +164,7 @@ pub struct RegisterBlock {
 }
 #[doc = "clk_cfg0 register accessor: an alias for `Reg<CLK_CFG0_SPEC>`"]
 pub type CLK_CFG0 = crate::Reg<clk_cfg0::CLK_CFG0_SPEC>;
-#[doc = "clk_cfg0."]
+#[doc = "Clock configuration for processor and bus"]
 pub mod clk_cfg0;
 #[doc = "clk_cfg1 register accessor: an alias for `Reg<CLK_CFG1_SPEC>`"]
 pub type CLK_CFG1 = crate::Reg<clk_cfg1::CLK_CFG1_SPEC>;
@@ -172,11 +172,11 @@ pub type CLK_CFG1 = crate::Reg<clk_cfg1::CLK_CFG1_SPEC>;
 pub mod clk_cfg1;
 #[doc = "clk_cfg2 register accessor: an alias for `Reg<CLK_CFG2_SPEC>`"]
 pub type CLK_CFG2 = crate::Reg<clk_cfg2::CLK_CFG2_SPEC>;
-#[doc = "clk_cfg2."]
+#[doc = "Clock configuration for UART and Flash"]
 pub mod clk_cfg2;
 #[doc = "clk_cfg3 register accessor: an alias for `Reg<CLK_CFG3_SPEC>`"]
 pub type CLK_CFG3 = crate::Reg<clk_cfg3::CLK_CFG3_SPEC>;
-#[doc = "clk_cfg3."]
+#[doc = "Clock configuration for I2C and SPI"]
 pub mod clk_cfg3;
 #[doc = "swrst_cfg0 register accessor: an alias for `Reg<SWRST_CFG0_SPEC>`"]
 pub type SWRST_CFG0 = crate::Reg<swrst_cfg0::SWRST_CFG0_SPEC>;
@@ -276,7 +276,7 @@ pub type CPU_CLK_CFG = crate::Reg<cpu_clk_cfg::CPU_CLK_CFG_SPEC>;
 pub mod cpu_clk_cfg;
 #[doc = "GPADC_32M_SRC_CTRL register accessor: an alias for `Reg<GPADC_32M_SRC_CTRL_SPEC>`"]
 pub type GPADC_32M_SRC_CTRL = crate::Reg<gpadc_32m_src_ctrl::GPADC_32M_SRC_CTRL_SPEC>;
-#[doc = "GPADC_32M_SRC_CTRL."]
+#[doc = "Clock configuration for GPADC"]
 pub mod gpadc_32m_src_ctrl;
 #[doc = "DIG32K_WAKEUP_CTRL register accessor: an alias for `Reg<DIG32K_WAKEUP_CTRL_SPEC>`"]
 pub type DIG32K_WAKEUP_CTRL = crate::Reg<dig32k_wakeup_ctrl::DIG32K_WAKEUP_CTRL_SPEC>;
@@ -312,63 +312,63 @@ pub type DEBUG = crate::Reg<debug::DEBUG_SPEC>;
 pub mod debug;
 #[doc = "GPIO_CFGCTL0 register accessor: an alias for `Reg<GPIO_CFGCTL0_SPEC>`"]
 pub type GPIO_CFGCTL0 = crate::Reg<gpio_cfgctl0::GPIO_CFGCTL0_SPEC>;
-#[doc = "GPIO_CFGCTL0."]
+#[doc = "GPIO0, GPIO1 configuration"]
 pub mod gpio_cfgctl0;
 #[doc = "GPIO_CFGCTL1 register accessor: an alias for `Reg<GPIO_CFGCTL1_SPEC>`"]
 pub type GPIO_CFGCTL1 = crate::Reg<gpio_cfgctl1::GPIO_CFGCTL1_SPEC>;
-#[doc = "GPIO_CFGCTL1."]
+#[doc = "GPIO2, GPIO3 configuration"]
 pub mod gpio_cfgctl1;
 #[doc = "GPIO_CFGCTL2 register accessor: an alias for `Reg<GPIO_CFGCTL2_SPEC>`"]
 pub type GPIO_CFGCTL2 = crate::Reg<gpio_cfgctl2::GPIO_CFGCTL2_SPEC>;
-#[doc = "GPIO_CFGCTL2."]
+#[doc = "GPIO4, GPIO5 configuration"]
 pub mod gpio_cfgctl2;
 #[doc = "GPIO_CFGCTL3 register accessor: an alias for `Reg<GPIO_CFGCTL3_SPEC>`"]
 pub type GPIO_CFGCTL3 = crate::Reg<gpio_cfgctl3::GPIO_CFGCTL3_SPEC>;
-#[doc = "GPIO_CFGCTL3."]
+#[doc = "GPIO6, GPIO7 configuration"]
 pub mod gpio_cfgctl3;
 #[doc = "GPIO_CFGCTL4 register accessor: an alias for `Reg<GPIO_CFGCTL4_SPEC>`"]
 pub type GPIO_CFGCTL4 = crate::Reg<gpio_cfgctl4::GPIO_CFGCTL4_SPEC>;
-#[doc = "GPIO_CFGCTL4."]
+#[doc = "GPIO8, GPIO9 configuration"]
 pub mod gpio_cfgctl4;
 #[doc = "GPIO_CFGCTL5 register accessor: an alias for `Reg<GPIO_CFGCTL5_SPEC>`"]
 pub type GPIO_CFGCTL5 = crate::Reg<gpio_cfgctl5::GPIO_CFGCTL5_SPEC>;
-#[doc = "GPIO_CFGCTL5."]
+#[doc = "GPIO10, GPIO11 configuration"]
 pub mod gpio_cfgctl5;
 #[doc = "GPIO_CFGCTL6 register accessor: an alias for `Reg<GPIO_CFGCTL6_SPEC>`"]
 pub type GPIO_CFGCTL6 = crate::Reg<gpio_cfgctl6::GPIO_CFGCTL6_SPEC>;
-#[doc = "GPIO_CFGCTL6."]
+#[doc = "GPIO12, GPIO13 configuration"]
 pub mod gpio_cfgctl6;
 #[doc = "GPIO_CFGCTL7 register accessor: an alias for `Reg<GPIO_CFGCTL7_SPEC>`"]
 pub type GPIO_CFGCTL7 = crate::Reg<gpio_cfgctl7::GPIO_CFGCTL7_SPEC>;
-#[doc = "GPIO_CFGCTL7."]
+#[doc = "GPIO14, GPIO15 configuration"]
 pub mod gpio_cfgctl7;
 #[doc = "GPIO_CFGCTL8 register accessor: an alias for `Reg<GPIO_CFGCTL8_SPEC>`"]
 pub type GPIO_CFGCTL8 = crate::Reg<gpio_cfgctl8::GPIO_CFGCTL8_SPEC>;
-#[doc = "GPIO_CFGCTL8."]
+#[doc = "GPIO16, GPIO17 configuration"]
 pub mod gpio_cfgctl8;
 #[doc = "GPIO_CFGCTL9 register accessor: an alias for `Reg<GPIO_CFGCTL9_SPEC>`"]
 pub type GPIO_CFGCTL9 = crate::Reg<gpio_cfgctl9::GPIO_CFGCTL9_SPEC>;
-#[doc = "GPIO_CFGCTL9."]
+#[doc = "GPIO18, GPIO19 configuration"]
 pub mod gpio_cfgctl9;
 #[doc = "GPIO_CFGCTL10 register accessor: an alias for `Reg<GPIO_CFGCTL10_SPEC>`"]
 pub type GPIO_CFGCTL10 = crate::Reg<gpio_cfgctl10::GPIO_CFGCTL10_SPEC>;
-#[doc = "GPIO_CFGCTL10."]
+#[doc = "GPIO20, GPIO21 configuration"]
 pub mod gpio_cfgctl10;
 #[doc = "GPIO_CFGCTL11 register accessor: an alias for `Reg<GPIO_CFGCTL11_SPEC>`"]
 pub type GPIO_CFGCTL11 = crate::Reg<gpio_cfgctl11::GPIO_CFGCTL11_SPEC>;
-#[doc = "GPIO_CFGCTL11."]
+#[doc = "GPIO22, GPIO23 configuration"]
 pub mod gpio_cfgctl11;
 #[doc = "GPIO_CFGCTL12 register accessor: an alias for `Reg<GPIO_CFGCTL12_SPEC>`"]
 pub type GPIO_CFGCTL12 = crate::Reg<gpio_cfgctl12::GPIO_CFGCTL12_SPEC>;
-#[doc = "GPIO_CFGCTL12."]
+#[doc = "GPIO24, GPIO25 configuration"]
 pub mod gpio_cfgctl12;
 #[doc = "GPIO_CFGCTL13 register accessor: an alias for `Reg<GPIO_CFGCTL13_SPEC>`"]
 pub type GPIO_CFGCTL13 = crate::Reg<gpio_cfgctl13::GPIO_CFGCTL13_SPEC>;
-#[doc = "GPIO_CFGCTL13."]
+#[doc = "GPIO26, GPIO27 configuration"]
 pub mod gpio_cfgctl13;
 #[doc = "GPIO_CFGCTL14 register accessor: an alias for `Reg<GPIO_CFGCTL14_SPEC>`"]
 pub type GPIO_CFGCTL14 = crate::Reg<gpio_cfgctl14::GPIO_CFGCTL14_SPEC>;
-#[doc = "GPIO_CFGCTL14."]
+#[doc = "GPIO28 configuration"]
 pub mod gpio_cfgctl14;
 #[doc = "GPIO_CFGCTL30 register accessor: an alias for `Reg<GPIO_CFGCTL30_SPEC>`"]
 pub type GPIO_CFGCTL30 = crate::Reg<gpio_cfgctl30::GPIO_CFGCTL30_SPEC>;

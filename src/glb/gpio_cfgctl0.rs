@@ -625,7 +625,7 @@ impl W {
         self
     }
 }
-#[doc = "GPIO_CFGCTL0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_cfgctl0](index.html) module"]
+#[doc = "GPIO0, GPIO1 configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_cfgctl0](index.html) module"]
 pub struct GPIO_CFGCTL0_SPEC;
 impl crate::RegisterSpec for GPIO_CFGCTL0_SPEC {
     type Ux = u32;
