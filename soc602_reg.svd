@@ -6975,7 +6975,7 @@
 								<enumeratedValues>
 									<name>GPIO0InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -6992,7 +6992,7 @@
 								<enumeratedValues>
 									<name>GPIO1InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7009,7 +7009,7 @@
 								<enumeratedValues>
 									<name>GPIO2InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7026,7 +7026,7 @@
 								<enumeratedValues>
 									<name>GPIO3InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7043,7 +7043,7 @@
 								<enumeratedValues>
 									<name>GPIO4InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7060,7 +7060,7 @@
 								<enumeratedValues>
 									<name>GPIO5InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7077,7 +7077,7 @@
 								<enumeratedValues>
 									<name>GPIO6InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7094,7 +7094,7 @@
 								<enumeratedValues>
 									<name>GPIO7InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7111,7 +7111,7 @@
 								<enumeratedValues>
 									<name>GPIO8InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7128,7 +7128,7 @@
 								<enumeratedValues>
 									<name>GPIO9InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7145,7 +7145,7 @@
 								<enumeratedValues>
 									<name>GPIO10InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7162,7 +7162,7 @@
 								<enumeratedValues>
 									<name>GPIO11InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7179,7 +7179,7 @@
 								<enumeratedValues>
 									<name>GPIO12InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7196,7 +7196,7 @@
 								<enumeratedValues>
 									<name>GPIO13InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7213,7 +7213,7 @@
 								<enumeratedValues>
 									<name>GPIO14InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7230,7 +7230,7 @@
 								<enumeratedValues>
 									<name>GPIO15InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7247,7 +7247,7 @@
 								<enumeratedValues>
 									<name>GPIO16InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7264,7 +7264,7 @@
 								<enumeratedValues>
 									<name>GPIO17InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7281,7 +7281,7 @@
 								<enumeratedValues>
 									<name>GPIO18InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7298,7 +7298,7 @@
 								<enumeratedValues>
 									<name>GPIO19InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7315,7 +7315,7 @@
 								<enumeratedValues>
 									<name>GPIO20InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7332,7 +7332,7 @@
 								<enumeratedValues>
 									<name>GPIO21InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7349,7 +7349,7 @@
 								<enumeratedValues>
 									<name>GPIO22InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7366,7 +7366,7 @@
 								<enumeratedValues>
 									<name>GPIO23InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7383,7 +7383,7 @@
 								<enumeratedValues>
 									<name>GPIO24InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7400,7 +7400,7 @@
 								<enumeratedValues>
 									<name>GPIO25InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7417,7 +7417,7 @@
 								<enumeratedValues>
 									<name>GPIO26InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7434,7 +7434,7 @@
 								<enumeratedValues>
 									<name>GPIO27InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
@@ -7451,7 +7451,7 @@
 								<enumeratedValues>
 									<name>GPIO28InterruptClear</name>
 									<enumeratedValue>
-										<name>no-clear</name>
+										<name>no_clear</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
