@@ -1075,6 +1075,8 @@
 						<name>GPIO_CFGCTL0</name>
 						<description>GPIO0, GPIO1 configuration</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x11031103</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>real_gpio_1_func_sel</name>
@@ -1372,6 +1374,8 @@
 						<name>GPIO_CFGCTL1</name>
 						<description>GPIO2, GPIO3 configuration</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x11031103</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>real_gpio_3_func_sel</name>
@@ -1665,6 +1669,8 @@
 						<name>GPIO_CFGCTL2</name>
 						<description>GPIO4, GPIO5 configuration</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x11031103</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>real_gpio_5_func_sel</name>
@@ -1954,6 +1960,8 @@
 						<name>GPIO_CFGCTL3</name>
 						<description>GPIO6, GPIO7 configuration</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0x0b030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_7_func_sel</name>
@@ -2219,6 +2227,8 @@
 						<name>GPIO_CFGCTL4</name>
 						<description>GPIO8, GPIO9 configuration</description>
 						<addressOffset>0x110</addressOffset>
+						<resetValue>0x0b030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_9_func_sel</name>
@@ -2484,6 +2494,8 @@
 						<name>GPIO_CFGCTL5</name>
 						<description>GPIO10, GPIO11 configuration</description>
 						<addressOffset>0x114</addressOffset>
+						<resetValue>0x0e030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_11_func_sel</name>
@@ -2753,6 +2765,8 @@
 						<name>GPIO_CFGCTL6</name>
 						<description>GPIO12, GPIO13 configuration</description>
 						<addressOffset>0x118</addressOffset>
+						<resetValue>0x0b030e03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_13_func_sel</name>
@@ -3022,6 +3036,8 @@
 						<name>GPIO_CFGCTL7</name>
 						<description>GPIO14, GPIO15 configuration</description>
 						<addressOffset>0x11C</addressOffset>
+						<resetValue>0x0b030e03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_15_func_sel</name>
@@ -3291,6 +3307,8 @@
 						<name>GPIO_CFGCTL8</name>
 						<description>GPIO16, GPIO17 configuration</description>
 						<addressOffset>0x120</addressOffset>
+						<resetValue>0x0e030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_17_func_sel</name>
@@ -3560,6 +3578,8 @@
 						<name>GPIO_CFGCTL9</name>
 						<description>GPIO18, GPIO19 configuration</description>
 						<addressOffset>0x124</addressOffset>
+						<resetValue>0x0b030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_19_func_sel</name>
@@ -3829,6 +3849,8 @@
 						<name>GPIO_CFGCTL10</name>
 						<description>GPIO20, GPIO21 configuration</description>
 						<addressOffset>0x128</addressOffset>
+						<resetValue>0x0b030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_21_func_sel</name>
@@ -4098,6 +4120,8 @@
 						<name>GPIO_CFGCTL11</name>
 						<description>GPIO22, GPIO23 configuration</description>
 						<addressOffset>0x12C</addressOffset>
+						<resetValue>0x00030b03</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_23_pd</name>
@@ -4321,6 +4345,8 @@
 						<name>GPIO_CFGCTL12</name>
 						<description>GPIO24, GPIO25 configuration</description>
 						<addressOffset>0x130</addressOffset>
+						<resetValue>0x00030023</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_25_pd</name>
@@ -4498,6 +4524,8 @@
 						<name>GPIO_CFGCTL13</name>
 						<description>GPIO26, GPIO27 configuration</description>
 						<addressOffset>0x134</addressOffset>
+						<resetValue>0x00030003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_27_pd</name>
@@ -4675,6 +4703,8 @@
 						<name>GPIO_CFGCTL14</name>
 						<description>GPIO28 configuration</description>
 						<addressOffset>0x138</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_28_pd</name>
