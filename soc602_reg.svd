@@ -4768,6 +4768,8 @@
 						<description>Input register for all GPIO pins. Input Enabled bit must be set in configuration register to work.</description>
 						<addressOffset>0x180</addressOffset>
 						<access>read-only</access>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_22_i</name>
@@ -5159,6 +5161,8 @@
 						<name>GPIO_CFGCTL32</name>
 						<description>Output register for all GPIO pins. Output Enabled bit must be set in Output Enable register to work.</description>
 						<addressOffset>0x188</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_22_o</name>
@@ -5562,6 +5566,8 @@
 						<name>GPIO_CFGCTL34</name>
 						<description>Output enable register for GPIO.</description>
 						<addressOffset>0x190</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_22_oe</name>
@@ -5965,6 +5971,8 @@
 						<name>GPIO_INT_MASK1</name>
 						<description>Interrupt masking register. The SDK limits the GPIO pins to &lt; 32 although the docs do not mention more than 28 GPIO pins.</description>
 						<addressOffset>0x1A0</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_0_mask</name>
@@ -6466,6 +6474,8 @@
 						<description>Interrupt status register. The SDK limits the GPIO pins to &lt; 32 although the docs do not mention more than 28 GPIO pins.</description>
 						<addressOffset>0x1A8</addressOffset>
 						<access>read-only</access>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_0_interrupt_status</name>
@@ -6966,6 +6976,8 @@
 						<name>GPIO_INT_CLR1</name>
 						<description>Interrupt clearing register.</description>
 						<addressOffset>0x1B0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_0_interrupt_clear</name>
@@ -7466,6 +7478,8 @@
 						<name>GPIO_INT_MODE_SET1</name>
 						<description>GPIO interrupt trigger and control register for GPIO0-GPIO9.</description>
 						<addressOffset>0x1C0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_0_interrupt_trigger_mode</name>
@@ -7893,6 +7907,8 @@
 						<name>GPIO_INT_MODE_SET2</name>
 						<description>GPIO interrupt trigger and control register for GPIO10-GPIO19.</description>
 						<addressOffset>0x1C4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_10_interrupt_trigger_mode</name>
@@ -8320,6 +8336,8 @@
 						<name>GPIO_INT_MODE_SET3</name>
 						<description>GPIO interrupt trigger and control register for GPIO20-GPIO29.</description>
 						<addressOffset>0x1C8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_gpio_20_interrupt_trigger_mode</name>
