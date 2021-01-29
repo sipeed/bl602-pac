@@ -13465,16 +13465,20 @@
 						<name>pwm_int_config</name>
 						<description>pwm_int_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_clear</name>
 								<lsb>8</lsb>
 								<msb>13</msb>
+								<access>write-only</access>
 							</field>
 							<field>
 								<name>pwm_interrupt_sts</name>
 								<lsb>0</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13482,6 +13486,8 @@
 						<name>pwm0_clkdiv</name>
 						<description>pwm0_clkdiv.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -13494,6 +13500,8 @@
 						<name>pwm0_thre1</name>
 						<description>pwm0_thre1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -13506,6 +13514,8 @@
 						<name>pwm0_thre2</name>
 						<description>pwm0_thre2.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -13518,6 +13528,8 @@
 						<name>pwm0_period</name>
 						<description>pwm0_period.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -13530,11 +13542,14 @@
 						<name>pwm0_config</name>
 						<description>pwm0_config.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -13572,6 +13587,8 @@
 						<name>pwm0_interrupt</name>
 						<description>pwm0_interrupt.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -13589,6 +13606,8 @@
 						<name>pwm1_clkdiv</name>
 						<description>pwm1_clkdiv.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -13601,6 +13620,8 @@
 						<name>pwm1_thre1</name>
 						<description>pwm1_thre1.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -13613,6 +13634,8 @@
 						<name>pwm1_thre2</name>
 						<description>pwm1_thre2.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -13625,6 +13648,8 @@
 						<name>pwm1_period</name>
 						<description>pwm1_period.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -13637,11 +13662,14 @@
 						<name>pwm1_config</name>
 						<description>pwm1_config.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -13679,6 +13707,8 @@
 						<name>pwm1_interrupt</name>
 						<description>pwm1_interrupt.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -13696,6 +13726,8 @@
 						<name>pwm2_clkdiv</name>
 						<description>pwm2_clkdiv.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -13708,6 +13740,8 @@
 						<name>pwm2_thre1</name>
 						<description>pwm2_thre1.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -13720,6 +13754,8 @@
 						<name>pwm2_thre2</name>
 						<description>pwm2_thre2.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -13732,6 +13768,8 @@
 						<name>pwm2_period</name>
 						<description>pwm2_period.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -13744,11 +13782,14 @@
 						<name>pwm2_config</name>
 						<description>pwm2_config.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -13786,6 +13827,8 @@
 						<name>pwm2_interrupt</name>
 						<description>pwm2_interrupt.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -13803,6 +13846,8 @@
 						<name>pwm3_clkdiv</name>
 						<description>pwm3_clkdiv.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -13815,6 +13860,8 @@
 						<name>pwm3_thre1</name>
 						<description>pwm3_thre1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -13827,6 +13874,8 @@
 						<name>pwm3_thre2</name>
 						<description>pwm3_thre2.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -13839,6 +13888,8 @@
 						<name>pwm3_period</name>
 						<description>pwm3_period.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -13851,11 +13902,14 @@
 						<name>pwm3_config</name>
 						<description>pwm3_config.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -13893,6 +13947,8 @@
 						<name>pwm3_interrupt</name>
 						<description>pwm3_interrupt.</description>
 						<addressOffset>0x94</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -13910,6 +13966,8 @@
 						<name>pwm4_clkdiv</name>
 						<description>pwm4_clkdiv.</description>
 						<addressOffset>0xA0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -13922,6 +13980,8 @@
 						<name>pwm4_thre1</name>
 						<description>pwm4_thre1.</description>
 						<addressOffset>0xA4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -13934,6 +13994,8 @@
 						<name>pwm4_thre2</name>
 						<description>pwm4_thre2.</description>
 						<addressOffset>0xA8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -13946,6 +14008,8 @@
 						<name>pwm4_period</name>
 						<description>pwm4_period.</description>
 						<addressOffset>0xAC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -13958,11 +14022,14 @@
 						<name>pwm4_config</name>
 						<description>pwm4_config.</description>
 						<addressOffset>0xB0</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -14000,6 +14067,8 @@
 						<name>pwm4_interrupt</name>
 						<description>pwm4_interrupt.</description>
 						<addressOffset>0xB4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
