@@ -10291,6 +10291,8 @@
 						<name>ef_cfg_0</name>
 						<description>ef_cfg_0.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_dbg_mode</name>
@@ -10398,6 +10400,8 @@
 						<name>ef_dbg_pwd_low</name>
 						<description>ef_dbg_pwd_low.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_dbg_pwd_low</name>
@@ -10410,6 +10414,8 @@
 						<name>ef_dbg_pwd_high</name>
 						<description>ef_dbg_pwd_high.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_dbg_pwd_high</name>
@@ -10422,6 +10428,8 @@
 						<name>ef_ana_trim_0</name>
 						<description>ef_ana_trim_0.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_ana_trim_0</name>
@@ -10434,6 +10442,8 @@
 						<name>ef_sw_usage_0</name>
 						<description>ef_sw_usage_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_sw_usage_0</name>
@@ -10446,6 +10456,8 @@
 						<name>ef_wifi_mac_low</name>
 						<description>ef_wifi_mac_low.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_wifi_mac_low</name>
@@ -10458,6 +10470,8 @@
 						<name>ef_wifi_mac_high</name>
 						<description>ef_wifi_mac_high.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_wifi_mac_high</name>
@@ -10470,6 +10484,8 @@
 						<name>ef_key_slot_0_w0</name>
 						<description>ef_key_slot_0_w0.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w0</name>
@@ -10482,6 +10498,8 @@
 						<name>ef_key_slot_0_w1</name>
 						<description>ef_key_slot_0_w1.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w1</name>
@@ -10494,6 +10512,8 @@
 						<name>ef_key_slot_0_w2</name>
 						<description>ef_key_slot_0_w2.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w2</name>
@@ -10506,6 +10526,8 @@
 						<name>ef_key_slot_0_w3</name>
 						<description>ef_key_slot_0_w3.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w3</name>
@@ -10518,6 +10540,8 @@
 						<name>ef_key_slot_1_w0</name>
 						<description>ef_key_slot_1_w0.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w0</name>
@@ -10530,6 +10554,8 @@
 						<name>ef_key_slot_1_w1</name>
 						<description>ef_key_slot_1_w1.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w1</name>
@@ -10542,6 +10568,8 @@
 						<name>ef_key_slot_1_w2</name>
 						<description>ef_key_slot_1_w2.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w2</name>
@@ -10554,6 +10582,8 @@
 						<name>ef_key_slot_1_w3</name>
 						<description>ef_key_slot_1_w3.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w3</name>
@@ -10566,6 +10596,8 @@
 						<name>ef_key_slot_2_w0</name>
 						<description>ef_key_slot_2_w0.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w0</name>
@@ -10578,6 +10610,8 @@
 						<name>ef_key_slot_2_w1</name>
 						<description>ef_key_slot_2_w1.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w1</name>
@@ -10590,6 +10624,8 @@
 						<name>ef_key_slot_2_w2</name>
 						<description>ef_key_slot_2_w2.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w2</name>
@@ -10602,6 +10638,8 @@
 						<name>ef_key_slot_2_w3</name>
 						<description>ef_key_slot_2_w3.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w3</name>
@@ -10614,6 +10652,8 @@
 						<name>ef_key_slot_3_w0</name>
 						<description>ef_key_slot_3_w0.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w0</name>
@@ -10626,6 +10666,8 @@
 						<name>ef_key_slot_3_w1</name>
 						<description>ef_key_slot_3_w1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w1</name>
@@ -10638,6 +10680,8 @@
 						<name>ef_key_slot_3_w2</name>
 						<description>ef_key_slot_3_w2.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w2</name>
@@ -10650,6 +10694,8 @@
 						<name>ef_key_slot_3_w3</name>
 						<description>ef_key_slot_3_w3.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w3</name>
@@ -10662,6 +10708,8 @@
 						<name>ef_key_slot_4_w0</name>
 						<description>ef_key_slot_4_w0.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w0</name>
@@ -10674,6 +10722,8 @@
 						<name>ef_key_slot_4_w1</name>
 						<description>ef_key_slot_4_w1.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w1</name>
@@ -10686,6 +10736,8 @@
 						<name>ef_key_slot_4_w2</name>
 						<description>ef_key_slot_4_w2.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w2</name>
@@ -10698,6 +10750,8 @@
 						<name>ef_key_slot_4_w3</name>
 						<description>ef_key_slot_4_w3.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w3</name>
@@ -10710,6 +10764,8 @@
 						<name>ef_key_slot_5_w0</name>
 						<description>ef_key_slot_5_w0.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w0</name>
@@ -10722,6 +10778,8 @@
 						<name>ef_key_slot_5_w1</name>
 						<description>ef_key_slot_5_w1.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w1</name>
@@ -10734,6 +10792,8 @@
 						<name>ef_key_slot_5_w2</name>
 						<description>ef_key_slot_5_w2.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w2</name>
@@ -10746,6 +10806,8 @@
 						<name>ef_key_slot_5_w3</name>
 						<description>ef_key_slot_5_w3.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w3</name>
@@ -10758,6 +10820,8 @@
 						<name>ef_data_0_lock</name>
 						<description>ef_data_0_lock.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rd_lock_key_slot_5</name>
