@@ -11804,6 +11804,8 @@
 						<name>cci_cfg</name>
 						<description>cci_cfg.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000221</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_mcci_clk_inv</name>
@@ -11856,6 +11858,8 @@
 						<name>cci_addr</name>
 						<description>cci_addr.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>apb_cci_addr</name>
@@ -11868,6 +11872,8 @@
 						<name>cci_wdata</name>
 						<description>cci_wdata.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>apb_cci_wdata</name>
@@ -11880,11 +11886,14 @@
 						<name>cci_rdata</name>
 						<description>cci_rdata.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>apb_cci_rdata</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -11892,21 +11901,26 @@
 						<name>cci_ctl</name>
 						<description>cci_ctl.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ahb_state</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>cci_read_flag</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>cci_write_flag</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
