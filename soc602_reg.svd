@@ -16795,11 +16795,14 @@
 						<name>DMA_IntStatus</name>
 						<description>DMA_IntStatus.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>IntStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16807,11 +16810,14 @@
 						<name>DMA_IntTCStatus</name>
 						<description>DMA_IntTCStatus.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>IntTCStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16819,11 +16825,14 @@
 						<name>DMA_IntTCClear</name>
 						<description>DMA_IntTCClear.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>IntTCClear</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16831,11 +16840,14 @@
 						<name>DMA_IntErrorStatus</name>
 						<description>DMA_IntErrorStatus.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>IntErrorStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16843,11 +16855,14 @@
 						<name>DMA_IntErrClr</name>
 						<description>DMA_IntErrClr.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>IntErrClr</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16855,11 +16870,14 @@
 						<name>DMA_RawIntTCStatus</name>
 						<description>DMA_RawIntTCStatus.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>RawIntTCStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16867,11 +16885,14 @@
 						<name>DMA_RawIntErrorStatus</name>
 						<description>DMA_RawIntErrorStatus.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>RawIntErrorStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16879,11 +16900,14 @@
 						<name>DMA_EnbldChns</name>
 						<description>DMA_EnbldChns.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>EnabledChannels</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16891,6 +16915,8 @@
 						<name>DMA_SoftBReq</name>
 						<description>DMA_SoftBReq.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SoftBReq</name>
@@ -16903,6 +16929,8 @@
 						<name>DMA_SoftSReq</name>
 						<description>DMA_SoftSReq.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SoftSReq</name>
@@ -16915,6 +16943,8 @@
 						<name>DMA_SoftLBReq</name>
 						<description>DMA_SoftLBReq.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SoftLBReq</name>
@@ -16927,6 +16957,8 @@
 						<name>DMA_SoftLSReq</name>
 						<description>DMA_SoftLSReq.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SoftLSReq</name>
@@ -16939,6 +16971,8 @@
 						<name>DMA_Top_Config</name>
 						<description>DMA_Top_Config.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>M</name>
@@ -16956,6 +16990,8 @@
 						<name>DMA_Sync</name>
 						<description>DMA_Sync.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>DMA_Sync</name>
@@ -16968,6 +17004,8 @@
 						<name>DMA_C0SrcAddr</name>
 						<description>DMA_C0SrcAddr.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -16980,6 +17018,8 @@
 						<name>DMA_C0DstAddr</name>
 						<description>DMA_C0DstAddr.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -16992,6 +17032,8 @@
 						<name>DMA_C0LLI</name>
 						<description>DMA_C0LLI.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -17004,6 +17046,8 @@
 						<name>DMA_C0Control</name>
 						<description>DMA_C0Control.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>I</name>
@@ -17061,11 +17105,14 @@
 						<name>DMA_C0Config</name>
 						<description>DMA_C0Config.</description>
 						<addressOffset>0x110</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>LLICounter</name>
 								<lsb>20</lsb>
 								<msb>29</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>H</name>
@@ -17076,6 +17123,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -17118,6 +17166,8 @@
 						<name>DMA_C1SrcAddr</name>
 						<description>DMA_C1SrcAddr.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -17130,6 +17180,8 @@
 						<name>DMA_C1DstAddr</name>
 						<description>DMA_C1DstAddr.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -17142,6 +17194,8 @@
 						<name>DMA_C1LLI</name>
 						<description>DMA_C1LLI.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -17154,6 +17208,8 @@
 						<name>DMA_C1Control</name>
 						<description>DMA_C1Control.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>I</name>
@@ -17206,6 +17262,8 @@
 						<name>DMA_C1Config</name>
 						<description>DMA_C1Config.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>H</name>
@@ -17216,6 +17274,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -17258,6 +17317,8 @@
 						<name>DMA_C2SrcAddr</name>
 						<description>DMA_C2SrcAddr.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -17270,6 +17331,8 @@
 						<name>DMA_C2DstAddr</name>
 						<description>DMA_C2DstAddr.</description>
 						<addressOffset>0x304</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -17282,6 +17345,8 @@
 						<name>DMA_C2LLI</name>
 						<description>DMA_C2LLI.</description>
 						<addressOffset>0x308</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -17294,6 +17359,8 @@
 						<name>DMA_C2Control</name>
 						<description>DMA_C2Control.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>I</name>
@@ -17346,6 +17413,8 @@
 						<name>DMA_C2Config</name>
 						<description>DMA_C2Config.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>H</name>
@@ -17356,6 +17425,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -17398,6 +17468,8 @@
 						<name>DMA_C3SrcAddr</name>
 						<description>DMA_C3SrcAddr.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -17410,6 +17482,8 @@
 						<name>DMA_C3DstAddr</name>
 						<description>DMA_C3DstAddr.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -17422,6 +17496,8 @@
 						<name>DMA_C3LLI</name>
 						<description>DMA_C3LLI.</description>
 						<addressOffset>0x408</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -17434,6 +17510,8 @@
 						<name>DMA_C3Control</name>
 						<description>DMA_C3Control.</description>
 						<addressOffset>0x40C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>I</name>
@@ -17486,6 +17564,8 @@
 						<name>DMA_C3Config</name>
 						<description>DMA_C3Config.</description>
 						<addressOffset>0x410</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>H</name>
@@ -17496,6 +17576,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
