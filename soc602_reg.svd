@@ -15136,12 +15136,27 @@
 						<name>cks_config</name>
 						<description>cks_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_cks_byte_swap</name>
-								<description>Endianness (0: little endian, 1: big endian)</description>
+								<description>Endianness.</description>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<enumeratedValues>
+									<name>CKSByteSwap</name>
+									<enumeratedValue>
+										<name>little_endian</name>
+										<description>Little endian.</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>big_endian</name>
+										<description>Big endian.</description>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>cr_cks_clr</name>
@@ -15154,11 +15169,14 @@
 						<name>data_in</name>
 						<description>Checksum data in</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>data_in</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15166,11 +15184,14 @@
 						<name>cks_out</name>
 						<description>Checksum value out</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cks_out</name>
 								<lsb>0</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
