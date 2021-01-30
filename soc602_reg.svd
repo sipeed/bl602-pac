@@ -11192,6 +11192,8 @@
 						<name>ef_if_ctrl_0</name>
 						<description>ef_if_ctrl_0.</description>
 						<addressOffset>0x800</addressOffset>
+						<resetValue>0x00240003</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_prot_code_cyc</name>
@@ -11212,6 +11214,7 @@
 								<name>ef_if_0_int</name>
 								<lsb>20</lsb>
 								<msb>20</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_cyc_modify_lock</name>
@@ -11267,16 +11270,19 @@
 								<name>ef_if_0_busy</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_0_autoload_done</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_0_autoload_p1_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -11284,6 +11290,8 @@
 						<name>ef_if_cyc_0</name>
 						<description>ef_if_cyc_0.</description>
 						<addressOffset>0x804</addressOffset>
+						<resetValue>0x16000040</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_cyc_pd_cs_s</name>
@@ -11316,6 +11324,8 @@
 						<name>ef_if_cyc_1</name>
 						<description>ef_if_cyc_1.</description>
 						<addressOffset>0x808</addressOffset>
+						<resetValue>0x00206609</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_cyc_pd_cs_h</name>
@@ -11348,6 +11358,8 @@
 						<name>ef_if_0_manual</name>
 						<description>ef_if_0_manual.</description>
 						<addressOffset>0x80C</addressOffset>
+						<resetValue>0x0000e400</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_prot_code_manual</name>
@@ -11358,6 +11370,7 @@
 								<name>ef_if_0_q</name>
 								<lsb>16</lsb>
 								<msb>23</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_csb</name>
@@ -11400,11 +11413,14 @@
 						<name>ef_if_0_status</name>
 						<description>ef_if_0_status.</description>
 						<addressOffset>0x810</addressOffset>
+						<resetValue>0x0000e400</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_0_status</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -11412,6 +11428,9 @@
 						<name>ef_if_cfg_0</name>
 						<description>ef_if_cfg_0.</description>
 						<addressOffset>0x814</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>ef_if_dbg_mode</name>
@@ -11519,6 +11538,8 @@
 						<name>ef_sw_cfg_0</name>
 						<description>ef_sw_cfg_0.</description>
 						<addressOffset>0x818</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_sw_dbg_mode</name>
@@ -11633,11 +11654,14 @@
 						<name>ef_if_ana_trim_0</name>
 						<description>ef_if_ana_trim_0.</description>
 						<addressOffset>0x820</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_ana_trim_0</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -11645,11 +11669,14 @@
 						<name>ef_if_sw_usage_0</name>
 						<description>ef_if_sw_usage_0.</description>
 						<addressOffset>0x824</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_if_sw_usage_0</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -11657,6 +11684,8 @@
 						<name>ef_crc_ctrl_0</name>
 						<description>ef_crc_ctrl_0.</description>
 						<addressOffset>0xA00</addressOffset>
+						<resetValue>0x00ff0224</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_crc_slp_n</name>
@@ -11682,6 +11711,7 @@
 								<name>ef_crc_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_crc_din_endian</name>
@@ -11702,6 +11732,7 @@
 								<name>ef_crc_error</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_crc_mode</name>
@@ -11722,6 +11753,7 @@
 								<name>ef_crc_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -11729,6 +11761,8 @@
 						<name>ef_crc_ctrl_1</name>
 						<description>ef_crc_ctrl_1.</description>
 						<addressOffset>0xA04</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_crc_data_0_en</name>
@@ -11741,6 +11775,8 @@
 						<name>ef_crc_ctrl_2</name>
 						<description>ef_crc_ctrl_2.</description>
 						<addressOffset>0xA08</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_crc_data_1_en</name>
@@ -11753,6 +11789,8 @@
 						<name>ef_crc_ctrl_3</name>
 						<description>ef_crc_ctrl_3.</description>
 						<addressOffset>0xA0C</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_crc_iv</name>
@@ -11765,6 +11803,8 @@
 						<name>ef_crc_ctrl_4</name>
 						<description>ef_crc_ctrl_4.</description>
 						<addressOffset>0xA10</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_crc_golden</name>
@@ -11777,11 +11817,14 @@
 						<name>ef_crc_ctrl_5</name>
 						<description>ef_crc_ctrl_5.</description>
 						<addressOffset>0xA14</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ef_crc_dout</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
