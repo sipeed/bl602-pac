@@ -18854,6 +18854,8 @@
 						<name>aon</name>
 						<description>aon.</description>
 						<addressOffset>0x800</addressOffset>
+						<resetValue>0x00400000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sw_pu_ldo11_rt</name>
@@ -18886,6 +18888,8 @@
 						<name>aon_common</name>
 						<description>aon_common.</description>
 						<addressOffset>0x804</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ten_cip_misc_aon</name>
@@ -18963,6 +18967,8 @@
 						<name>aon_misc</name>
 						<description>aon_misc.</description>
 						<addressOffset>0x808</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sw_wb_en_aon</name>
@@ -18980,6 +18986,8 @@
 						<name>bg_sys_top</name>
 						<description>bg_sys_top.</description>
 						<addressOffset>0x810</addressOffset>
+						<resetValue>0x00001100</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>bg_sys_start_ctrl_aon</name>
@@ -19002,11 +19010,14 @@
 						<name>dcdc18_top_0</name>
 						<description>dcdc18_top_0.</description>
 						<addressOffset>0x814</addressOffset>
+						<resetValue>0x8a580736</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>dcdc18_rdy_aon</name>
 								<lsb>31</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>dcdc18_sstart_time_aon</name>
@@ -19059,6 +19070,8 @@
 						<name>dcdc18_top_1</name>
 						<description>dcdc18_top_1.</description>
 						<addressOffset>0x818</addressOffset>
+						<resetValue>0x18180048</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>dcdc18_pulldown_aon</name>
@@ -19111,6 +19124,8 @@
 						<name>ldo11soc_and_dctest</name>
 						<description>ldo11soc_and_dctest.</description>
 						<addressOffset>0x81C</addressOffset>
+						<resetValue>0x70001811</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pmip_dc_tp_out_en_aon</name>
@@ -19126,11 +19141,13 @@
 								<name>ldo11soc_power_good_aon</name>
 								<lsb>29</lsb>
 								<msb>29</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ldo11soc_rdy_aon</name>
 								<lsb>28</lsb>
 								<msb>28</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ldo11soc_cc_aon</name>
@@ -19173,6 +19190,8 @@
 						<name>psw_irrcv</name>
 						<description>psw_irrcv.</description>
 						<addressOffset>0x820</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pu_ir_psw_aon</name>
@@ -19185,6 +19204,8 @@
 						<name>rf_top_aon</name>
 						<description>rf_top_aon.</description>
 						<addressOffset>0x880</addressOffset>
+						<resetValue>0x00020137</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ldo15rf_bypass_aon</name>
@@ -19252,6 +19273,8 @@
 						<name>xtal_cfg</name>
 						<description>xtal_cfg.</description>
 						<addressOffset>0x884</addressOffset>
+						<resetValue>0xb410f0f0</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>xtal_rdy_sel_aon</name>
@@ -19319,6 +19342,8 @@
 						<name>tsen</name>
 						<description>tsen.</description>
 						<addressOffset>0x888</addressOffset>
+						<resetValue>0x78ff08ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>xtal_rdy_int_sel_aon</name>
@@ -19334,6 +19359,7 @@
 								<name>xtal_rdy</name>
 								<lsb>28</lsb>
 								<msb>28</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tsen_refcode_rfcal</name>
@@ -19351,6 +19377,8 @@
 						<name>acomp0_ctrl</name>
 						<description>acomp0_ctrl.</description>
 						<addressOffset>0x900</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>acomp0_muxen</name>
@@ -19398,6 +19426,8 @@
 						<name>acomp1_ctrl</name>
 						<description>acomp1_ctrl.</description>
 						<addressOffset>0x904</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>acomp1_muxen</name>
@@ -19445,6 +19475,8 @@
 						<name>acomp_ctrl</name>
 						<description>acomp_ctrl.</description>
 						<addressOffset>0x908</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>acomp_reserved</name>
@@ -19455,11 +19487,13 @@
 								<name>acomp0_out_raw</name>
 								<lsb>19</lsb>
 								<msb>19</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>acomp1_out_raw</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>acomp0_test_sel</name>
@@ -19497,6 +19531,8 @@
 						<name>gpadc_reg_cmd</name>
 						<description>gpadc_reg_cmd.</description>
 						<addressOffset>0x90C</addressOffset>
+						<resetValue>0x00000f78</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_sen_test_en</name>
@@ -19589,6 +19625,8 @@
 						<name>gpadc_reg_config1</name>
 						<description>gpadc_reg_config1.</description>
 						<addressOffset>0x910</addressOffset>
+						<resetValue>0x000c0002</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_v18_sel</name>
@@ -19646,6 +19684,8 @@
 						<name>gpadc_reg_config2</name>
 						<description>gpadc_reg_config2.</description>
 						<addressOffset>0x914</addressOffset>
+						<resetValue>0x00019100</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_tsvbe_low</name>
@@ -19738,6 +19778,8 @@
 						<name>gpadc_reg_scn_pos1</name>
 						<description>adc converation sequence 1</description>
 						<addressOffset>0x918</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_scan_pos_5</name>
@@ -19775,6 +19817,8 @@
 						<name>gpadc_reg_scn_pos2</name>
 						<description>adc converation sequence 2</description>
 						<addressOffset>0x91C</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_scan_pos_11</name>
@@ -19812,6 +19856,8 @@
 						<name>gpadc_reg_scn_neg1</name>
 						<description>adc converation sequence 3</description>
 						<addressOffset>0x920</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_scan_neg_5</name>
@@ -19849,6 +19895,8 @@
 						<name>gpadc_reg_scn_neg2</name>
 						<description>adc converation sequence 4</description>
 						<addressOffset>0x924</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_scan_neg_11</name>
@@ -19886,6 +19934,8 @@
 						<name>gpadc_reg_status</name>
 						<description>gpadc_reg_status.</description>
 						<addressOffset>0x928</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_reserved</name>
@@ -19896,6 +19946,7 @@
 								<name>gpadc_data_rdy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19903,6 +19954,8 @@
 						<name>gpadc_reg_isr</name>
 						<description>gpadc_reg_isr.</description>
 						<addressOffset>0x92C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_pos_satur_mask</name>
@@ -19928,11 +19981,13 @@
 								<name>gpadc_pos_satur</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_neg_satur</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19940,11 +19995,14 @@
 						<name>gpadc_reg_result</name>
 						<description>gpadc_reg_result.</description>
 						<addressOffset>0x930</addressOffset>
+						<resetValue>0x01ef0000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_data_out</name>
 								<lsb>0</lsb>
 								<msb>25</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19952,11 +20010,14 @@
 						<name>gpadc_reg_raw_result</name>
 						<description>gpadc_reg_raw_result.</description>
 						<addressOffset>0x934</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_raw_data</name>
 								<lsb>0</lsb>
 								<msb>11</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19964,6 +20025,8 @@
 						<name>gpadc_reg_define</name>
 						<description>gpadc_reg_define.</description>
 						<addressOffset>0x938</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_os_cal_data</name>
@@ -19976,6 +20039,8 @@
 						<name>hbncore_resv0</name>
 						<description>hbncore_resv0.</description>
 						<addressOffset>0x93C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>hbncore_resv0_data</name>
@@ -19988,6 +20053,8 @@
 						<name>hbncore_resv1</name>
 						<description>hbncore_resv1.</description>
 						<addressOffset>0x940</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>hbncore_resv1_data</name>
