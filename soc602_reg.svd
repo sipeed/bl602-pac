@@ -10944,6 +10944,8 @@
 						<name>reg_key_slot_6_w0</name>
 						<description>reg_key_slot_6_w0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w0</name>
@@ -10956,6 +10958,8 @@
 						<name>reg_key_slot_6_w1</name>
 						<description>reg_key_slot_6_w1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w1</name>
@@ -10968,6 +10972,8 @@
 						<name>reg_key_slot_6_w2</name>
 						<description>reg_key_slot_6_w2.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w2</name>
@@ -10980,6 +10986,8 @@
 						<name>reg_key_slot_6_w3</name>
 						<description>reg_key_slot_6_w3.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w3</name>
@@ -10992,6 +11000,8 @@
 						<name>reg_key_slot_7_w0</name>
 						<description>reg_key_slot_7_w0.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w0</name>
@@ -11004,6 +11014,8 @@
 						<name>reg_key_slot_7_w1</name>
 						<description>reg_key_slot_7_w1.</description>
 						<addressOffset>0x94</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w1</name>
@@ -11016,6 +11028,8 @@
 						<name>reg_key_slot_7_w2</name>
 						<description>reg_key_slot_7_w2.</description>
 						<addressOffset>0x98</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w2</name>
@@ -11028,6 +11042,8 @@
 						<name>reg_key_slot_7_w3</name>
 						<description>reg_key_slot_7_w3.</description>
 						<addressOffset>0x9C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w3</name>
@@ -11040,6 +11056,8 @@
 						<name>reg_key_slot_8_w0</name>
 						<description>reg_key_slot_8_w0.</description>
 						<addressOffset>0xA0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w0</name>
@@ -11052,6 +11070,8 @@
 						<name>reg_key_slot_8_w1</name>
 						<description>reg_key_slot_8_w1.</description>
 						<addressOffset>0xA4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w1</name>
@@ -11064,6 +11084,8 @@
 						<name>reg_key_slot_8_w2</name>
 						<description>reg_key_slot_8_w2.</description>
 						<addressOffset>0xA8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w2</name>
@@ -11076,6 +11098,8 @@
 						<name>reg_key_slot_8_w3</name>
 						<description>reg_key_slot_8_w3.</description>
 						<addressOffset>0xAC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w3</name>
@@ -11088,6 +11112,8 @@
 						<name>reg_key_slot_9_w0</name>
 						<description>reg_key_slot_9_w0.</description>
 						<addressOffset>0xB0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w0</name>
@@ -11100,6 +11126,8 @@
 						<name>reg_key_slot_9_w1</name>
 						<description>reg_key_slot_9_w1.</description>
 						<addressOffset>0xB4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w1</name>
@@ -11112,6 +11140,8 @@
 						<name>reg_key_slot_9_w2</name>
 						<description>reg_key_slot_9_w2.</description>
 						<addressOffset>0xB8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w2</name>
@@ -11124,6 +11154,8 @@
 						<name>reg_key_slot_9_w3</name>
 						<description>reg_key_slot_9_w3.</description>
 						<addressOffset>0xBC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w3</name>
@@ -11136,54 +11168,72 @@
 						<name>reg_key_slot_10_w0</name>
 						<description>reg_key_slot_10_w0.</description>
 						<addressOffset>0xC0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_10_w1</name>
 						<description>reg_key_slot_10_w1.</description>
 						<addressOffset>0xC4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_10_w2</name>
 						<description>reg_key_slot_10_w2.</description>
 						<addressOffset>0xC8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_10_w3</name>
 						<description>reg_key_slot_10_w3.</description>
 						<addressOffset>0xCC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w0</name>
 						<description>reg_key_slot_11_w0.</description>
 						<addressOffset>0xD0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w1</name>
 						<description>reg_key_slot_11_w1.</description>
 						<addressOffset>0xD4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w2</name>
 						<description>reg_key_slot_11_w2.</description>
 						<addressOffset>0xD8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w3</name>
 						<description>reg_key_slot_11_w3.</description>
 						<addressOffset>0xDC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_data_1_lock</name>
 						<description>reg_data_1_lock.</description>
 						<addressOffset>0xE0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rd_lock_key_slot_9</name>
