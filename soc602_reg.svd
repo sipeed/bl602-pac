@@ -18694,16 +18694,20 @@
 						<name>HBN_CTL</name>
 						<description>HBN_CTL.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00d50000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>hbn_state</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sram_slp</name>
 								<lsb>27</lsb>
 								<msb>27</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sram_slp_option</name>
@@ -18764,11 +18768,13 @@
 								<name>trap_mode</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>hbn_mode</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 							<field>
 								<name>rtc_ctl</name>
@@ -18781,6 +18787,8 @@
 						<name>HBN_TIME_L</name>
 						<description>HBN_TIME_L.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>hbn_time_l</name>
@@ -18793,6 +18801,8 @@
 						<name>HBN_TIME_H</name>
 						<description>HBN_TIME_H.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>hbn_time_h</name>
@@ -18805,6 +18815,9 @@
 						<name>RTC_TIME_L</name>
 						<description>RTC_TIME_L.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>rtc_time_latch_l</name>
@@ -18817,16 +18830,20 @@
 						<name>RTC_TIME_H</name>
 						<description>RTC_TIME_H.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rtc_time_latch</name>
 								<lsb>31</lsb>
 								<msb>31</msb>
+								<access>write-only</access>
 							</field>
 							<field>
 								<name>rtc_time_latch_h</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18834,6 +18851,8 @@
 						<name>HBN_IRQ_MODE</name>
 						<description>HBN_IRQ_MODE.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x03010105</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pin_wakeup_en</name>
@@ -18886,6 +18905,9 @@
 						<name>HBN_IRQ_STAT</name>
 						<description>HBN_IRQ_STAT.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>irq_stat</name>
@@ -18898,6 +18920,9 @@
 						<name>HBN_IRQ_CLR</name>
 						<description>HBN_IRQ_CLR.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>irq_clr</name>
@@ -18910,6 +18935,8 @@
 						<name>HBN_PIR_CFG</name>
 						<description>HBN_PIR_CFG.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_nosync</name>
@@ -18947,6 +18974,8 @@
 						<name>HBN_PIR_VTH</name>
 						<description>HBN_PIR_VTH.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x000003ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pir_vth</name>
@@ -18959,6 +18988,8 @@
 						<name>HBN_PIR_INTERVAL</name>
 						<description>HBN_PIR_INTERVAL.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000a3d</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pir_interval</name>
@@ -18971,11 +19002,14 @@
 						<name>HBN_BOR_CFG</name>
 						<description>HBN_BOR_CFG.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000002</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>r_bor_out</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pu_bor</name>
@@ -18998,6 +19032,8 @@
 						<name>HBN_GLB</name>
 						<description>HBN_GLB.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0xaa0a0020</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sw_ldo11_aon_vout_sel</name>
@@ -19040,6 +19076,8 @@
 						<name>HBN_SRAM</name>
 						<description>HBN_SRAM.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>retram_slp</name>
@@ -19057,6 +19095,8 @@
 						<name>HBN_RSV0</name>
 						<description>HBN_RSV0.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>HBN_RSV0</name>
@@ -19069,6 +19109,8 @@
 						<name>HBN_RSV1</name>
 						<description>HBN_RSV1.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>HBN_RSV1</name>
@@ -19081,6 +19123,8 @@
 						<name>HBN_RSV2</name>
 						<description>HBN_RSV2.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>HBN_RSV2</name>
@@ -19093,6 +19137,8 @@
 						<name>HBN_RSV3</name>
 						<description>HBN_RSV3.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>HBN_RSV3</name>
@@ -19105,6 +19151,8 @@
 						<name>rc32k_ctrl0</name>
 						<description>rc32k_ctrl0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x5008801b</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rc32k_code_fr_ext</name>
@@ -19135,11 +19183,13 @@
 								<name>rc32k_dig_code_fr_cal</name>
 								<lsb>6</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_cal_precharge</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_cal_div</name>
@@ -19150,16 +19200,19 @@
 								<name>rc32k_cal_inprogress</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_rdy</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_cal_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19167,6 +19220,8 @@
 						<name>xtal32k</name>
 						<description>xtal32k.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x000f0228</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pu_xtal32k</name>
