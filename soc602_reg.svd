@@ -10452,6 +10452,9 @@
 						<name>tzc_rom_ctrl</name>
 						<description>tzc_rom_ctrl.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000f0f</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_sboot_done</name>
@@ -10544,6 +10547,9 @@
 						<name>tzc_rom0_r0</name>
 						<description>tzc_rom0_r0.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom0_r0_start</name>
@@ -10561,6 +10567,9 @@
 						<name>tzc_rom0_r1</name>
 						<description>tzc_rom0_r1.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom0_r1_start</name>
@@ -10578,6 +10587,9 @@
 						<name>tzc_rom1_r0</name>
 						<description>tzc_rom1_r0.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom1_r0_start</name>
@@ -10595,6 +10607,9 @@
 						<name>tzc_rom1_r1</name>
 						<description>tzc_rom1_r1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom1_r1_start</name>
