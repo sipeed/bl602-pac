@@ -14992,6 +14992,8 @@
 						<name>irtx_config</name>
 						<description>irtx_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x0001f510</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_data_num</name>
@@ -15059,6 +15061,8 @@
 						<name>irtx_int_sts</name>
 						<description>irtx_int_sts.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x01000100</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_end_en</name>
@@ -15079,6 +15083,7 @@
 								<name>irtx_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15086,6 +15091,8 @@
 						<name>irtx_data_word0</name>
 						<description>irtx_data_word0.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_data_word0</name>
@@ -15098,6 +15105,8 @@
 						<name>irtx_data_word1</name>
 						<description>irtx_data_word1.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_data_word1</name>
@@ -15110,6 +15119,8 @@
 						<name>irtx_pulse_width</name>
 						<description>irtx_pulse_width.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x22110464</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_mod_ph1_w</name>
@@ -15132,6 +15143,8 @@
 						<name>irtx_pw</name>
 						<description>irtx_pw.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x007f2000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_tail_ph1_w</name>
@@ -15179,6 +15192,8 @@
 						<name>irtx_swm_pw_0</name>
 						<description>irtx_swm_pw_0.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_0</name>
@@ -15191,6 +15206,8 @@
 						<name>irtx_swm_pw_1</name>
 						<description>irtx_swm_pw_1.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_1</name>
@@ -15203,6 +15220,8 @@
 						<name>irtx_swm_pw_2</name>
 						<description>irtx_swm_pw_2.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_2</name>
@@ -15215,6 +15234,8 @@
 						<name>irtx_swm_pw_3</name>
 						<description>irtx_swm_pw_3.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_3</name>
@@ -15227,6 +15248,8 @@
 						<name>irtx_swm_pw_4</name>
 						<description>irtx_swm_pw_4.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_4</name>
@@ -15239,6 +15262,8 @@
 						<name>irtx_swm_pw_5</name>
 						<description>irtx_swm_pw_5.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_5</name>
@@ -15251,6 +15276,8 @@
 						<name>irtx_swm_pw_6</name>
 						<description>irtx_swm_pw_6.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_6</name>
@@ -15263,6 +15290,8 @@
 						<name>irtx_swm_pw_7</name>
 						<description>irtx_swm_pw_7.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_7</name>
@@ -15275,6 +15304,8 @@
 						<name>irrx_config</name>
 						<description>irrx_config.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000002</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irrx_deg_cnt</name>
@@ -15307,6 +15338,8 @@
 						<name>irrx_int_sts</name>
 						<description>irrx_int_sts.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x01000100</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irrx_end_en</name>
@@ -15327,6 +15360,7 @@
 								<name>irrx_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15334,6 +15368,8 @@
 						<name>irrx_pw_config</name>
 						<description>irrx_pw_config.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x23270d47</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_irrx_end_th</name>
@@ -15351,11 +15387,14 @@
 						<name>irrx_data_count</name>
 						<description>irrx_data_count.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sts_irrx_data_cnt</name>
 								<lsb>0</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15363,11 +15402,14 @@
 						<name>irrx_data_word0</name>
 						<description>irrx_data_word0.</description>
 						<addressOffset>0x94</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sts_irrx_data_word0</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15375,11 +15417,14 @@
 						<name>irrx_data_word1</name>
 						<description>irrx_data_word1.</description>
 						<addressOffset>0x98</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sts_irrx_data_word1</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15387,6 +15432,8 @@
 						<name>irrx_swm_fifo_config_0</name>
 						<description>irrx_swm_fifo_config_0.</description>
 						<addressOffset>0xC0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_cnt</name>
@@ -15415,6 +15462,9 @@
 						<name>irrx_swm_fifo_rdata</name>
 						<description>irrx_swm_fifo_rdata.</description>
 						<addressOffset>0xC4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>rx_fifo_rdata</name>
