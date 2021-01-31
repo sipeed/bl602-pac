@@ -1155,11 +1155,6 @@
 										<name>E21_TDI</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -1323,11 +1318,6 @@
 									<enumeratedValue>
 										<name>E21_TMS</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -1498,11 +1488,6 @@
 										<name>E21_TDO</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -1666,11 +1651,6 @@
 									<enumeratedValue>
 										<name>E21_TCK</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -1841,11 +1821,6 @@
 										<name>E21_TDI</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -2006,11 +1981,6 @@
 										<name>E21_TMS</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -2142,11 +2112,6 @@
 										<name>E21_TDO</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -2272,11 +2237,6 @@
 									<enumeratedValue>
 										<name>E21_TCK</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -2413,11 +2373,6 @@
 										<name>E21_TDI</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -2539,11 +2494,6 @@
 									<enumeratedValue>
 										<name>E21_TMS</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -2680,11 +2630,6 @@
 										<name>E21_TDO</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -2810,11 +2755,6 @@
 									<enumeratedValue>
 										<name>E21_TCK</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -2951,11 +2891,6 @@
 										<name>E21_TDI</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -3081,11 +3016,6 @@
 									<enumeratedValue>
 										<name>E21_TMS</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -3222,11 +3152,6 @@
 										<name>E21_TDO</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -3352,11 +3277,6 @@
 									<enumeratedValue>
 										<name>E21_TCK</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -3497,11 +3417,6 @@
 										<name>E21_TDI</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -3623,11 +3538,6 @@
 									<enumeratedValue>
 										<name>E21_TMS</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -3764,11 +3674,6 @@
 										<name>E21_TDO</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -3894,11 +3799,6 @@
 									<enumeratedValue>
 										<name>E21_TCK</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -4035,11 +3935,6 @@
 										<name>E21_TDI</name>
 										<value>14</value>
 									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
-									</enumeratedValue>
 								</enumeratedValues>
 							</field>
 							<field>
@@ -4165,11 +4060,6 @@
 									<enumeratedValue>
 										<name>E21_TMS</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -4390,11 +4280,6 @@
 									<enumeratedValue>
 										<name>E21_TCK</name>
 										<value>14</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>reserved</name>
-										<description>Reserved values. Do not use.</description>
-										<isDefault>true</isDefault>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
