@@ -15822,6 +15822,8 @@
 						<name>sf_ctrl_0</name>
 						<description>sf_ctrl_0.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x1ad2001c</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_id</name>
@@ -15867,6 +15869,7 @@
 								<name>sf_if_int</name>
 								<lsb>16</lsb>
 								<msb>16</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_if_read_dly_en</name>
@@ -15904,6 +15907,8 @@
 						<name>sf_ctrl_1</name>
 						<description>sf_ctrl_1.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0xf3600000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_ahb2sram_en</name>
@@ -15934,6 +15939,7 @@
 								<name>sf_ahb2sif_stopped</name>
 								<lsb>26</lsb>
 								<msb>26</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_if_reg_wp</name>
@@ -15964,6 +15970,7 @@
 								<name>sf_if_sr_int</name>
 								<lsb>16</lsb>
 								<msb>16</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_if_sr_pat</name>
@@ -15981,6 +15988,8 @@
 						<name>sf_if_sahb_0</name>
 						<description>sf_if_sahb_0.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_0_qpi_mode_en</name>
@@ -16046,6 +16055,7 @@
 								<name>sf_if_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16053,6 +16063,8 @@
 						<name>sf_if_sahb_1</name>
 						<description>sf_if_sahb_1.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_0_cmd_buf_0</name>
@@ -16065,6 +16077,8 @@
 						<name>sf_if_sahb_2</name>
 						<description>sf_if_sahb_2.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_0_cmd_buf_1</name>
@@ -16077,6 +16091,8 @@
 						<name>sf_if_iahb_0</name>
 						<description>sf_if_iahb_0.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0d040000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_1_qpi_mode_en</name>
@@ -16134,6 +16150,8 @@
 						<name>sf_if_iahb_1</name>
 						<description>sf_if_iahb_1.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x03000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_1_cmd_buf_0</name>
@@ -16146,6 +16164,8 @@
 						<name>sf_if_iahb_2</name>
 						<description>sf_if_iahb_2.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_1_cmd_buf_1</name>
@@ -16158,6 +16178,9 @@
 						<name>sf_if_status_0</name>
 						<description>sf_if_status_0.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_if_status_0</name>
@@ -16170,6 +16193,9 @@
 						<name>sf_if_status_1</name>
 						<description>sf_if_status_1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x20000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_if_status_1</name>
@@ -16182,16 +16208,20 @@
 						<name>sf_aes</name>
 						<description>sf_aes.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000040</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_status</name>
 								<lsb>5</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_aes_pref_busy</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_aes_pref_trig</name>
@@ -16214,6 +16244,9 @@
 						<name>sf_ahb2sif_status</name>
 						<description>sf_ahb2sif_status.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x10000003</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_ahb2sif_status</name>
@@ -16226,6 +16259,8 @@
 						<name>sf_if_io_dly_0</name>
 						<description>sf_if_io_dly_0.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_dqs_do_dly_sel</name>
@@ -16258,6 +16293,8 @@
 						<name>sf_if_io_dly_1</name>
 						<description>sf_if_io_dly_1.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_io_0_do_dly_sel</name>
@@ -16280,6 +16317,8 @@
 						<name>sf_if_io_dly_2</name>
 						<description>sf_if_io_dly_2.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_io_1_do_dly_sel</name>
@@ -16302,6 +16341,8 @@
 						<name>sf_if_io_dly_3</name>
 						<description>sf_if_io_dly_3.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_io_2_do_dly_sel</name>
@@ -16324,6 +16365,8 @@
 						<name>sf_if_io_dly_4</name>
 						<description>sf_if_io_dly_4.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_io_3_do_dly_sel</name>
@@ -16358,6 +16401,8 @@
 						<name>sf2_if_io_dly_0</name>
 						<description>sf2_if_io_dly_0.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf2_dqs_do_dly_sel</name>
@@ -16390,6 +16435,8 @@
 						<name>sf2_if_io_dly_1</name>
 						<description>sf2_if_io_dly_1.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf2_io_0_do_dly_sel</name>
@@ -16412,6 +16459,8 @@
 						<name>sf2_if_io_dly_2</name>
 						<description>sf2_if_io_dly_2.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf2_io_1_do_dly_sel</name>
@@ -16434,6 +16483,8 @@
 						<name>sf2_if_io_dly_3</name>
 						<description>sf2_if_io_dly_3.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf2_io_2_do_dly_sel</name>
@@ -16456,6 +16507,8 @@
 						<name>sf2_if_io_dly_4</name>
 						<description>sf2_if_io_dly_4.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf2_io_3_do_dly_sel</name>
@@ -16478,6 +16531,8 @@
 						<name>sf3_if_io_dly_0</name>
 						<description>sf3_if_io_dly_0.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf3_dqs_do_dly_sel</name>
@@ -16510,6 +16565,8 @@
 						<name>sf3_if_io_dly_1</name>
 						<description>sf3_if_io_dly_1.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf3_io_0_do_dly_sel</name>
@@ -16532,6 +16589,8 @@
 						<name>sf3_if_io_dly_2</name>
 						<description>sf3_if_io_dly_2.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf3_io_1_do_dly_sel</name>
@@ -16554,6 +16613,8 @@
 						<name>sf3_if_io_dly_3</name>
 						<description>sf3_if_io_dly_3.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf3_io_2_do_dly_sel</name>
@@ -16576,6 +16637,8 @@
 						<name>sf3_if_io_dly_4</name>
 						<description>sf3_if_io_dly_4.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf3_io_3_do_dly_sel</name>
@@ -16598,6 +16661,8 @@
 						<name>sf_ctrl_2</name>
 						<description>sf_ctrl_2.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_dqs_en</name>
@@ -16625,6 +16690,8 @@
 						<name>sf_ctrl_3</name>
 						<description>sf_ctrl_3.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x20000046</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_1_ack_lat</name>
@@ -16667,6 +16734,8 @@
 						<name>sf_if_iahb_3</name>
 						<description>sf_if_iahb_3.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x8d840000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_2_qpi_mode_en</name>
@@ -16724,6 +16793,8 @@
 						<name>sf_if_iahb_4</name>
 						<description>sf_if_iahb_4.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x38000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_2_cmd_buf_0</name>
@@ -16736,6 +16807,8 @@
 						<name>sf_if_iahb_5</name>
 						<description>sf_if_iahb_5.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_2_cmd_buf_1</name>
@@ -16748,6 +16821,8 @@
 						<name>sf_if_iahb_6</name>
 						<description>sf_if_iahb_6.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x80000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_3_qpi_mode_en</name>
@@ -16770,6 +16845,8 @@
 						<name>sf_if_iahb_7</name>
 						<description>sf_if_iahb_7.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0xc0000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_if_3_cmd_buf_0</name>
@@ -16782,6 +16859,9 @@
 						<name>sf_ctrl_prot_en_rd</name>
 						<description>sf_ctrl_prot_en_rd.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_dbg_dis</name>
@@ -16814,6 +16894,8 @@
 						<name>sf_ctrl_prot_en</name>
 						<description>sf_ctrl_prot_en.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_ctrl_id1_en</name>
@@ -16836,6 +16918,8 @@
 						<name>sf_aes_key_r0_0</name>
 						<description>sf_aes_key_r0_0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_0</name>
@@ -16848,6 +16932,8 @@
 						<name>sf_aes_key_r0_1</name>
 						<description>sf_aes_key_r0_1.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_1</name>
@@ -16860,6 +16946,8 @@
 						<name>sf_aes_key_r0_2</name>
 						<description>sf_aes_key_r0_2.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_2</name>
@@ -16872,6 +16960,8 @@
 						<name>sf_aes_key_r0_3</name>
 						<description>sf_aes_key_r0_3.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_3</name>
@@ -16884,6 +16974,8 @@
 						<name>sf_aes_key_r0_4</name>
 						<description>sf_aes_key_r0_4.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_4</name>
@@ -16896,6 +16988,8 @@
 						<name>sf_aes_key_r0_5</name>
 						<description>sf_aes_key_r0_5.</description>
 						<addressOffset>0x214</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_5</name>
@@ -16908,6 +17002,8 @@
 						<name>sf_aes_key_r0_6</name>
 						<description>sf_aes_key_r0_6.</description>
 						<addressOffset>0x218</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_6</name>
@@ -16920,6 +17016,8 @@
 						<name>sf_aes_key_r0_7</name>
 						<description>sf_aes_key_r0_7.</description>
 						<addressOffset>0x21C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_7</name>
@@ -16932,6 +17030,8 @@
 						<name>sf_aes_iv_r0_w0</name>
 						<description>sf_aes_iv_r0_w0.</description>
 						<addressOffset>0x220</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w0</name>
@@ -16944,6 +17044,8 @@
 						<name>sf_aes_iv_r0_w1</name>
 						<description>sf_aes_iv_r0_w1.</description>
 						<addressOffset>0x224</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w1</name>
@@ -16956,6 +17058,8 @@
 						<name>sf_aes_iv_r0_w2</name>
 						<description>sf_aes_iv_r0_w2.</description>
 						<addressOffset>0x228</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w2</name>
@@ -16968,6 +17072,8 @@
 						<name>sf_aes_iv_r0_w3</name>
 						<description>sf_aes_iv_r0_w3.</description>
 						<addressOffset>0x22C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w3</name>
@@ -16980,6 +17086,8 @@
 						<name>sf_aes_cfg_r0</name>
 						<description>sf_aes_cfg_r0.</description>
 						<addressOffset>0x230</addressOffset>
+						<resetValue>0x00003fff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_region_r0_lock</name>
@@ -17012,6 +17120,8 @@
 						<name>sf_aes_key_r1_0</name>
 						<description>sf_aes_key_r1_0.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_0</name>
@@ -17024,6 +17134,8 @@
 						<name>sf_aes_key_r1_1</name>
 						<description>sf_aes_key_r1_1.</description>
 						<addressOffset>0x304</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_1</name>
@@ -17036,6 +17148,8 @@
 						<name>sf_aes_key_r1_2</name>
 						<description>sf_aes_key_r1_2.</description>
 						<addressOffset>0x308</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_2</name>
@@ -17048,6 +17162,8 @@
 						<name>sf_aes_key_r1_3</name>
 						<description>sf_aes_key_r1_3.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_3</name>
@@ -17060,6 +17176,8 @@
 						<name>sf_aes_key_r1_4</name>
 						<description>sf_aes_key_r1_4.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_4</name>
@@ -17072,6 +17190,8 @@
 						<name>sf_aes_key_r1_5</name>
 						<description>sf_aes_key_r1_5.</description>
 						<addressOffset>0x314</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_5</name>
@@ -17084,6 +17204,8 @@
 						<name>sf_aes_key_r1_6</name>
 						<description>sf_aes_key_r1_6.</description>
 						<addressOffset>0x318</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_6</name>
@@ -17096,6 +17218,8 @@
 						<name>sf_aes_key_r1_7</name>
 						<description>sf_aes_key_r1_7.</description>
 						<addressOffset>0x31C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_7</name>
@@ -17108,6 +17232,8 @@
 						<name>sf_aes_iv_r1_w0</name>
 						<description>sf_aes_iv_r1_w0.</description>
 						<addressOffset>0x320</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w0</name>
@@ -17120,6 +17246,8 @@
 						<name>sf_aes_iv_r1_w1</name>
 						<description>sf_aes_iv_r1_w1.</description>
 						<addressOffset>0x324</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w1</name>
@@ -17132,6 +17260,8 @@
 						<name>sf_aes_iv_r1_w2</name>
 						<description>sf_aes_iv_r1_w2.</description>
 						<addressOffset>0x328</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w2</name>
@@ -17144,6 +17274,8 @@
 						<name>sf_aes_iv_r1_w3</name>
 						<description>sf_aes_iv_r1_w3.</description>
 						<addressOffset>0x32C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w3</name>
@@ -17156,6 +17288,8 @@
 						<name>sf_aes_r1</name>
 						<description>sf_aes_r1.</description>
 						<addressOffset>0x330</addressOffset>
+						<resetValue>0x00003fff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_r1_lock</name>
@@ -17188,6 +17322,8 @@
 						<name>sf_aes_key_r2_0</name>
 						<description>sf_aes_key_r2_0.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_0</name>
@@ -17200,6 +17336,10 @@
 						<name>sf_aes_key_r2_1</name>
 						<description>sf_aes_key_r2_1.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_1</name>
@@ -17224,6 +17364,8 @@
 						<name>sf_aes_key_r2_3</name>
 						<description>sf_aes_key_r2_3.</description>
 						<addressOffset>0x40C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_3</name>
@@ -17236,6 +17378,8 @@
 						<name>sf_aes_key_r2_4</name>
 						<description>sf_aes_key_r2_4.</description>
 						<addressOffset>0x410</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_4</name>
@@ -17248,6 +17392,8 @@
 						<name>sf_aes_key_r2_5</name>
 						<description>sf_aes_key_r2_5.</description>
 						<addressOffset>0x414</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_5</name>
@@ -17260,6 +17406,8 @@
 						<name>sf_aes_key_r2_6</name>
 						<description>sf_aes_key_r2_6.</description>
 						<addressOffset>0x418</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_6</name>
@@ -17272,6 +17420,8 @@
 						<name>sf_aes_key_r2_7</name>
 						<description>sf_aes_key_r2_7.</description>
 						<addressOffset>0x41C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_7</name>
@@ -17284,6 +17434,8 @@
 						<name>sf_aes_iv_r2_w0</name>
 						<description>sf_aes_iv_r2_w0.</description>
 						<addressOffset>0x420</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w0</name>
@@ -17296,6 +17448,8 @@
 						<name>sf_aes_iv_r2_w1</name>
 						<description>sf_aes_iv_r2_w1.</description>
 						<addressOffset>0x424</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w1</name>
@@ -17308,6 +17462,8 @@
 						<name>sf_aes_iv_r2_w2</name>
 						<description>sf_aes_iv_r2_w2.</description>
 						<addressOffset>0x428</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w2</name>
@@ -17320,6 +17476,8 @@
 						<name>sf_aes_iv_r2_w3</name>
 						<description>sf_aes_iv_r2_w3.</description>
 						<addressOffset>0x42C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w3</name>
@@ -17332,6 +17490,8 @@
 						<name>sf_aes_r2</name>
 						<description>sf_aes_r2.</description>
 						<addressOffset>0x430</addressOffset>
+						<resetValue>0x00003fff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_r2_lock</name>
@@ -17364,6 +17524,8 @@
 						<name>sf_id0_offset</name>
 						<description>sf_id0_offset.</description>
 						<addressOffset>0x434</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_id0_offset</name>
@@ -17376,6 +17538,8 @@
 						<name>sf_id1_offset</name>
 						<description>sf_id1_offset.</description>
 						<addressOffset>0x438</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_id1_offset</name>
