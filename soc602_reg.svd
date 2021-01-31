@@ -12851,6 +12851,7 @@
 								<name>tx_fifo_underflow</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_overflow</name>
@@ -13228,6 +13229,7 @@
 								<name>rx_fifo_overflow</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_underflow</name>
@@ -13331,6 +13333,8 @@
 						<name>i2c_config</name>
 						<description>i2c_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x0000000a</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_deg_cnt</name>
@@ -13383,6 +13387,8 @@
 						<name>i2c_int_sts</name>
 						<description>i2c_int_sts.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x3f003f00</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_fer_en</name>
@@ -13478,31 +13484,37 @@
 								<name>i2c_fer_int</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_arb_int</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_nak_int</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_rxf_int</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_txf_int</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13510,6 +13522,8 @@
 						<name>i2c_sub_addr</name>
 						<description>i2c_sub_addr.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_sub_addr_b3</name>
@@ -13537,6 +13551,8 @@
 						<name>i2c_bus_busy</name>
 						<description>i2c_bus_busy.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_bus_busy_clr</name>
@@ -13547,6 +13563,7 @@
 								<name>sts_i2c_bus_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13554,6 +13571,8 @@
 						<name>i2c_prd_start</name>
 						<description>i2c_prd_start.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_prd_s_ph_3</name>
@@ -13581,6 +13600,8 @@
 						<name>i2c_prd_stop</name>
 						<description>i2c_prd_stop.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_prd_p_ph_3</name>
@@ -13608,6 +13629,8 @@
 						<name>i2c_prd_data</name>
 						<description>i2c_prd_data.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_i2c_prd_d_ph_3</name>
@@ -13635,11 +13658,14 @@
 						<name>i2c_fifo_config_0</name>
 						<description>i2c_fifo_config_0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_underflow</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
@@ -13655,6 +13681,7 @@
 								<name>tx_fifo_overflow</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -13682,6 +13709,8 @@
 						<name>i2c_fifo_config_1</name>
 						<description>i2c_fifo_config_1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000002</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_th</name>
@@ -13702,6 +13731,7 @@
 								<name>tx_fifo_cnt</name>
 								<lsb>0</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13709,6 +13739,9 @@
 						<name>i2c_fifo_wdata</name>
 						<description>i2c_fifo_wdata.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>i2c_fifo_wdata</name>
@@ -13721,6 +13754,9 @@
 						<name>i2c_fifo_rdata</name>
 						<description>i2c_fifo_rdata.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>i2c_fifo_rdata</name>
@@ -15356,6 +15392,7 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>4</lsb>
 								<msb>10</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_underflow</name>
