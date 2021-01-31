@@ -1083,6 +1083,30 @@
 								<lsb>28</lsb>
 								<msb>31</msb>
 								<access>read-only</access>
+								<enumeratedValues>
+									<name>GPIO1RealFunctionSelect</name>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_REG</name>
+										<description>Function select is reg_gpio_1_func_sel</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_SDIO</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_RF</name>
+										<value>12</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_JTAG</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_CCI</name>
+										<value>15</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_1_func_sel</name>
@@ -1228,6 +1252,30 @@
 								<lsb>12</lsb>
 								<msb>15</msb>
 								<access>read-only</access>
+								<enumeratedValues>
+									<name>GPIO0RealFunctionSelect</name>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_REG</name>
+										<description>Function select is reg_gpio_0_func_sel</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_SDIO</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_RF</name>
+										<value>12</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_JTAG</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_CCI</name>
+										<value>15</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_0_func_sel</name>
@@ -1382,6 +1430,30 @@
 								<lsb>28</lsb>
 								<msb>31</msb>
 								<access>read-only</access>
+								<enumeratedValues>
+									<name>GPIO3RealFunctionSelect</name>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_REG</name>
+										<description>Function select is reg_gpio_3_func_sel</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_SDIO</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_RF</name>
+										<value>12</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_JTAG</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_CCI</name>
+										<value>15</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_3_func_sel</name>
@@ -1523,6 +1595,30 @@
 								<lsb>12</lsb>
 								<msb>15</msb>
 								<access>read-only</access>
+								<enumeratedValues>
+									<name>GPIO2RealFunctionSelect</name>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_REG</name>
+										<description>Function select is reg_gpio_2_func_sel</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_SDIO</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_RF</name>
+										<value>12</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_JTAG</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_CCI</name>
+										<value>15</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_2_func_sel</name>
@@ -1677,6 +1773,30 @@
 								<lsb>28</lsb>
 								<msb>31</msb>
 								<access>read-only</access>
+								<enumeratedValues>
+									<name>GPIO5RealFunctionSelect</name>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_REG</name>
+										<description>Function select is reg_gpio_5_func_sel</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_SDIO</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_RF</name>
+										<value>12</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_JTAG</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_CCI</name>
+										<value>15</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_5_func_sel</name>
@@ -1818,6 +1938,30 @@
 								<lsb>12</lsb>
 								<msb>15</msb>
 								<access>read-only</access>
+								<enumeratedValues>
+									<name>GPIO4RealFunctionSelect</name>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_REG</name>
+										<description>Function select is reg_gpio_4_func_sel</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_SDIO</name>
+										<value>1</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_RF</name>
+										<value>12</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_JTAG</name>
+										<value>14</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>GLB_GPIO_REAL_MODE_CCI</name>
+										<value>15</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>reg_gpio_4_func_sel</name>
