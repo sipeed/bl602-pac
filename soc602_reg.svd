@@ -12212,6 +12212,8 @@
 						<name>l1c_config</name>
 						<description>l1c_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x06000f00</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>wrap_dis</name>
@@ -12262,6 +12264,7 @@
 								<name>l1c_invalid_done</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>l1c_invalid_en</name>
@@ -12284,6 +12287,9 @@
 						<name>hit_cnt_lsb</name>
 						<description>hit_cnt_lsb.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>hit_cnt_lsb</name>
@@ -12296,6 +12302,9 @@
 						<name>hit_cnt_msb</name>
 						<description>hit_cnt_msb.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>hit_cnt_msb</name>
@@ -12308,6 +12317,9 @@
 						<name>miss_cnt</name>
 						<description>miss_cnt.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>miss_cnt</name>
@@ -12320,12 +12332,16 @@
 						<name>l1c_range</name>
 						<description>l1c_range.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>l1c_bmx_err_addr_en</name>
 						<description>l1c_bmx_err_addr_en.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>l1c_hsel_option</name>
@@ -12336,11 +12352,13 @@
 								<name>l1c_bmx_err_tz</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>l1c_bmx_err_dec</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>l1c_bmx_err_addr_dis</name>
@@ -12353,6 +12371,9 @@
 						<name>l1c_bmx_err_addr</name>
 						<description>l1c_bmx_err_addr.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>l1c_bmx_err_addr</name>
@@ -12365,6 +12386,9 @@
 						<name>irom1_misr_dataout_0</name>
 						<description>irom1_misr_dataout_0.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>irom1_misr_dataout_0</name>
@@ -12377,12 +12401,16 @@
 						<name>irom1_misr_dataout_1</name>
 						<description>irom1_misr_dataout_1.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>cpu_clk_gate</name>
 						<description>cpu_clk_gate.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>force_e21_clock_on_2</name>
