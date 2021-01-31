@@ -8587,6 +8587,8 @@
 						<name>se_sha_0_ctrl</name>
 						<description>se_sha_0_ctrl.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_sha_0_msg_len</name>
@@ -8617,6 +8619,7 @@
 								<name>se_sha_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_sha_0_hash_sel</name>
@@ -8642,6 +8645,7 @@
 								<name>se_sha_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -8649,6 +8653,8 @@
 						<name>se_sha_0_msa</name>
 						<description>se_sha_0_msa.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_sha_0_msa</name>
@@ -8661,6 +8667,9 @@
 						<name>se_sha_0_status</name>
 						<description>se_sha_0_status.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000041</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_status</name>
@@ -8673,6 +8682,8 @@
 						<name>se_sha_0_endian</name>
 						<description>se_sha_0_endian.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000001</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_sha_0_dout_endian</name>
@@ -8685,6 +8696,9 @@
 						<name>se_sha_0_hash_l_0</name>
 						<description>se_sha_0_hash_l_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_0</name>
@@ -8697,6 +8711,9 @@
 						<name>se_sha_0_hash_l_1</name>
 						<description>se_sha_0_hash_l_1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_1</name>
@@ -8709,6 +8726,9 @@
 						<name>se_sha_0_hash_l_2</name>
 						<description>se_sha_0_hash_l_2.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_2</name>
@@ -8721,6 +8741,9 @@
 						<name>se_sha_0_hash_l_3</name>
 						<description>se_sha_0_hash_l_3.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_3</name>
@@ -8733,6 +8756,9 @@
 						<name>se_sha_0_hash_l_4</name>
 						<description>se_sha_0_hash_l_4.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_4</name>
@@ -8745,6 +8771,9 @@
 						<name>se_sha_0_hash_l_5</name>
 						<description>se_sha_0_hash_l_5.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_5</name>
@@ -8757,6 +8786,9 @@
 						<name>se_sha_0_hash_l_6</name>
 						<description>se_sha_0_hash_l_6.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_6</name>
@@ -8769,6 +8801,9 @@
 						<name>se_sha_0_hash_l_7</name>
 						<description>se_sha_0_hash_l_7.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_7</name>
@@ -8781,6 +8816,9 @@
 						<name>se_sha_0_hash_h_0</name>
 						<description>se_sha_0_hash_h_0.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_0</name>
@@ -8793,6 +8831,9 @@
 						<name>se_sha_0_hash_h_1</name>
 						<description>se_sha_0_hash_h_1.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_1</name>
@@ -8805,6 +8846,9 @@
 						<name>se_sha_0_hash_h_2</name>
 						<description>se_sha_0_hash_h_2.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_2</name>
@@ -8817,6 +8861,9 @@
 						<name>se_sha_0_hash_h_3</name>
 						<description>se_sha_0_hash_h_3.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_3</name>
@@ -8829,6 +8876,9 @@
 						<name>se_sha_0_hash_h_4</name>
 						<description>se_sha_0_hash_h_4.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_4</name>
@@ -8841,6 +8891,9 @@
 						<name>se_sha_0_hash_h_5</name>
 						<description>se_sha_0_hash_h_5.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_5</name>
@@ -8853,6 +8906,9 @@
 						<name>se_sha_0_hash_h_6</name>
 						<description>se_sha_0_hash_h_6.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_6</name>
@@ -8865,6 +8921,9 @@
 						<name>se_sha_0_hash_h_7</name>
 						<description>se_sha_0_hash_h_7.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_7</name>
@@ -8877,6 +8936,8 @@
 						<name>se_sha_0_link</name>
 						<description>se_sha_0_link.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_sha_0_lca</name>
@@ -8889,6 +8950,8 @@
 						<name>se_sha_0_ctrl_prot</name>
 						<description>se_sha_0_ctrl_prot.</description>
 						<addressOffset>0xFC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_sha_id1_en</name>
@@ -8911,6 +8974,8 @@
 						<name>se_aes_0_ctrl</name>
 						<description>se_aes_0_ctrl.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_msg_len</name>
@@ -8951,6 +9016,7 @@
 								<name>se_aes_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_aes_0_hw_key_en</name>
@@ -8986,6 +9052,7 @@
 								<name>se_aes_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -8993,6 +9060,8 @@
 						<name>se_aes_0_msa</name>
 						<description>se_aes_0_msa.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_msa</name>
@@ -9005,6 +9074,8 @@
 						<name>se_aes_0_mda</name>
 						<description>se_aes_0_mda.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_mda</name>
@@ -9017,6 +9088,9 @@
 						<name>se_aes_0_status</name>
 						<description>se_aes_0_status.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0x00000100</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_aes_0_status</name>
@@ -9029,6 +9103,8 @@
 						<name>se_aes_0_iv_0</name>
 						<description>se_aes_0_iv_0.</description>
 						<addressOffset>0x110</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_0</name>
@@ -9041,6 +9117,8 @@
 						<name>se_aes_0_iv_1</name>
 						<description>se_aes_0_iv_1.</description>
 						<addressOffset>0x114</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_1</name>
@@ -9053,6 +9131,8 @@
 						<name>se_aes_0_iv_2</name>
 						<description>se_aes_0_iv_2.</description>
 						<addressOffset>0x118</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_2</name>
@@ -9065,6 +9145,8 @@
 						<name>se_aes_0_iv_3</name>
 						<description>se_aes_0_iv_3.</description>
 						<addressOffset>0x11C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_3</name>
@@ -9077,6 +9159,8 @@
 						<name>se_aes_0_key_0</name>
 						<description>se_aes_0_key_0.</description>
 						<addressOffset>0x120</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_0</name>
@@ -9089,6 +9173,8 @@
 						<name>se_aes_0_key_1</name>
 						<description>se_aes_0_key_1.</description>
 						<addressOffset>0x124</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_1</name>
@@ -9101,6 +9187,8 @@
 						<name>se_aes_0_key_2</name>
 						<description>se_aes_0_key_2.</description>
 						<addressOffset>0x128</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_2</name>
@@ -9113,6 +9201,8 @@
 						<name>se_aes_0_key_3</name>
 						<description>se_aes_0_key_3.</description>
 						<addressOffset>0x12C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_3</name>
@@ -9125,6 +9215,8 @@
 						<name>se_aes_0_key_4</name>
 						<description>se_aes_0_key_4.</description>
 						<addressOffset>0x130</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_4</name>
@@ -9137,6 +9229,8 @@
 						<name>se_aes_0_key_5</name>
 						<description>se_aes_0_key_5.</description>
 						<addressOffset>0x134</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_5</name>
@@ -9149,6 +9243,8 @@
 						<name>se_aes_0_key_6</name>
 						<description>se_aes_0_key_6.</description>
 						<addressOffset>0x138</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_6</name>
@@ -9161,6 +9257,8 @@
 						<name>se_aes_0_key_7</name>
 						<description>se_aes_0_key_7.</description>
 						<addressOffset>0x13C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_7</name>
@@ -9173,6 +9271,8 @@
 						<name>se_aes_0_key_sel_0</name>
 						<description>se_aes_0_key_sel_0.</description>
 						<addressOffset>0x140</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_sel_0</name>
@@ -9185,6 +9285,8 @@
 						<name>se_aes_0_key_sel_1</name>
 						<description>se_aes_0_key_sel_1.</description>
 						<addressOffset>0x144</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_key_sel_1</name>
@@ -9197,6 +9299,8 @@
 						<name>se_aes_0_endian</name>
 						<description>se_aes_0_endian.</description>
 						<addressOffset>0x148</addressOffset>
+						<resetValue>0x0000000f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_ctr_len</name>
@@ -9229,6 +9333,8 @@
 						<name>se_aes_0_sboot</name>
 						<description>se_aes_0_sboot.</description>
 						<addressOffset>0x14C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_sboot_key_sel</name>
@@ -9241,6 +9347,8 @@
 						<name>se_aes_0_link</name>
 						<description>se_aes_0_link.</description>
 						<addressOffset>0x150</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_0_lca</name>
@@ -9253,6 +9361,8 @@
 						<name>se_aes_0_ctrl_prot</name>
 						<description>se_aes_0_ctrl_prot.</description>
 						<addressOffset>0x1FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_aes_id1_en</name>
@@ -9275,6 +9385,8 @@
 						<name>se_trng_0_ctrl_0</name>
 						<description>se_trng_0_ctrl_0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_trng_0_manual_en</name>
@@ -9310,11 +9422,13 @@
 								<name>se_trng_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_trng_0_ht_error</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_trng_0_dout_clr_1t</name>
@@ -9335,6 +9449,7 @@
 								<name>se_trng_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -9342,6 +9457,9 @@
 						<name>se_trng_0_status</name>
 						<description>se_trng_0_status.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00100020</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_status</name>
@@ -9354,6 +9472,9 @@
 						<name>se_trng_0_dout_0</name>
 						<description>se_trng_0_dout_0.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_0</name>
@@ -9366,6 +9487,9 @@
 						<name>se_trng_0_dout_1</name>
 						<description>se_trng_0_dout_1.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_1</name>
@@ -9378,6 +9502,9 @@
 						<name>se_trng_0_dout_2</name>
 						<description>se_trng_0_dout_2.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_2</name>
@@ -9390,6 +9517,9 @@
 						<name>se_trng_0_dout_3</name>
 						<description>se_trng_0_dout_3.</description>
 						<addressOffset>0x214</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_3</name>
@@ -9402,6 +9532,9 @@
 						<name>se_trng_0_dout_4</name>
 						<description>se_trng_0_dout_4.</description>
 						<addressOffset>0x218</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_4</name>
@@ -9414,6 +9547,9 @@
 						<name>se_trng_0_dout_5</name>
 						<description>se_trng_0_dout_5.</description>
 						<addressOffset>0x21C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_5</name>
@@ -9426,6 +9562,9 @@
 						<name>se_trng_0_dout_6</name>
 						<description>se_trng_0_dout_6.</description>
 						<addressOffset>0x220</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_6</name>
@@ -9438,6 +9577,9 @@
 						<name>se_trng_0_dout_7</name>
 						<description>se_trng_0_dout_7.</description>
 						<addressOffset>0x224</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_7</name>
@@ -9450,6 +9592,8 @@
 						<name>se_trng_0_test</name>
 						<description>se_trng_0_test.</description>
 						<addressOffset>0x228</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_trng_0_ht_alarm_n</name>
@@ -9482,6 +9626,8 @@
 						<name>se_trng_0_ctrl_1</name>
 						<description>se_trng_0_ctrl_1.</description>
 						<addressOffset>0x22C</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_trng_0_reseed_n_lsb</name>
@@ -9494,6 +9640,8 @@
 						<name>se_trng_0_ctrl_2</name>
 						<description>se_trng_0_ctrl_2.</description>
 						<addressOffset>0x230</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_trng_0_reseed_n_msb</name>
@@ -9506,6 +9654,8 @@
 						<name>se_trng_0_ctrl_3</name>
 						<description>se_trng_0_ctrl_3.</description>
 						<addressOffset>0x234</addressOffset>
+						<resetValue>0x837a4203</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_trng_0_rosc_en</name>
@@ -9538,6 +9688,9 @@
 						<name>se_trng_0_test_out_0</name>
 						<description>se_trng_0_test_out_0.</description>
 						<addressOffset>0x240</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_0</name>
@@ -9550,6 +9703,9 @@
 						<name>se_trng_0_test_out_1</name>
 						<description>se_trng_0_test_out_1.</description>
 						<addressOffset>0x244</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_1</name>
@@ -9562,6 +9718,9 @@
 						<name>se_trng_0_test_out_2</name>
 						<description>se_trng_0_test_out_2.</description>
 						<addressOffset>0x248</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_2</name>
@@ -9574,6 +9733,9 @@
 						<name>se_trng_0_test_out_3</name>
 						<description>se_trng_0_test_out_3.</description>
 						<addressOffset>0x24C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_3</name>
@@ -9586,6 +9748,8 @@
 						<name>se_trng_0_ctrl_prot</name>
 						<description>se_trng_0_ctrl_prot.</description>
 						<addressOffset>0x2FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_trng_id1_en</name>
@@ -9608,11 +9772,14 @@
 						<name>se_pka_0_ctrl_0</name>
 						<description>se_pka_0_ctrl_0.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_pka_0_status</name>
 								<lsb>17</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_pka_0_status_clr_1t</name>
@@ -9648,6 +9815,7 @@
 								<name>se_pka_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_pka_0_prot_md</name>
@@ -9663,6 +9831,7 @@
 								<name>se_pka_0_busy</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_pka_0_done_clr_1t</name>
@@ -9673,6 +9842,7 @@
 								<name>se_pka_0_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -9680,6 +9850,8 @@
 						<name>se_pka_0_seed</name>
 						<description>se_pka_0_seed.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_pka_0_seed</name>
@@ -9692,6 +9864,8 @@
 						<name>se_pka_0_ctrl_1</name>
 						<description>se_pka_0_ctrl_1.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x00000005</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_pka_0_hbypass</name>
@@ -9709,18 +9883,24 @@
 						<name>se_pka_0_rw</name>
 						<description>se_pka_0_rw.</description>
 						<addressOffset>0x340</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>se_pka_0_rw_burst</name>
 						<description>se_pka_0_rw_burst.</description>
 						<addressOffset>0x360</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>se_pka_0_ctrl_prot</name>
 						<description>se_pka_0_ctrl_prot.</description>
 						<addressOffset>0x3FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_pka_id1_en</name>
@@ -9743,6 +9923,8 @@
 						<name>se_cdet_0_ctrl_0</name>
 						<description>se_cdet_0_ctrl_0.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x21640004</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_cdet_0_g_loop_min</name>
@@ -9758,11 +9940,13 @@
 								<name>se_cdet_0_status</name>
 								<lsb>2</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_cdet_0_error</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_cdet_0_en</name>
@@ -9775,6 +9959,8 @@
 						<name>se_cdet_0_ctrl_1</name>
 						<description>se_cdet_0_ctrl_1.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x00ff0332</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_cdet_0_g_slp_n</name>
@@ -9797,6 +9983,8 @@
 						<name>se_cdet_0_ctrl_prot</name>
 						<description>se_cdet_0_ctrl_prot.</description>
 						<addressOffset>0x4FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_cdet_id1_en</name>
@@ -9819,6 +10007,8 @@
 						<name>se_gmac_0_ctrl_0</name>
 						<description>se_gmac_0_ctrl_0.</description>
 						<addressOffset>0x500</addressOffset>
+						<resetValue>0x00007000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_gmac_0_x_endian</name>
@@ -9854,6 +10044,7 @@
 								<name>se_gmac_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_gmac_0_en</name>
@@ -9869,6 +10060,7 @@
 								<name>se_gmac_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -9876,6 +10068,8 @@
 						<name>se_gmac_0_lca</name>
 						<description>se_gmac_0_lca.</description>
 						<addressOffset>0x504</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_gmac_0_lca</name>
@@ -9888,6 +10082,9 @@
 						<name>se_gmac_0_status</name>
 						<description>se_gmac_0_status.</description>
 						<addressOffset>0x508</addressOffset>
+						<resetValue>0xf1000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_gmac_0_status</name>
@@ -9900,6 +10097,8 @@
 						<name>se_gmac_0_ctrl_prot</name>
 						<description>se_gmac_0_ctrl_prot.</description>
 						<addressOffset>0x5FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>se_gmac_id1_en</name>
@@ -9922,6 +10121,9 @@
 						<name>se_ctrl_prot_rd</name>
 						<description>se_ctrl_prot_rd.</description>
 						<addressOffset>0xF00</addressOffset>
+						<resetValue>0x00777777</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_dbg_dis</name>
