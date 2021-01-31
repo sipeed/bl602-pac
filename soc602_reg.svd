@@ -13093,11 +13093,13 @@
 								<name>rx_fifo_underflow</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_underflow</name>
@@ -13109,6 +13111,7 @@
 								<name>tx_fifo_overflow</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -13202,6 +13205,8 @@
 						<name>spi_config</name>
 						<description>spi_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_spi_deg_cnt</name>
@@ -13264,6 +13269,8 @@
 						<name>spi_int_sts</name>
 						<description>spi_int_sts.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x3f003f00</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_spi_fer_en</name>
@@ -13359,31 +13366,37 @@
 								<name>spi_fer_int</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_txu_int</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_sto_int</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_rxf_int</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_txf_int</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13391,6 +13404,9 @@
 						<name>spi_bus_busy</name>
 						<description>spi_bus_busy.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sts_spi_bus_busy</name>
@@ -13403,6 +13419,8 @@
 						<name>spi_prd_0</name>
 						<description>spi_prd_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_spi_prd_d_ph_1</name>
@@ -13430,6 +13448,8 @@
 						<name>spi_prd_1</name>
 						<description>spi_prd_1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0000000f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_spi_prd_i</name>
@@ -13442,6 +13462,8 @@
 						<name>spi_rxd_ignr</name>
 						<description>spi_rxd_ignr.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_spi_rxd_ignr_s</name>
@@ -13459,6 +13481,8 @@
 						<name>spi_sto_value</name>
 						<description>spi_sto_value.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000fff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_spi_sto_value</name>
@@ -13471,11 +13495,14 @@
 						<name>spi_fifo_config_0</name>
 						<description>spi_fifo_config_0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_underflow</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
@@ -13487,11 +13514,13 @@
 								<name>tx_fifo_underflow</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_overflow</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -13519,6 +13548,8 @@
 						<name>spi_fifo_config_1</name>
 						<description>spi_fifo_config_1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000004</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_th</name>
@@ -13534,11 +13565,13 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>8</lsb>
 								<msb>10</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_cnt</name>
 								<lsb>0</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13923,11 +13956,13 @@
 								<name>rx_fifo_overflow</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_underflow</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_overflow</name>
@@ -13978,6 +14013,7 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>8</lsb>
 								<msb>9</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_cnt</name>
@@ -15697,11 +15733,13 @@
 								<name>rx_fifo_underflow</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
