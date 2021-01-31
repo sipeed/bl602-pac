@@ -18018,6 +18018,8 @@
 						<name>PDS_CTL</name>
 						<description>PDS_CTL.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x1a006b00</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_pds_ctrl_pll</name>
@@ -18130,6 +18132,8 @@
 						<name>PDS_TIME1</name>
 						<description>PDS_TIME1.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000ca8</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_sleep_duration</name>
@@ -18142,6 +18146,8 @@
 						<name>PDS_INT</name>
 						<description>PDS_INT.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_pds_int_clr</name>
@@ -18172,21 +18178,25 @@
 								<name>ro_pds_pll_done_int</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ro_pds_rf_done_int</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ro_pds_irq_in</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ro_pds_wake_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18194,6 +18204,8 @@
 						<name>PDS_CTL2</name>
 						<description>PDS_CTL2.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_pds_force_wb_gate_clk</name>
@@ -18251,6 +18263,8 @@
 						<name>PDS_CTL3</name>
 						<description>PDS_CTL3.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x49000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_pds_misc_iso_en</name>
@@ -18298,6 +18312,8 @@
 						<name>PDS_CTL4</name>
 						<description>PDS_CTL4.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x0f00f00f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_pds_misc_gate_clk</name>
@@ -18365,6 +18381,9 @@
 						<name>pds_stat</name>
 						<description>pds_stat.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>ro_pds_pll_state</name>
@@ -18387,6 +18406,8 @@
 						<name>pds_ram1</name>
 						<description>pds_ram1.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_np_sram_pwr</name>
@@ -18399,6 +18420,8 @@
 						<name>rc32m_ctrl0</name>
 						<description>rc32m_ctrl0.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x18080018</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rc32m_code_fr_ext</name>
@@ -18434,11 +18457,13 @@
 								<name>rc32m_dig_code_fr_cal</name>
 								<lsb>6</lsb>
 								<msb>13</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_cal_precharge</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_cal_div</name>
@@ -18449,16 +18474,19 @@
 								<name>rc32m_cal_inprogress</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_rdy</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_cal_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18466,6 +18494,8 @@
 						<name>rc32m_ctrl1</name>
 						<description>rc32m_ctrl1.</description>
 						<addressOffset>0x304</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rc32m_reserved</name>
@@ -18503,6 +18533,8 @@
 						<name>pu_rst_clkpll</name>
 						<description>pu_rst_clkpll.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x000001f0</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pu_clkpll</name>
@@ -18565,6 +18597,8 @@
 						<name>clkpll_top_ctrl</name>
 						<description>clkpll_top_ctrl.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x01100414</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_vg13_sel</name>
@@ -18602,6 +18636,8 @@
 						<name>clkpll_cp</name>
 						<description>clkpll_cp.</description>
 						<addressOffset>0x408</addressOffset>
+						<resetValue>0x00000741</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_cp_opamp_en</name>
@@ -18639,6 +18675,8 @@
 						<name>clkpll_rz</name>
 						<description>clkpll_rz.</description>
 						<addressOffset>0x40C</addressOffset>
+						<resetValue>0x0005a020</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_rz</name>
@@ -18676,6 +18714,8 @@
 						<name>clkpll_fbdv</name>
 						<description>clkpll_fbdv.</description>
 						<addressOffset>0x410</addressOffset>
+						<resetValue>0x00000005</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_sel_fb_clk</name>
@@ -18693,6 +18733,8 @@
 						<name>clkpll_vco</name>
 						<description>clkpll_vco.</description>
 						<addressOffset>0x414</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_shrtr</name>
@@ -18710,6 +18752,8 @@
 						<name>clkpll_sdm</name>
 						<description>clkpll_sdm.</description>
 						<addressOffset>0x418</addressOffset>
+						<resetValue>0x10600000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_sdm_bypass</name>
@@ -18737,6 +18781,8 @@
 						<name>clkpll_output_en</name>
 						<description>clkpll_output_en.</description>
 						<addressOffset>0x41C</addressOffset>
+						<resetValue>0x00000100</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>clkpll_en_div2_480m</name>
