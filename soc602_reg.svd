@@ -32,6 +32,8 @@
 						<name>clk_cfg0</name>
 						<description>Clock configuration for processor and bus</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x6000000f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>glb_id</name>
@@ -101,6 +103,8 @@
 						<name>clk_cfg1</name>
 						<description>clk_cfg1.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x01100001</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>ble_en</name>
@@ -131,6 +135,8 @@
 						<name>clk_cfg2</name>
 						<description>Clock configuration for UART and Flash</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0xff8f2b17</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>dma_clk_en</name>
@@ -171,6 +177,7 @@
 								<name>hbn_uart_clk_sel</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>uart_clk_en</name>
@@ -188,6 +195,8 @@
 						<name>clk_cfg3</name>
 						<description>Clock configuration for I2C and SPI</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x01ff0103</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>i2c_clk_en</name>
@@ -215,6 +224,8 @@
 						<name>swrst_cfg0</name>
 						<description>swrst_cfg0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>swrst_s30</name>
@@ -242,6 +253,8 @@
 						<name>swrst_cfg1</name>
 						<description>swrst_cfg1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>swrst_s1a7</name>
@@ -369,6 +382,8 @@
 						<name>swrst_cfg2</name>
 						<description>swrst_cfg2.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pka_clk_sel</name>
@@ -401,12 +416,16 @@
 						<name>swrst_cfg3</name>
 						<description>swrst_cfg3.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>cgen_cfg0</name>
 						<description>cgen_cfg0.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cgen_m</name>
@@ -419,6 +438,8 @@
 						<name>cgen_cfg1</name>
 						<description>cgen_cfg1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00ffffff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cgen_s1a</name>
@@ -436,6 +457,8 @@
 						<name>cgen_cfg2</name>
 						<description>cgen_cfg2.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000011</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cgen_s3</name>
@@ -453,12 +476,16 @@
 						<name>cgen_cfg3</name>
 						<description>cgen_cfg3.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields/>
 					</register>
 					<register>
 						<name>MBIST_CTL</name>
 						<description>MBIST_CTL.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_mbist_rst_n</name>
@@ -496,6 +523,9 @@
 						<name>MBIST_STAT</name>
 						<description>MBIST_STAT.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>wifi_mbist_fail</name>
@@ -553,6 +583,8 @@
 						<name>bmx_cfg1</name>
 						<description>bmx_cfg1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>hbn_apb_cfg</name>
@@ -600,6 +632,8 @@
 						<name>bmx_cfg2</name>
 						<description>bmx_cfg2.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>bmx_dbg_sel</name>
@@ -610,11 +644,13 @@
 								<name>bmx_err_tz</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>bmx_err_dec</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>bmx_err_addr_dis</name>
@@ -628,6 +664,9 @@
 						<name>bmx_err_addr</name>
 						<description>bmx_err_addr.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>bmx_err_addr</name>
@@ -640,6 +679,9 @@
 						<name>bmx_dbg_out</name>
 						<description>bmx_dbg_out.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>bmx_dbg_out</name>
@@ -700,6 +742,8 @@
 						<name>sram_ret</name>
 						<description>sram_ret.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_sram_ret</name>
@@ -712,6 +756,8 @@
 						<name>sram_slp</name>
 						<description>sram_slp.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_sram_slp</name>
@@ -724,6 +770,8 @@
 						<name>sram_parm</name>
 						<description>sram_parm.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x0c0c0c0c</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_sram_parm</name>
@@ -736,6 +784,8 @@
 						<name>seam_misc</name>
 						<description>seam_misc.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>em_sel</name>
@@ -748,6 +798,8 @@
 						<name>glb_parm</name>
 						<description>glb_parm.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00018300</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>uart_swap_set</name>
@@ -840,6 +892,8 @@
 						<name>CPU_CLK_CFG</name>
 						<description>CPU_CLK_CFG.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00080010</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>debug_ndreset_gate</name>
@@ -867,6 +921,8 @@
 						<name>GPADC_32M_SRC_CTRL</name>
 						<description>Clock configuration for GPADC</description>
 						<addressOffset>0xA4</addressOffset>
+						<resetValue>0x00000102</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpadc_32m_div_en</name>
@@ -889,6 +945,8 @@
 						<name>DIG32K_WAKEUP_CTRL</name>
 						<description>DIG32K_WAKEUP_CTRL.</description>
 						<addressOffset>0xA8</addressOffset>
+						<resetValue>0x033e13e8</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_en_platform_wakeup</name>
@@ -936,6 +994,8 @@
 						<name>WIFI_BT_COEX_CTRL</name>
 						<description>WIFI_BT_COEX_CTRL.</description>
 						<addressOffset>0xAC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>en_gpio_bt_coex</name>
@@ -963,6 +1023,8 @@
 						<name>UART_SIG_SEL_0</name>
 						<description>UART_SIG_SEL_0.</description>
 						<addressOffset>0xC0</addressOffset>
+						<resetValue>0x76543210</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>uart_sig_7_sel</name>
@@ -1010,6 +1072,8 @@
 						<name>DBG_SEL_LL</name>
 						<description>DBG_SEL_LL.</description>
 						<addressOffset>0xD0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_dbg_ll_ctrl</name>
@@ -1022,6 +1086,8 @@
 						<name>DBG_SEL_LH</name>
 						<description>DBG_SEL_LH.</description>
 						<addressOffset>0xD4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_dbg_lh_ctrl</name>
@@ -1034,6 +1100,8 @@
 						<name>DBG_SEL_HL</name>
 						<description>DBG_SEL_HL.</description>
 						<addressOffset>0xD8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_dbg_hl_ctrl</name>
@@ -1046,6 +1114,8 @@
 						<name>DBG_SEL_HH</name>
 						<description>DBG_SEL_HH.</description>
 						<addressOffset>0xDC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>reg_dbg_hh_ctrl</name>
@@ -1058,6 +1128,9 @@
 						<name>debug</name>
 						<description>debug.</description>
 						<addressOffset>0xE0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>debug_i</name>
@@ -2506,6 +2579,8 @@
 						<name>led_driver</name>
 						<description>led_driver.</description>
 						<addressOffset>0x224</addressOffset>
+						<resetValue>0x00000080</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>pu_leddrv</name>
@@ -2543,6 +2618,8 @@
 						<name>gpdac_ctrl</name>
 						<description>gpdac_ctrl.</description>
 						<addressOffset>0x308</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpdac_reserved</name>
@@ -2580,6 +2657,8 @@
 						<name>gpdac_actrl</name>
 						<description>gpdac_actrl.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x000c0000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpdac_a_outmux</name>
@@ -2607,6 +2686,8 @@
 						<name>gpdac_bctrl</name>
 						<description>gpdac_bctrl.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x000c0000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpdac_b_outmux</name>
@@ -2634,6 +2715,8 @@
 						<name>gpdac_data</name>
 						<description>gpdac_data.</description>
 						<addressOffset>0x314</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpdac_a_data</name>
@@ -2651,6 +2734,9 @@
 						<name>tzc_glb_ctrl_0</name>
 						<description>tzc_glb_ctrl_0.</description>
 						<addressOffset>0xF00</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_glb_clk_lock</name>
@@ -2728,6 +2814,9 @@
 						<name>tzc_glb_ctrl_1</name>
 						<description>tzc_glb_ctrl_1.</description>
 						<addressOffset>0xF04</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_glb_swrst_s1f_lock</name>
@@ -2895,6 +2984,9 @@
 						<name>tzc_glb_ctrl_2</name>
 						<description>tzc_glb_ctrl_2.</description>
 						<addressOffset>0xF08</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_glb_gpio_28_lock</name>
@@ -3045,9 +3137,8 @@
 					</register>
 					<register>
 						<name>tzc_glb_ctrl_3</name>
-						<description>tzc_glb_ctrl_3.</description>
+						<description>Reserved according to SDK.</description>
 						<addressOffset>0xF0C</addressOffset>
-						<fields/>
 					</register>
 				</registers>
 			</peripheral>
