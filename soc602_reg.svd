@@ -8181,6 +8181,8 @@
 						<name>gpadc_config</name>
 						<description>gpadc_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rsvd_31_24</name>
@@ -8196,6 +8198,7 @@
 								<name>gpadc_fifo_data_count</name>
 								<lsb>16</lsb>
 								<msb>21</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_underrun_mask</name>
@@ -8231,26 +8234,31 @@
 								<name>gpadc_fifo_underrun</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_overrun</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_rdy</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_full</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_ne</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_clr</name>
@@ -8268,6 +8276,9 @@
 						<name>gpadc_dma_rdata</name>
 						<description>gpadc_dma_rdata.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>rsvd_31_26</name>
@@ -8285,6 +8296,8 @@
 						<name>gpdac_config</name>
 						<description>gpdac_config.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rsvd_31_24</name>
@@ -8327,6 +8340,8 @@
 						<name>gpdac_dma_config</name>
 						<description>gpdac_dma_config.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>gpdac_dma_format</name>
@@ -8344,6 +8359,9 @@
 						<name>gpdac_dma_wdata</name>
 						<description>gpdac_dma_wdata.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>gpdac_dma_wdata</name>
@@ -8356,6 +8374,9 @@
 						<name>gpdac_tx_fifo_status</name>
 						<description>gpdac_tx_fifo_status.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000040</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>TxFifoWrPtr</name>
