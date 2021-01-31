@@ -8424,6 +8424,9 @@
 						<name>sd_chip_id_low</name>
 						<description>sd_chip_id_low.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_chip_id_low</name>
@@ -8436,6 +8439,9 @@
 						<name>sd_chip_id_high</name>
 						<description>sd_chip_id_high.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_chip_id_high</name>
@@ -8448,6 +8454,9 @@
 						<name>sd_wifi_mac_low</name>
 						<description>sd_wifi_mac_low.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_wifi_mac_low</name>
@@ -8460,6 +8469,9 @@
 						<name>sd_wifi_mac_high</name>
 						<description>sd_wifi_mac_high.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_wifi_mac_high</name>
@@ -8472,6 +8484,8 @@
 						<name>sd_dbg_pwd_low</name>
 						<description>sd_dbg_pwd_low.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sd_dbg_pwd_low</name>
@@ -8484,6 +8498,8 @@
 						<name>sd_dbg_pwd_high</name>
 						<description>sd_dbg_pwd_high.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sd_dbg_pwd_high</name>
@@ -8496,21 +8512,26 @@
 						<name>sd_status</name>
 						<description>sd_status.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sd_dbg_ena</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sd_dbg_mode</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sd_dbg_pwd_cnt</name>
 								<lsb>4</lsb>
 								<msb>23</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sd_dbg_cci_clk_sel</name>
@@ -8531,6 +8552,7 @@
 								<name>sd_dbg_pwd_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
