@@ -12697,6 +12697,8 @@
 						<name>utx_config</name>
 						<description>utx_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00001700</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_utx_len</name>
@@ -12754,6 +12756,8 @@
 						<name>urx_config</name>
 						<description>urx_config.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000700</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_urx_len</name>
@@ -12821,6 +12825,8 @@
 						<name>uart_bit_prd</name>
 						<description>uart_bit_prd.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00ff00ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_urx_bit_prd</name>
@@ -12838,6 +12844,8 @@
 						<name>data_config</name>
 						<description>data_config.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_uart_bit_inv</name>
@@ -12850,6 +12858,8 @@
 						<name>utx_ir_position</name>
 						<description>utx_ir_position.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x009f0070</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_utx_ir_pos_p</name>
@@ -12867,6 +12877,8 @@
 						<name>urx_ir_position</name>
 						<description>urx_ir_position.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0000006f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_urx_ir_pos_s</name>
@@ -12879,6 +12891,8 @@
 						<name>urx_rto_timer</name>
 						<description>urx_rto_timer.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x0000000f</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_urx_rto_value</name>
@@ -12891,6 +12905,9 @@
 						<name>uart_int_sts</name>
 						<description>UART interrupt status</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>urx_fer_int</name>
@@ -12938,6 +12955,8 @@
 						<name>uart_int_mask</name>
 						<description>UART interrupt mask</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_urx_fer_mask</name>
@@ -12985,6 +13004,8 @@
 						<name>uart_int_clear</name>
 						<description>UART interrupt clear</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rsvd_7</name>
@@ -13032,6 +13053,8 @@
 						<name>uart_int_en</name>
 						<description>UART interrupt enable</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>cr_urx_fer_en</name>
@@ -13079,6 +13102,9 @@
 						<name>uart_status</name>
 						<description>uart_status.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sts_urx_bus_busy</name>
@@ -13096,6 +13122,9 @@
 						<name>sts_urx_abr_prd</name>
 						<description>sts_urx_abr_prd.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sts_urx_abr_prd_0x55</name>
@@ -13113,6 +13142,8 @@
 						<name>uart_fifo_config_0</name>
 						<description>uart_fifo_config_0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_underflow</name>
@@ -13164,6 +13195,8 @@
 						<name>uart_fifo_config_1</name>
 						<description>uart_fifo_config_1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000020</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>rx_fifo_th</name>
@@ -13179,11 +13212,13 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>8</lsb>
 								<msb>13</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_cnt</name>
 								<lsb>0</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -13191,6 +13226,9 @@
 						<name>uart_fifo_wdata</name>
 						<description>uart_fifo_wdata.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>uart_fifo_wdata</name>
@@ -13203,6 +13241,9 @@
 						<name>uart_fifo_rdata</name>
 						<description>uart_fifo_rdata.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>uart_fifo_rdata</name>
