@@ -45,11 +45,13 @@
 								<name>chip_rdy</name>
 								<lsb>27</lsb>
 								<msb>27</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>fclk_sw_state</name>
 								<lsb>24</lsb>
 								<msb>26</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_bclk_div</name>
@@ -67,6 +69,7 @@
 								<name>hbn_root_clk_sel</name>
 								<lsb>6</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_pll_sel</name>
@@ -1130,12 +1133,12 @@
 						<addressOffset>0xE0</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetValue>0xffffffff</resetValue>
-						<access>read-only</access>
 						<fields>
 							<field>
 								<name>debug_i</name>
 								<lsb>1</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>debug_oe</name>
@@ -9658,9 +9661,10 @@
 						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
-								<name>se_trng_0_rosc_en</name>
+								<name>se_trng_0_rosc_dis</name>
 								<lsb>31</lsb>
 								<msb>31</msb>
+								<description>Used to be called 'se_trng_0_rosc_en', but the SDK calls it 'se_trng_0_rosc_dis'.</description>
 							</field>
 							<field>
 								<name>se_trng_0_ht_od_en</name>
@@ -12278,7 +12282,7 @@
 						<name>ef_crc_ctrl_4</name>
 						<description>ef_crc_ctrl_4.</description>
 						<addressOffset>0xA10</addressOffset>
-						<resetValue>0xffffffff</resetValue>
+						<resetValue>0xc2a8fa9d</resetValue>
 						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
@@ -17535,8 +17539,6 @@
 						<addressOffset>0x404</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetValue>0xffffffff</resetValue>
-						<resetValue>0x00000000</resetValue>
-						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_1</name>
@@ -17549,6 +17551,8 @@
 						<name>sf_aes_key_r2_2</name>
 						<description>sf_aes_key_r2_2.</description>
 						<addressOffset>0x408</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_2</name>
@@ -18015,7 +18019,7 @@
 						<name>DMA_C0Control</name>
 						<description>DMA_C0Control.</description>
 						<addressOffset>0x10C</addressOffset>
-						<resetValue>0x00000000</resetValue>
+						<resetValue>0x0c489000</resetValue>
 						<resetValue>0xffffffff</resetValue>
 						<fields>
 							<field>
