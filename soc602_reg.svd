@@ -7573,11 +7573,11 @@
 								<enumeratedValues>
 									<name>GPIO0ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7615,11 +7615,11 @@
 								<enumeratedValues>
 									<name>GPIO1ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7657,11 +7657,11 @@
 								<enumeratedValues>
 									<name>GPIO2ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7699,11 +7699,11 @@
 								<enumeratedValues>
 									<name>GPIO3ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7741,11 +7741,11 @@
 								<enumeratedValues>
 									<name>GPIO4ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7783,11 +7783,11 @@
 								<enumeratedValues>
 									<name>GPIO5ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7825,11 +7825,11 @@
 								<enumeratedValues>
 									<name>GPIO6ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7867,11 +7867,11 @@
 								<enumeratedValues>
 									<name>GPIO7ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7909,11 +7909,11 @@
 								<enumeratedValues>
 									<name>GPIO8ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -7951,11 +7951,11 @@
 								<enumeratedValues>
 									<name>GPIO9ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8002,11 +8002,11 @@
 								<enumeratedValues>
 									<name>GPIO10ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8044,11 +8044,11 @@
 								<enumeratedValues>
 									<name>GPIO11ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8086,11 +8086,11 @@
 								<enumeratedValues>
 									<name>GPIO12ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8128,11 +8128,11 @@
 								<enumeratedValues>
 									<name>GPIO13ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8170,11 +8170,11 @@
 								<enumeratedValues>
 									<name>GPIO14ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8212,11 +8212,11 @@
 								<enumeratedValues>
 									<name>GPIO15ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8254,11 +8254,11 @@
 								<enumeratedValues>
 									<name>GPIO16ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8296,11 +8296,11 @@
 								<enumeratedValues>
 									<name>GPIO17ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8338,11 +8338,11 @@
 								<enumeratedValues>
 									<name>GPIO18ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8380,11 +8380,11 @@
 								<enumeratedValues>
 									<name>GPIO19ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8431,11 +8431,11 @@
 								<enumeratedValues>
 									<name>GPIO20ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8473,11 +8473,11 @@
 								<enumeratedValues>
 									<name>GPIO21ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8515,11 +8515,11 @@
 								<enumeratedValues>
 									<name>GPIO22ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8557,11 +8557,11 @@
 								<enumeratedValues>
 									<name>GPIO23ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8599,11 +8599,11 @@
 								<enumeratedValues>
 									<name>GPIO24ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8641,11 +8641,11 @@
 								<enumeratedValues>
 									<name>GPIO25ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8683,11 +8683,11 @@
 								<enumeratedValues>
 									<name>GPIO26ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8725,11 +8725,11 @@
 								<enumeratedValues>
 									<name>GPIO27ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8767,11 +8767,11 @@
 								<enumeratedValues>
 									<name>GPIO28ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
@@ -8809,11 +8809,11 @@
 								<enumeratedValues>
 									<name>GPIO29ControlMode</name>
 									<enumeratedValue>
-										<name>sync</name>
+										<name>synchronous</name>
 										<value>0</value>
 									</enumeratedValue>
 									<enumeratedValue>
-										<name>async</name>
+										<name>asynchronous</name>
 										<value>1</value>
 									</enumeratedValue>
 								</enumeratedValues>
