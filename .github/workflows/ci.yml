@@ -1,0 +1,90 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust_check:
+    name: Rust check
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Run checks on stable and nightly Rust
+        rust: [stable, nightly]
+
+        include:
+          # Run check with MSRV as well
+          - rust: 1.42.0
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Rust ${{ matrix.rust }}
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: ${{ matrix.rust }}
+          override: true
+          components: rustfmt
+      
+      - name: Install xmllint
+        run: sudo apt-get install libxml2-utils
+      - name: Install Python dependencies
+        run: |
+          pip3 install --user setuptools wheel
+          pip3 install --user svdtools
+      - name: Put pip binary directory into path
+        run: echo "~/.local/bin" >> $GITHUB_PATH
+
+      - name: Cache Cargo installed binaries
+        uses: actions/cache@v1
+        id: cache-cargo
+        with:
+          path: ~/cargo-bin
+          key: ${{ runner.os }}-svd2rust-0.17.0
+      - name: Install svd2rust
+        if: steps.cache-cargo.outputs.cache-hit != 'true'
+        uses: actions-rs/install@v0.1
+        with:
+          crate: svd2rust
+          version: 0.17.0
+      - name: Copy svd2rust to cache directory
+        if: steps.cache-cargo.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/cargo-bin
+          cp ~/.cargo/bin/svd2rust ~/cargo-bin
+      - name: Install form
+        if: steps.cache-cargo.outputs.cache-hit != 'true'
+        uses: actions-rs/install@v0.1
+        with:
+          crate: form
+          version: 0.7.0
+      - name: Copy form to cache directory
+        if: steps.cache-cargo.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/cargo-bin
+          cp ~/.cargo/bin/form ~/cargo-bin
+          
+      - name: Put new cargo binary directory into path
+        run: echo "~/cargo-bin" >> $GITHUB_PATH
+
+      - name: Install and run SVDConv
+        run: |
+          pushd ~/.local/bin
+          wget https://github.com/ARM-software/CMSIS_5/raw/develop/CMSIS/Utilities/Linux64/SVDConv
+          chmod 0770 SVDConv
+          popd
+          SVDConv soc602_reg.svd      
+      - name: Build PAC
+        run: ./scripts/regenerate-rust-code.sh soc602_reg.svd src
+
+      - name: Check PAC
+        uses: actions-rs/cargo@v1
+        with:
+          command: check
