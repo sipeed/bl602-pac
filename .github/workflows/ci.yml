@@ -73,7 +73,14 @@ jobs:
           
       - name: Put new cargo binary directory into path
         run: echo "~/cargo-bin" >> $GITHUB_PATH
-      
+
+      - name: Install and run SVDConv
+        run: |
+          pushd ~/.local/bin
+          wget https://github.com/ARM-software/CMSIS_5/raw/develop/CMSIS/Utilities/Linux64/SVDConv
+          chmod 0770 SVDConv
+          popd
+          SVDConv bl602_soc.svd      
       - name: Build PAC
         run: ./scripts/regenerate-rust-code.sh soc602_reg.svd src
 
