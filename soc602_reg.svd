@@ -32,6 +32,8 @@
 						<name>clk_cfg0</name>
 						<description>Clock configuration for processor and bus</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x6000000f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>glb_id</name>
@@ -43,11 +45,13 @@
 								<name>chip_rdy</name>
 								<lsb>27</lsb>
 								<msb>27</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>fclk_sw_state</name>
 								<lsb>24</lsb>
 								<msb>26</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_bclk_div</name>
@@ -65,6 +69,7 @@
 								<name>hbn_root_clk_sel</name>
 								<lsb>6</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>reg_pll_sel</name>
@@ -101,6 +106,8 @@
 						<name>clk_cfg1</name>
 						<description>clk_cfg1.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x01100001</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ble_en</name>
@@ -131,6 +138,8 @@
 						<name>clk_cfg2</name>
 						<description>Clock configuration for UART and Flash</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0xff8f2b17</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>dma_clk_en</name>
@@ -171,6 +180,7 @@
 								<name>hbn_uart_clk_sel</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>uart_clk_en</name>
@@ -188,6 +198,8 @@
 						<name>clk_cfg3</name>
 						<description>Clock configuration for I2C and SPI</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x01ff0103</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>i2c_clk_en</name>
@@ -215,6 +227,8 @@
 						<name>swrst_cfg0</name>
 						<description>swrst_cfg0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>swrst_s30</name>
@@ -242,6 +256,8 @@
 						<name>swrst_cfg1</name>
 						<description>swrst_cfg1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>swrst_s1a7</name>
@@ -369,6 +385,8 @@
 						<name>swrst_cfg2</name>
 						<description>swrst_cfg2.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pka_clk_sel</name>
@@ -401,12 +419,16 @@
 						<name>swrst_cfg3</name>
 						<description>swrst_cfg3.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>cgen_cfg0</name>
 						<description>cgen_cfg0.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cgen_m</name>
@@ -419,6 +441,8 @@
 						<name>cgen_cfg1</name>
 						<description>cgen_cfg1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00ffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cgen_s1a</name>
@@ -436,6 +460,8 @@
 						<name>cgen_cfg2</name>
 						<description>cgen_cfg2.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000011</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cgen_s3</name>
@@ -453,12 +479,16 @@
 						<name>cgen_cfg3</name>
 						<description>cgen_cfg3.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>MBIST_CTL</name>
 						<description>MBIST_CTL.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_mbist_rst_n</name>
@@ -496,6 +526,9 @@
 						<name>MBIST_STAT</name>
 						<description>MBIST_STAT.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>wifi_mbist_fail</name>
@@ -553,6 +586,8 @@
 						<name>bmx_cfg1</name>
 						<description>bmx_cfg1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>hbn_apb_cfg</name>
@@ -600,6 +635,8 @@
 						<name>bmx_cfg2</name>
 						<description>bmx_cfg2.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>bmx_dbg_sel</name>
@@ -610,11 +647,13 @@
 								<name>bmx_err_tz</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>bmx_err_dec</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>bmx_err_addr_dis</name>
@@ -628,6 +667,9 @@
 						<name>bmx_err_addr</name>
 						<description>bmx_err_addr.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>bmx_err_addr</name>
@@ -640,6 +682,9 @@
 						<name>bmx_dbg_out</name>
 						<description>bmx_dbg_out.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>bmx_dbg_out</name>
@@ -700,6 +745,8 @@
 						<name>sram_ret</name>
 						<description>sram_ret.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_sram_ret</name>
@@ -712,6 +759,8 @@
 						<name>sram_slp</name>
 						<description>sram_slp.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_sram_slp</name>
@@ -724,6 +773,8 @@
 						<name>sram_parm</name>
 						<description>sram_parm.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x0c0c0c0c</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_sram_parm</name>
@@ -736,6 +787,8 @@
 						<name>seam_misc</name>
 						<description>seam_misc.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>em_sel</name>
@@ -748,6 +801,8 @@
 						<name>glb_parm</name>
 						<description>glb_parm.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00018300</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>uart_swap_set</name>
@@ -840,6 +895,8 @@
 						<name>CPU_CLK_CFG</name>
 						<description>CPU_CLK_CFG.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00080010</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>debug_ndreset_gate</name>
@@ -867,6 +924,8 @@
 						<name>GPADC_32M_SRC_CTRL</name>
 						<description>Clock configuration for GPADC</description>
 						<addressOffset>0xA4</addressOffset>
+						<resetValue>0x00000102</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_32m_div_en</name>
@@ -889,6 +948,8 @@
 						<name>DIG32K_WAKEUP_CTRL</name>
 						<description>DIG32K_WAKEUP_CTRL.</description>
 						<addressOffset>0xA8</addressOffset>
+						<resetValue>0x033e13e8</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_en_platform_wakeup</name>
@@ -936,6 +997,8 @@
 						<name>WIFI_BT_COEX_CTRL</name>
 						<description>WIFI_BT_COEX_CTRL.</description>
 						<addressOffset>0xAC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>en_gpio_bt_coex</name>
@@ -963,6 +1026,8 @@
 						<name>UART_SIG_SEL_0</name>
 						<description>UART_SIG_SEL_0.</description>
 						<addressOffset>0xC0</addressOffset>
+						<resetValue>0x76543210</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>uart_sig_7_sel</name>
@@ -1010,6 +1075,8 @@
 						<name>DBG_SEL_LL</name>
 						<description>DBG_SEL_LL.</description>
 						<addressOffset>0xD0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_dbg_ll_ctrl</name>
@@ -1022,6 +1089,8 @@
 						<name>DBG_SEL_LH</name>
 						<description>DBG_SEL_LH.</description>
 						<addressOffset>0xD4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_dbg_lh_ctrl</name>
@@ -1034,6 +1103,8 @@
 						<name>DBG_SEL_HL</name>
 						<description>DBG_SEL_HL.</description>
 						<addressOffset>0xD8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_dbg_hl_ctrl</name>
@@ -1046,6 +1117,8 @@
 						<name>DBG_SEL_HH</name>
 						<description>DBG_SEL_HH.</description>
 						<addressOffset>0xDC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_dbg_hh_ctrl</name>
@@ -1058,11 +1131,14 @@
 						<name>debug</name>
 						<description>debug.</description>
 						<addressOffset>0xE0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>debug_i</name>
 								<lsb>1</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>debug_oe</name>
@@ -8824,6 +8900,8 @@
 						<name>led_driver</name>
 						<description>led_driver.</description>
 						<addressOffset>0x224</addressOffset>
+						<resetValue>0x00000080</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pu_leddrv</name>
@@ -8861,6 +8939,8 @@
 						<name>gpdac_ctrl</name>
 						<description>gpdac_ctrl.</description>
 						<addressOffset>0x308</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpdac_reserved</name>
@@ -8898,6 +8978,8 @@
 						<name>gpdac_actrl</name>
 						<description>gpdac_actrl.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x000c0000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpdac_a_outmux</name>
@@ -8925,6 +9007,8 @@
 						<name>gpdac_bctrl</name>
 						<description>gpdac_bctrl.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x000c0000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpdac_b_outmux</name>
@@ -8952,6 +9036,8 @@
 						<name>gpdac_data</name>
 						<description>gpdac_data.</description>
 						<addressOffset>0x314</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpdac_a_data</name>
@@ -8969,6 +9055,9 @@
 						<name>tzc_glb_ctrl_0</name>
 						<description>tzc_glb_ctrl_0.</description>
 						<addressOffset>0xF00</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_glb_clk_lock</name>
@@ -9046,6 +9135,9 @@
 						<name>tzc_glb_ctrl_1</name>
 						<description>tzc_glb_ctrl_1.</description>
 						<addressOffset>0xF04</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_glb_swrst_s1f_lock</name>
@@ -9213,6 +9305,9 @@
 						<name>tzc_glb_ctrl_2</name>
 						<description>tzc_glb_ctrl_2.</description>
 						<addressOffset>0xF08</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_glb_gpio_28_lock</name>
@@ -9363,9 +9458,8 @@
 					</register>
 					<register>
 						<name>tzc_glb_ctrl_3</name>
-						<description>tzc_glb_ctrl_3.</description>
+						<description>Reserved according to SDK.</description>
 						<addressOffset>0xF0C</addressOffset>
-						<fields/>
 					</register>
 				</registers>
 			</peripheral>
@@ -14408,6 +14502,8 @@
 						<name>gpadc_config</name>
 						<description>gpadc_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rsvd_31_24</name>
@@ -14423,6 +14519,7 @@
 								<name>gpadc_fifo_data_count</name>
 								<lsb>16</lsb>
 								<msb>21</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_underrun_mask</name>
@@ -14458,26 +14555,31 @@
 								<name>gpadc_fifo_underrun</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_overrun</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_rdy</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_full</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_ne</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_fifo_clr</name>
@@ -14495,6 +14597,9 @@
 						<name>gpadc_dma_rdata</name>
 						<description>gpadc_dma_rdata.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>rsvd_31_26</name>
@@ -14512,6 +14617,8 @@
 						<name>gpdac_config</name>
 						<description>gpdac_config.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rsvd_31_24</name>
@@ -14554,6 +14661,8 @@
 						<name>gpdac_dma_config</name>
 						<description>gpdac_dma_config.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpdac_dma_format</name>
@@ -14571,6 +14680,9 @@
 						<name>gpdac_dma_wdata</name>
 						<description>gpdac_dma_wdata.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>gpdac_dma_wdata</name>
@@ -14583,6 +14695,9 @@
 						<name>gpdac_tx_fifo_status</name>
 						<description>gpdac_tx_fifo_status.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000040</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>TxFifoWrPtr</name>
@@ -14630,6 +14745,9 @@
 						<name>sd_chip_id_low</name>
 						<description>sd_chip_id_low.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_chip_id_low</name>
@@ -14642,6 +14760,9 @@
 						<name>sd_chip_id_high</name>
 						<description>sd_chip_id_high.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_chip_id_high</name>
@@ -14654,6 +14775,9 @@
 						<name>sd_wifi_mac_low</name>
 						<description>sd_wifi_mac_low.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_wifi_mac_low</name>
@@ -14666,6 +14790,9 @@
 						<name>sd_wifi_mac_high</name>
 						<description>sd_wifi_mac_high.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sd_wifi_mac_high</name>
@@ -14678,6 +14805,8 @@
 						<name>sd_dbg_pwd_low</name>
 						<description>sd_dbg_pwd_low.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sd_dbg_pwd_low</name>
@@ -14690,6 +14819,8 @@
 						<name>sd_dbg_pwd_high</name>
 						<description>sd_dbg_pwd_high.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sd_dbg_pwd_high</name>
@@ -14702,21 +14833,26 @@
 						<name>sd_status</name>
 						<description>sd_status.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sd_dbg_ena</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sd_dbg_mode</name>
 								<lsb>24</lsb>
 								<msb>27</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sd_dbg_pwd_cnt</name>
 								<lsb>4</lsb>
 								<msb>23</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sd_dbg_cci_clk_sel</name>
@@ -14737,6 +14873,7 @@
 								<name>sd_dbg_pwd_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -14771,6 +14908,8 @@
 						<name>se_sha_0_ctrl</name>
 						<description>se_sha_0_ctrl.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_sha_0_msg_len</name>
@@ -14801,6 +14940,7 @@
 								<name>se_sha_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_sha_0_hash_sel</name>
@@ -14826,6 +14966,7 @@
 								<name>se_sha_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -14833,6 +14974,8 @@
 						<name>se_sha_0_msa</name>
 						<description>se_sha_0_msa.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_sha_0_msa</name>
@@ -14845,6 +14988,9 @@
 						<name>se_sha_0_status</name>
 						<description>se_sha_0_status.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000041</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_status</name>
@@ -14857,6 +15003,8 @@
 						<name>se_sha_0_endian</name>
 						<description>se_sha_0_endian.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000001</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_sha_0_dout_endian</name>
@@ -14869,6 +15017,9 @@
 						<name>se_sha_0_hash_l_0</name>
 						<description>se_sha_0_hash_l_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_0</name>
@@ -14881,6 +15032,9 @@
 						<name>se_sha_0_hash_l_1</name>
 						<description>se_sha_0_hash_l_1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_1</name>
@@ -14893,6 +15047,9 @@
 						<name>se_sha_0_hash_l_2</name>
 						<description>se_sha_0_hash_l_2.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_2</name>
@@ -14905,6 +15062,9 @@
 						<name>se_sha_0_hash_l_3</name>
 						<description>se_sha_0_hash_l_3.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_3</name>
@@ -14917,6 +15077,9 @@
 						<name>se_sha_0_hash_l_4</name>
 						<description>se_sha_0_hash_l_4.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_4</name>
@@ -14929,6 +15092,9 @@
 						<name>se_sha_0_hash_l_5</name>
 						<description>se_sha_0_hash_l_5.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_5</name>
@@ -14941,6 +15107,9 @@
 						<name>se_sha_0_hash_l_6</name>
 						<description>se_sha_0_hash_l_6.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_6</name>
@@ -14953,6 +15122,9 @@
 						<name>se_sha_0_hash_l_7</name>
 						<description>se_sha_0_hash_l_7.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_l_7</name>
@@ -14965,6 +15137,9 @@
 						<name>se_sha_0_hash_h_0</name>
 						<description>se_sha_0_hash_h_0.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_0</name>
@@ -14977,6 +15152,9 @@
 						<name>se_sha_0_hash_h_1</name>
 						<description>se_sha_0_hash_h_1.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_1</name>
@@ -14989,6 +15167,9 @@
 						<name>se_sha_0_hash_h_2</name>
 						<description>se_sha_0_hash_h_2.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_2</name>
@@ -15001,6 +15182,9 @@
 						<name>se_sha_0_hash_h_3</name>
 						<description>se_sha_0_hash_h_3.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_3</name>
@@ -15013,6 +15197,9 @@
 						<name>se_sha_0_hash_h_4</name>
 						<description>se_sha_0_hash_h_4.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_4</name>
@@ -15025,6 +15212,9 @@
 						<name>se_sha_0_hash_h_5</name>
 						<description>se_sha_0_hash_h_5.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_5</name>
@@ -15037,6 +15227,9 @@
 						<name>se_sha_0_hash_h_6</name>
 						<description>se_sha_0_hash_h_6.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_6</name>
@@ -15049,6 +15242,9 @@
 						<name>se_sha_0_hash_h_7</name>
 						<description>se_sha_0_hash_h_7.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_sha_0_hash_h_7</name>
@@ -15061,6 +15257,8 @@
 						<name>se_sha_0_link</name>
 						<description>se_sha_0_link.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_sha_0_lca</name>
@@ -15073,6 +15271,8 @@
 						<name>se_sha_0_ctrl_prot</name>
 						<description>se_sha_0_ctrl_prot.</description>
 						<addressOffset>0xFC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_sha_id1_en</name>
@@ -15095,6 +15295,8 @@
 						<name>se_aes_0_ctrl</name>
 						<description>se_aes_0_ctrl.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_msg_len</name>
@@ -15135,6 +15337,7 @@
 								<name>se_aes_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_aes_0_hw_key_en</name>
@@ -15170,6 +15373,7 @@
 								<name>se_aes_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15177,6 +15381,8 @@
 						<name>se_aes_0_msa</name>
 						<description>se_aes_0_msa.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_msa</name>
@@ -15189,6 +15395,8 @@
 						<name>se_aes_0_mda</name>
 						<description>se_aes_0_mda.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_mda</name>
@@ -15201,6 +15409,9 @@
 						<name>se_aes_0_status</name>
 						<description>se_aes_0_status.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0x00000100</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_aes_0_status</name>
@@ -15213,6 +15424,8 @@
 						<name>se_aes_0_iv_0</name>
 						<description>se_aes_0_iv_0.</description>
 						<addressOffset>0x110</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_0</name>
@@ -15225,6 +15438,8 @@
 						<name>se_aes_0_iv_1</name>
 						<description>se_aes_0_iv_1.</description>
 						<addressOffset>0x114</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_1</name>
@@ -15237,6 +15452,8 @@
 						<name>se_aes_0_iv_2</name>
 						<description>se_aes_0_iv_2.</description>
 						<addressOffset>0x118</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_2</name>
@@ -15249,6 +15466,8 @@
 						<name>se_aes_0_iv_3</name>
 						<description>se_aes_0_iv_3.</description>
 						<addressOffset>0x11C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_iv_3</name>
@@ -15261,6 +15480,8 @@
 						<name>se_aes_0_key_0</name>
 						<description>se_aes_0_key_0.</description>
 						<addressOffset>0x120</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_0</name>
@@ -15273,6 +15494,8 @@
 						<name>se_aes_0_key_1</name>
 						<description>se_aes_0_key_1.</description>
 						<addressOffset>0x124</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_1</name>
@@ -15285,6 +15508,8 @@
 						<name>se_aes_0_key_2</name>
 						<description>se_aes_0_key_2.</description>
 						<addressOffset>0x128</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_2</name>
@@ -15297,6 +15522,8 @@
 						<name>se_aes_0_key_3</name>
 						<description>se_aes_0_key_3.</description>
 						<addressOffset>0x12C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_3</name>
@@ -15309,6 +15536,8 @@
 						<name>se_aes_0_key_4</name>
 						<description>se_aes_0_key_4.</description>
 						<addressOffset>0x130</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_4</name>
@@ -15321,6 +15550,8 @@
 						<name>se_aes_0_key_5</name>
 						<description>se_aes_0_key_5.</description>
 						<addressOffset>0x134</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_5</name>
@@ -15333,6 +15564,8 @@
 						<name>se_aes_0_key_6</name>
 						<description>se_aes_0_key_6.</description>
 						<addressOffset>0x138</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_6</name>
@@ -15345,6 +15578,8 @@
 						<name>se_aes_0_key_7</name>
 						<description>se_aes_0_key_7.</description>
 						<addressOffset>0x13C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_7</name>
@@ -15357,6 +15592,8 @@
 						<name>se_aes_0_key_sel_0</name>
 						<description>se_aes_0_key_sel_0.</description>
 						<addressOffset>0x140</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_sel_0</name>
@@ -15369,6 +15606,8 @@
 						<name>se_aes_0_key_sel_1</name>
 						<description>se_aes_0_key_sel_1.</description>
 						<addressOffset>0x144</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_key_sel_1</name>
@@ -15381,6 +15620,8 @@
 						<name>se_aes_0_endian</name>
 						<description>se_aes_0_endian.</description>
 						<addressOffset>0x148</addressOffset>
+						<resetValue>0x0000000f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_ctr_len</name>
@@ -15413,6 +15654,8 @@
 						<name>se_aes_0_sboot</name>
 						<description>se_aes_0_sboot.</description>
 						<addressOffset>0x14C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_sboot_key_sel</name>
@@ -15425,6 +15668,8 @@
 						<name>se_aes_0_link</name>
 						<description>se_aes_0_link.</description>
 						<addressOffset>0x150</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_0_lca</name>
@@ -15437,6 +15682,8 @@
 						<name>se_aes_0_ctrl_prot</name>
 						<description>se_aes_0_ctrl_prot.</description>
 						<addressOffset>0x1FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_aes_id1_en</name>
@@ -15459,6 +15706,8 @@
 						<name>se_trng_0_ctrl_0</name>
 						<description>se_trng_0_ctrl_0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_trng_0_manual_en</name>
@@ -15494,11 +15743,13 @@
 								<name>se_trng_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_trng_0_ht_error</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_trng_0_dout_clr_1t</name>
@@ -15519,6 +15770,7 @@
 								<name>se_trng_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15526,6 +15778,9 @@
 						<name>se_trng_0_status</name>
 						<description>se_trng_0_status.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00100020</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_status</name>
@@ -15538,6 +15793,9 @@
 						<name>se_trng_0_dout_0</name>
 						<description>se_trng_0_dout_0.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_0</name>
@@ -15550,6 +15808,9 @@
 						<name>se_trng_0_dout_1</name>
 						<description>se_trng_0_dout_1.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_1</name>
@@ -15562,6 +15823,9 @@
 						<name>se_trng_0_dout_2</name>
 						<description>se_trng_0_dout_2.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_2</name>
@@ -15574,6 +15838,9 @@
 						<name>se_trng_0_dout_3</name>
 						<description>se_trng_0_dout_3.</description>
 						<addressOffset>0x214</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_3</name>
@@ -15586,6 +15853,9 @@
 						<name>se_trng_0_dout_4</name>
 						<description>se_trng_0_dout_4.</description>
 						<addressOffset>0x218</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_4</name>
@@ -15598,6 +15868,9 @@
 						<name>se_trng_0_dout_5</name>
 						<description>se_trng_0_dout_5.</description>
 						<addressOffset>0x21C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_5</name>
@@ -15610,6 +15883,9 @@
 						<name>se_trng_0_dout_6</name>
 						<description>se_trng_0_dout_6.</description>
 						<addressOffset>0x220</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_6</name>
@@ -15622,6 +15898,9 @@
 						<name>se_trng_0_dout_7</name>
 						<description>se_trng_0_dout_7.</description>
 						<addressOffset>0x224</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_dout_7</name>
@@ -15634,6 +15913,8 @@
 						<name>se_trng_0_test</name>
 						<description>se_trng_0_test.</description>
 						<addressOffset>0x228</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_trng_0_ht_alarm_n</name>
@@ -15666,6 +15947,8 @@
 						<name>se_trng_0_ctrl_1</name>
 						<description>se_trng_0_ctrl_1.</description>
 						<addressOffset>0x22C</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_trng_0_reseed_n_lsb</name>
@@ -15678,6 +15961,8 @@
 						<name>se_trng_0_ctrl_2</name>
 						<description>se_trng_0_ctrl_2.</description>
 						<addressOffset>0x230</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_trng_0_reseed_n_msb</name>
@@ -15690,11 +15975,14 @@
 						<name>se_trng_0_ctrl_3</name>
 						<description>se_trng_0_ctrl_3.</description>
 						<addressOffset>0x234</addressOffset>
+						<resetValue>0x837a4203</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
-								<name>se_trng_0_rosc_en</name>
+								<name>se_trng_0_rosc_dis</name>
 								<lsb>31</lsb>
 								<msb>31</msb>
+								<description>Used to be called 'se_trng_0_rosc_en', but the SDK calls it 'se_trng_0_rosc_dis'.</description>
 							</field>
 							<field>
 								<name>se_trng_0_ht_od_en</name>
@@ -15722,6 +16010,9 @@
 						<name>se_trng_0_test_out_0</name>
 						<description>se_trng_0_test_out_0.</description>
 						<addressOffset>0x240</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_0</name>
@@ -15734,6 +16025,9 @@
 						<name>se_trng_0_test_out_1</name>
 						<description>se_trng_0_test_out_1.</description>
 						<addressOffset>0x244</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_1</name>
@@ -15746,6 +16040,9 @@
 						<name>se_trng_0_test_out_2</name>
 						<description>se_trng_0_test_out_2.</description>
 						<addressOffset>0x248</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_2</name>
@@ -15758,6 +16055,9 @@
 						<name>se_trng_0_test_out_3</name>
 						<description>se_trng_0_test_out_3.</description>
 						<addressOffset>0x24C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_trng_0_test_out_3</name>
@@ -15770,6 +16070,8 @@
 						<name>se_trng_0_ctrl_prot</name>
 						<description>se_trng_0_ctrl_prot.</description>
 						<addressOffset>0x2FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_trng_id1_en</name>
@@ -15792,11 +16094,14 @@
 						<name>se_pka_0_ctrl_0</name>
 						<description>se_pka_0_ctrl_0.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_pka_0_status</name>
 								<lsb>17</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_pka_0_status_clr_1t</name>
@@ -15832,6 +16137,7 @@
 								<name>se_pka_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_pka_0_prot_md</name>
@@ -15847,6 +16153,7 @@
 								<name>se_pka_0_busy</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_pka_0_done_clr_1t</name>
@@ -15857,6 +16164,7 @@
 								<name>se_pka_0_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -15864,6 +16172,8 @@
 						<name>se_pka_0_seed</name>
 						<description>se_pka_0_seed.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_pka_0_seed</name>
@@ -15876,6 +16186,8 @@
 						<name>se_pka_0_ctrl_1</name>
 						<description>se_pka_0_ctrl_1.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x00000005</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_pka_0_hbypass</name>
@@ -15893,18 +16205,24 @@
 						<name>se_pka_0_rw</name>
 						<description>se_pka_0_rw.</description>
 						<addressOffset>0x340</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>se_pka_0_rw_burst</name>
 						<description>se_pka_0_rw_burst.</description>
 						<addressOffset>0x360</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>se_pka_0_ctrl_prot</name>
 						<description>se_pka_0_ctrl_prot.</description>
 						<addressOffset>0x3FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_pka_id1_en</name>
@@ -15927,6 +16245,8 @@
 						<name>se_cdet_0_ctrl_0</name>
 						<description>se_cdet_0_ctrl_0.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x21640004</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_cdet_0_g_loop_min</name>
@@ -15942,11 +16262,13 @@
 								<name>se_cdet_0_status</name>
 								<lsb>2</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_cdet_0_error</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_cdet_0_en</name>
@@ -15959,6 +16281,8 @@
 						<name>se_cdet_0_ctrl_1</name>
 						<description>se_cdet_0_ctrl_1.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x00ff0332</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_cdet_0_g_slp_n</name>
@@ -15981,6 +16305,8 @@
 						<name>se_cdet_0_ctrl_prot</name>
 						<description>se_cdet_0_ctrl_prot.</description>
 						<addressOffset>0x4FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_cdet_id1_en</name>
@@ -16003,6 +16329,8 @@
 						<name>se_gmac_0_ctrl_0</name>
 						<description>se_gmac_0_ctrl_0.</description>
 						<addressOffset>0x500</addressOffset>
+						<resetValue>0x00007000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_gmac_0_x_endian</name>
@@ -16038,6 +16366,7 @@
 								<name>se_gmac_0_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>se_gmac_0_en</name>
@@ -16053,6 +16382,7 @@
 								<name>se_gmac_0_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -16060,6 +16390,8 @@
 						<name>se_gmac_0_lca</name>
 						<description>se_gmac_0_lca.</description>
 						<addressOffset>0x504</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_gmac_0_lca</name>
@@ -16072,6 +16404,9 @@
 						<name>se_gmac_0_status</name>
 						<description>se_gmac_0_status.</description>
 						<addressOffset>0x508</addressOffset>
+						<resetValue>0xf1000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_gmac_0_status</name>
@@ -16084,6 +16419,8 @@
 						<name>se_gmac_0_ctrl_prot</name>
 						<description>se_gmac_0_ctrl_prot.</description>
 						<addressOffset>0x5FC</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>se_gmac_id1_en</name>
@@ -16106,6 +16443,9 @@
 						<name>se_ctrl_prot_rd</name>
 						<description>se_ctrl_prot_rd.</description>
 						<addressOffset>0xF00</addressOffset>
+						<resetValue>0x00777777</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>se_dbg_dis</name>
@@ -16259,6 +16599,8 @@
 						<name>tzc_rom_ctrl</name>
 						<description>tzc_rom_ctrl.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000f0f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tzc_sboot_done</name>
@@ -16351,6 +16693,8 @@
 						<name>tzc_rom0_r0</name>
 						<description>tzc_rom0_r0.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tzc_rom0_r0_start</name>
@@ -16368,6 +16712,8 @@
 						<name>tzc_rom0_r1</name>
 						<description>tzc_rom0_r1.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tzc_rom0_r1_start</name>
@@ -16385,6 +16731,8 @@
 						<name>tzc_rom1_r0</name>
 						<description>tzc_rom1_r0.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tzc_rom1_r0_start</name>
@@ -16402,6 +16750,8 @@
 						<name>tzc_rom1_r1</name>
 						<description>tzc_rom1_r1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tzc_rom1_r1_start</name>
@@ -16434,6 +16784,9 @@
 						<name>tzc_rom_ctrl</name>
 						<description>tzc_rom_ctrl.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000f0f</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_sboot_done</name>
@@ -16526,6 +16879,9 @@
 						<name>tzc_rom0_r0</name>
 						<description>tzc_rom0_r0.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom0_r0_start</name>
@@ -16543,6 +16899,9 @@
 						<name>tzc_rom0_r1</name>
 						<description>tzc_rom0_r1.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom0_r1_start</name>
@@ -16560,6 +16919,9 @@
 						<name>tzc_rom1_r0</name>
 						<description>tzc_rom1_r0.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom1_r0_start</name>
@@ -16577,6 +16939,9 @@
 						<name>tzc_rom1_r1</name>
 						<description>tzc_rom1_r1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tzc_rom1_r1_start</name>
@@ -16609,6 +16974,8 @@
 						<name>ef_cfg_0</name>
 						<description>ef_cfg_0.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_dbg_mode</name>
@@ -16716,6 +17083,8 @@
 						<name>ef_dbg_pwd_low</name>
 						<description>ef_dbg_pwd_low.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_dbg_pwd_low</name>
@@ -16728,6 +17097,8 @@
 						<name>ef_dbg_pwd_high</name>
 						<description>ef_dbg_pwd_high.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_dbg_pwd_high</name>
@@ -16740,6 +17111,8 @@
 						<name>ef_ana_trim_0</name>
 						<description>ef_ana_trim_0.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_ana_trim_0</name>
@@ -16752,6 +17125,8 @@
 						<name>ef_sw_usage_0</name>
 						<description>ef_sw_usage_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_sw_usage_0</name>
@@ -16764,6 +17139,8 @@
 						<name>ef_wifi_mac_low</name>
 						<description>ef_wifi_mac_low.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_wifi_mac_low</name>
@@ -16776,6 +17153,8 @@
 						<name>ef_wifi_mac_high</name>
 						<description>ef_wifi_mac_high.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_wifi_mac_high</name>
@@ -16788,6 +17167,8 @@
 						<name>ef_key_slot_0_w0</name>
 						<description>ef_key_slot_0_w0.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w0</name>
@@ -16800,6 +17181,8 @@
 						<name>ef_key_slot_0_w1</name>
 						<description>ef_key_slot_0_w1.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w1</name>
@@ -16812,6 +17195,8 @@
 						<name>ef_key_slot_0_w2</name>
 						<description>ef_key_slot_0_w2.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w2</name>
@@ -16824,6 +17209,8 @@
 						<name>ef_key_slot_0_w3</name>
 						<description>ef_key_slot_0_w3.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_0_w3</name>
@@ -16836,6 +17223,8 @@
 						<name>ef_key_slot_1_w0</name>
 						<description>ef_key_slot_1_w0.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w0</name>
@@ -16848,6 +17237,8 @@
 						<name>ef_key_slot_1_w1</name>
 						<description>ef_key_slot_1_w1.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w1</name>
@@ -16860,6 +17251,8 @@
 						<name>ef_key_slot_1_w2</name>
 						<description>ef_key_slot_1_w2.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w2</name>
@@ -16872,6 +17265,8 @@
 						<name>ef_key_slot_1_w3</name>
 						<description>ef_key_slot_1_w3.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_1_w3</name>
@@ -16884,6 +17279,8 @@
 						<name>ef_key_slot_2_w0</name>
 						<description>ef_key_slot_2_w0.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w0</name>
@@ -16896,6 +17293,8 @@
 						<name>ef_key_slot_2_w1</name>
 						<description>ef_key_slot_2_w1.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w1</name>
@@ -16908,6 +17307,8 @@
 						<name>ef_key_slot_2_w2</name>
 						<description>ef_key_slot_2_w2.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w2</name>
@@ -16920,6 +17321,8 @@
 						<name>ef_key_slot_2_w3</name>
 						<description>ef_key_slot_2_w3.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_2_w3</name>
@@ -16932,6 +17335,8 @@
 						<name>ef_key_slot_3_w0</name>
 						<description>ef_key_slot_3_w0.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w0</name>
@@ -16944,6 +17349,8 @@
 						<name>ef_key_slot_3_w1</name>
 						<description>ef_key_slot_3_w1.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w1</name>
@@ -16956,6 +17363,8 @@
 						<name>ef_key_slot_3_w2</name>
 						<description>ef_key_slot_3_w2.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w2</name>
@@ -16968,6 +17377,8 @@
 						<name>ef_key_slot_3_w3</name>
 						<description>ef_key_slot_3_w3.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_3_w3</name>
@@ -16980,6 +17391,8 @@
 						<name>ef_key_slot_4_w0</name>
 						<description>ef_key_slot_4_w0.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w0</name>
@@ -16992,6 +17405,8 @@
 						<name>ef_key_slot_4_w1</name>
 						<description>ef_key_slot_4_w1.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w1</name>
@@ -17004,6 +17419,8 @@
 						<name>ef_key_slot_4_w2</name>
 						<description>ef_key_slot_4_w2.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w2</name>
@@ -17016,6 +17433,8 @@
 						<name>ef_key_slot_4_w3</name>
 						<description>ef_key_slot_4_w3.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_4_w3</name>
@@ -17028,6 +17447,8 @@
 						<name>ef_key_slot_5_w0</name>
 						<description>ef_key_slot_5_w0.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w0</name>
@@ -17040,6 +17461,8 @@
 						<name>ef_key_slot_5_w1</name>
 						<description>ef_key_slot_5_w1.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w1</name>
@@ -17052,6 +17475,8 @@
 						<name>ef_key_slot_5_w2</name>
 						<description>ef_key_slot_5_w2.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w2</name>
@@ -17064,6 +17489,8 @@
 						<name>ef_key_slot_5_w3</name>
 						<description>ef_key_slot_5_w3.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_key_slot_5_w3</name>
@@ -17076,6 +17503,8 @@
 						<name>ef_data_0_lock</name>
 						<description>ef_data_0_lock.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rd_lock_key_slot_5</name>
@@ -17198,6 +17627,8 @@
 						<name>reg_key_slot_6_w0</name>
 						<description>reg_key_slot_6_w0.</description>
 						<addressOffset>0x00</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w0</name>
@@ -17210,6 +17641,8 @@
 						<name>reg_key_slot_6_w1</name>
 						<description>reg_key_slot_6_w1.</description>
 						<addressOffset>0x04</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w1</name>
@@ -17222,6 +17655,8 @@
 						<name>reg_key_slot_6_w2</name>
 						<description>reg_key_slot_6_w2.</description>
 						<addressOffset>0x08</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w2</name>
@@ -17234,6 +17669,8 @@
 						<name>reg_key_slot_6_w3</name>
 						<description>reg_key_slot_6_w3.</description>
 						<addressOffset>0x0C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_6_w3</name>
@@ -17246,6 +17683,8 @@
 						<name>reg_key_slot_7_w0</name>
 						<description>reg_key_slot_7_w0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w0</name>
@@ -17258,6 +17697,8 @@
 						<name>reg_key_slot_7_w1</name>
 						<description>reg_key_slot_7_w1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w1</name>
@@ -17270,6 +17711,8 @@
 						<name>reg_key_slot_7_w2</name>
 						<description>reg_key_slot_7_w2.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w2</name>
@@ -17282,6 +17725,8 @@
 						<name>reg_key_slot_7_w3</name>
 						<description>reg_key_slot_7_w3.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_7_w3</name>
@@ -17294,6 +17739,8 @@
 						<name>reg_key_slot_8_w0</name>
 						<description>reg_key_slot_8_w0.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w0</name>
@@ -17306,6 +17753,8 @@
 						<name>reg_key_slot_8_w1</name>
 						<description>reg_key_slot_8_w1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w1</name>
@@ -17318,6 +17767,8 @@
 						<name>reg_key_slot_8_w2</name>
 						<description>reg_key_slot_8_w2.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w2</name>
@@ -17330,6 +17781,8 @@
 						<name>reg_key_slot_8_w3</name>
 						<description>reg_key_slot_8_w3.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_8_w3</name>
@@ -17342,6 +17795,8 @@
 						<name>reg_key_slot_9_w0</name>
 						<description>reg_key_slot_9_w0.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w0</name>
@@ -17354,6 +17809,8 @@
 						<name>reg_key_slot_9_w1</name>
 						<description>reg_key_slot_9_w1.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w1</name>
@@ -17366,6 +17823,8 @@
 						<name>reg_key_slot_9_w2</name>
 						<description>reg_key_slot_9_w2.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w2</name>
@@ -17378,6 +17837,8 @@
 						<name>reg_key_slot_9_w3</name>
 						<description>reg_key_slot_9_w3.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_key_slot_9_w3</name>
@@ -17390,54 +17851,72 @@
 						<name>reg_key_slot_10_w0</name>
 						<description>reg_key_slot_10_w0.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_10_w1</name>
 						<description>reg_key_slot_10_w1.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_10_w2</name>
 						<description>reg_key_slot_10_w2.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_10_w3</name>
 						<description>reg_key_slot_10_w3.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w0</name>
 						<description>reg_key_slot_11_w0.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w1</name>
 						<description>reg_key_slot_11_w1.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w2</name>
 						<description>reg_key_slot_11_w2.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_key_slot_11_w3</name>
 						<description>reg_key_slot_11_w3.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>reg_data_1_lock</name>
 						<description>reg_data_1_lock.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rd_lock_key_slot_9</name>
@@ -17510,6 +17989,8 @@
 						<name>ef_if_ctrl_0</name>
 						<description>ef_if_ctrl_0.</description>
 						<addressOffset>0x000</addressOffset>
+						<resetValue>0x00240003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_prot_code_cyc</name>
@@ -17530,6 +18011,7 @@
 								<name>ef_if_0_int</name>
 								<lsb>20</lsb>
 								<msb>20</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_cyc_modify_lock</name>
@@ -17585,16 +18067,19 @@
 								<name>ef_if_0_busy</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_0_autoload_done</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_0_autoload_p1_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -17602,6 +18087,8 @@
 						<name>ef_if_cyc_0</name>
 						<description>ef_if_cyc_0.</description>
 						<addressOffset>0x004</addressOffset>
+						<resetValue>0x16000040</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_cyc_pd_cs_s</name>
@@ -17634,6 +18121,8 @@
 						<name>ef_if_cyc_1</name>
 						<description>ef_if_cyc_1.</description>
 						<addressOffset>0x008</addressOffset>
+						<resetValue>0x00206609</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_cyc_pd_cs_h</name>
@@ -17666,6 +18155,8 @@
 						<name>ef_if_0_manual</name>
 						<description>ef_if_0_manual.</description>
 						<addressOffset>0x00C</addressOffset>
+						<resetValue>0x0000e400</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_prot_code_manual</name>
@@ -17676,6 +18167,7 @@
 								<name>ef_if_0_q</name>
 								<lsb>16</lsb>
 								<msb>23</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_if_csb</name>
@@ -17718,11 +18210,14 @@
 						<name>ef_if_0_status</name>
 						<description>ef_if_0_status.</description>
 						<addressOffset>0x010</addressOffset>
+						<resetValue>0x0000e400</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_0_status</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -17730,6 +18225,9 @@
 						<name>ef_if_cfg_0</name>
 						<description>ef_if_cfg_0.</description>
 						<addressOffset>0x014</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>ef_if_dbg_mode</name>
@@ -17951,11 +18449,14 @@
 						<name>ef_if_ana_trim_0</name>
 						<description>ef_if_ana_trim_0.</description>
 						<addressOffset>0x020</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_ana_trim_0</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -17963,11 +18464,14 @@
 						<name>ef_if_sw_usage_0</name>
 						<description>ef_if_sw_usage_0.</description>
 						<addressOffset>0x024</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_if_sw_usage_0</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -17975,6 +18479,8 @@
 						<name>ef_crc_ctrl_0</name>
 						<description>ef_crc_ctrl_0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00ff0224</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_crc_slp_n</name>
@@ -18000,6 +18506,7 @@
 								<name>ef_crc_int</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_crc_din_endian</name>
@@ -18020,6 +18527,7 @@
 								<name>ef_crc_error</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ef_crc_mode</name>
@@ -18040,6 +18548,7 @@
 								<name>ef_crc_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18047,6 +18556,8 @@
 						<name>ef_crc_ctrl_1</name>
 						<description>ef_crc_ctrl_1.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_crc_data_0_en</name>
@@ -18059,6 +18570,8 @@
 						<name>ef_crc_ctrl_2</name>
 						<description>ef_crc_ctrl_2.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_crc_data_1_en</name>
@@ -18071,6 +18584,8 @@
 						<name>ef_crc_ctrl_3</name>
 						<description>ef_crc_ctrl_3.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_crc_iv</name>
@@ -18083,6 +18598,8 @@
 						<name>ef_crc_ctrl_4</name>
 						<description>ef_crc_ctrl_4.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0xc2a8fa9d</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_crc_golden</name>
@@ -18095,11 +18612,14 @@
 						<name>ef_crc_ctrl_5</name>
 						<description>ef_crc_ctrl_5.</description>
 						<addressOffset>0x214</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ef_crc_dout</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18122,6 +18642,8 @@
 						<name>cci_cfg</name>
 						<description>cci_cfg.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000221</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>reg_mcci_clk_inv</name>
@@ -18174,6 +18696,8 @@
 						<name>cci_addr</name>
 						<description>cci_addr.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>apb_cci_addr</name>
@@ -18186,6 +18710,8 @@
 						<name>cci_wdata</name>
 						<description>cci_wdata.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>apb_cci_wdata</name>
@@ -18198,11 +18724,14 @@
 						<name>cci_rdata</name>
 						<description>cci_rdata.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>apb_cci_rdata</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18210,21 +18739,26 @@
 						<name>cci_ctl</name>
 						<description>cci_ctl.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ahb_state</name>
 								<lsb>2</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>cci_read_flag</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>cci_write_flag</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18247,6 +18781,8 @@
 						<name>l1c_config</name>
 						<description>l1c_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x06000f00</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>wrap_dis</name>
@@ -18297,6 +18833,7 @@
 								<name>l1c_invalid_done</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>l1c_invalid_en</name>
@@ -18319,6 +18856,9 @@
 						<name>hit_cnt_lsb</name>
 						<description>hit_cnt_lsb.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>hit_cnt_lsb</name>
@@ -18331,6 +18871,9 @@
 						<name>hit_cnt_msb</name>
 						<description>hit_cnt_msb.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>hit_cnt_msb</name>
@@ -18343,6 +18886,9 @@
 						<name>miss_cnt</name>
 						<description>miss_cnt.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>miss_cnt</name>
@@ -18355,12 +18901,16 @@
 						<name>l1c_range</name>
 						<description>l1c_range.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>l1c_bmx_err_addr_en</name>
 						<description>l1c_bmx_err_addr_en.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>l1c_hsel_option</name>
@@ -18371,11 +18921,13 @@
 								<name>l1c_bmx_err_tz</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>l1c_bmx_err_dec</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>l1c_bmx_err_addr_dis</name>
@@ -18388,6 +18940,9 @@
 						<name>l1c_bmx_err_addr</name>
 						<description>l1c_bmx_err_addr.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>l1c_bmx_err_addr</name>
@@ -18400,6 +18955,9 @@
 						<name>irom1_misr_dataout_0</name>
 						<description>irom1_misr_dataout_0.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>irom1_misr_dataout_0</name>
@@ -18412,12 +18970,16 @@
 						<name>irom1_misr_dataout_1</name>
 						<description>irom1_misr_dataout_1.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields/>
 					</register>
 					<register>
 						<name>cpu_clk_gate</name>
 						<description>cpu_clk_gate.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>force_e21_clock_on_2</name>
@@ -18455,6 +19017,8 @@
 						<name>utx_config</name>
 						<description>utx_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00001700</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_utx_len</name>
@@ -18512,6 +19076,8 @@
 						<name>urx_config</name>
 						<description>urx_config.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000700</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_urx_len</name>
@@ -18579,6 +19145,8 @@
 						<name>uart_bit_prd</name>
 						<description>uart_bit_prd.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00ff00ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_urx_bit_prd</name>
@@ -18596,6 +19164,8 @@
 						<name>data_config</name>
 						<description>data_config.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_uart_bit_inv</name>
@@ -18608,6 +19178,8 @@
 						<name>utx_ir_position</name>
 						<description>utx_ir_position.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x009f0070</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_utx_ir_pos_p</name>
@@ -18625,6 +19197,8 @@
 						<name>urx_ir_position</name>
 						<description>urx_ir_position.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0000006f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_urx_ir_pos_s</name>
@@ -18637,6 +19211,8 @@
 						<name>urx_rto_timer</name>
 						<description>urx_rto_timer.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x0000000f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_urx_rto_value</name>
@@ -18649,6 +19225,9 @@
 						<name>uart_int_sts</name>
 						<description>UART interrupt status</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>urx_fer_int</name>
@@ -18696,6 +19275,8 @@
 						<name>uart_int_mask</name>
 						<description>UART interrupt mask</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_urx_fer_mask</name>
@@ -18743,6 +19324,8 @@
 						<name>uart_int_clear</name>
 						<description>UART interrupt clear</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rsvd_7</name>
@@ -18790,6 +19373,8 @@
 						<name>uart_int_en</name>
 						<description>UART interrupt enable</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x000000ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_urx_fer_en</name>
@@ -18837,6 +19422,9 @@
 						<name>uart_status</name>
 						<description>uart_status.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sts_urx_bus_busy</name>
@@ -18854,6 +19442,9 @@
 						<name>sts_urx_abr_prd</name>
 						<description>sts_urx_abr_prd.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sts_urx_abr_prd_0x55</name>
@@ -18871,26 +19462,32 @@
 						<name>uart_fifo_config_0</name>
 						<description>uart_fifo_config_0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_underflow</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_underflow</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_overflow</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -18918,6 +19515,8 @@
 						<name>uart_fifo_config_1</name>
 						<description>uart_fifo_config_1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000020</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_th</name>
@@ -18933,11 +19532,13 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>8</lsb>
 								<msb>13</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_cnt</name>
 								<lsb>0</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -18945,6 +19546,9 @@
 						<name>uart_fifo_wdata</name>
 						<description>uart_fifo_wdata.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>uart_fifo_wdata</name>
@@ -18957,6 +19561,9 @@
 						<name>uart_fifo_rdata</name>
 						<description>uart_fifo_rdata.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>uart_fifo_rdata</name>
@@ -18984,6 +19591,8 @@
 						<name>spi_config</name>
 						<description>spi_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_spi_deg_cnt</name>
@@ -19046,6 +19655,8 @@
 						<name>spi_int_sts</name>
 						<description>spi_int_sts.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x3f003f00</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_spi_fer_en</name>
@@ -19141,31 +19752,37 @@
 								<name>spi_fer_int</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_txu_int</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_sto_int</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_rxf_int</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_txf_int</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>spi_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19173,6 +19790,9 @@
 						<name>spi_bus_busy</name>
 						<description>spi_bus_busy.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sts_spi_bus_busy</name>
@@ -19185,6 +19805,8 @@
 						<name>spi_prd_0</name>
 						<description>spi_prd_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_spi_prd_d_ph_1</name>
@@ -19212,6 +19834,8 @@
 						<name>spi_prd_1</name>
 						<description>spi_prd_1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0000000f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_spi_prd_i</name>
@@ -19224,6 +19848,8 @@
 						<name>spi_rxd_ignr</name>
 						<description>spi_rxd_ignr.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_spi_rxd_ignr_s</name>
@@ -19241,6 +19867,8 @@
 						<name>spi_sto_value</name>
 						<description>spi_sto_value.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000fff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_spi_sto_value</name>
@@ -19253,26 +19881,32 @@
 						<name>spi_fifo_config_0</name>
 						<description>spi_fifo_config_0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_underflow</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_underflow</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_overflow</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -19300,6 +19934,8 @@
 						<name>spi_fifo_config_1</name>
 						<description>spi_fifo_config_1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000004</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_th</name>
@@ -19315,11 +19951,13 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>8</lsb>
 								<msb>10</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_cnt</name>
 								<lsb>0</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19327,6 +19965,9 @@
 						<name>spi_fifo_wdata</name>
 						<description>spi_fifo_wdata.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>spi_fifo_wdata</name>
@@ -19339,6 +19980,9 @@
 						<name>spi_fifo_rdata</name>
 						<description>spi_fifo_rdata.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>spi_fifo_rdata</name>
@@ -19366,6 +20010,8 @@
 						<name>i2c_config</name>
 						<description>i2c_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x0000000a</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_deg_cnt</name>
@@ -19418,6 +20064,8 @@
 						<name>i2c_int_sts</name>
 						<description>i2c_int_sts.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x3f003f00</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_fer_en</name>
@@ -19513,31 +20161,37 @@
 								<name>i2c_fer_int</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_arb_int</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_nak_int</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_rxf_int</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_txf_int</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>i2c_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19545,6 +20199,8 @@
 						<name>i2c_sub_addr</name>
 						<description>i2c_sub_addr.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_sub_addr_b3</name>
@@ -19572,6 +20228,8 @@
 						<name>i2c_bus_busy</name>
 						<description>i2c_bus_busy.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_bus_busy_clr</name>
@@ -19582,6 +20240,7 @@
 								<name>sts_i2c_bus_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19589,6 +20248,8 @@
 						<name>i2c_prd_start</name>
 						<description>i2c_prd_start.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_prd_s_ph_3</name>
@@ -19616,6 +20277,8 @@
 						<name>i2c_prd_stop</name>
 						<description>i2c_prd_stop.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_prd_p_ph_3</name>
@@ -19643,6 +20306,8 @@
 						<name>i2c_prd_data</name>
 						<description>i2c_prd_data.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x0f0f0f0f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_i2c_prd_d_ph_3</name>
@@ -19670,26 +20335,32 @@
 						<name>i2c_fifo_config_0</name>
 						<description>i2c_fifo_config_0.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_underflow</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
 								<lsb>6</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_underflow</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_overflow</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -19717,6 +20388,8 @@
 						<name>i2c_fifo_config_1</name>
 						<description>i2c_fifo_config_1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000002</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_th</name>
@@ -19732,11 +20405,13 @@
 								<name>rx_fifo_cnt</name>
 								<lsb>8</lsb>
 								<msb>9</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tx_fifo_cnt</name>
 								<lsb>0</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19744,6 +20419,9 @@
 						<name>i2c_fifo_wdata</name>
 						<description>i2c_fifo_wdata.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>i2c_fifo_wdata</name>
@@ -19756,6 +20434,9 @@
 						<name>i2c_fifo_rdata</name>
 						<description>i2c_fifo_rdata.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>i2c_fifo_rdata</name>
@@ -19783,16 +20464,20 @@
 						<name>pwm_int_config</name>
 						<description>pwm_int_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_clear</name>
 								<lsb>8</lsb>
 								<msb>13</msb>
+								<access>write-only</access>
 							</field>
 							<field>
 								<name>pwm_interrupt_sts</name>
 								<lsb>0</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -19800,6 +20485,8 @@
 						<name>pwm0_clkdiv</name>
 						<description>pwm0_clkdiv.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -19812,6 +20499,8 @@
 						<name>pwm0_thre1</name>
 						<description>pwm0_thre1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -19824,6 +20513,8 @@
 						<name>pwm0_thre2</name>
 						<description>pwm0_thre2.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -19836,6 +20527,8 @@
 						<name>pwm0_period</name>
 						<description>pwm0_period.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -19848,11 +20541,14 @@
 						<name>pwm0_config</name>
 						<description>pwm0_config.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -19890,6 +20586,8 @@
 						<name>pwm0_interrupt</name>
 						<description>pwm0_interrupt.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -19907,6 +20605,8 @@
 						<name>pwm1_clkdiv</name>
 						<description>pwm1_clkdiv.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -19919,6 +20619,8 @@
 						<name>pwm1_thre1</name>
 						<description>pwm1_thre1.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -19931,6 +20633,8 @@
 						<name>pwm1_thre2</name>
 						<description>pwm1_thre2.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -19943,6 +20647,8 @@
 						<name>pwm1_period</name>
 						<description>pwm1_period.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -19955,11 +20661,14 @@
 						<name>pwm1_config</name>
 						<description>pwm1_config.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -19997,6 +20706,8 @@
 						<name>pwm1_interrupt</name>
 						<description>pwm1_interrupt.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -20014,6 +20725,8 @@
 						<name>pwm2_clkdiv</name>
 						<description>pwm2_clkdiv.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -20026,6 +20739,8 @@
 						<name>pwm2_thre1</name>
 						<description>pwm2_thre1.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -20038,6 +20753,8 @@
 						<name>pwm2_thre2</name>
 						<description>pwm2_thre2.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -20050,6 +20767,8 @@
 						<name>pwm2_period</name>
 						<description>pwm2_period.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -20062,11 +20781,14 @@
 						<name>pwm2_config</name>
 						<description>pwm2_config.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -20104,6 +20826,8 @@
 						<name>pwm2_interrupt</name>
 						<description>pwm2_interrupt.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -20121,6 +20845,8 @@
 						<name>pwm3_clkdiv</name>
 						<description>pwm3_clkdiv.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -20133,6 +20859,8 @@
 						<name>pwm3_thre1</name>
 						<description>pwm3_thre1.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -20145,6 +20873,8 @@
 						<name>pwm3_thre2</name>
 						<description>pwm3_thre2.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -20157,6 +20887,8 @@
 						<name>pwm3_period</name>
 						<description>pwm3_period.</description>
 						<addressOffset>0x8C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -20169,11 +20901,14 @@
 						<name>pwm3_config</name>
 						<description>pwm3_config.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -20211,6 +20946,8 @@
 						<name>pwm3_interrupt</name>
 						<description>pwm3_interrupt.</description>
 						<addressOffset>0x94</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -20228,6 +20965,8 @@
 						<name>pwm4_clkdiv</name>
 						<description>pwm4_clkdiv.</description>
 						<addressOffset>0xA0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_clk_div</name>
@@ -20240,6 +20979,8 @@
 						<name>pwm4_thre1</name>
 						<description>pwm4_thre1.</description>
 						<addressOffset>0xA4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre1</name>
@@ -20252,6 +20993,8 @@
 						<name>pwm4_thre2</name>
 						<description>pwm4_thre2.</description>
 						<addressOffset>0xA8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_thre2</name>
@@ -20264,6 +21007,8 @@
 						<name>pwm4_period</name>
 						<description>pwm4_period.</description>
 						<addressOffset>0xAC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_period</name>
@@ -20276,11 +21021,14 @@
 						<name>pwm4_config</name>
 						<description>pwm4_config.</description>
 						<addressOffset>0xB0</addressOffset>
+						<resetValue>0x00000008</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_sts_top</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pwm_stop_en</name>
@@ -20318,6 +21066,8 @@
 						<name>pwm4_interrupt</name>
 						<description>pwm4_interrupt.</description>
 						<addressOffset>0xB4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pwm_int_enable</name>
@@ -20350,6 +21100,8 @@
 						<name>TCCR</name>
 						<description>TCCR.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cs_wdt</name>
@@ -20382,6 +21134,8 @@
 						<name>TMR2_0</name>
 						<description>TMR2_0.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tmr</name>
@@ -20394,6 +21148,8 @@
 						<name>TMR2_1</name>
 						<description>TMR2_1.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tmr</name>
@@ -20406,6 +21162,8 @@
 						<name>TMR2_2</name>
 						<description>TMR2_2.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tmr</name>
@@ -20418,6 +21176,8 @@
 						<name>TMR3_0</name>
 						<description>TMR3_0.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tmr</name>
@@ -20430,6 +21190,8 @@
 						<name>TMR3_1</name>
 						<description>TMR3_1.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tmr</name>
@@ -20442,6 +21204,8 @@
 						<name>TMR3_2</name>
 						<description>TMR3_2.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tmr</name>
@@ -20454,6 +21218,9 @@
 						<name>TCR2</name>
 						<description>TCR2.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tcr</name>
@@ -20466,6 +21233,9 @@
 						<name>TCR3</name>
 						<description>TCR3.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tcr3_counter</name>
@@ -20478,6 +21248,9 @@
 						<name>TMSR2</name>
 						<description>TMSR2.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tmsr_2</name>
@@ -20500,6 +21273,9 @@
 						<name>TMSR3</name>
 						<description>TMSR3.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tmsr_2</name>
@@ -20522,6 +21298,8 @@
 						<name>TIER2</name>
 						<description>TIER2.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tier_2</name>
@@ -20544,6 +21322,8 @@
 						<name>TIER3</name>
 						<description>TIER3.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tier_2</name>
@@ -20566,6 +21346,8 @@
 						<name>TPLVR2</name>
 						<description>TPLVR2.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tplvr</name>
@@ -20578,6 +21360,8 @@
 						<name>TPLVR3</name>
 						<description>TPLVR3.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tplvr</name>
@@ -20590,6 +21374,8 @@
 						<name>TPLCR2</name>
 						<description>TPLCR2.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tplcr</name>
@@ -20602,6 +21388,8 @@
 						<name>TPLCR3</name>
 						<description>TPLCR3.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tplcr</name>
@@ -20614,6 +21402,8 @@
 						<name>WMER</name>
 						<description>WMER.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>wrie</name>
@@ -20631,6 +21421,8 @@
 						<name>WMR</name>
 						<description>WMR.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>wmr</name>
@@ -20643,6 +21435,9 @@
 						<name>WVR</name>
 						<description>WVR.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>wvr</name>
@@ -20655,6 +21450,8 @@
 						<name>WSR</name>
 						<description>WSR.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>wts</name>
@@ -20667,6 +21464,9 @@
 						<name>TICR2</name>
 						<description>TICR2.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>tclr_2</name>
@@ -20689,6 +21489,9 @@
 						<name>TICR3</name>
 						<description>TICR3.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>tclr_2</name>
@@ -20711,6 +21514,9 @@
 						<name>WICR</name>
 						<description>WICR.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>wiclr</name>
@@ -20723,6 +21529,8 @@
 						<name>TCER</name>
 						<description>TCER.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>timer3_en</name>
@@ -20740,6 +21548,8 @@
 						<name>TCMR</name>
 						<description>TCMR.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>timer3_mode</name>
@@ -20757,6 +21567,8 @@
 						<name>TILR2</name>
 						<description>TILR2.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tilr_2</name>
@@ -20779,6 +21591,8 @@
 						<name>TILR3</name>
 						<description>TILR3.</description>
 						<addressOffset>0x94</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>tilr_2</name>
@@ -20801,6 +21615,9 @@
 						<name>WCR</name>
 						<description>WCR.</description>
 						<addressOffset>0x98</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>wcr</name>
@@ -20813,6 +21630,9 @@
 						<name>WFAR</name>
 						<description>WFAR.</description>
 						<addressOffset>0x9C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>wfar</name>
@@ -20825,6 +21645,9 @@
 						<name>WSAR</name>
 						<description>WSAR.</description>
 						<addressOffset>0xA0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>wsar</name>
@@ -20837,6 +21660,9 @@
 						<name>TCVWR2</name>
 						<description>TCVWR2.</description>
 						<addressOffset>0xA8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tcvwr</name>
@@ -20849,6 +21675,9 @@
 						<name>TCVWR3</name>
 						<description>TCVWR3.</description>
 						<addressOffset>0xAC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tcvwr</name>
@@ -20861,6 +21690,9 @@
 						<name>TCVSYN2</name>
 						<description>TCVSYN2.</description>
 						<addressOffset>0xB4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tcvsyn2</name>
@@ -20873,6 +21705,9 @@
 						<name>TCVSYN3</name>
 						<description>TCVSYN3.</description>
 						<addressOffset>0xB8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>tcvsyn3</name>
@@ -20885,6 +21720,8 @@
 						<name>TCDR</name>
 						<description>TCDR.</description>
 						<addressOffset>0xBC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>wcdr</name>
@@ -20922,6 +21759,8 @@
 						<name>irtx_config</name>
 						<description>irtx_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x0001f510</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_data_num</name>
@@ -20989,6 +21828,8 @@
 						<name>irtx_int_sts</name>
 						<description>irtx_int_sts.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x01000100</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_end_en</name>
@@ -21009,6 +21850,7 @@
 								<name>irtx_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21016,6 +21858,8 @@
 						<name>irtx_data_word0</name>
 						<description>irtx_data_word0.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_data_word0</name>
@@ -21028,6 +21872,8 @@
 						<name>irtx_data_word1</name>
 						<description>irtx_data_word1.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_data_word1</name>
@@ -21040,6 +21886,8 @@
 						<name>irtx_pulse_width</name>
 						<description>irtx_pulse_width.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x22110464</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_mod_ph1_w</name>
@@ -21062,6 +21910,8 @@
 						<name>irtx_pw</name>
 						<description>irtx_pw.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x007f2000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_tail_ph1_w</name>
@@ -21109,6 +21959,8 @@
 						<name>irtx_swm_pw_0</name>
 						<description>irtx_swm_pw_0.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_0</name>
@@ -21121,6 +21973,8 @@
 						<name>irtx_swm_pw_1</name>
 						<description>irtx_swm_pw_1.</description>
 						<addressOffset>0x44</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_1</name>
@@ -21133,6 +21987,8 @@
 						<name>irtx_swm_pw_2</name>
 						<description>irtx_swm_pw_2.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_2</name>
@@ -21145,6 +22001,8 @@
 						<name>irtx_swm_pw_3</name>
 						<description>irtx_swm_pw_3.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_3</name>
@@ -21157,6 +22015,8 @@
 						<name>irtx_swm_pw_4</name>
 						<description>irtx_swm_pw_4.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_4</name>
@@ -21169,6 +22029,8 @@
 						<name>irtx_swm_pw_5</name>
 						<description>irtx_swm_pw_5.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_5</name>
@@ -21181,6 +22043,8 @@
 						<name>irtx_swm_pw_6</name>
 						<description>irtx_swm_pw_6.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_6</name>
@@ -21193,6 +22057,8 @@
 						<name>irtx_swm_pw_7</name>
 						<description>irtx_swm_pw_7.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irtx_swm_pw_7</name>
@@ -21205,6 +22071,8 @@
 						<name>irrx_config</name>
 						<description>irrx_config.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000002</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irrx_deg_cnt</name>
@@ -21237,6 +22105,8 @@
 						<name>irrx_int_sts</name>
 						<description>irrx_int_sts.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x01000100</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irrx_end_en</name>
@@ -21257,6 +22127,7 @@
 								<name>irrx_end_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21264,6 +22135,8 @@
 						<name>irrx_pw_config</name>
 						<description>irrx_pw_config.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0x23270d47</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_irrx_end_th</name>
@@ -21281,11 +22154,14 @@
 						<name>irrx_data_count</name>
 						<description>irrx_data_count.</description>
 						<addressOffset>0x90</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sts_irrx_data_cnt</name>
 								<lsb>0</lsb>
 								<msb>6</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21293,11 +22169,14 @@
 						<name>irrx_data_word0</name>
 						<description>irrx_data_word0.</description>
 						<addressOffset>0x94</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sts_irrx_data_word0</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21305,11 +22184,14 @@
 						<name>irrx_data_word1</name>
 						<description>irrx_data_word1.</description>
 						<addressOffset>0x98</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sts_irrx_data_word1</name>
 								<lsb>0</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21317,21 +22199,26 @@
 						<name>irrx_swm_fifo_config_0</name>
 						<description>irrx_swm_fifo_config_0.</description>
 						<addressOffset>0xC0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rx_fifo_cnt</name>
 								<lsb>4</lsb>
 								<msb>10</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_underflow</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_overflow</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rx_fifo_clr</name>
@@ -21344,6 +22231,9 @@
 						<name>irrx_swm_fifo_rdata</name>
 						<description>irrx_swm_fifo_rdata.</description>
 						<addressOffset>0xC4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>rx_fifo_rdata</name>
@@ -21371,12 +22261,27 @@
 						<name>cks_config</name>
 						<description>cks_config.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_cks_byte_swap</name>
-								<description>Endianness (0: little endian, 1: big endian)</description>
+								<description>Endianness.</description>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<enumeratedValues>
+									<name>CKSByteSwap</name>
+									<enumeratedValue>
+										<name>little_endian</name>
+										<description>Little endian.</description>
+										<value>0</value>
+									</enumeratedValue>
+									<enumeratedValue>
+										<name>big_endian</name>
+										<description>Big endian.</description>
+										<value>1</value>
+									</enumeratedValue>
+								</enumeratedValues>
 							</field>
 							<field>
 								<name>cr_cks_clr</name>
@@ -21389,11 +22294,14 @@
 						<name>data_in</name>
 						<description>Checksum data in</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>data_in</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21401,11 +22309,14 @@
 						<name>cks_out</name>
 						<description>Checksum value out</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x0000ffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cks_out</name>
 								<lsb>0</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21428,6 +22339,8 @@
 						<name>sf_ctrl_0</name>
 						<description>sf_ctrl_0.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x1ad2001c</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_id</name>
@@ -21473,6 +22386,7 @@
 								<name>sf_if_int</name>
 								<lsb>16</lsb>
 								<msb>16</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_if_read_dly_en</name>
@@ -21510,6 +22424,8 @@
 						<name>sf_ctrl_1</name>
 						<description>sf_ctrl_1.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0xf3600000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_ahb2sram_en</name>
@@ -21540,6 +22456,7 @@
 								<name>sf_ahb2sif_stopped</name>
 								<lsb>26</lsb>
 								<msb>26</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_if_reg_wp</name>
@@ -21570,6 +22487,7 @@
 								<name>sf_if_sr_int</name>
 								<lsb>16</lsb>
 								<msb>16</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_if_sr_pat</name>
@@ -21587,6 +22505,8 @@
 						<name>sf_if_sahb_0</name>
 						<description>sf_if_sahb_0.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_0_qpi_mode_en</name>
@@ -21652,6 +22572,7 @@
 								<name>sf_if_busy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -21659,6 +22580,8 @@
 						<name>sf_if_sahb_1</name>
 						<description>sf_if_sahb_1.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_0_cmd_buf_0</name>
@@ -21671,6 +22594,8 @@
 						<name>sf_if_sahb_2</name>
 						<description>sf_if_sahb_2.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_0_cmd_buf_1</name>
@@ -21683,6 +22608,8 @@
 						<name>sf_if_iahb_0</name>
 						<description>sf_if_iahb_0.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x0d040000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_1_qpi_mode_en</name>
@@ -21740,6 +22667,8 @@
 						<name>sf_if_iahb_1</name>
 						<description>sf_if_iahb_1.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x03000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_1_cmd_buf_0</name>
@@ -21752,6 +22681,8 @@
 						<name>sf_if_iahb_2</name>
 						<description>sf_if_iahb_2.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_1_cmd_buf_1</name>
@@ -21764,6 +22695,9 @@
 						<name>sf_if_status_0</name>
 						<description>sf_if_status_0.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_if_status_0</name>
@@ -21776,6 +22710,9 @@
 						<name>sf_if_status_1</name>
 						<description>sf_if_status_1.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x20000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_if_status_1</name>
@@ -21788,16 +22725,20 @@
 						<name>sf_aes</name>
 						<description>sf_aes.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000040</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_status</name>
 								<lsb>5</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_aes_pref_busy</name>
 								<lsb>4</lsb>
 								<msb>4</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sf_aes_pref_trig</name>
@@ -21820,6 +22761,9 @@
 						<name>sf_ahb2sif_status</name>
 						<description>sf_ahb2sif_status.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x10000003</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_ahb2sif_status</name>
@@ -21832,6 +22776,8 @@
 						<name>sf_if_io_dly_0</name>
 						<description>sf_if_io_dly_0.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_dqs_do_dly_sel</name>
@@ -21864,6 +22810,8 @@
 						<name>sf_if_io_dly_1</name>
 						<description>sf_if_io_dly_1.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_io_0_do_dly_sel</name>
@@ -21886,6 +22834,8 @@
 						<name>sf_if_io_dly_2</name>
 						<description>sf_if_io_dly_2.</description>
 						<addressOffset>0x38</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_io_1_do_dly_sel</name>
@@ -21908,6 +22858,8 @@
 						<name>sf_if_io_dly_3</name>
 						<description>sf_if_io_dly_3.</description>
 						<addressOffset>0x3C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_io_2_do_dly_sel</name>
@@ -21930,6 +22882,8 @@
 						<name>sf_if_io_dly_4</name>
 						<description>sf_if_io_dly_4.</description>
 						<addressOffset>0x40</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_io_3_do_dly_sel</name>
@@ -21964,6 +22918,8 @@
 						<name>sf2_if_io_dly_0</name>
 						<description>sf2_if_io_dly_0.</description>
 						<addressOffset>0x48</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf2_dqs_do_dly_sel</name>
@@ -21996,6 +22952,8 @@
 						<name>sf2_if_io_dly_1</name>
 						<description>sf2_if_io_dly_1.</description>
 						<addressOffset>0x4C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf2_io_0_do_dly_sel</name>
@@ -22018,6 +22976,8 @@
 						<name>sf2_if_io_dly_2</name>
 						<description>sf2_if_io_dly_2.</description>
 						<addressOffset>0x50</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf2_io_1_do_dly_sel</name>
@@ -22040,6 +23000,8 @@
 						<name>sf2_if_io_dly_3</name>
 						<description>sf2_if_io_dly_3.</description>
 						<addressOffset>0x54</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf2_io_2_do_dly_sel</name>
@@ -22062,6 +23024,8 @@
 						<name>sf2_if_io_dly_4</name>
 						<description>sf2_if_io_dly_4.</description>
 						<addressOffset>0x58</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf2_io_3_do_dly_sel</name>
@@ -22084,6 +23048,8 @@
 						<name>sf3_if_io_dly_0</name>
 						<description>sf3_if_io_dly_0.</description>
 						<addressOffset>0x5C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf3_dqs_do_dly_sel</name>
@@ -22116,6 +23082,8 @@
 						<name>sf3_if_io_dly_1</name>
 						<description>sf3_if_io_dly_1.</description>
 						<addressOffset>0x60</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf3_io_0_do_dly_sel</name>
@@ -22138,6 +23106,8 @@
 						<name>sf3_if_io_dly_2</name>
 						<description>sf3_if_io_dly_2.</description>
 						<addressOffset>0x64</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf3_io_1_do_dly_sel</name>
@@ -22160,6 +23130,8 @@
 						<name>sf3_if_io_dly_3</name>
 						<description>sf3_if_io_dly_3.</description>
 						<addressOffset>0x68</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf3_io_2_do_dly_sel</name>
@@ -22182,6 +23154,8 @@
 						<name>sf3_if_io_dly_4</name>
 						<description>sf3_if_io_dly_4.</description>
 						<addressOffset>0x6C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf3_io_3_do_dly_sel</name>
@@ -22204,6 +23178,8 @@
 						<name>sf_ctrl_2</name>
 						<description>sf_ctrl_2.</description>
 						<addressOffset>0x70</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_dqs_en</name>
@@ -22231,6 +23207,8 @@
 						<name>sf_ctrl_3</name>
 						<description>sf_ctrl_3.</description>
 						<addressOffset>0x74</addressOffset>
+						<resetValue>0x20000046</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_1_ack_lat</name>
@@ -22273,6 +23251,8 @@
 						<name>sf_if_iahb_3</name>
 						<description>sf_if_iahb_3.</description>
 						<addressOffset>0x78</addressOffset>
+						<resetValue>0x8d840000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_2_qpi_mode_en</name>
@@ -22330,6 +23310,8 @@
 						<name>sf_if_iahb_4</name>
 						<description>sf_if_iahb_4.</description>
 						<addressOffset>0x7C</addressOffset>
+						<resetValue>0x38000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_2_cmd_buf_0</name>
@@ -22342,6 +23324,8 @@
 						<name>sf_if_iahb_5</name>
 						<description>sf_if_iahb_5.</description>
 						<addressOffset>0x80</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_2_cmd_buf_1</name>
@@ -22354,6 +23338,8 @@
 						<name>sf_if_iahb_6</name>
 						<description>sf_if_iahb_6.</description>
 						<addressOffset>0x84</addressOffset>
+						<resetValue>0x80000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_3_qpi_mode_en</name>
@@ -22376,6 +23362,8 @@
 						<name>sf_if_iahb_7</name>
 						<description>sf_if_iahb_7.</description>
 						<addressOffset>0x88</addressOffset>
+						<resetValue>0xc0000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_if_3_cmd_buf_0</name>
@@ -22388,6 +23376,9 @@
 						<name>sf_ctrl_prot_en_rd</name>
 						<description>sf_ctrl_prot_en_rd.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>sf_dbg_dis</name>
@@ -22420,6 +23411,8 @@
 						<name>sf_ctrl_prot_en</name>
 						<description>sf_ctrl_prot_en.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_ctrl_id1_en</name>
@@ -22442,6 +23435,8 @@
 						<name>sf_aes_key_r0_0</name>
 						<description>sf_aes_key_r0_0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_0</name>
@@ -22454,6 +23449,8 @@
 						<name>sf_aes_key_r0_1</name>
 						<description>sf_aes_key_r0_1.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_1</name>
@@ -22466,6 +23463,8 @@
 						<name>sf_aes_key_r0_2</name>
 						<description>sf_aes_key_r0_2.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_2</name>
@@ -22478,6 +23477,8 @@
 						<name>sf_aes_key_r0_3</name>
 						<description>sf_aes_key_r0_3.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_3</name>
@@ -22490,6 +23491,8 @@
 						<name>sf_aes_key_r0_4</name>
 						<description>sf_aes_key_r0_4.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_4</name>
@@ -22502,6 +23505,8 @@
 						<name>sf_aes_key_r0_5</name>
 						<description>sf_aes_key_r0_5.</description>
 						<addressOffset>0x214</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_5</name>
@@ -22514,6 +23519,8 @@
 						<name>sf_aes_key_r0_6</name>
 						<description>sf_aes_key_r0_6.</description>
 						<addressOffset>0x218</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_6</name>
@@ -22526,6 +23533,8 @@
 						<name>sf_aes_key_r0_7</name>
 						<description>sf_aes_key_r0_7.</description>
 						<addressOffset>0x21C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r0_7</name>
@@ -22538,6 +23547,8 @@
 						<name>sf_aes_iv_r0_w0</name>
 						<description>sf_aes_iv_r0_w0.</description>
 						<addressOffset>0x220</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w0</name>
@@ -22550,6 +23561,8 @@
 						<name>sf_aes_iv_r0_w1</name>
 						<description>sf_aes_iv_r0_w1.</description>
 						<addressOffset>0x224</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w1</name>
@@ -22562,6 +23575,8 @@
 						<name>sf_aes_iv_r0_w2</name>
 						<description>sf_aes_iv_r0_w2.</description>
 						<addressOffset>0x228</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w2</name>
@@ -22574,6 +23589,8 @@
 						<name>sf_aes_iv_r0_w3</name>
 						<description>sf_aes_iv_r0_w3.</description>
 						<addressOffset>0x22C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r0_w3</name>
@@ -22586,6 +23603,8 @@
 						<name>sf_aes_cfg_r0</name>
 						<description>sf_aes_cfg_r0.</description>
 						<addressOffset>0x230</addressOffset>
+						<resetValue>0x00003fff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_region_r0_lock</name>
@@ -22618,6 +23637,8 @@
 						<name>sf_aes_key_r1_0</name>
 						<description>sf_aes_key_r1_0.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_0</name>
@@ -22630,6 +23651,8 @@
 						<name>sf_aes_key_r1_1</name>
 						<description>sf_aes_key_r1_1.</description>
 						<addressOffset>0x304</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_1</name>
@@ -22642,6 +23665,8 @@
 						<name>sf_aes_key_r1_2</name>
 						<description>sf_aes_key_r1_2.</description>
 						<addressOffset>0x308</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_2</name>
@@ -22654,6 +23679,8 @@
 						<name>sf_aes_key_r1_3</name>
 						<description>sf_aes_key_r1_3.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_3</name>
@@ -22666,6 +23693,8 @@
 						<name>sf_aes_key_r1_4</name>
 						<description>sf_aes_key_r1_4.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_4</name>
@@ -22678,6 +23707,8 @@
 						<name>sf_aes_key_r1_5</name>
 						<description>sf_aes_key_r1_5.</description>
 						<addressOffset>0x314</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_5</name>
@@ -22690,6 +23721,8 @@
 						<name>sf_aes_key_r1_6</name>
 						<description>sf_aes_key_r1_6.</description>
 						<addressOffset>0x318</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_6</name>
@@ -22702,6 +23735,8 @@
 						<name>sf_aes_key_r1_7</name>
 						<description>sf_aes_key_r1_7.</description>
 						<addressOffset>0x31C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r1_7</name>
@@ -22714,6 +23749,8 @@
 						<name>sf_aes_iv_r1_w0</name>
 						<description>sf_aes_iv_r1_w0.</description>
 						<addressOffset>0x320</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w0</name>
@@ -22726,6 +23763,8 @@
 						<name>sf_aes_iv_r1_w1</name>
 						<description>sf_aes_iv_r1_w1.</description>
 						<addressOffset>0x324</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w1</name>
@@ -22738,6 +23777,8 @@
 						<name>sf_aes_iv_r1_w2</name>
 						<description>sf_aes_iv_r1_w2.</description>
 						<addressOffset>0x328</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w2</name>
@@ -22750,6 +23791,8 @@
 						<name>sf_aes_iv_r1_w3</name>
 						<description>sf_aes_iv_r1_w3.</description>
 						<addressOffset>0x32C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r1_w3</name>
@@ -22762,6 +23805,8 @@
 						<name>sf_aes_r1</name>
 						<description>sf_aes_r1.</description>
 						<addressOffset>0x330</addressOffset>
+						<resetValue>0x00003fff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_r1_lock</name>
@@ -22794,6 +23839,8 @@
 						<name>sf_aes_key_r2_0</name>
 						<description>sf_aes_key_r2_0.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_0</name>
@@ -22806,6 +23853,8 @@
 						<name>sf_aes_key_r2_1</name>
 						<description>sf_aes_key_r2_1.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_1</name>
@@ -22818,6 +23867,8 @@
 						<name>sf_aes_key_r2_2</name>
 						<description>sf_aes_key_r2_2.</description>
 						<addressOffset>0x408</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_2</name>
@@ -22830,6 +23881,8 @@
 						<name>sf_aes_key_r2_3</name>
 						<description>sf_aes_key_r2_3.</description>
 						<addressOffset>0x40C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_3</name>
@@ -22842,6 +23895,8 @@
 						<name>sf_aes_key_r2_4</name>
 						<description>sf_aes_key_r2_4.</description>
 						<addressOffset>0x410</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_4</name>
@@ -22854,6 +23909,8 @@
 						<name>sf_aes_key_r2_5</name>
 						<description>sf_aes_key_r2_5.</description>
 						<addressOffset>0x414</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_5</name>
@@ -22866,6 +23923,8 @@
 						<name>sf_aes_key_r2_6</name>
 						<description>sf_aes_key_r2_6.</description>
 						<addressOffset>0x418</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_6</name>
@@ -22878,6 +23937,8 @@
 						<name>sf_aes_key_r2_7</name>
 						<description>sf_aes_key_r2_7.</description>
 						<addressOffset>0x41C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_key_r2_7</name>
@@ -22890,6 +23951,8 @@
 						<name>sf_aes_iv_r2_w0</name>
 						<description>sf_aes_iv_r2_w0.</description>
 						<addressOffset>0x420</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w0</name>
@@ -22902,6 +23965,8 @@
 						<name>sf_aes_iv_r2_w1</name>
 						<description>sf_aes_iv_r2_w1.</description>
 						<addressOffset>0x424</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w1</name>
@@ -22914,6 +23979,8 @@
 						<name>sf_aes_iv_r2_w2</name>
 						<description>sf_aes_iv_r2_w2.</description>
 						<addressOffset>0x428</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w2</name>
@@ -22926,6 +23993,8 @@
 						<name>sf_aes_iv_r2_w3</name>
 						<description>sf_aes_iv_r2_w3.</description>
 						<addressOffset>0x42C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_iv_r2_w3</name>
@@ -22938,6 +24007,8 @@
 						<name>sf_aes_r2</name>
 						<description>sf_aes_r2.</description>
 						<addressOffset>0x430</addressOffset>
+						<resetValue>0x00003fff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_aes_r2_lock</name>
@@ -22970,6 +24041,8 @@
 						<name>sf_id0_offset</name>
 						<description>sf_id0_offset.</description>
 						<addressOffset>0x434</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_id0_offset</name>
@@ -22982,6 +24055,8 @@
 						<name>sf_id1_offset</name>
 						<description>sf_id1_offset.</description>
 						<addressOffset>0x438</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sf_id1_offset</name>
@@ -23009,11 +24084,14 @@
 						<name>DMA_IntStatus</name>
 						<description>DMA_IntStatus.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>IntStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23021,11 +24099,14 @@
 						<name>DMA_IntTCStatus</name>
 						<description>DMA_IntTCStatus.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>IntTCStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23033,11 +24114,14 @@
 						<name>DMA_IntTCClear</name>
 						<description>DMA_IntTCClear.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>IntTCClear</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23045,11 +24129,14 @@
 						<name>DMA_IntErrorStatus</name>
 						<description>DMA_IntErrorStatus.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>IntErrorStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23057,11 +24144,14 @@
 						<name>DMA_IntErrClr</name>
 						<description>DMA_IntErrClr.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>IntErrClr</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23069,11 +24159,14 @@
 						<name>DMA_RawIntTCStatus</name>
 						<description>DMA_RawIntTCStatus.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>RawIntTCStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23081,11 +24174,14 @@
 						<name>DMA_RawIntErrorStatus</name>
 						<description>DMA_RawIntErrorStatus.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>RawIntErrorStatus</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23093,11 +24189,14 @@
 						<name>DMA_EnbldChns</name>
 						<description>DMA_EnbldChns.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>EnabledChannels</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23105,6 +24204,8 @@
 						<name>DMA_SoftBReq</name>
 						<description>DMA_SoftBReq.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SoftBReq</name>
@@ -23117,6 +24218,8 @@
 						<name>DMA_SoftSReq</name>
 						<description>DMA_SoftSReq.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SoftSReq</name>
@@ -23129,6 +24232,8 @@
 						<name>DMA_SoftLBReq</name>
 						<description>DMA_SoftLBReq.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SoftLBReq</name>
@@ -23141,6 +24246,8 @@
 						<name>DMA_SoftLSReq</name>
 						<description>DMA_SoftLSReq.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SoftLSReq</name>
@@ -23153,6 +24260,8 @@
 						<name>DMA_Top_Config</name>
 						<description>DMA_Top_Config.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>M</name>
@@ -23170,6 +24279,8 @@
 						<name>DMA_Sync</name>
 						<description>DMA_Sync.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>DMA_Sync</name>
@@ -23182,6 +24293,8 @@
 						<name>DMA_C0SrcAddr</name>
 						<description>DMA_C0SrcAddr.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -23194,6 +24307,8 @@
 						<name>DMA_C0DstAddr</name>
 						<description>DMA_C0DstAddr.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -23206,6 +24321,8 @@
 						<name>DMA_C0LLI</name>
 						<description>DMA_C0LLI.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -23218,6 +24335,8 @@
 						<name>DMA_C0Control</name>
 						<description>DMA_C0Control.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>I</name>
@@ -23275,11 +24394,14 @@
 						<name>DMA_C0Config</name>
 						<description>DMA_C0Config.</description>
 						<addressOffset>0x110</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>LLICounter</name>
 								<lsb>20</lsb>
 								<msb>29</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>H</name>
@@ -23290,6 +24412,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -23332,6 +24455,8 @@
 						<name>DMA_C1SrcAddr</name>
 						<description>DMA_C1SrcAddr.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -23344,6 +24469,8 @@
 						<name>DMA_C1DstAddr</name>
 						<description>DMA_C1DstAddr.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -23356,6 +24483,8 @@
 						<name>DMA_C1LLI</name>
 						<description>DMA_C1LLI.</description>
 						<addressOffset>0x208</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -23368,6 +24497,8 @@
 						<name>DMA_C1Control</name>
 						<description>DMA_C1Control.</description>
 						<addressOffset>0x20C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>I</name>
@@ -23420,6 +24551,8 @@
 						<name>DMA_C1Config</name>
 						<description>DMA_C1Config.</description>
 						<addressOffset>0x210</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>H</name>
@@ -23430,6 +24563,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -23472,6 +24606,8 @@
 						<name>DMA_C2SrcAddr</name>
 						<description>DMA_C2SrcAddr.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -23484,6 +24620,8 @@
 						<name>DMA_C2DstAddr</name>
 						<description>DMA_C2DstAddr.</description>
 						<addressOffset>0x304</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -23496,6 +24634,8 @@
 						<name>DMA_C2LLI</name>
 						<description>DMA_C2LLI.</description>
 						<addressOffset>0x308</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -23508,6 +24648,8 @@
 						<name>DMA_C2Control</name>
 						<description>DMA_C2Control.</description>
 						<addressOffset>0x30C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>I</name>
@@ -23560,6 +24702,8 @@
 						<name>DMA_C2Config</name>
 						<description>DMA_C2Config.</description>
 						<addressOffset>0x310</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>H</name>
@@ -23570,6 +24714,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -23612,6 +24757,8 @@
 						<name>DMA_C3SrcAddr</name>
 						<description>DMA_C3SrcAddr.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>SrcAddr</name>
@@ -23624,6 +24771,8 @@
 						<name>DMA_C3DstAddr</name>
 						<description>DMA_C3DstAddr.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>DstAddr</name>
@@ -23636,6 +24785,8 @@
 						<name>DMA_C3LLI</name>
 						<description>DMA_C3LLI.</description>
 						<addressOffset>0x408</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>LLI</name>
@@ -23648,6 +24799,8 @@
 						<name>DMA_C3Control</name>
 						<description>DMA_C3Control.</description>
 						<addressOffset>0x40C</addressOffset>
+						<resetValue>0x0c489000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>I</name>
@@ -23700,6 +24853,8 @@
 						<name>DMA_C3Config</name>
 						<description>DMA_C3Config.</description>
 						<addressOffset>0x410</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>H</name>
@@ -23710,6 +24865,7 @@
 								<name>A</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>L</name>
@@ -23767,6 +24923,8 @@
 						<name>PDS_CTL</name>
 						<description>PDS_CTL.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x1a006b00</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_pds_ctrl_pll</name>
@@ -23879,6 +25037,8 @@
 						<name>PDS_TIME1</name>
 						<description>PDS_TIME1.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000ca8</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_sleep_duration</name>
@@ -23891,6 +25051,8 @@
 						<name>PDS_INT</name>
 						<description>PDS_INT.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_pds_int_clr</name>
@@ -23921,21 +25083,25 @@
 								<name>ro_pds_pll_done_int</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ro_pds_rf_done_int</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ro_pds_irq_in</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ro_pds_wake_int</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -23943,6 +25109,8 @@
 						<name>PDS_CTL2</name>
 						<description>PDS_CTL2.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_pds_force_wb_gate_clk</name>
@@ -24000,6 +25168,8 @@
 						<name>PDS_CTL3</name>
 						<description>PDS_CTL3.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x49000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_pds_misc_iso_en</name>
@@ -24047,6 +25217,8 @@
 						<name>PDS_CTL4</name>
 						<description>PDS_CTL4.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x0f00f00f</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_pds_misc_gate_clk</name>
@@ -24114,6 +25286,9 @@
 						<name>pds_stat</name>
 						<description>pds_stat.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>ro_pds_pll_state</name>
@@ -24136,6 +25311,8 @@
 						<name>pds_ram1</name>
 						<description>pds_ram1.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>cr_np_sram_pwr</name>
@@ -24148,6 +25325,8 @@
 						<name>rc32m_ctrl0</name>
 						<description>rc32m_ctrl0.</description>
 						<addressOffset>0x300</addressOffset>
+						<resetValue>0x18080018</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rc32m_code_fr_ext</name>
@@ -24183,11 +25362,13 @@
 								<name>rc32m_dig_code_fr_cal</name>
 								<lsb>6</lsb>
 								<msb>13</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_cal_precharge</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_cal_div</name>
@@ -24198,16 +25379,19 @@
 								<name>rc32m_cal_inprogress</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_rdy</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32m_cal_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -24215,6 +25399,8 @@
 						<name>rc32m_ctrl1</name>
 						<description>rc32m_ctrl1.</description>
 						<addressOffset>0x304</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rc32m_reserved</name>
@@ -24252,6 +25438,8 @@
 						<name>pu_rst_clkpll</name>
 						<description>pu_rst_clkpll.</description>
 						<addressOffset>0x400</addressOffset>
+						<resetValue>0x000001f0</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pu_clkpll</name>
@@ -24314,6 +25502,8 @@
 						<name>clkpll_top_ctrl</name>
 						<description>clkpll_top_ctrl.</description>
 						<addressOffset>0x404</addressOffset>
+						<resetValue>0x01100414</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_vg13_sel</name>
@@ -24351,6 +25541,8 @@
 						<name>clkpll_cp</name>
 						<description>clkpll_cp.</description>
 						<addressOffset>0x408</addressOffset>
+						<resetValue>0x00000741</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_cp_opamp_en</name>
@@ -24388,6 +25580,8 @@
 						<name>clkpll_rz</name>
 						<description>clkpll_rz.</description>
 						<addressOffset>0x40C</addressOffset>
+						<resetValue>0x0005a020</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_rz</name>
@@ -24425,6 +25619,8 @@
 						<name>clkpll_fbdv</name>
 						<description>clkpll_fbdv.</description>
 						<addressOffset>0x410</addressOffset>
+						<resetValue>0x00000005</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_sel_fb_clk</name>
@@ -24442,6 +25638,8 @@
 						<name>clkpll_vco</name>
 						<description>clkpll_vco.</description>
 						<addressOffset>0x414</addressOffset>
+						<resetValue>0x00000007</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_shrtr</name>
@@ -24459,6 +25657,8 @@
 						<name>clkpll_sdm</name>
 						<description>clkpll_sdm.</description>
 						<addressOffset>0x418</addressOffset>
+						<resetValue>0x10600000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_sdm_bypass</name>
@@ -24486,6 +25686,8 @@
 						<name>clkpll_output_en</name>
 						<description>clkpll_output_en.</description>
 						<addressOffset>0x41C</addressOffset>
+						<resetValue>0x00000100</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>clkpll_en_div2_480m</name>
@@ -24558,16 +25760,20 @@
 						<name>HBN_CTL</name>
 						<description>HBN_CTL.</description>
 						<addressOffset>0x0</addressOffset>
+						<resetValue>0x00d50000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>hbn_state</name>
 								<lsb>28</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sram_slp</name>
 								<lsb>27</lsb>
 								<msb>27</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>sram_slp_option</name>
@@ -24628,11 +25834,13 @@
 								<name>trap_mode</name>
 								<lsb>8</lsb>
 								<msb>8</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>hbn_mode</name>
 								<lsb>7</lsb>
 								<msb>7</msb>
+								<access>write-only</access>
 							</field>
 							<field>
 								<name>rtc_ctl</name>
@@ -24645,6 +25853,8 @@
 						<name>HBN_TIME_L</name>
 						<description>HBN_TIME_L.</description>
 						<addressOffset>0x4</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>hbn_time_l</name>
@@ -24657,6 +25867,8 @@
 						<name>HBN_TIME_H</name>
 						<description>HBN_TIME_H.</description>
 						<addressOffset>0x8</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>hbn_time_h</name>
@@ -24669,6 +25881,9 @@
 						<name>RTC_TIME_L</name>
 						<description>RTC_TIME_L.</description>
 						<addressOffset>0xC</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>rtc_time_latch_l</name>
@@ -24681,16 +25896,20 @@
 						<name>RTC_TIME_H</name>
 						<description>RTC_TIME_H.</description>
 						<addressOffset>0x10</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rtc_time_latch</name>
 								<lsb>31</lsb>
 								<msb>31</msb>
+								<access>write-only</access>
 							</field>
 							<field>
 								<name>rtc_time_latch_h</name>
 								<lsb>0</lsb>
 								<msb>7</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -24698,6 +25917,8 @@
 						<name>HBN_IRQ_MODE</name>
 						<description>HBN_IRQ_MODE.</description>
 						<addressOffset>0x14</addressOffset>
+						<resetValue>0x03010105</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pin_wakeup_en</name>
@@ -24750,6 +25971,9 @@
 						<name>HBN_IRQ_STAT</name>
 						<description>HBN_IRQ_STAT.</description>
 						<addressOffset>0x18</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>read-only</access>
 						<fields>
 							<field>
 								<name>irq_stat</name>
@@ -24762,6 +25986,9 @@
 						<name>HBN_IRQ_CLR</name>
 						<description>HBN_IRQ_CLR.</description>
 						<addressOffset>0x1C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
+						<access>write-only</access>
 						<fields>
 							<field>
 								<name>irq_clr</name>
@@ -24774,6 +26001,8 @@
 						<name>HBN_PIR_CFG</name>
 						<description>HBN_PIR_CFG.</description>
 						<addressOffset>0x20</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_nosync</name>
@@ -24811,6 +26040,8 @@
 						<name>HBN_PIR_VTH</name>
 						<description>HBN_PIR_VTH.</description>
 						<addressOffset>0x24</addressOffset>
+						<resetValue>0x000003ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pir_vth</name>
@@ -24823,6 +26054,8 @@
 						<name>HBN_PIR_INTERVAL</name>
 						<description>HBN_PIR_INTERVAL.</description>
 						<addressOffset>0x28</addressOffset>
+						<resetValue>0x00000a3d</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pir_interval</name>
@@ -24835,11 +26068,14 @@
 						<name>HBN_BOR_CFG</name>
 						<description>HBN_BOR_CFG.</description>
 						<addressOffset>0x2C</addressOffset>
+						<resetValue>0x00000002</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>r_bor_out</name>
 								<lsb>3</lsb>
 								<msb>3</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>pu_bor</name>
@@ -24862,6 +26098,8 @@
 						<name>HBN_GLB</name>
 						<description>HBN_GLB.</description>
 						<addressOffset>0x30</addressOffset>
+						<resetValue>0xaa0a0020</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sw_ldo11_aon_vout_sel</name>
@@ -24904,6 +26142,8 @@
 						<name>HBN_SRAM</name>
 						<description>HBN_SRAM.</description>
 						<addressOffset>0x34</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>retram_slp</name>
@@ -24921,6 +26161,8 @@
 						<name>HBN_RSV0</name>
 						<description>HBN_RSV0.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>HBN_RSV0</name>
@@ -24933,6 +26175,8 @@
 						<name>HBN_RSV1</name>
 						<description>HBN_RSV1.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>HBN_RSV1</name>
@@ -24945,6 +26189,8 @@
 						<name>HBN_RSV2</name>
 						<description>HBN_RSV2.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>HBN_RSV2</name>
@@ -24957,6 +26203,8 @@
 						<name>HBN_RSV3</name>
 						<description>HBN_RSV3.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>HBN_RSV3</name>
@@ -24969,6 +26217,8 @@
 						<name>rc32k_ctrl0</name>
 						<description>rc32k_ctrl0.</description>
 						<addressOffset>0x200</addressOffset>
+						<resetValue>0x5008801b</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>rc32k_code_fr_ext</name>
@@ -24999,11 +26249,13 @@
 								<name>rc32k_dig_code_fr_cal</name>
 								<lsb>6</lsb>
 								<msb>15</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_cal_precharge</name>
 								<lsb>5</lsb>
 								<msb>5</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_cal_div</name>
@@ -25014,16 +26266,19 @@
 								<name>rc32k_cal_inprogress</name>
 								<lsb>2</lsb>
 								<msb>2</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_rdy</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>rc32k_cal_done</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -25031,6 +26286,8 @@
 						<name>xtal32k</name>
 						<description>xtal32k.</description>
 						<addressOffset>0x204</addressOffset>
+						<resetValue>0x000f0228</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pu_xtal32k</name>
@@ -25103,6 +26360,8 @@
 						<name>aon</name>
 						<description>aon.</description>
 						<addressOffset>0x000</addressOffset>
+						<resetValue>0x00400000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sw_pu_ldo11_rt</name>
@@ -25135,6 +26394,8 @@
 						<name>aon_common</name>
 						<description>aon_common.</description>
 						<addressOffset>0x004</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ten_cip_misc_aon</name>
@@ -25212,6 +26473,8 @@
 						<name>aon_misc</name>
 						<description>aon_misc.</description>
 						<addressOffset>0x008</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>sw_wb_en_aon</name>
@@ -25229,6 +26492,8 @@
 						<name>bg_sys_top</name>
 						<description>bg_sys_top.</description>
 						<addressOffset>0x010</addressOffset>
+						<resetValue>0x00001100</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>bg_sys_start_ctrl_aon</name>
@@ -25251,11 +26516,14 @@
 						<name>dcdc18_top_0</name>
 						<description>dcdc18_top_0.</description>
 						<addressOffset>0x014</addressOffset>
+						<resetValue>0x8a580736</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>dcdc18_rdy_aon</name>
 								<lsb>31</lsb>
 								<msb>31</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>dcdc18_sstart_time_aon</name>
@@ -25308,6 +26576,8 @@
 						<name>dcdc18_top_1</name>
 						<description>dcdc18_top_1.</description>
 						<addressOffset>0x018</addressOffset>
+						<resetValue>0x18180048</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>dcdc18_pulldown_aon</name>
@@ -25360,6 +26630,8 @@
 						<name>ldo11soc_and_dctest</name>
 						<description>ldo11soc_and_dctest.</description>
 						<addressOffset>0x01C</addressOffset>
+						<resetValue>0x70001811</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pmip_dc_tp_out_en_aon</name>
@@ -25375,11 +26647,13 @@
 								<name>ldo11soc_power_good_aon</name>
 								<lsb>29</lsb>
 								<msb>29</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ldo11soc_rdy_aon</name>
 								<lsb>28</lsb>
 								<msb>28</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>ldo11soc_cc_aon</name>
@@ -25422,6 +26696,8 @@
 						<name>psw_irrcv</name>
 						<description>psw_irrcv.</description>
 						<addressOffset>0x020</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>pu_ir_psw_aon</name>
@@ -25434,6 +26710,8 @@
 						<name>rf_top_aon</name>
 						<description>rf_top_aon.</description>
 						<addressOffset>0x080</addressOffset>
+						<resetValue>0x00020137</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>ldo15rf_bypass_aon</name>
@@ -25501,6 +26779,8 @@
 						<name>xtal_cfg</name>
 						<description>xtal_cfg.</description>
 						<addressOffset>0x084</addressOffset>
+						<resetValue>0xb410f0f0</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>xtal_rdy_sel_aon</name>
@@ -25568,6 +26848,8 @@
 						<name>tsen</name>
 						<description>tsen.</description>
 						<addressOffset>0x088</addressOffset>
+						<resetValue>0x78ff08ff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>xtal_rdy_int_sel_aon</name>
@@ -25583,6 +26865,7 @@
 								<name>xtal_rdy</name>
 								<lsb>28</lsb>
 								<msb>28</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>tsen_refcode_rfcal</name>
@@ -25600,6 +26883,8 @@
 						<name>acomp0_ctrl</name>
 						<description>acomp0_ctrl.</description>
 						<addressOffset>0x100</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>acomp0_muxen</name>
@@ -25647,6 +26932,8 @@
 						<name>acomp1_ctrl</name>
 						<description>acomp1_ctrl.</description>
 						<addressOffset>0x104</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>acomp1_muxen</name>
@@ -25694,6 +26981,8 @@
 						<name>acomp_ctrl</name>
 						<description>acomp_ctrl.</description>
 						<addressOffset>0x108</addressOffset>
+						<resetValue>0x00000003</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>acomp_reserved</name>
@@ -25704,11 +26993,13 @@
 								<name>acomp0_out_raw</name>
 								<lsb>19</lsb>
 								<msb>19</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>acomp1_out_raw</name>
 								<lsb>17</lsb>
 								<msb>17</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>acomp0_test_sel</name>
@@ -25746,6 +27037,8 @@
 						<name>gpadc_reg_cmd</name>
 						<description>gpadc_reg_cmd.</description>
 						<addressOffset>0x10C</addressOffset>
+						<resetValue>0x00000f78</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_sen_test_en</name>
@@ -25838,6 +27131,8 @@
 						<name>gpadc_reg_config1</name>
 						<description>gpadc_reg_config1.</description>
 						<addressOffset>0x110</addressOffset>
+						<resetValue>0x000c0002</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_v18_sel</name>
@@ -25895,6 +27190,8 @@
 						<name>gpadc_reg_config2</name>
 						<description>gpadc_reg_config2.</description>
 						<addressOffset>0x114</addressOffset>
+						<resetValue>0x00019100</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_tsvbe_low</name>
@@ -25987,6 +27284,8 @@
 						<name>gpadc_reg_scn_pos1</name>
 						<description>adc converation sequence 1</description>
 						<addressOffset>0x118</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_scan_pos_5</name>
@@ -26024,6 +27323,8 @@
 						<name>gpadc_reg_scn_pos2</name>
 						<description>adc converation sequence 2</description>
 						<addressOffset>0x11C</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_scan_pos_11</name>
@@ -26061,6 +27362,8 @@
 						<name>gpadc_reg_scn_neg1</name>
 						<description>adc converation sequence 3</description>
 						<addressOffset>0x120</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_scan_neg_5</name>
@@ -26098,6 +27401,8 @@
 						<name>gpadc_reg_scn_neg2</name>
 						<description>adc converation sequence 4</description>
 						<addressOffset>0x124</addressOffset>
+						<resetValue>0x1ef7bdef</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_scan_neg_11</name>
@@ -26135,6 +27440,8 @@
 						<name>gpadc_reg_status</name>
 						<description>gpadc_reg_status.</description>
 						<addressOffset>0x128</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_reserved</name>
@@ -26145,6 +27452,7 @@
 								<name>gpadc_data_rdy</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -26152,6 +27460,8 @@
 						<name>gpadc_reg_isr</name>
 						<description>gpadc_reg_isr.</description>
 						<addressOffset>0x12C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_pos_satur_mask</name>
@@ -26177,11 +27487,13 @@
 								<name>gpadc_pos_satur</name>
 								<lsb>1</lsb>
 								<msb>1</msb>
+								<access>read-only</access>
 							</field>
 							<field>
 								<name>gpadc_neg_satur</name>
 								<lsb>0</lsb>
 								<msb>0</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -26189,11 +27501,14 @@
 						<name>gpadc_reg_result</name>
 						<description>gpadc_reg_result.</description>
 						<addressOffset>0x130</addressOffset>
+						<resetValue>0x01ef0000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_data_out</name>
 								<lsb>0</lsb>
 								<msb>25</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -26201,11 +27516,14 @@
 						<name>gpadc_reg_raw_result</name>
 						<description>gpadc_reg_raw_result.</description>
 						<addressOffset>0x134</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_raw_data</name>
 								<lsb>0</lsb>
 								<msb>11</msb>
+								<access>read-only</access>
 							</field>
 						</fields>
 					</register>
@@ -26213,6 +27531,8 @@
 						<name>gpadc_reg_define</name>
 						<description>gpadc_reg_define.</description>
 						<addressOffset>0x138</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>gpadc_os_cal_data</name>
@@ -26225,6 +27545,8 @@
 						<name>hbncore_resv0</name>
 						<description>hbncore_resv0.</description>
 						<addressOffset>0x13C</addressOffset>
+						<resetValue>0x00000000</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>hbncore_resv0_data</name>
@@ -26237,6 +27559,8 @@
 						<name>hbncore_resv1</name>
 						<description>hbncore_resv1.</description>
 						<addressOffset>0x140</addressOffset>
+						<resetValue>0xffffffff</resetValue>
+						<resetMask>0xffffffff</resetMask>
 						<fields>
 							<field>
 								<name>hbncore_resv1_data</name>
