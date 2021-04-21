@@ -54,7 +54,7 @@ impl<'a> CR_IRTX_MOD_PH1_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> CR_IRTX_MOD_PH0_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | (((value as u32) & 0xff) << 16);
+        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> CR_IRTX_PW_UNIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | ((value as u32) & 0x0fff);
+        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
         self.w
     }
 }
@@ -162,10 +162,10 @@ impl crate::Readable for IRTX_PULSE_WIDTH_SPEC {
 impl crate::Writable for IRTX_PULSE_WIDTH_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets irtx_pulse_width to value 0"]
+#[doc = "`reset()` method sets irtx_pulse_width to value 0x2211_0464"]
 impl crate::Resettable for IRTX_PULSE_WIDTH_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x2211_0464
     }
 }

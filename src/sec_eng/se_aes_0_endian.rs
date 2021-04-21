@@ -54,7 +54,7 @@ impl<'a> SE_AES_0_CTR_LEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | (((value as u32) & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> SE_AES_0_IV_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> SE_AES_0_KEY_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -162,7 +162,7 @@ impl<'a> SE_AES_0_DIN_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -198,7 +198,7 @@ impl<'a> SE_AES_0_DOUT_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -274,10 +274,10 @@ impl crate::Readable for SE_AES_0_ENDIAN_SPEC {
 impl crate::Writable for SE_AES_0_ENDIAN_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_aes_0_endian to value 0"]
+#[doc = "`reset()` method sets se_aes_0_endian to value 0x0f"]
 impl crate::Resettable for SE_AES_0_ENDIAN_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0f
     }
 }

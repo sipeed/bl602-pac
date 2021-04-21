@@ -46,28 +46,6 @@ impl core::ops::Deref for PWM_STS_TOP_R {
         &self.0
     }
 }
-#[doc = "Field `pwm_sts_top` writer - "]
-pub struct PWM_STS_TOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWM_STS_TOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
 #[doc = "Field `pwm_stop_en` reader - "]
 pub struct PWM_STOP_EN_R(crate::FieldReader<bool, bool>);
 impl PWM_STOP_EN_R {
@@ -100,7 +78,7 @@ impl<'a> PWM_STOP_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
@@ -136,7 +114,7 @@ impl<'a> PWM_SW_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
@@ -172,7 +150,7 @@ impl<'a> PWM_SW_FORCE_VAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
@@ -208,7 +186,7 @@ impl<'a> PWM_STOP_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -244,7 +222,7 @@ impl<'a> PWM_OUT_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -270,7 +248,7 @@ impl<'a> REG_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
+        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
         self.w
     }
 }
@@ -312,11 +290,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    pub fn pwm_sts_top(&mut self) -> PWM_STS_TOP_W {
-        PWM_STS_TOP_W { w: self }
-    }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn pwm_stop_en(&mut self) -> PWM_STOP_EN_W {
@@ -366,10 +339,10 @@ impl crate::Readable for PWM2_CONFIG_SPEC {
 impl crate::Writable for PWM2_CONFIG_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets pwm2_config to value 0"]
+#[doc = "`reset()` method sets pwm2_config to value 0x08"]
 impl crate::Resettable for PWM2_CONFIG_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x08
     }
 }

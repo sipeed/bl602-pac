@@ -64,7 +64,7 @@ impl<'a> GPADC_32M_DIV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> GPADC_32M_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> GPADC_32M_CLK_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | ((value as u32) & 0x3f);
+        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
         self.w
     }
 }
@@ -182,10 +182,10 @@ impl crate::Readable for GPADC_32M_SRC_CTRL_SPEC {
 impl crate::Writable for GPADC_32M_SRC_CTRL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets GPADC_32M_SRC_CTRL to value 0"]
+#[doc = "`reset()` method sets GPADC_32M_SRC_CTRL to value 0x0102"]
 impl crate::Resettable for GPADC_32M_SRC_CTRL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0102
     }
 }

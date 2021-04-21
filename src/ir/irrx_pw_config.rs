@@ -54,7 +54,7 @@ impl<'a> CR_IRRX_END_TH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
+        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> CR_IRRX_DATA_TH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
+        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
         self.w
     }
 }
@@ -126,10 +126,10 @@ impl crate::Readable for IRRX_PW_CONFIG_SPEC {
 impl crate::Writable for IRRX_PW_CONFIG_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets irrx_pw_config to value 0"]
+#[doc = "`reset()` method sets irrx_pw_config to value 0x2327_0d47"]
 impl crate::Resettable for IRRX_PW_CONFIG_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x2327_0d47
     }
 }

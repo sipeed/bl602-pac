@@ -64,7 +64,7 @@ impl<'a> SW_WB_EN_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SW_SOC_EN_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -146,10 +146,10 @@ impl crate::Readable for AON_MISC_SPEC {
 impl crate::Writable for AON_MISC_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets aon_misc to value 0"]
+#[doc = "`reset()` method sets aon_misc to value 0x03"]
 impl crate::Resettable for AON_MISC_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x03
     }
 }

@@ -64,7 +64,7 @@ impl<'a> PMIP_DC_TP_OUT_EN_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> PU_VDDCORE_MISC_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
@@ -118,28 +118,6 @@ impl core::ops::Deref for LDO11SOC_POWER_GOOD_AON_R {
         &self.0
     }
 }
-#[doc = "Field `ldo11soc_power_good_aon` writer - "]
-pub struct LDO11SOC_POWER_GOOD_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LDO11SOC_POWER_GOOD_AON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
-        self.w
-    }
-}
 #[doc = "Field `ldo11soc_rdy_aon` reader - "]
 pub struct LDO11SOC_RDY_AON_R(crate::FieldReader<bool, bool>);
 impl LDO11SOC_RDY_AON_R {
@@ -152,28 +130,6 @@ impl core::ops::Deref for LDO11SOC_RDY_AON_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ldo11soc_rdy_aon` writer - "]
-pub struct LDO11SOC_RDY_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LDO11SOC_RDY_AON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
-        self.w
     }
 }
 #[doc = "Field `ldo11soc_cc_aon` reader - "]
@@ -198,7 +154,7 @@ impl<'a> LDO11SOC_CC_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | (((value as u32) & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
         self.w
     }
 }
@@ -224,7 +180,7 @@ impl<'a> LDO11SOC_VTH_SEL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
         self.w
     }
 }
@@ -260,7 +216,7 @@ impl<'a> LDO11SOC_PULLDOWN_SEL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -296,7 +252,7 @@ impl<'a> LDO11SOC_PULLDOWN_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -322,7 +278,7 @@ impl<'a> LDO11SOC_SSTART_DELAY_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
         self.w
     }
 }
@@ -358,7 +314,7 @@ impl<'a> LDO11SOC_SSTART_SEL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
@@ -394,7 +350,7 @@ impl<'a> PU_LDO11SOC_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -466,16 +422,6 @@ impl W {
     pub fn pu_vddcore_misc_aon(&mut self) -> PU_VDDCORE_MISC_AON_W {
         PU_VDDCORE_MISC_AON_W { w: self }
     }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn ldo11soc_power_good_aon(&mut self) -> LDO11SOC_POWER_GOOD_AON_W {
-        LDO11SOC_POWER_GOOD_AON_W { w: self }
-    }
-    #[doc = "Bit 28"]
-    #[inline(always)]
-    pub fn ldo11soc_rdy_aon(&mut self) -> LDO11SOC_RDY_AON_W {
-        LDO11SOC_RDY_AON_W { w: self }
-    }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     pub fn ldo11soc_cc_aon(&mut self) -> LDO11SOC_CC_AON_W {
@@ -530,10 +476,10 @@ impl crate::Readable for LDO11SOC_AND_DCTEST_SPEC {
 impl crate::Writable for LDO11SOC_AND_DCTEST_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets ldo11soc_and_dctest to value 0"]
+#[doc = "`reset()` method sets ldo11soc_and_dctest to value 0x7000_1811"]
 impl crate::Resettable for LDO11SOC_AND_DCTEST_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x7000_1811
     }
 }

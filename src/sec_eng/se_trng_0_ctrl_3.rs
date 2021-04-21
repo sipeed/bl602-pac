@@ -32,25 +32,25 @@ impl core::convert::From<crate::W<SE_TRNG_0_CTRL_3_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `se_trng_0_rosc_en` reader - "]
-pub struct SE_TRNG_0_ROSC_EN_R(crate::FieldReader<bool, bool>);
-impl SE_TRNG_0_ROSC_EN_R {
+#[doc = "Field `se_trng_0_rosc_dis` reader - Used to be called 'se_trng_0_rosc_en', but the SDK calls it 'se_trng_0_rosc_dis'."]
+pub struct SE_TRNG_0_ROSC_DIS_R(crate::FieldReader<bool, bool>);
+impl SE_TRNG_0_ROSC_DIS_R {
     pub(crate) fn new(bits: bool) -> Self {
-        SE_TRNG_0_ROSC_EN_R(crate::FieldReader::new(bits))
+        SE_TRNG_0_ROSC_DIS_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for SE_TRNG_0_ROSC_EN_R {
+impl core::ops::Deref for SE_TRNG_0_ROSC_DIS_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `se_trng_0_rosc_en` writer - "]
-pub struct SE_TRNG_0_ROSC_EN_W<'a> {
+#[doc = "Field `se_trng_0_rosc_dis` writer - Used to be called 'se_trng_0_rosc_en', but the SDK calls it 'se_trng_0_rosc_dis'."]
+pub struct SE_TRNG_0_ROSC_DIS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> SE_TRNG_0_ROSC_EN_W<'a> {
+impl<'a> SE_TRNG_0_ROSC_DIS_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -64,7 +64,7 @@ impl<'a> SE_TRNG_0_ROSC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SE_TRNG_0_HT_OD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> SE_TRNG_0_HT_APT_C_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | (((value as u32) & 0x03ff) << 16);
+        self.w.bits = (self.w.bits & !(0x03ff << 16)) | ((value as u32 & 0x03ff) << 16);
         self.w
     }
 }
@@ -152,7 +152,7 @@ impl<'a> SE_TRNG_0_HT_RCT_C_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -178,15 +178,15 @@ impl<'a> SE_TRNG_0_CP_RATIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
 impl R {
-    #[doc = "Bit 31"]
+    #[doc = "Bit 31 - Used to be called 'se_trng_0_rosc_en', but the SDK calls it 'se_trng_0_rosc_dis'."]
     #[inline(always)]
-    pub fn se_trng_0_rosc_en(&self) -> SE_TRNG_0_ROSC_EN_R {
-        SE_TRNG_0_ROSC_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+    pub fn se_trng_0_rosc_dis(&self) -> SE_TRNG_0_ROSC_DIS_R {
+        SE_TRNG_0_ROSC_DIS_R::new(((self.bits >> 31) & 0x01) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
@@ -210,10 +210,10 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31"]
+    #[doc = "Bit 31 - Used to be called 'se_trng_0_rosc_en', but the SDK calls it 'se_trng_0_rosc_dis'."]
     #[inline(always)]
-    pub fn se_trng_0_rosc_en(&mut self) -> SE_TRNG_0_ROSC_EN_W {
-        SE_TRNG_0_ROSC_EN_W { w: self }
+    pub fn se_trng_0_rosc_dis(&mut self) -> SE_TRNG_0_ROSC_DIS_W {
+        SE_TRNG_0_ROSC_DIS_W { w: self }
     }
     #[doc = "Bit 26"]
     #[inline(always)]
@@ -254,10 +254,10 @@ impl crate::Readable for SE_TRNG_0_CTRL_3_SPEC {
 impl crate::Writable for SE_TRNG_0_CTRL_3_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_trng_0_ctrl_3 to value 0"]
+#[doc = "`reset()` method sets se_trng_0_ctrl_3 to value 0x837a_4203"]
 impl crate::Resettable for SE_TRNG_0_CTRL_3_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x837a_4203
     }
 }

@@ -54,7 +54,7 @@ impl<'a> CLKPLL_SEL_FB_CLK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> CLKPLL_SEL_SAMPLE_CLK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
+        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
         self.w
     }
 }
@@ -126,10 +126,10 @@ impl crate::Readable for CLKPLL_FBDV_SPEC {
 impl crate::Writable for CLKPLL_FBDV_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets clkpll_fbdv to value 0"]
+#[doc = "`reset()` method sets clkpll_fbdv to value 0x05"]
 impl crate::Resettable for CLKPLL_FBDV_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x05
     }
 }

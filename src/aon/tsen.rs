@@ -54,7 +54,7 @@ impl<'a> XTAL_RDY_INT_SEL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | (((value as u32) & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> XTAL_INN_CFG_EN_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -106,28 +106,6 @@ impl core::ops::Deref for XTAL_RDY_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `xtal_rdy` writer - "]
-pub struct XTAL_RDY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTAL_RDY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
-        self.w
     }
 }
 #[doc = "Field `tsen_refcode_rfcal` reader - "]
@@ -152,7 +130,7 @@ impl<'a> TSEN_REFCODE_RFCAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | (((value as u32) & 0x0fff) << 16);
+        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
         self.w
     }
 }
@@ -178,7 +156,7 @@ impl<'a> TSEN_REFCODE_CORNER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | ((value as u32) & 0x0fff);
+        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
         self.w
     }
 }
@@ -220,11 +198,6 @@ impl W {
     pub fn xtal_inn_cfg_en_aon(&mut self) -> XTAL_INN_CFG_EN_AON_W {
         XTAL_INN_CFG_EN_AON_W { w: self }
     }
-    #[doc = "Bit 28"]
-    #[inline(always)]
-    pub fn xtal_rdy(&mut self) -> XTAL_RDY_W {
-        XTAL_RDY_W { w: self }
-    }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     pub fn tsen_refcode_rfcal(&mut self) -> TSEN_REFCODE_RFCAL_W {
@@ -254,10 +227,10 @@ impl crate::Readable for TSEN_SPEC {
 impl crate::Writable for TSEN_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets tsen to value 0"]
+#[doc = "`reset()` method sets tsen to value 0x78ff_08ff"]
 impl crate::Resettable for TSEN_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x78ff_08ff
     }
 }

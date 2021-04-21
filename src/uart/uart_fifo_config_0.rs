@@ -46,28 +46,6 @@ impl core::ops::Deref for RX_FIFO_UNDERFLOW_R {
         &self.0
     }
 }
-#[doc = "Field `rx_fifo_underflow` writer - "]
-pub struct RX_FIFO_UNDERFLOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FIFO_UNDERFLOW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
 #[doc = "Field `rx_fifo_overflow` reader - "]
 pub struct RX_FIFO_OVERFLOW_R(crate::FieldReader<bool, bool>);
 impl RX_FIFO_OVERFLOW_R {
@@ -80,28 +58,6 @@ impl core::ops::Deref for RX_FIFO_OVERFLOW_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `rx_fifo_overflow` writer - "]
-pub struct RX_FIFO_OVERFLOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FIFO_OVERFLOW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
     }
 }
 #[doc = "Field `tx_fifo_underflow` reader - "]
@@ -118,28 +74,6 @@ impl core::ops::Deref for TX_FIFO_UNDERFLOW_R {
         &self.0
     }
 }
-#[doc = "Field `tx_fifo_underflow` writer - "]
-pub struct TX_FIFO_UNDERFLOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_UNDERFLOW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
 #[doc = "Field `tx_fifo_overflow` reader - "]
 pub struct TX_FIFO_OVERFLOW_R(crate::FieldReader<bool, bool>);
 impl TX_FIFO_OVERFLOW_R {
@@ -152,28 +86,6 @@ impl core::ops::Deref for TX_FIFO_OVERFLOW_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `tx_fifo_overflow` writer - "]
-pub struct TX_FIFO_OVERFLOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_OVERFLOW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
     }
 }
 #[doc = "Field `rx_fifo_clr` reader - "]
@@ -208,7 +120,7 @@ impl<'a> RX_FIFO_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -244,7 +156,7 @@ impl<'a> TX_FIFO_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -280,7 +192,7 @@ impl<'a> UART_DMA_RX_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -316,7 +228,7 @@ impl<'a> UART_DMA_TX_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -363,26 +275,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    pub fn rx_fifo_underflow(&mut self) -> RX_FIFO_UNDERFLOW_W {
-        RX_FIFO_UNDERFLOW_W { w: self }
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn rx_fifo_overflow(&mut self) -> RX_FIFO_OVERFLOW_W {
-        RX_FIFO_OVERFLOW_W { w: self }
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn tx_fifo_underflow(&mut self) -> TX_FIFO_UNDERFLOW_W {
-        TX_FIFO_UNDERFLOW_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn tx_fifo_overflow(&mut self) -> TX_FIFO_OVERFLOW_W {
-        TX_FIFO_OVERFLOW_W { w: self }
-    }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn rx_fifo_clr(&mut self) -> RX_FIFO_CLR_W {

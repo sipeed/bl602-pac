@@ -54,7 +54,7 @@ impl<'a> EM_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
+        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for SEAM_MISC_SPEC {
 impl crate::Writable for SEAM_MISC_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets seam_misc to value 0"]
+#[doc = "`reset()` method sets seam_misc to value 0x03"]
 impl crate::Resettable for SEAM_MISC_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x03
     }
 }

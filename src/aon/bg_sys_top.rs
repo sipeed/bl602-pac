@@ -64,7 +64,7 @@ impl<'a> BG_SYS_START_CTRL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> PU_BG_SYS_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> PMIP_RESV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -182,10 +182,10 @@ impl crate::Readable for BG_SYS_TOP_SPEC {
 impl crate::Writable for BG_SYS_TOP_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets bg_sys_top to value 0"]
+#[doc = "`reset()` method sets bg_sys_top to value 0x1100"]
 impl crate::Resettable for BG_SYS_TOP_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x1100
     }
 }

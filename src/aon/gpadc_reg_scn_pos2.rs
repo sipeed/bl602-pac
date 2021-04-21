@@ -54,7 +54,7 @@ impl<'a> GPADC_SCAN_POS_11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 25)) | (((value as u32) & 0x1f) << 25);
+        self.w.bits = (self.w.bits & !(0x1f << 25)) | ((value as u32 & 0x1f) << 25);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> GPADC_SCAN_POS_10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 20)) | (((value as u32) & 0x1f) << 20);
+        self.w.bits = (self.w.bits & !(0x1f << 20)) | ((value as u32 & 0x1f) << 20);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> GPADC_SCAN_POS_9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 15)) | (((value as u32) & 0x1f) << 15);
+        self.w.bits = (self.w.bits & !(0x1f << 15)) | ((value as u32 & 0x1f) << 15);
         self.w
     }
 }
@@ -132,7 +132,7 @@ impl<'a> GPADC_SCAN_POS_8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 10)) | (((value as u32) & 0x1f) << 10);
+        self.w.bits = (self.w.bits & !(0x1f << 10)) | ((value as u32 & 0x1f) << 10);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> GPADC_SCAN_POS_7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 5)) | (((value as u32) & 0x1f) << 5);
+        self.w.bits = (self.w.bits & !(0x1f << 5)) | ((value as u32 & 0x1f) << 5);
         self.w
     }
 }
@@ -184,7 +184,7 @@ impl<'a> GPADC_SCAN_POS_6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | ((value as u32) & 0x1f);
+        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
         self.w
     }
 }
@@ -270,10 +270,10 @@ impl crate::Readable for GPADC_REG_SCN_POS2_SPEC {
 impl crate::Writable for GPADC_REG_SCN_POS2_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets gpadc_reg_scn_pos2 to value 0"]
+#[doc = "`reset()` method sets gpadc_reg_scn_pos2 to value 0x1ef7_bdef"]
 impl crate::Resettable for GPADC_REG_SCN_POS2_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x1ef7_bdef
     }
 }

@@ -54,7 +54,7 @@ impl<'a> RSVD_31_24_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> GPADC_FIFO_THL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | (((value as u32) & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
         self.w
     }
 }
@@ -96,18 +96,6 @@ impl core::ops::Deref for GPADC_FIFO_DATA_COUNT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `gpadc_fifo_data_count` writer - "]
-pub struct GPADC_FIFO_DATA_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_FIFO_DATA_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 16)) | (((value as u32) & 0x3f) << 16);
-        self.w
     }
 }
 #[doc = "Field `gpadc_fifo_underrun_mask` reader - "]
@@ -142,7 +130,7 @@ impl<'a> GPADC_FIFO_UNDERRUN_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
@@ -178,7 +166,7 @@ impl<'a> GPADC_FIFO_OVERRUN_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -214,7 +202,7 @@ impl<'a> GPADC_RDY_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -250,7 +238,7 @@ impl<'a> GPADC_FIFO_UNDERRUN_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -286,7 +274,7 @@ impl<'a> GPADC_FIFO_OVERRUN_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -322,7 +310,7 @@ impl<'a> GPADC_RDY_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -340,28 +328,6 @@ impl core::ops::Deref for GPADC_FIFO_UNDERRUN_R {
         &self.0
     }
 }
-#[doc = "Field `gpadc_fifo_underrun` writer - "]
-pub struct GPADC_FIFO_UNDERRUN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_FIFO_UNDERRUN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
 #[doc = "Field `gpadc_fifo_overrun` reader - "]
 pub struct GPADC_FIFO_OVERRUN_R(crate::FieldReader<bool, bool>);
 impl GPADC_FIFO_OVERRUN_R {
@@ -374,28 +340,6 @@ impl core::ops::Deref for GPADC_FIFO_OVERRUN_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `gpadc_fifo_overrun` writer - "]
-pub struct GPADC_FIFO_OVERRUN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_FIFO_OVERRUN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
     }
 }
 #[doc = "Field `gpadc_rdy` reader - "]
@@ -412,28 +356,6 @@ impl core::ops::Deref for GPADC_RDY_R {
         &self.0
     }
 }
-#[doc = "Field `gpadc_rdy` writer - "]
-pub struct GPADC_RDY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_RDY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
 #[doc = "Field `gpadc_fifo_full` reader - "]
 pub struct GPADC_FIFO_FULL_R(crate::FieldReader<bool, bool>);
 impl GPADC_FIFO_FULL_R {
@@ -448,28 +370,6 @@ impl core::ops::Deref for GPADC_FIFO_FULL_R {
         &self.0
     }
 }
-#[doc = "Field `gpadc_fifo_full` writer - "]
-pub struct GPADC_FIFO_FULL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_FIFO_FULL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
-    }
-}
 #[doc = "Field `gpadc_fifo_ne` reader - "]
 pub struct GPADC_FIFO_NE_R(crate::FieldReader<bool, bool>);
 impl GPADC_FIFO_NE_R {
@@ -482,28 +382,6 @@ impl core::ops::Deref for GPADC_FIFO_NE_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `gpadc_fifo_ne` writer - "]
-pub struct GPADC_FIFO_NE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_FIFO_NE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
     }
 }
 #[doc = "Field `gpadc_fifo_clr` reader - "]
@@ -538,7 +416,7 @@ impl<'a> GPADC_FIFO_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -574,7 +452,7 @@ impl<'a> GPADC_DMA_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -671,11 +549,6 @@ impl W {
     pub fn gpadc_fifo_thl(&mut self) -> GPADC_FIFO_THL_W {
         GPADC_FIFO_THL_W { w: self }
     }
-    #[doc = "Bits 16:21"]
-    #[inline(always)]
-    pub fn gpadc_fifo_data_count(&mut self) -> GPADC_FIFO_DATA_COUNT_W {
-        GPADC_FIFO_DATA_COUNT_W { w: self }
-    }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn gpadc_fifo_underrun_mask(&mut self) -> GPADC_FIFO_UNDERRUN_MASK_W {
@@ -705,31 +578,6 @@ impl W {
     #[inline(always)]
     pub fn gpadc_rdy_clr(&mut self) -> GPADC_RDY_CLR_W {
         GPADC_RDY_CLR_W { w: self }
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn gpadc_fifo_underrun(&mut self) -> GPADC_FIFO_UNDERRUN_W {
-        GPADC_FIFO_UNDERRUN_W { w: self }
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn gpadc_fifo_overrun(&mut self) -> GPADC_FIFO_OVERRUN_W {
-        GPADC_FIFO_OVERRUN_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn gpadc_rdy(&mut self) -> GPADC_RDY_W {
-        GPADC_RDY_W { w: self }
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn gpadc_fifo_full(&mut self) -> GPADC_FIFO_FULL_W {
-        GPADC_FIFO_FULL_W { w: self }
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn gpadc_fifo_ne(&mut self) -> GPADC_FIFO_NE_W {
-        GPADC_FIFO_NE_W { w: self }
     }
     #[doc = "Bit 1"]
     #[inline(always)]

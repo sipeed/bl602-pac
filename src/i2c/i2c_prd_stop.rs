@@ -54,7 +54,7 @@ impl<'a> CR_I2C_PRD_P_PH_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> CR_I2C_PRD_P_PH_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | (((value as u32) & 0xff) << 16);
+        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> CR_I2C_PRD_P_PH_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -132,7 +132,7 @@ impl<'a> CR_I2C_PRD_P_PH_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -198,10 +198,10 @@ impl crate::Readable for I2C_PRD_STOP_SPEC {
 impl crate::Writable for I2C_PRD_STOP_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets i2c_prd_stop to value 0"]
+#[doc = "`reset()` method sets i2c_prd_stop to value 0x0f0f_0f0f"]
 impl crate::Resettable for I2C_PRD_STOP_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0f0f_0f0f
     }
 }

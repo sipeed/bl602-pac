@@ -54,7 +54,7 @@ impl<'a> SE_CDET_0_G_LOOP_MIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> SE_CDET_0_G_LOOP_MAX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | (((value as u32) & 0xff) << 16);
+        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
         self.w
     }
 }
@@ -98,18 +98,6 @@ impl core::ops::Deref for SE_CDET_0_STATUS_R {
         &self.0
     }
 }
-#[doc = "Field `se_cdet_0_status` writer - "]
-pub struct SE_CDET_0_STATUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_CDET_0_STATUS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3fff << 2)) | (((value as u32) & 0x3fff) << 2);
-        self.w
-    }
-}
 #[doc = "Field `se_cdet_0_error` reader - "]
 pub struct SE_CDET_0_ERROR_R(crate::FieldReader<bool, bool>);
 impl SE_CDET_0_ERROR_R {
@@ -122,28 +110,6 @@ impl core::ops::Deref for SE_CDET_0_ERROR_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `se_cdet_0_error` writer - "]
-pub struct SE_CDET_0_ERROR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_CDET_0_ERROR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
     }
 }
 #[doc = "Field `se_cdet_0_en` reader - "]
@@ -178,7 +144,7 @@ impl<'a> SE_CDET_0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -220,16 +186,6 @@ impl W {
     pub fn se_cdet_0_g_loop_max(&mut self) -> SE_CDET_0_G_LOOP_MAX_W {
         SE_CDET_0_G_LOOP_MAX_W { w: self }
     }
-    #[doc = "Bits 2:15"]
-    #[inline(always)]
-    pub fn se_cdet_0_status(&mut self) -> SE_CDET_0_STATUS_W {
-        SE_CDET_0_STATUS_W { w: self }
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn se_cdet_0_error(&mut self) -> SE_CDET_0_ERROR_W {
-        SE_CDET_0_ERROR_W { w: self }
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn se_cdet_0_en(&mut self) -> SE_CDET_0_EN_W {
@@ -254,10 +210,10 @@ impl crate::Readable for SE_CDET_0_CTRL_0_SPEC {
 impl crate::Writable for SE_CDET_0_CTRL_0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_cdet_0_ctrl_0 to value 0"]
+#[doc = "`reset()` method sets se_cdet_0_ctrl_0 to value 0x2164_0004"]
 impl crate::Resettable for SE_CDET_0_CTRL_0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x2164_0004
     }
 }

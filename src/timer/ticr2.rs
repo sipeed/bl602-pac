@@ -1,17 +1,3 @@
-#[doc = "Register `TICR2` reader"]
-pub struct R(crate::R<TICR2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TICR2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::convert::From<crate::R<TICR2_SPEC>> for R {
-    fn from(reader: crate::R<TICR2_SPEC>) -> Self {
-        R(reader)
-    }
-}
 #[doc = "Register `TICR2` writer"]
 pub struct W(crate::W<TICR2_SPEC>);
 impl core::ops::Deref for W {
@@ -32,20 +18,6 @@ impl core::convert::From<crate::W<TICR2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `tclr_2` reader - "]
-pub struct TCLR_2_R(crate::FieldReader<bool, bool>);
-impl TCLR_2_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TCLR_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TCLR_2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `tclr_2` writer - "]
 pub struct TCLR_2_W<'a> {
     w: &'a mut W,
@@ -64,22 +36,8 @@ impl<'a> TCLR_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
-    }
-}
-#[doc = "Field `tclr_1` reader - "]
-pub struct TCLR_1_R(crate::FieldReader<bool, bool>);
-impl TCLR_1_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TCLR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TCLR_1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
     }
 }
 #[doc = "Field `tclr_1` writer - "]
@@ -100,22 +58,8 @@ impl<'a> TCLR_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
-    }
-}
-#[doc = "Field `tclr_0` reader - "]
-pub struct TCLR_0_R(crate::FieldReader<bool, bool>);
-impl TCLR_0_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TCLR_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TCLR_0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
     }
 }
 #[doc = "Field `tclr_0` writer - "]
@@ -136,25 +80,8 @@ impl<'a> TCLR_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
-    }
-}
-impl R {
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn tclr_2(&self) -> TCLR_2_R {
-        TCLR_2_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn tclr_1(&self) -> TCLR_1_R {
-        TCLR_1_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn tclr_0(&self) -> TCLR_0_R {
-        TCLR_0_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
@@ -179,14 +106,10 @@ impl W {
         self
     }
 }
-#[doc = "TICR2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ticr2](index.html) module"]
+#[doc = "TICR2.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ticr2](index.html) module"]
 pub struct TICR2_SPEC;
 impl crate::RegisterSpec for TICR2_SPEC {
     type Ux = u32;
-}
-#[doc = "`read()` method returns [ticr2::R](R) reader structure"]
-impl crate::Readable for TICR2_SPEC {
-    type Reader = R;
 }
 #[doc = "`write(|w| ..)` method takes [ticr2::W](W) writer structure"]
 impl crate::Writable for TICR2_SPEC {

@@ -64,7 +64,7 @@ impl<'a> CR_I2C_FER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> CR_I2C_ARB_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> CR_I2C_NAK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
         self.w
     }
 }
@@ -172,7 +172,7 @@ impl<'a> CR_I2C_RXF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> CR_I2C_TXF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
         self.w
     }
 }
@@ -244,7 +244,7 @@ impl<'a> CR_I2C_END_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
@@ -280,7 +280,7 @@ impl<'a> RSVD_21_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> CR_I2C_ARB_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
@@ -352,7 +352,7 @@ impl<'a> CR_I2C_NAK_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
@@ -388,7 +388,7 @@ impl<'a> RSVD_18_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
@@ -424,7 +424,7 @@ impl<'a> RSVD_17_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
@@ -460,7 +460,7 @@ impl<'a> CR_I2C_END_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -496,7 +496,7 @@ impl<'a> CR_I2C_FER_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -532,7 +532,7 @@ impl<'a> CR_I2C_ARB_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -568,7 +568,7 @@ impl<'a> CR_I2C_NAK_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -604,7 +604,7 @@ impl<'a> CR_I2C_RXF_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -640,7 +640,7 @@ impl<'a> CR_I2C_TXF_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -676,7 +676,7 @@ impl<'a> CR_I2C_END_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -694,28 +694,6 @@ impl core::ops::Deref for I2C_FER_INT_R {
         &self.0
     }
 }
-#[doc = "Field `i2c_fer_int` writer - "]
-pub struct I2C_FER_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_FER_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
 #[doc = "Field `i2c_arb_int` reader - "]
 pub struct I2C_ARB_INT_R(crate::FieldReader<bool, bool>);
 impl I2C_ARB_INT_R {
@@ -728,28 +706,6 @@ impl core::ops::Deref for I2C_ARB_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `i2c_arb_int` writer - "]
-pub struct I2C_ARB_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_ARB_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
     }
 }
 #[doc = "Field `i2c_nak_int` reader - "]
@@ -766,28 +722,6 @@ impl core::ops::Deref for I2C_NAK_INT_R {
         &self.0
     }
 }
-#[doc = "Field `i2c_nak_int` writer - "]
-pub struct I2C_NAK_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_NAK_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
-    }
-}
 #[doc = "Field `i2c_rxf_int` reader - "]
 pub struct I2C_RXF_INT_R(crate::FieldReader<bool, bool>);
 impl I2C_RXF_INT_R {
@@ -800,28 +734,6 @@ impl core::ops::Deref for I2C_RXF_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `i2c_rxf_int` writer - "]
-pub struct I2C_RXF_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_RXF_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
     }
 }
 #[doc = "Field `i2c_txf_int` reader - "]
@@ -838,28 +750,6 @@ impl core::ops::Deref for I2C_TXF_INT_R {
         &self.0
     }
 }
-#[doc = "Field `i2c_txf_int` writer - "]
-pub struct I2C_TXF_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_TXF_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `i2c_end_int` reader - "]
 pub struct I2C_END_INT_R(crate::FieldReader<bool, bool>);
 impl I2C_END_INT_R {
@@ -872,28 +762,6 @@ impl core::ops::Deref for I2C_END_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `i2c_end_int` writer - "]
-pub struct I2C_END_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_END_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -1109,36 +977,6 @@ impl W {
     pub fn cr_i2c_end_mask(&mut self) -> CR_I2C_END_MASK_W {
         CR_I2C_END_MASK_W { w: self }
     }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn i2c_fer_int(&mut self) -> I2C_FER_INT_W {
-        I2C_FER_INT_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn i2c_arb_int(&mut self) -> I2C_ARB_INT_W {
-        I2C_ARB_INT_W { w: self }
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn i2c_nak_int(&mut self) -> I2C_NAK_INT_W {
-        I2C_NAK_INT_W { w: self }
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn i2c_rxf_int(&mut self) -> I2C_RXF_INT_W {
-        I2C_RXF_INT_W { w: self }
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn i2c_txf_int(&mut self) -> I2C_TXF_INT_W {
-        I2C_TXF_INT_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn i2c_end_int(&mut self) -> I2C_END_INT_W {
-        I2C_END_INT_W { w: self }
-    }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
@@ -1158,10 +996,10 @@ impl crate::Readable for I2C_INT_STS_SPEC {
 impl crate::Writable for I2C_INT_STS_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets i2c_int_sts to value 0"]
+#[doc = "`reset()` method sets i2c_int_sts to value 0x3f00_3f00"]
 impl crate::Resettable for I2C_INT_STS_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x3f00_3f00
     }
 }

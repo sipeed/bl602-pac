@@ -46,18 +46,6 @@ impl core::ops::Deref for HBN_STATE_R {
         &self.0
     }
 }
-#[doc = "Field `hbn_state` writer - "]
-pub struct HBN_STATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HBN_STATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
-        self.w
-    }
-}
 #[doc = "Field `sram_slp` reader - "]
 pub struct SRAM_SLP_R(crate::FieldReader<bool, bool>);
 impl SRAM_SLP_R {
@@ -70,28 +58,6 @@ impl core::ops::Deref for SRAM_SLP_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `sram_slp` writer - "]
-pub struct SRAM_SLP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_SLP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
-        self.w
     }
 }
 #[doc = "Field `sram_slp_option` reader - "]
@@ -126,7 +92,7 @@ impl<'a> SRAM_SLP_OPTION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
@@ -162,7 +128,7 @@ impl<'a> PWR_ON_OPTION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
         self.w
     }
 }
@@ -198,7 +164,7 @@ impl<'a> RTC_DLY_OPTION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
@@ -234,7 +200,7 @@ impl<'a> PU_DCDC18_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
         self.w
     }
 }
@@ -260,7 +226,7 @@ impl<'a> HBN_LDO11_AON_VOUT_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 19)) | (((value as u32) & 0x0f) << 19);
+        self.w.bits = (self.w.bits & !(0x0f << 19)) | ((value as u32 & 0x0f) << 19);
         self.w
     }
 }
@@ -286,7 +252,7 @@ impl<'a> HBN_LDO11_RT_VOUT_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 15)) | (((value as u32) & 0x0f) << 15);
+        self.w.bits = (self.w.bits & !(0x0f << 15)) | ((value as u32 & 0x0f) << 15);
         self.w
     }
 }
@@ -322,7 +288,7 @@ impl<'a> HBN_DIS_PWR_OFF_LDO11_RT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
@@ -358,7 +324,7 @@ impl<'a> HBN_DIS_PWR_OFF_LDO11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -394,7 +360,7 @@ impl<'a> SW_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -430,7 +396,7 @@ impl<'a> PWRDN_HBN_RTC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -466,7 +432,7 @@ impl<'a> PWRDN_HBN_CORE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -478,42 +444,6 @@ impl TRAP_MODE_R {
     }
 }
 impl core::ops::Deref for TRAP_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `trap_mode` writer - "]
-pub struct TRAP_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRAP_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Field `hbn_mode` reader - "]
-pub struct HBN_MODE_R(crate::FieldReader<bool, bool>);
-impl HBN_MODE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        HBN_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HBN_MODE_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
@@ -538,7 +468,7 @@ impl<'a> HBN_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
@@ -564,7 +494,7 @@ impl<'a> RTC_CTL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | ((value as u32) & 0x7f);
+        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
         self.w
     }
 }
@@ -639,11 +569,6 @@ impl R {
     pub fn trap_mode(&self) -> TRAP_MODE_R {
         TRAP_MODE_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    pub fn hbn_mode(&self) -> HBN_MODE_R {
-        HBN_MODE_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
     #[doc = "Bits 0:6"]
     #[inline(always)]
     pub fn rtc_ctl(&self) -> RTC_CTL_R {
@@ -651,16 +576,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 28:31"]
-    #[inline(always)]
-    pub fn hbn_state(&mut self) -> HBN_STATE_W {
-        HBN_STATE_W { w: self }
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn sram_slp(&mut self) -> SRAM_SLP_W {
-        SRAM_SLP_W { w: self }
-    }
     #[doc = "Bit 26"]
     #[inline(always)]
     pub fn sram_slp_option(&mut self) -> SRAM_SLP_OPTION_W {
@@ -716,11 +631,6 @@ impl W {
     pub fn pwrdn_hbn_core(&mut self) -> PWRDN_HBN_CORE_W {
         PWRDN_HBN_CORE_W { w: self }
     }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn trap_mode(&mut self) -> TRAP_MODE_W {
-        TRAP_MODE_W { w: self }
-    }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn hbn_mode(&mut self) -> HBN_MODE_W {
@@ -750,10 +660,10 @@ impl crate::Readable for HBN_CTL_SPEC {
 impl crate::Writable for HBN_CTL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets HBN_CTL to value 0"]
+#[doc = "`reset()` method sets HBN_CTL to value 0x00d5_0000"]
 impl crate::Resettable for HBN_CTL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x00d5_0000
     }
 }

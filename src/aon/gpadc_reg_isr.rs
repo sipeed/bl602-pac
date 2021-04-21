@@ -64,7 +64,7 @@ impl<'a> GPADC_POS_SATUR_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> GPADC_NEG_SATUR_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> GPADC_POS_SATUR_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
@@ -172,7 +172,7 @@ impl<'a> GPADC_NEG_SATUR_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
@@ -190,28 +190,6 @@ impl core::ops::Deref for GPADC_POS_SATUR_R {
         &self.0
     }
 }
-#[doc = "Field `gpadc_pos_satur` writer - "]
-pub struct GPADC_POS_SATUR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_POS_SATUR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `gpadc_neg_satur` reader - "]
 pub struct GPADC_NEG_SATUR_R(crate::FieldReader<bool, bool>);
 impl GPADC_NEG_SATUR_R {
@@ -224,28 +202,6 @@ impl core::ops::Deref for GPADC_NEG_SATUR_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `gpadc_neg_satur` writer - "]
-pub struct GPADC_NEG_SATUR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_NEG_SATUR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -300,16 +256,6 @@ impl W {
     #[inline(always)]
     pub fn gpadc_neg_satur_clr(&mut self) -> GPADC_NEG_SATUR_CLR_W {
         GPADC_NEG_SATUR_CLR_W { w: self }
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn gpadc_pos_satur(&mut self) -> GPADC_POS_SATUR_W {
-        GPADC_POS_SATUR_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn gpadc_neg_satur(&mut self) -> GPADC_NEG_SATUR_W {
-        GPADC_NEG_SATUR_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

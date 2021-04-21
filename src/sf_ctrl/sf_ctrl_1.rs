@@ -64,7 +64,7 @@ impl<'a> SF_AHB2SRAM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SF_AHB2SIF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> SF_IF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -172,7 +172,7 @@ impl<'a> SF_IF_FN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> SF_AHB2SIF_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
         self.w
     }
 }
@@ -224,28 +224,6 @@ impl core::ops::Deref for SF_AHB2SIF_STOPPED_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `sf_ahb2sif_stopped` writer - "]
-pub struct SF_AHB2SIF_STOPPED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AHB2SIF_STOPPED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
-        self.w
     }
 }
 #[doc = "Field `sf_if_reg_wp` reader - "]
@@ -280,7 +258,7 @@ impl<'a> SF_IF_REG_WP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
         self.w
     }
 }
@@ -316,7 +294,7 @@ impl<'a> SF_IF_REG_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
@@ -342,7 +320,7 @@ impl<'a> SF_IF_0_ACK_LAT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 20)) | (((value as u32) & 0x07) << 20);
+        self.w.bits = (self.w.bits & !(0x07 << 20)) | ((value as u32 & 0x07) << 20);
         self.w
     }
 }
@@ -378,7 +356,7 @@ impl<'a> SF_IF_SR_INT_SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
@@ -414,7 +392,7 @@ impl<'a> SF_IF_SR_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
@@ -430,28 +408,6 @@ impl core::ops::Deref for SF_IF_SR_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `sf_if_sr_int` writer - "]
-pub struct SF_IF_SR_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_IF_SR_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
     }
 }
 #[doc = "Field `sf_if_sr_pat` reader - "]
@@ -476,7 +432,7 @@ impl<'a> SF_IF_SR_PAT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -502,7 +458,7 @@ impl<'a> SF_IF_SR_PAT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -604,11 +560,6 @@ impl W {
     pub fn sf_ahb2sif_stop(&mut self) -> SF_AHB2SIF_STOP_W {
         SF_AHB2SIF_STOP_W { w: self }
     }
-    #[doc = "Bit 26"]
-    #[inline(always)]
-    pub fn sf_ahb2sif_stopped(&mut self) -> SF_AHB2SIF_STOPPED_W {
-        SF_AHB2SIF_STOPPED_W { w: self }
-    }
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn sf_if_reg_wp(&mut self) -> SF_IF_REG_WP_W {
@@ -633,11 +584,6 @@ impl W {
     #[inline(always)]
     pub fn sf_if_sr_int_en(&mut self) -> SF_IF_SR_INT_EN_W {
         SF_IF_SR_INT_EN_W { w: self }
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn sf_if_sr_int(&mut self) -> SF_IF_SR_INT_W {
-        SF_IF_SR_INT_W { w: self }
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
@@ -668,10 +614,10 @@ impl crate::Readable for SF_CTRL_1_SPEC {
 impl crate::Writable for SF_CTRL_1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets sf_ctrl_1 to value 0"]
+#[doc = "`reset()` method sets sf_ctrl_1 to value 0xf360_0000"]
 impl crate::Resettable for SF_CTRL_1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xf360_0000
     }
 }

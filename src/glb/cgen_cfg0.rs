@@ -54,7 +54,7 @@ impl<'a> CGEN_M_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for CGEN_CFG0_SPEC {
 impl crate::Writable for CGEN_CFG0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets cgen_cfg0 to value 0"]
+#[doc = "`reset()` method sets cgen_cfg0 to value 0xff"]
 impl crate::Resettable for CGEN_CFG0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xff
     }
 }

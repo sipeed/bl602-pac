@@ -46,28 +46,6 @@ impl core::ops::Deref for DCDC18_RDY_AON_R {
         &self.0
     }
 }
-#[doc = "Field `dcdc18_rdy_aon` writer - "]
-pub struct DCDC18_RDY_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCDC18_RDY_AON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
-        self.w
-    }
-}
 #[doc = "Field `dcdc18_sstart_time_aon` reader - "]
 pub struct DCDC18_SSTART_TIME_AON_R(crate::FieldReader<u8, u8>);
 impl DCDC18_SSTART_TIME_AON_R {
@@ -90,7 +68,7 @@ impl<'a> DCDC18_SSTART_TIME_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | (((value as u32) & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
         self.w
     }
 }
@@ -126,7 +104,7 @@ impl<'a> DCDC18_OSC_INHIBIT_T2_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
         self.w
     }
 }
@@ -162,7 +140,7 @@ impl<'a> DCDC18_SLOW_OSC_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
@@ -198,7 +176,7 @@ impl<'a> DCDC18_STOP_OSC_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
         self.w
     }
 }
@@ -224,7 +202,7 @@ impl<'a> DCDC18_SLOPE_CURR_SEL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 20)) | (((value as u32) & 0x1f) << 20);
+        self.w.bits = (self.w.bits & !(0x1f << 20)) | ((value as u32 & 0x1f) << 20);
         self.w
     }
 }
@@ -250,7 +228,7 @@ impl<'a> DCDC18_OSC_FREQ_TRIM_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
         self.w
     }
 }
@@ -286,7 +264,7 @@ impl<'a> DCDC18_OSC_2M_MODE_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -312,7 +290,7 @@ impl<'a> DCDC18_VPFM_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
         self.w
     }
 }
@@ -338,7 +316,7 @@ impl<'a> DCDC18_VOUT_SEL_AON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 1)) | (((value as u32) & 0x1f) << 1);
+        self.w.bits = (self.w.bits & !(0x1f << 1)) | ((value as u32 & 0x1f) << 1);
         self.w
     }
 }
@@ -395,11 +373,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31"]
-    #[inline(always)]
-    pub fn dcdc18_rdy_aon(&mut self) -> DCDC18_RDY_AON_W {
-        DCDC18_RDY_AON_W { w: self }
-    }
     #[doc = "Bits 28:29"]
     #[inline(always)]
     pub fn dcdc18_sstart_time_aon(&mut self) -> DCDC18_SSTART_TIME_AON_W {
@@ -464,10 +437,10 @@ impl crate::Readable for DCDC18_TOP_0_SPEC {
 impl crate::Writable for DCDC18_TOP_0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets dcdc18_top_0 to value 0"]
+#[doc = "`reset()` method sets dcdc18_top_0 to value 0x8a58_0736"]
 impl crate::Resettable for DCDC18_TOP_0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x8a58_0736
     }
 }

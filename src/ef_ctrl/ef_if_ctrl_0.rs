@@ -54,7 +54,7 @@ impl<'a> EF_IF_PROT_CODE_CYC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> EF_IF_0_INT_SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> EF_IF_0_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
@@ -142,28 +142,6 @@ impl core::ops::Deref for EF_IF_0_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ef_if_0_int` writer - "]
-pub struct EF_IF_0_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_IF_0_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
-        self.w
     }
 }
 #[doc = "Field `ef_if_cyc_modify_lock` reader - "]
@@ -198,7 +176,7 @@ impl<'a> EF_IF_CYC_MODIFY_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
@@ -234,7 +212,7 @@ impl<'a> EF_IF_AUTO_RD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
@@ -270,7 +248,7 @@ impl<'a> EF_CLK_SAHB_DATA_GATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
@@ -306,7 +284,7 @@ impl<'a> EF_IF_POR_DIG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -332,7 +310,7 @@ impl<'a> EF_IF_PROT_CODE_CTRL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -368,7 +346,7 @@ impl<'a> EF_CLK_SAHB_DATA_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
@@ -404,7 +382,7 @@ impl<'a> EF_IF_0_CYC_MODIFY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
@@ -440,7 +418,7 @@ impl<'a> EF_IF_0_MANUAL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
@@ -476,7 +454,7 @@ impl<'a> EF_IF_0_TRIG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
@@ -512,7 +490,7 @@ impl<'a> EF_IF_0_RW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -530,28 +508,6 @@ impl core::ops::Deref for EF_IF_0_BUSY_R {
         &self.0
     }
 }
-#[doc = "Field `ef_if_0_busy` writer - "]
-pub struct EF_IF_0_BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_IF_0_BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
-    }
-}
 #[doc = "Field `ef_if_0_autoload_done` reader - "]
 pub struct EF_IF_0_AUTOLOAD_DONE_R(crate::FieldReader<bool, bool>);
 impl EF_IF_0_AUTOLOAD_DONE_R {
@@ -566,28 +522,6 @@ impl core::ops::Deref for EF_IF_0_AUTOLOAD_DONE_R {
         &self.0
     }
 }
-#[doc = "Field `ef_if_0_autoload_done` writer - "]
-pub struct EF_IF_0_AUTOLOAD_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_IF_0_AUTOLOAD_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `ef_if_0_autoload_p1_done` reader - "]
 pub struct EF_IF_0_AUTOLOAD_P1_DONE_R(crate::FieldReader<bool, bool>);
 impl EF_IF_0_AUTOLOAD_P1_DONE_R {
@@ -600,28 +534,6 @@ impl core::ops::Deref for EF_IF_0_AUTOLOAD_P1_DONE_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ef_if_0_autoload_p1_done` writer - "]
-pub struct EF_IF_0_AUTOLOAD_P1_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_IF_0_AUTOLOAD_P1_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -727,11 +639,6 @@ impl W {
     pub fn ef_if_0_int_clr(&mut self) -> EF_IF_0_INT_CLR_W {
         EF_IF_0_INT_CLR_W { w: self }
     }
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    pub fn ef_if_0_int(&mut self) -> EF_IF_0_INT_W {
-        EF_IF_0_INT_W { w: self }
-    }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn ef_if_cyc_modify_lock(&mut self) -> EF_IF_CYC_MODIFY_LOCK_W {
@@ -782,21 +689,6 @@ impl W {
     pub fn ef_if_0_rw(&mut self) -> EF_IF_0_RW_W {
         EF_IF_0_RW_W { w: self }
     }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn ef_if_0_busy(&mut self) -> EF_IF_0_BUSY_W {
-        EF_IF_0_BUSY_W { w: self }
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn ef_if_0_autoload_done(&mut self) -> EF_IF_0_AUTOLOAD_DONE_W {
-        EF_IF_0_AUTOLOAD_DONE_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn ef_if_0_autoload_p1_done(&mut self) -> EF_IF_0_AUTOLOAD_P1_DONE_W {
-        EF_IF_0_AUTOLOAD_P1_DONE_W { w: self }
-    }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
@@ -816,10 +708,10 @@ impl crate::Readable for EF_IF_CTRL_0_SPEC {
 impl crate::Writable for EF_IF_CTRL_0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets ef_if_ctrl_0 to value 0"]
+#[doc = "`reset()` method sets ef_if_ctrl_0 to value 0x0024_0003"]
 impl crate::Resettable for EF_IF_CTRL_0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0024_0003
     }
 }

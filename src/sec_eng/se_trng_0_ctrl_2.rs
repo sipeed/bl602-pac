@@ -54,7 +54,7 @@ impl<'a> SE_TRNG_0_RESEED_N_MSB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
+        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for SE_TRNG_0_CTRL_2_SPEC {
 impl crate::Writable for SE_TRNG_0_CTRL_2_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_trng_0_ctrl_2 to value 0"]
+#[doc = "`reset()` method sets se_trng_0_ctrl_2 to value 0xff"]
 impl crate::Resettable for SE_TRNG_0_CTRL_2_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xff
     }
 }

@@ -64,7 +64,7 @@ impl<'a> SF_AES_REGION_R0_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SF_AES_REGION_R0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> SF_AES_REGION_R0_HW_KEY_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -162,7 +162,7 @@ impl<'a> SF_AES_REGION_R0_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3fff << 14)) | (((value as u32) & 0x3fff) << 14);
+        self.w.bits = (self.w.bits & !(0x3fff << 14)) | ((value as u32 & 0x3fff) << 14);
         self.w
     }
 }
@@ -188,7 +188,7 @@ impl<'a> SF_AES_REGION_R0_END_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | ((value as u32) & 0x3fff);
+        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
         self.w
     }
 }
@@ -264,10 +264,10 @@ impl crate::Readable for SF_AES_CFG_R0_SPEC {
 impl crate::Writable for SF_AES_CFG_R0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets sf_aes_cfg_r0 to value 0"]
+#[doc = "`reset()` method sets sf_aes_cfg_r0 to value 0x3fff"]
 impl crate::Resettable for SF_AES_CFG_R0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x3fff
     }
 }

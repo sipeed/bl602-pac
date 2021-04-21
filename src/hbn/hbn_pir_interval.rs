@@ -54,7 +54,7 @@ impl<'a> PIR_INTERVAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | ((value as u32) & 0x0fff);
+        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for HBN_PIR_INTERVAL_SPEC {
 impl crate::Writable for HBN_PIR_INTERVAL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets HBN_PIR_INTERVAL to value 0"]
+#[doc = "`reset()` method sets HBN_PIR_INTERVAL to value 0x0a3d"]
 impl crate::Resettable for HBN_PIR_INTERVAL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0a3d
     }
 }

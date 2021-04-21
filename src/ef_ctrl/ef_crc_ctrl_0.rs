@@ -54,7 +54,7 @@ impl<'a> EF_CRC_SLP_N_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
+        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> EF_CRC_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> EF_CRC_INT_SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -162,7 +162,7 @@ impl<'a> EF_CRC_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -178,28 +178,6 @@ impl core::ops::Deref for EF_CRC_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ef_crc_int` writer - "]
-pub struct EF_CRC_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_CRC_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
     }
 }
 #[doc = "Field `ef_crc_din_endian` reader - "]
@@ -234,7 +212,7 @@ impl<'a> EF_CRC_DIN_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
@@ -270,7 +248,7 @@ impl<'a> EF_CRC_DOUT_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
@@ -306,7 +284,7 @@ impl<'a> EF_CRC_DOUT_INV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
@@ -322,28 +300,6 @@ impl core::ops::Deref for EF_CRC_ERROR_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ef_crc_error` writer - "]
-pub struct EF_CRC_ERROR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_CRC_ERROR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
     }
 }
 #[doc = "Field `ef_crc_mode` reader - "]
@@ -378,7 +334,7 @@ impl<'a> EF_CRC_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -414,7 +370,7 @@ impl<'a> EF_CRC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -450,7 +406,7 @@ impl<'a> EF_CRC_TRIG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -466,28 +422,6 @@ impl core::ops::Deref for EF_CRC_BUSY_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ef_crc_busy` writer - "]
-pub struct EF_CRC_BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_CRC_BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -578,11 +512,6 @@ impl W {
     pub fn ef_crc_int_clr(&mut self) -> EF_CRC_INT_CLR_W {
         EF_CRC_INT_CLR_W { w: self }
     }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn ef_crc_int(&mut self) -> EF_CRC_INT_W {
-        EF_CRC_INT_W { w: self }
-    }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn ef_crc_din_endian(&mut self) -> EF_CRC_DIN_ENDIAN_W {
@@ -598,11 +527,6 @@ impl W {
     pub fn ef_crc_dout_inv_en(&mut self) -> EF_CRC_DOUT_INV_EN_W {
         EF_CRC_DOUT_INV_EN_W { w: self }
     }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn ef_crc_error(&mut self) -> EF_CRC_ERROR_W {
-        EF_CRC_ERROR_W { w: self }
-    }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn ef_crc_mode(&mut self) -> EF_CRC_MODE_W {
@@ -617,11 +541,6 @@ impl W {
     #[inline(always)]
     pub fn ef_crc_trig(&mut self) -> EF_CRC_TRIG_W {
         EF_CRC_TRIG_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn ef_crc_busy(&mut self) -> EF_CRC_BUSY_W {
-        EF_CRC_BUSY_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -642,10 +561,10 @@ impl crate::Readable for EF_CRC_CTRL_0_SPEC {
 impl crate::Writable for EF_CRC_CTRL_0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets ef_crc_ctrl_0 to value 0"]
+#[doc = "`reset()` method sets ef_crc_ctrl_0 to value 0x00ff_0224"]
 impl crate::Resettable for EF_CRC_CTRL_0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x00ff_0224
     }
 }

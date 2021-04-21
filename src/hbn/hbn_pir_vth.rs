@@ -54,7 +54,7 @@ impl<'a> PIR_VTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | ((value as u32) & 0x3fff);
+        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for HBN_PIR_VTH_SPEC {
 impl crate::Writable for HBN_PIR_VTH_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets HBN_PIR_VTH to value 0"]
+#[doc = "`reset()` method sets HBN_PIR_VTH to value 0x03ff"]
 impl crate::Resettable for HBN_PIR_VTH_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x03ff
     }
 }

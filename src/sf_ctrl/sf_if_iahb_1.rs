@@ -54,7 +54,7 @@ impl<'a> SF_IF_1_CMD_BUF_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
+        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for SF_IF_IAHB_1_SPEC {
 impl crate::Writable for SF_IF_IAHB_1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets sf_if_iahb_1 to value 0"]
+#[doc = "`reset()` method sets sf_if_iahb_1 to value 0x0300_0000"]
 impl crate::Resettable for SF_IF_IAHB_1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0300_0000
     }
 }

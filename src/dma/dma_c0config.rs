@@ -46,18 +46,6 @@ impl core::ops::Deref for LLICOUNTER_R {
         &self.0
     }
 }
-#[doc = "Field `LLICounter` writer - "]
-pub struct LLICOUNTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LLICOUNTER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 20)) | (((value as u32) & 0x03ff) << 20);
-        self.w
-    }
-}
 #[doc = "Field `H` reader - "]
 pub struct H_R(crate::FieldReader<bool, bool>);
 impl H_R {
@@ -90,7 +78,7 @@ impl<'a> H_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
@@ -106,28 +94,6 @@ impl core::ops::Deref for A_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `A` writer - "]
-pub struct A_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> A_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
     }
 }
 #[doc = "Field `L` reader - "]
@@ -162,7 +128,7 @@ impl<'a> L_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -198,7 +164,7 @@ impl<'a> ITC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
         self.w
     }
 }
@@ -234,7 +200,7 @@ impl<'a> IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
@@ -260,7 +226,7 @@ impl<'a> FLOWCNTRL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | (((value as u32) & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
         self.w
     }
 }
@@ -286,7 +252,7 @@ impl<'a> DSTPERIPHERAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 6)) | (((value as u32) & 0x1f) << 6);
+        self.w.bits = (self.w.bits & !(0x1f << 6)) | ((value as u32 & 0x1f) << 6);
         self.w
     }
 }
@@ -312,7 +278,7 @@ impl<'a> SRCPERIPHERAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 1)) | (((value as u32) & 0x1f) << 1);
+        self.w.bits = (self.w.bits & !(0x1f << 1)) | ((value as u32 & 0x1f) << 1);
         self.w
     }
 }
@@ -348,7 +314,7 @@ impl<'a> E_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -405,20 +371,10 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 20:29"]
-    #[inline(always)]
-    pub fn llicounter(&mut self) -> LLICOUNTER_W {
-        LLICOUNTER_W { w: self }
-    }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn h(&mut self) -> H_W {
         H_W { w: self }
-    }
-    #[doc = "Bit 17"]
-    #[inline(always)]
-    pub fn a(&mut self) -> A_W {
-        A_W { w: self }
     }
     #[doc = "Bit 16"]
     #[inline(always)]

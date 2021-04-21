@@ -54,7 +54,7 @@ impl<'a> ACOMP_RESERVED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -72,28 +72,6 @@ impl core::ops::Deref for ACOMP0_OUT_RAW_R {
         &self.0
     }
 }
-#[doc = "Field `acomp0_out_raw` writer - "]
-pub struct ACOMP0_OUT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACOMP0_OUT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
-        self.w
-    }
-}
 #[doc = "Field `acomp1_out_raw` reader - "]
 pub struct ACOMP1_OUT_RAW_R(crate::FieldReader<bool, bool>);
 impl ACOMP1_OUT_RAW_R {
@@ -106,28 +84,6 @@ impl core::ops::Deref for ACOMP1_OUT_RAW_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `acomp1_out_raw` writer - "]
-pub struct ACOMP1_OUT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACOMP1_OUT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
     }
 }
 #[doc = "Field `acomp0_test_sel` reader - "]
@@ -152,7 +108,7 @@ impl<'a> ACOMP0_TEST_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
         self.w
     }
 }
@@ -178,7 +134,7 @@ impl<'a> ACOMP1_TEST_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | (((value as u32) & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
         self.w
     }
 }
@@ -214,7 +170,7 @@ impl<'a> ACOMP0_TEST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -250,7 +206,7 @@ impl<'a> ACOMP1_TEST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -286,7 +242,7 @@ impl<'a> ACOMP0_RSTN_ANA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -322,7 +278,7 @@ impl<'a> ACOMP1_RSTN_ANA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -379,16 +335,6 @@ impl W {
     pub fn acomp_reserved(&mut self) -> ACOMP_RESERVED_W {
         ACOMP_RESERVED_W { w: self }
     }
-    #[doc = "Bit 19"]
-    #[inline(always)]
-    pub fn acomp0_out_raw(&mut self) -> ACOMP0_OUT_RAW_W {
-        ACOMP0_OUT_RAW_W { w: self }
-    }
-    #[doc = "Bit 17"]
-    #[inline(always)]
-    pub fn acomp1_out_raw(&mut self) -> ACOMP1_OUT_RAW_W {
-        ACOMP1_OUT_RAW_W { w: self }
-    }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn acomp0_test_sel(&mut self) -> ACOMP0_TEST_SEL_W {
@@ -438,10 +384,10 @@ impl crate::Readable for ACOMP_CTRL_SPEC {
 impl crate::Writable for ACOMP_CTRL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets acomp_ctrl to value 0"]
+#[doc = "`reset()` method sets acomp_ctrl to value 0x03"]
 impl crate::Resettable for ACOMP_CTRL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x03
     }
 }

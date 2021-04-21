@@ -64,7 +64,7 @@ impl<'a> RX_FIFO_TH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> TX_FIFO_TH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -118,18 +118,6 @@ impl core::ops::Deref for RX_FIFO_CNT_R {
         &self.0
     }
 }
-#[doc = "Field `rx_fifo_cnt` writer - "]
-pub struct RX_FIFO_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FIFO_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
-        self.w
-    }
-}
 #[doc = "Field `tx_fifo_cnt` reader - "]
 pub struct TX_FIFO_CNT_R(crate::FieldReader<u8, u8>);
 impl TX_FIFO_CNT_R {
@@ -142,18 +130,6 @@ impl core::ops::Deref for TX_FIFO_CNT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `tx_fifo_cnt` writer - "]
-pub struct TX_FIFO_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
-        self.w
     }
 }
 impl R {
@@ -189,16 +165,6 @@ impl W {
     pub fn tx_fifo_th(&mut self) -> TX_FIFO_TH_W {
         TX_FIFO_TH_W { w: self }
     }
-    #[doc = "Bits 8:9"]
-    #[inline(always)]
-    pub fn rx_fifo_cnt(&mut self) -> RX_FIFO_CNT_W {
-        RX_FIFO_CNT_W { w: self }
-    }
-    #[doc = "Bits 0:1"]
-    #[inline(always)]
-    pub fn tx_fifo_cnt(&mut self) -> TX_FIFO_CNT_W {
-        TX_FIFO_CNT_W { w: self }
-    }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
@@ -218,10 +184,10 @@ impl crate::Readable for I2C_FIFO_CONFIG_1_SPEC {
 impl crate::Writable for I2C_FIFO_CONFIG_1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets i2c_fifo_config_1 to value 0"]
+#[doc = "`reset()` method sets i2c_fifo_config_1 to value 0x02"]
 impl crate::Resettable for I2C_FIFO_CONFIG_1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x02
     }
 }
