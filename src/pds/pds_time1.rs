@@ -54,7 +54,7 @@ impl<'a> CR_SLEEP_DURATION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
+        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for PDS_TIME1_SPEC {
 impl crate::Writable for PDS_TIME1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets PDS_TIME1 to value 0"]
+#[doc = "`reset()` method sets PDS_TIME1 to value 0x0ca8"]
 impl crate::Resettable for PDS_TIME1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0ca8
     }
 }

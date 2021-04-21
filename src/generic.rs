@@ -112,7 +112,7 @@ where
     #[doc = ""]
     #[doc = " Similar to `write`, but unused bits will contain 0."]
     #[inline(always)]
-    pub fn write_with_zero<F>(&self, f: F)
+    pub unsafe fn write_with_zero<F>(&self, f: F)
     where
         F: FnOnce(&mut REG::Writer) -> &mut W<REG>,
     {
@@ -204,14 +204,6 @@ impl<REG: RegisterSpec> W<REG> {
         self.bits = bits;
         self
     }
-}
-#[doc = " Used if enumerated values cover not the whole range."]
-#[derive(Clone, Copy, PartialEq)]
-pub enum Variant<U, T> {
-    #[doc = " Expected variant."]
-    Val(T),
-    #[doc = " Raw bits."]
-    Res(U),
 }
 #[doc = " Field reader."]
 #[doc = ""]

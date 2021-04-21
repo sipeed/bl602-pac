@@ -54,7 +54,7 @@ impl<'a> CR_UTX_IR_POS_P_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
+        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> CR_UTX_IR_POS_S_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
+        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
         self.w
     }
 }
@@ -126,10 +126,10 @@ impl crate::Readable for UTX_IR_POSITION_SPEC {
 impl crate::Writable for UTX_IR_POSITION_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets utx_ir_position to value 0"]
+#[doc = "`reset()` method sets utx_ir_position to value 0x009f_0070"]
 impl crate::Resettable for UTX_IR_POSITION_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x009f_0070
     }
 }

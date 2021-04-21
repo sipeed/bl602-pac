@@ -54,7 +54,7 @@ impl<'a> EF_IF_PROT_CODE_MANUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | (((value as u32) & 0xff) << 24);
+        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
         self.w
     }
 }
@@ -70,18 +70,6 @@ impl core::ops::Deref for EF_IF_0_Q_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ef_if_0_q` writer - "]
-pub struct EF_IF_0_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EF_IF_0_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | (((value as u32) & 0xff) << 16);
-        self.w
     }
 }
 #[doc = "Field `ef_if_csb` reader - "]
@@ -116,7 +104,7 @@ impl<'a> EF_IF_CSB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
         self.w
     }
 }
@@ -152,7 +140,7 @@ impl<'a> EF_IF_LOAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
@@ -188,7 +176,7 @@ impl<'a> EF_IF_PGENB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -224,7 +212,7 @@ impl<'a> EF_IF_STROBE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -260,7 +248,7 @@ impl<'a> EF_IF_PS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -296,7 +284,7 @@ impl<'a> EF_IF_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -322,7 +310,7 @@ impl<'a> EF_IF_A_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | ((value as u32) & 0x03ff);
+        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
         self.w
     }
 }
@@ -379,11 +367,6 @@ impl W {
     pub fn ef_if_prot_code_manual(&mut self) -> EF_IF_PROT_CODE_MANUAL_W {
         EF_IF_PROT_CODE_MANUAL_W { w: self }
     }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    pub fn ef_if_0_q(&mut self) -> EF_IF_0_Q_W {
-        EF_IF_0_Q_W { w: self }
-    }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn ef_if_csb(&mut self) -> EF_IF_CSB_W {
@@ -438,10 +421,10 @@ impl crate::Readable for EF_IF_0_MANUAL_SPEC {
 impl crate::Writable for EF_IF_0_MANUAL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets ef_if_0_manual to value 0"]
+#[doc = "`reset()` method sets ef_if_0_manual to value 0xe400"]
 impl crate::Resettable for EF_IF_0_MANUAL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xe400
     }
 }

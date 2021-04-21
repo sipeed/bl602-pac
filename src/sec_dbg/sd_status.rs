@@ -46,18 +46,6 @@ impl core::ops::Deref for SD_DBG_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `sd_dbg_ena` writer - "]
-pub struct SD_DBG_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SD_DBG_ENA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
-        self.w
-    }
-}
 #[doc = "Field `sd_dbg_mode` reader - "]
 pub struct SD_DBG_MODE_R(crate::FieldReader<u8, u8>);
 impl SD_DBG_MODE_R {
@@ -72,18 +60,6 @@ impl core::ops::Deref for SD_DBG_MODE_R {
         &self.0
     }
 }
-#[doc = "Field `sd_dbg_mode` writer - "]
-pub struct SD_DBG_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SD_DBG_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
-        self.w
-    }
-}
 #[doc = "Field `sd_dbg_pwd_cnt` reader - "]
 pub struct SD_DBG_PWD_CNT_R(crate::FieldReader<u32, u32>);
 impl SD_DBG_PWD_CNT_R {
@@ -96,18 +72,6 @@ impl core::ops::Deref for SD_DBG_PWD_CNT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `sd_dbg_pwd_cnt` writer - "]
-pub struct SD_DBG_PWD_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SD_DBG_PWD_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x000f_ffff << 4)) | (((value as u32) & 0x000f_ffff) << 4);
-        self.w
     }
 }
 #[doc = "Field `sd_dbg_cci_clk_sel` reader - "]
@@ -142,7 +106,7 @@ impl<'a> SD_DBG_CCI_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -178,7 +142,7 @@ impl<'a> SD_DBG_CCI_READ_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -214,7 +178,7 @@ impl<'a> SD_DBG_PWD_TRIG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -230,28 +194,6 @@ impl core::ops::Deref for SD_DBG_PWD_BUSY_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `sd_dbg_pwd_busy` writer - "]
-pub struct SD_DBG_PWD_BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SD_DBG_PWD_BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -292,21 +234,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 28:31"]
-    #[inline(always)]
-    pub fn sd_dbg_ena(&mut self) -> SD_DBG_ENA_W {
-        SD_DBG_ENA_W { w: self }
-    }
-    #[doc = "Bits 24:27"]
-    #[inline(always)]
-    pub fn sd_dbg_mode(&mut self) -> SD_DBG_MODE_W {
-        SD_DBG_MODE_W { w: self }
-    }
-    #[doc = "Bits 4:23"]
-    #[inline(always)]
-    pub fn sd_dbg_pwd_cnt(&mut self) -> SD_DBG_PWD_CNT_W {
-        SD_DBG_PWD_CNT_W { w: self }
-    }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn sd_dbg_cci_clk_sel(&mut self) -> SD_DBG_CCI_CLK_SEL_W {
@@ -321,11 +248,6 @@ impl W {
     #[inline(always)]
     pub fn sd_dbg_pwd_trig(&mut self) -> SD_DBG_PWD_TRIG_W {
         SD_DBG_PWD_TRIG_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn sd_dbg_pwd_busy(&mut self) -> SD_DBG_PWD_BUSY_W {
-        SD_DBG_PWD_BUSY_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

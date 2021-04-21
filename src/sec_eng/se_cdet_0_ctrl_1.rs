@@ -54,7 +54,7 @@ impl<'a> SE_CDET_0_G_SLP_N_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | (((value as u32) & 0xff) << 16);
+        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> SE_CDET_0_T_DLY_N_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> SE_CDET_0_T_LOOP_N_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -162,10 +162,10 @@ impl crate::Readable for SE_CDET_0_CTRL_1_SPEC {
 impl crate::Writable for SE_CDET_0_CTRL_1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_cdet_0_ctrl_1 to value 0"]
+#[doc = "`reset()` method sets se_cdet_0_ctrl_1 to value 0x00ff_0332"]
 impl crate::Resettable for SE_CDET_0_CTRL_1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x00ff_0332
     }
 }

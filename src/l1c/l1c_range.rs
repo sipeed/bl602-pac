@@ -12,8 +12,34 @@ impl core::convert::From<crate::R<L1C_RANGE_SPEC>> for R {
         R(reader)
     }
 }
-impl R {}
-#[doc = "l1c_range.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1c_range](index.html) module"]
+#[doc = "Register `l1c_range` writer"]
+pub struct W(crate::W<L1C_RANGE_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<L1C_RANGE_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<L1C_RANGE_SPEC>> for W {
+    fn from(writer: crate::W<L1C_RANGE_SPEC>) -> Self {
+        W(writer)
+    }
+}
+impl W {
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "l1c_range.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1c_range](index.html) module"]
 pub struct L1C_RANGE_SPEC;
 impl crate::RegisterSpec for L1C_RANGE_SPEC {
     type Ux = u32;
@@ -21,6 +47,10 @@ impl crate::RegisterSpec for L1C_RANGE_SPEC {
 #[doc = "`read()` method returns [l1c_range::R](R) reader structure"]
 impl crate::Readable for L1C_RANGE_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [l1c_range::W](W) writer structure"]
+impl crate::Writable for L1C_RANGE_SPEC {
+    type Writer = W;
 }
 #[doc = "`reset()` method sets l1c_range to value 0"]
 impl crate::Resettable for L1C_RANGE_SPEC {

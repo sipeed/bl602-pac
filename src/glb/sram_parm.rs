@@ -54,7 +54,7 @@ impl<'a> REG_SRAM_PARM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
+        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for SRAM_PARM_SPEC {
 impl crate::Writable for SRAM_PARM_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets sram_parm to value 0"]
+#[doc = "`reset()` method sets sram_parm to value 0x0c0c_0c0c"]
 impl crate::Resettable for SRAM_PARM_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0c0c_0c0c
     }
 }

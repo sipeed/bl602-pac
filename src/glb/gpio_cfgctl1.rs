@@ -32,77 +32,310 @@ impl core::convert::From<crate::W<GPIO_CFGCTL1_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum REAL_GPIO_3_FUNC_SEL_A {
+    #[doc = "0: Function select is reg_gpio_3_func_sel"]
+    GLB_GPIO_REAL_MODE_REG = 0,
+    #[doc = "1: `1`"]
+    GLB_GPIO_REAL_MODE_SDIO = 1,
+    #[doc = "12: `1100`"]
+    GLB_GPIO_REAL_MODE_RF = 12,
+    #[doc = "14: `1110`"]
+    GLB_GPIO_REAL_MODE_JTAG = 14,
+    #[doc = "15: `1111`"]
+    GLB_GPIO_REAL_MODE_CCI = 15,
+}
+impl From<REAL_GPIO_3_FUNC_SEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: REAL_GPIO_3_FUNC_SEL_A) -> Self {
+        variant as _
+    }
+}
 #[doc = "Field `real_gpio_3_func_sel` reader - "]
-pub struct REAL_GPIO_3_FUNC_SEL_R(crate::FieldReader<u8, u8>);
+pub struct REAL_GPIO_3_FUNC_SEL_R(crate::FieldReader<u8, REAL_GPIO_3_FUNC_SEL_A>);
 impl REAL_GPIO_3_FUNC_SEL_R {
     pub(crate) fn new(bits: u8) -> Self {
         REAL_GPIO_3_FUNC_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<REAL_GPIO_3_FUNC_SEL_A> {
+        match self.bits {
+            0 => Some(REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_REG),
+            1 => Some(REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_SDIO),
+            12 => Some(REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_RF),
+            14 => Some(REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_JTAG),
+            15 => Some(REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_CCI),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_REG`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_reg(&self) -> bool {
+        **self == REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_REG
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_SDIO`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_sdio(&self) -> bool {
+        **self == REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_SDIO
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_RF`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_rf(&self) -> bool {
+        **self == REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_RF
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_JTAG`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_jtag(&self) -> bool {
+        **self == REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_JTAG
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_CCI`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_cci(&self) -> bool {
+        **self == REAL_GPIO_3_FUNC_SEL_A::GLB_GPIO_REAL_MODE_CCI
+    }
 }
 impl core::ops::Deref for REAL_GPIO_3_FUNC_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, REAL_GPIO_3_FUNC_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `real_gpio_3_func_sel` writer - "]
-pub struct REAL_GPIO_3_FUNC_SEL_W<'a> {
-    w: &'a mut W,
+#[doc = "Function select for GPIO3.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum REG_GPIO_3_FUNC_SEL_A {
+    #[doc = "1: `1`"]
+    SDIO_DAT1 = 1,
+    #[doc = "4: `100`"]
+    SPI_SCLK = 4,
+    #[doc = "6: `110`"]
+    I2C_SDA = 6,
+    #[doc = "7: `111`"]
+    UART_SIG3 = 7,
+    #[doc = "8: `1000`"]
+    PWM_CH3 = 8,
+    #[doc = "9: `1001`"]
+    FEM_GPIO_3 = 9,
+    #[doc = "10: `1010`"]
+    ATEST_QP = 10,
+    #[doc = "11: `1011`"]
+    SWGPIO_3 = 11,
+    #[doc = "14: `1110`"]
+    E21_TDO = 14,
 }
-impl<'a> REAL_GPIO_3_FUNC_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<REG_GPIO_3_FUNC_SEL_A> for u8 {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
-        self.w
+    fn from(variant: REG_GPIO_3_FUNC_SEL_A) -> Self {
+        variant as _
     }
 }
-#[doc = "Field `reg_gpio_3_func_sel` reader - "]
-pub struct REG_GPIO_3_FUNC_SEL_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `reg_gpio_3_func_sel` reader - Function select for GPIO3."]
+pub struct REG_GPIO_3_FUNC_SEL_R(crate::FieldReader<u8, REG_GPIO_3_FUNC_SEL_A>);
 impl REG_GPIO_3_FUNC_SEL_R {
     pub(crate) fn new(bits: u8) -> Self {
         REG_GPIO_3_FUNC_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<REG_GPIO_3_FUNC_SEL_A> {
+        match self.bits {
+            1 => Some(REG_GPIO_3_FUNC_SEL_A::SDIO_DAT1),
+            4 => Some(REG_GPIO_3_FUNC_SEL_A::SPI_SCLK),
+            6 => Some(REG_GPIO_3_FUNC_SEL_A::I2C_SDA),
+            7 => Some(REG_GPIO_3_FUNC_SEL_A::UART_SIG3),
+            8 => Some(REG_GPIO_3_FUNC_SEL_A::PWM_CH3),
+            9 => Some(REG_GPIO_3_FUNC_SEL_A::FEM_GPIO_3),
+            10 => Some(REG_GPIO_3_FUNC_SEL_A::ATEST_QP),
+            11 => Some(REG_GPIO_3_FUNC_SEL_A::SWGPIO_3),
+            14 => Some(REG_GPIO_3_FUNC_SEL_A::E21_TDO),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `SDIO_DAT1`"]
+    #[inline(always)]
+    pub fn is_sdio_dat1(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::SDIO_DAT1
+    }
+    #[doc = "Checks if the value of the field is `SPI_SCLK`"]
+    #[inline(always)]
+    pub fn is_spi_sclk(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::SPI_SCLK
+    }
+    #[doc = "Checks if the value of the field is `I2C_SDA`"]
+    #[inline(always)]
+    pub fn is_i2c_sda(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::I2C_SDA
+    }
+    #[doc = "Checks if the value of the field is `UART_SIG3`"]
+    #[inline(always)]
+    pub fn is_uart_sig3(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::UART_SIG3
+    }
+    #[doc = "Checks if the value of the field is `PWM_CH3`"]
+    #[inline(always)]
+    pub fn is_pwm_ch3(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::PWM_CH3
+    }
+    #[doc = "Checks if the value of the field is `FEM_GPIO_3`"]
+    #[inline(always)]
+    pub fn is_fem_gpio_3(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::FEM_GPIO_3
+    }
+    #[doc = "Checks if the value of the field is `ATEST_QP`"]
+    #[inline(always)]
+    pub fn is_atest_qp(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::ATEST_QP
+    }
+    #[doc = "Checks if the value of the field is `SWGPIO_3`"]
+    #[inline(always)]
+    pub fn is_swgpio_3(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::SWGPIO_3
+    }
+    #[doc = "Checks if the value of the field is `E21_TDO`"]
+    #[inline(always)]
+    pub fn is_e21_tdo(&self) -> bool {
+        **self == REG_GPIO_3_FUNC_SEL_A::E21_TDO
+    }
 }
 impl core::ops::Deref for REG_GPIO_3_FUNC_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, REG_GPIO_3_FUNC_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_3_func_sel` writer - "]
+#[doc = "Field `reg_gpio_3_func_sel` writer - Function select for GPIO3."]
 pub struct REG_GPIO_3_FUNC_SEL_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_3_FUNC_SEL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_3_FUNC_SEL_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn sdio_dat1(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::SDIO_DAT1)
+    }
+    #[doc = "`100`"]
+    #[inline(always)]
+    pub fn spi_sclk(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::SPI_SCLK)
+    }
+    #[doc = "`110`"]
+    #[inline(always)]
+    pub fn i2c_sda(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::I2C_SDA)
+    }
+    #[doc = "`111`"]
+    #[inline(always)]
+    pub fn uart_sig3(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::UART_SIG3)
+    }
+    #[doc = "`1000`"]
+    #[inline(always)]
+    pub fn pwm_ch3(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::PWM_CH3)
+    }
+    #[doc = "`1001`"]
+    #[inline(always)]
+    pub fn fem_gpio_3(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::FEM_GPIO_3)
+    }
+    #[doc = "`1010`"]
+    #[inline(always)]
+    pub fn atest_qp(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::ATEST_QP)
+    }
+    #[doc = "`1011`"]
+    #[inline(always)]
+    pub fn swgpio_3(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::SWGPIO_3)
+    }
+    #[doc = "`1110`"]
+    #[inline(always)]
+    pub fn e21_tdo(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_FUNC_SEL_A::E21_TDO)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
+        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_3_pd` reader - "]
-pub struct REG_GPIO_3_PD_R(crate::FieldReader<bool, bool>);
+#[doc = "Pull Down Resistor for GPIO3.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_3_PD_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_3_PD_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_3_PD_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_3_pd` reader - Pull Down Resistor for GPIO3."]
+pub struct REG_GPIO_3_PD_R(crate::FieldReader<bool, REG_GPIO_3_PD_A>);
 impl REG_GPIO_3_PD_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_3_PD_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_3_PD_A {
+        match self.bits {
+            false => REG_GPIO_3_PD_A::DISABLED,
+            true => REG_GPIO_3_PD_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_3_PD_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_3_PD_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_3_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_3_PD_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_3_pd` writer - "]
+#[doc = "Field `reg_gpio_3_pd` writer - Pull Down Resistor for GPIO3."]
 pub struct REG_GPIO_3_PD_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_3_PD_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_3_PD_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_PD_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_PD_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -116,29 +349,76 @@ impl<'a> REG_GPIO_3_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_3_pu` reader - "]
-pub struct REG_GPIO_3_PU_R(crate::FieldReader<bool, bool>);
+#[doc = "Pull Up Resistor for GPIO3.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_3_PU_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_3_PU_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_3_PU_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_3_pu` reader - Pull Up Resistor for GPIO3."]
+pub struct REG_GPIO_3_PU_R(crate::FieldReader<bool, REG_GPIO_3_PU_A>);
 impl REG_GPIO_3_PU_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_3_PU_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_3_PU_A {
+        match self.bits {
+            false => REG_GPIO_3_PU_A::DISABLED,
+            true => REG_GPIO_3_PU_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_3_PU_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_3_PU_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_3_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_3_PU_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_3_pu` writer - "]
+#[doc = "Field `reg_gpio_3_pu` writer - Pull Up Resistor for GPIO3."]
 pub struct REG_GPIO_3_PU_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_3_PU_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_3_PU_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_PU_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_PU_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -152,55 +432,151 @@ impl<'a> REG_GPIO_3_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_3_drv` reader - "]
-pub struct REG_GPIO_3_DRV_R(crate::FieldReader<u8, u8>);
+#[doc = "Driving control enabled for GPIO3.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum REG_GPIO_3_DRV_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_3_DRV_A> for u8 {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_3_DRV_A) -> Self {
+        variant as _
+    }
+}
+#[doc = "Field `reg_gpio_3_drv` reader - Driving control enabled for GPIO3."]
+pub struct REG_GPIO_3_DRV_R(crate::FieldReader<u8, REG_GPIO_3_DRV_A>);
 impl REG_GPIO_3_DRV_R {
     pub(crate) fn new(bits: u8) -> Self {
         REG_GPIO_3_DRV_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<REG_GPIO_3_DRV_A> {
+        match self.bits {
+            0 => Some(REG_GPIO_3_DRV_A::DISABLED),
+            1 => Some(REG_GPIO_3_DRV_A::ENABLED),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_3_DRV_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_3_DRV_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_3_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, REG_GPIO_3_DRV_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_3_drv` writer - "]
+#[doc = "Field `reg_gpio_3_drv` writer - Driving control enabled for GPIO3."]
 pub struct REG_GPIO_3_DRV_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_3_DRV_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_3_DRV_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_DRV_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_DRV_A::ENABLED)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | (((value as u32) & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_3_smt` reader - "]
-pub struct REG_GPIO_3_SMT_R(crate::FieldReader<bool, bool>);
+#[doc = "Schmitt trigger enabled for GPIO3.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_3_SMT_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_3_SMT_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_3_SMT_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_3_smt` reader - Schmitt trigger enabled for GPIO3."]
+pub struct REG_GPIO_3_SMT_R(crate::FieldReader<bool, REG_GPIO_3_SMT_A>);
 impl REG_GPIO_3_SMT_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_3_SMT_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_3_SMT_A {
+        match self.bits {
+            false => REG_GPIO_3_SMT_A::DISABLED,
+            true => REG_GPIO_3_SMT_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_3_SMT_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_3_SMT_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_3_SMT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_3_SMT_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_3_smt` writer - "]
+#[doc = "Field `reg_gpio_3_smt` writer - Schmitt trigger enabled for GPIO3."]
 pub struct REG_GPIO_3_SMT_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_3_SMT_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_3_SMT_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_SMT_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_SMT_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -214,29 +590,76 @@ impl<'a> REG_GPIO_3_SMT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_3_ie` reader - "]
-pub struct REG_GPIO_3_IE_R(crate::FieldReader<bool, bool>);
+#[doc = "Input enable for GPIO3.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_3_IE_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_3_IE_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_3_IE_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_3_ie` reader - Input enable for GPIO3."]
+pub struct REG_GPIO_3_IE_R(crate::FieldReader<bool, REG_GPIO_3_IE_A>);
 impl REG_GPIO_3_IE_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_3_IE_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_3_IE_A {
+        match self.bits {
+            false => REG_GPIO_3_IE_A::DISABLED,
+            true => REG_GPIO_3_IE_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_3_IE_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_3_IE_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_3_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_3_IE_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_3_ie` writer - "]
+#[doc = "Field `reg_gpio_3_ie` writer - Input enable for GPIO3."]
 pub struct REG_GPIO_3_IE_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_3_IE_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_3_IE_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_IE_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_3_IE_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -250,81 +673,327 @@ impl<'a> REG_GPIO_3_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
+#[doc = "\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum REAL_GPIO_2_FUNC_SEL_A {
+    #[doc = "0: Function select is reg_gpio_2_func_sel"]
+    GLB_GPIO_REAL_MODE_REG = 0,
+    #[doc = "1: `1`"]
+    GLB_GPIO_REAL_MODE_SDIO = 1,
+    #[doc = "12: `1100`"]
+    GLB_GPIO_REAL_MODE_RF = 12,
+    #[doc = "14: `1110`"]
+    GLB_GPIO_REAL_MODE_JTAG = 14,
+    #[doc = "15: `1111`"]
+    GLB_GPIO_REAL_MODE_CCI = 15,
+}
+impl From<REAL_GPIO_2_FUNC_SEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: REAL_GPIO_2_FUNC_SEL_A) -> Self {
+        variant as _
+    }
+}
 #[doc = "Field `real_gpio_2_func_sel` reader - "]
-pub struct REAL_GPIO_2_FUNC_SEL_R(crate::FieldReader<u8, u8>);
+pub struct REAL_GPIO_2_FUNC_SEL_R(crate::FieldReader<u8, REAL_GPIO_2_FUNC_SEL_A>);
 impl REAL_GPIO_2_FUNC_SEL_R {
     pub(crate) fn new(bits: u8) -> Self {
         REAL_GPIO_2_FUNC_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<REAL_GPIO_2_FUNC_SEL_A> {
+        match self.bits {
+            0 => Some(REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_REG),
+            1 => Some(REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_SDIO),
+            12 => Some(REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_RF),
+            14 => Some(REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_JTAG),
+            15 => Some(REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_CCI),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_REG`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_reg(&self) -> bool {
+        **self == REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_REG
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_SDIO`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_sdio(&self) -> bool {
+        **self == REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_SDIO
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_RF`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_rf(&self) -> bool {
+        **self == REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_RF
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_JTAG`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_jtag(&self) -> bool {
+        **self == REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_JTAG
+    }
+    #[doc = "Checks if the value of the field is `GLB_GPIO_REAL_MODE_CCI`"]
+    #[inline(always)]
+    pub fn is_glb_gpio_real_mode_cci(&self) -> bool {
+        **self == REAL_GPIO_2_FUNC_SEL_A::GLB_GPIO_REAL_MODE_CCI
+    }
 }
 impl core::ops::Deref for REAL_GPIO_2_FUNC_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, REAL_GPIO_2_FUNC_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `real_gpio_2_func_sel` writer - "]
-pub struct REAL_GPIO_2_FUNC_SEL_W<'a> {
-    w: &'a mut W,
+#[doc = "Function select for GPIO2.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum REG_GPIO_2_FUNC_SEL_A {
+    #[doc = "1: `1`"]
+    SDIO_DAT0 = 1,
+    #[doc = "2: `10`"]
+    SF_D3 = 2,
+    #[doc = "4: `100`"]
+    SPI_SS = 4,
+    #[doc = "6: `110`"]
+    I2C_SCL = 6,
+    #[doc = "7: `111`"]
+    UART_SIG2 = 7,
+    #[doc = "8: `1000`"]
+    PWM_CH2 = 8,
+    #[doc = "9: `1001`"]
+    FEM_GPIO_2 = 9,
+    #[doc = "10: `1010`"]
+    ATEST_QN = 10,
+    #[doc = "11: `1011`"]
+    SWGPIO_2 = 11,
+    #[doc = "14: `1110`"]
+    E21_TCK = 14,
 }
-impl<'a> REAL_GPIO_2_FUNC_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<REG_GPIO_2_FUNC_SEL_A> for u8 {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
-        self.w
+    fn from(variant: REG_GPIO_2_FUNC_SEL_A) -> Self {
+        variant as _
     }
 }
-#[doc = "Field `reg_gpio_2_func_sel` reader - "]
-pub struct REG_GPIO_2_FUNC_SEL_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `reg_gpio_2_func_sel` reader - Function select for GPIO2."]
+pub struct REG_GPIO_2_FUNC_SEL_R(crate::FieldReader<u8, REG_GPIO_2_FUNC_SEL_A>);
 impl REG_GPIO_2_FUNC_SEL_R {
     pub(crate) fn new(bits: u8) -> Self {
         REG_GPIO_2_FUNC_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<REG_GPIO_2_FUNC_SEL_A> {
+        match self.bits {
+            1 => Some(REG_GPIO_2_FUNC_SEL_A::SDIO_DAT0),
+            2 => Some(REG_GPIO_2_FUNC_SEL_A::SF_D3),
+            4 => Some(REG_GPIO_2_FUNC_SEL_A::SPI_SS),
+            6 => Some(REG_GPIO_2_FUNC_SEL_A::I2C_SCL),
+            7 => Some(REG_GPIO_2_FUNC_SEL_A::UART_SIG2),
+            8 => Some(REG_GPIO_2_FUNC_SEL_A::PWM_CH2),
+            9 => Some(REG_GPIO_2_FUNC_SEL_A::FEM_GPIO_2),
+            10 => Some(REG_GPIO_2_FUNC_SEL_A::ATEST_QN),
+            11 => Some(REG_GPIO_2_FUNC_SEL_A::SWGPIO_2),
+            14 => Some(REG_GPIO_2_FUNC_SEL_A::E21_TCK),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `SDIO_DAT0`"]
+    #[inline(always)]
+    pub fn is_sdio_dat0(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::SDIO_DAT0
+    }
+    #[doc = "Checks if the value of the field is `SF_D3`"]
+    #[inline(always)]
+    pub fn is_sf_d3(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::SF_D3
+    }
+    #[doc = "Checks if the value of the field is `SPI_SS`"]
+    #[inline(always)]
+    pub fn is_spi_ss(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::SPI_SS
+    }
+    #[doc = "Checks if the value of the field is `I2C_SCL`"]
+    #[inline(always)]
+    pub fn is_i2c_scl(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::I2C_SCL
+    }
+    #[doc = "Checks if the value of the field is `UART_SIG2`"]
+    #[inline(always)]
+    pub fn is_uart_sig2(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::UART_SIG2
+    }
+    #[doc = "Checks if the value of the field is `PWM_CH2`"]
+    #[inline(always)]
+    pub fn is_pwm_ch2(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::PWM_CH2
+    }
+    #[doc = "Checks if the value of the field is `FEM_GPIO_2`"]
+    #[inline(always)]
+    pub fn is_fem_gpio_2(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::FEM_GPIO_2
+    }
+    #[doc = "Checks if the value of the field is `ATEST_QN`"]
+    #[inline(always)]
+    pub fn is_atest_qn(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::ATEST_QN
+    }
+    #[doc = "Checks if the value of the field is `SWGPIO_2`"]
+    #[inline(always)]
+    pub fn is_swgpio_2(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::SWGPIO_2
+    }
+    #[doc = "Checks if the value of the field is `E21_TCK`"]
+    #[inline(always)]
+    pub fn is_e21_tck(&self) -> bool {
+        **self == REG_GPIO_2_FUNC_SEL_A::E21_TCK
+    }
 }
 impl core::ops::Deref for REG_GPIO_2_FUNC_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, REG_GPIO_2_FUNC_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_2_func_sel` writer - "]
+#[doc = "Field `reg_gpio_2_func_sel` writer - Function select for GPIO2."]
 pub struct REG_GPIO_2_FUNC_SEL_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_2_FUNC_SEL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_2_FUNC_SEL_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn sdio_dat0(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::SDIO_DAT0)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn sf_d3(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::SF_D3)
+    }
+    #[doc = "`100`"]
+    #[inline(always)]
+    pub fn spi_ss(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::SPI_SS)
+    }
+    #[doc = "`110`"]
+    #[inline(always)]
+    pub fn i2c_scl(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::I2C_SCL)
+    }
+    #[doc = "`111`"]
+    #[inline(always)]
+    pub fn uart_sig2(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::UART_SIG2)
+    }
+    #[doc = "`1000`"]
+    #[inline(always)]
+    pub fn pwm_ch2(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::PWM_CH2)
+    }
+    #[doc = "`1001`"]
+    #[inline(always)]
+    pub fn fem_gpio_2(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::FEM_GPIO_2)
+    }
+    #[doc = "`1010`"]
+    #[inline(always)]
+    pub fn atest_qn(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::ATEST_QN)
+    }
+    #[doc = "`1011`"]
+    #[inline(always)]
+    pub fn swgpio_2(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::SWGPIO_2)
+    }
+    #[doc = "`1110`"]
+    #[inline(always)]
+    pub fn e21_tck(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_FUNC_SEL_A::E21_TCK)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_2_pd` reader - "]
-pub struct REG_GPIO_2_PD_R(crate::FieldReader<bool, bool>);
+#[doc = "Pull Down Resistor for GPIO2.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_2_PD_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_2_PD_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_2_PD_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_2_pd` reader - Pull Down Resistor for GPIO2."]
+pub struct REG_GPIO_2_PD_R(crate::FieldReader<bool, REG_GPIO_2_PD_A>);
 impl REG_GPIO_2_PD_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_2_PD_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_2_PD_A {
+        match self.bits {
+            false => REG_GPIO_2_PD_A::DISABLED,
+            true => REG_GPIO_2_PD_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_2_PD_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_2_PD_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_2_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_2_PD_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_2_pd` writer - "]
+#[doc = "Field `reg_gpio_2_pd` writer - Pull Down Resistor for GPIO2."]
 pub struct REG_GPIO_2_PD_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_2_PD_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_2_PD_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_PD_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_PD_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -338,29 +1007,76 @@ impl<'a> REG_GPIO_2_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_2_pu` reader - "]
-pub struct REG_GPIO_2_PU_R(crate::FieldReader<bool, bool>);
+#[doc = "Pull Up Resistor for GPIO2.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_2_PU_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_2_PU_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_2_PU_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_2_pu` reader - Pull Up Resistor for GPIO2."]
+pub struct REG_GPIO_2_PU_R(crate::FieldReader<bool, REG_GPIO_2_PU_A>);
 impl REG_GPIO_2_PU_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_2_PU_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_2_PU_A {
+        match self.bits {
+            false => REG_GPIO_2_PU_A::DISABLED,
+            true => REG_GPIO_2_PU_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_2_PU_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_2_PU_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_2_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_2_PU_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_2_pu` writer - "]
+#[doc = "Field `reg_gpio_2_pu` writer - Pull Up Resistor for GPIO2."]
 pub struct REG_GPIO_2_PU_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_2_PU_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_2_PU_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_PU_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_PU_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -374,55 +1090,151 @@ impl<'a> REG_GPIO_2_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_2_drv` reader - "]
-pub struct REG_GPIO_2_DRV_R(crate::FieldReader<u8, u8>);
+#[doc = "Driving control enabled for GPIO2.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum REG_GPIO_2_DRV_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_2_DRV_A> for u8 {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_2_DRV_A) -> Self {
+        variant as _
+    }
+}
+#[doc = "Field `reg_gpio_2_drv` reader - Driving control enabled for GPIO2."]
+pub struct REG_GPIO_2_DRV_R(crate::FieldReader<u8, REG_GPIO_2_DRV_A>);
 impl REG_GPIO_2_DRV_R {
     pub(crate) fn new(bits: u8) -> Self {
         REG_GPIO_2_DRV_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<REG_GPIO_2_DRV_A> {
+        match self.bits {
+            0 => Some(REG_GPIO_2_DRV_A::DISABLED),
+            1 => Some(REG_GPIO_2_DRV_A::ENABLED),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_2_DRV_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_2_DRV_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_2_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, REG_GPIO_2_DRV_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_2_drv` writer - "]
+#[doc = "Field `reg_gpio_2_drv` writer - Driving control enabled for GPIO2."]
 pub struct REG_GPIO_2_DRV_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_2_DRV_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_2_DRV_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_DRV_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_DRV_A::ENABLED)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_2_smt` reader - "]
-pub struct REG_GPIO_2_SMT_R(crate::FieldReader<bool, bool>);
+#[doc = "Schmitt trigger enabled for GPIO2.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_2_SMT_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_2_SMT_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_2_SMT_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_2_smt` reader - Schmitt trigger enabled for GPIO2."]
+pub struct REG_GPIO_2_SMT_R(crate::FieldReader<bool, REG_GPIO_2_SMT_A>);
 impl REG_GPIO_2_SMT_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_2_SMT_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_2_SMT_A {
+        match self.bits {
+            false => REG_GPIO_2_SMT_A::DISABLED,
+            true => REG_GPIO_2_SMT_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_2_SMT_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_2_SMT_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_2_SMT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_2_SMT_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_2_smt` writer - "]
+#[doc = "Field `reg_gpio_2_smt` writer - Schmitt trigger enabled for GPIO2."]
 pub struct REG_GPIO_2_SMT_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_2_SMT_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_2_SMT_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_SMT_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_SMT_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -436,29 +1248,76 @@ impl<'a> REG_GPIO_2_SMT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Field `reg_gpio_2_ie` reader - "]
-pub struct REG_GPIO_2_IE_R(crate::FieldReader<bool, bool>);
+#[doc = "Input enable for GPIO2.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum REG_GPIO_2_IE_A {
+    #[doc = "0: `0`"]
+    DISABLED = 0,
+    #[doc = "1: `1`"]
+    ENABLED = 1,
+}
+impl From<REG_GPIO_2_IE_A> for bool {
+    #[inline(always)]
+    fn from(variant: REG_GPIO_2_IE_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `reg_gpio_2_ie` reader - Input enable for GPIO2."]
+pub struct REG_GPIO_2_IE_R(crate::FieldReader<bool, REG_GPIO_2_IE_A>);
 impl REG_GPIO_2_IE_R {
     pub(crate) fn new(bits: bool) -> Self {
         REG_GPIO_2_IE_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> REG_GPIO_2_IE_A {
+        match self.bits {
+            false => REG_GPIO_2_IE_A::DISABLED,
+            true => REG_GPIO_2_IE_A::ENABLED,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        **self == REG_GPIO_2_IE_A::DISABLED
+    }
+    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        **self == REG_GPIO_2_IE_A::ENABLED
+    }
 }
 impl core::ops::Deref for REG_GPIO_2_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, REG_GPIO_2_IE_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `reg_gpio_2_ie` writer - "]
+#[doc = "Field `reg_gpio_2_ie` writer - Input enable for GPIO2."]
 pub struct REG_GPIO_2_IE_W<'a> {
     w: &'a mut W,
 }
 impl<'a> REG_GPIO_2_IE_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: REG_GPIO_2_IE_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_IE_A::DISABLED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut W {
+        self.variant(REG_GPIO_2_IE_A::ENABLED)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -472,7 +1331,7 @@ impl<'a> REG_GPIO_2_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -482,32 +1341,32 @@ impl R {
     pub fn real_gpio_3_func_sel(&self) -> REAL_GPIO_3_FUNC_SEL_R {
         REAL_GPIO_3_FUNC_SEL_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
-    #[doc = "Bits 24:27"]
+    #[doc = "Bits 24:27 - Function select for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_func_sel(&self) -> REG_GPIO_3_FUNC_SEL_R {
         REG_GPIO_3_FUNC_SEL_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
-    #[doc = "Bit 21"]
+    #[doc = "Bit 21 - Pull Down Resistor for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_pd(&self) -> REG_GPIO_3_PD_R {
         REG_GPIO_3_PD_R::new(((self.bits >> 21) & 0x01) != 0)
     }
-    #[doc = "Bit 20"]
+    #[doc = "Bit 20 - Pull Up Resistor for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_pu(&self) -> REG_GPIO_3_PU_R {
         REG_GPIO_3_PU_R::new(((self.bits >> 20) & 0x01) != 0)
     }
-    #[doc = "Bits 18:19"]
+    #[doc = "Bits 18:19 - Driving control enabled for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_drv(&self) -> REG_GPIO_3_DRV_R {
         REG_GPIO_3_DRV_R::new(((self.bits >> 18) & 0x03) as u8)
     }
-    #[doc = "Bit 17"]
+    #[doc = "Bit 17 - Schmitt trigger enabled for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_smt(&self) -> REG_GPIO_3_SMT_R {
         REG_GPIO_3_SMT_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bit 16"]
+    #[doc = "Bit 16 - Input enable for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_ie(&self) -> REG_GPIO_3_IE_R {
         REG_GPIO_3_IE_R::new(((self.bits >> 16) & 0x01) != 0)
@@ -517,104 +1376,94 @@ impl R {
     pub fn real_gpio_2_func_sel(&self) -> REAL_GPIO_2_FUNC_SEL_R {
         REAL_GPIO_2_FUNC_SEL_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
-    #[doc = "Bits 8:11"]
+    #[doc = "Bits 8:11 - Function select for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_func_sel(&self) -> REG_GPIO_2_FUNC_SEL_R {
         REG_GPIO_2_FUNC_SEL_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 5 - Pull Down Resistor for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_pd(&self) -> REG_GPIO_2_PD_R {
         REG_GPIO_2_PD_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 4 - Pull Up Resistor for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_pu(&self) -> REG_GPIO_2_PU_R {
         REG_GPIO_2_PU_R::new(((self.bits >> 4) & 0x01) != 0)
     }
-    #[doc = "Bits 2:3"]
+    #[doc = "Bits 2:3 - Driving control enabled for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_drv(&self) -> REG_GPIO_2_DRV_R {
         REG_GPIO_2_DRV_R::new(((self.bits >> 2) & 0x03) as u8)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bit 1 - Schmitt trigger enabled for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_smt(&self) -> REG_GPIO_2_SMT_R {
         REG_GPIO_2_SMT_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 0 - Input enable for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_ie(&self) -> REG_GPIO_2_IE_R {
         REG_GPIO_2_IE_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bits 28:31"]
-    #[inline(always)]
-    pub fn real_gpio_3_func_sel(&mut self) -> REAL_GPIO_3_FUNC_SEL_W {
-        REAL_GPIO_3_FUNC_SEL_W { w: self }
-    }
-    #[doc = "Bits 24:27"]
+    #[doc = "Bits 24:27 - Function select for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_func_sel(&mut self) -> REG_GPIO_3_FUNC_SEL_W {
         REG_GPIO_3_FUNC_SEL_W { w: self }
     }
-    #[doc = "Bit 21"]
+    #[doc = "Bit 21 - Pull Down Resistor for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_pd(&mut self) -> REG_GPIO_3_PD_W {
         REG_GPIO_3_PD_W { w: self }
     }
-    #[doc = "Bit 20"]
+    #[doc = "Bit 20 - Pull Up Resistor for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_pu(&mut self) -> REG_GPIO_3_PU_W {
         REG_GPIO_3_PU_W { w: self }
     }
-    #[doc = "Bits 18:19"]
+    #[doc = "Bits 18:19 - Driving control enabled for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_drv(&mut self) -> REG_GPIO_3_DRV_W {
         REG_GPIO_3_DRV_W { w: self }
     }
-    #[doc = "Bit 17"]
+    #[doc = "Bit 17 - Schmitt trigger enabled for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_smt(&mut self) -> REG_GPIO_3_SMT_W {
         REG_GPIO_3_SMT_W { w: self }
     }
-    #[doc = "Bit 16"]
+    #[doc = "Bit 16 - Input enable for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_ie(&mut self) -> REG_GPIO_3_IE_W {
         REG_GPIO_3_IE_W { w: self }
     }
-    #[doc = "Bits 12:15"]
-    #[inline(always)]
-    pub fn real_gpio_2_func_sel(&mut self) -> REAL_GPIO_2_FUNC_SEL_W {
-        REAL_GPIO_2_FUNC_SEL_W { w: self }
-    }
-    #[doc = "Bits 8:11"]
+    #[doc = "Bits 8:11 - Function select for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_func_sel(&mut self) -> REG_GPIO_2_FUNC_SEL_W {
         REG_GPIO_2_FUNC_SEL_W { w: self }
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 5 - Pull Down Resistor for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_pd(&mut self) -> REG_GPIO_2_PD_W {
         REG_GPIO_2_PD_W { w: self }
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 4 - Pull Up Resistor for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_pu(&mut self) -> REG_GPIO_2_PU_W {
         REG_GPIO_2_PU_W { w: self }
     }
-    #[doc = "Bits 2:3"]
+    #[doc = "Bits 2:3 - Driving control enabled for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_drv(&mut self) -> REG_GPIO_2_DRV_W {
         REG_GPIO_2_DRV_W { w: self }
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bit 1 - Schmitt trigger enabled for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_smt(&mut self) -> REG_GPIO_2_SMT_W {
         REG_GPIO_2_SMT_W { w: self }
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 0 - Input enable for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_ie(&mut self) -> REG_GPIO_2_IE_W {
         REG_GPIO_2_IE_W { w: self }
@@ -638,10 +1487,10 @@ impl crate::Readable for GPIO_CFGCTL1_SPEC {
 impl crate::Writable for GPIO_CFGCTL1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets GPIO_CFGCTL1 to value 0"]
+#[doc = "`reset()` method sets GPIO_CFGCTL1 to value 0x1103_1103"]
 impl crate::Resettable for GPIO_CFGCTL1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x1103_1103
     }
 }

@@ -64,7 +64,7 @@ impl<'a> SF_CTRL_ID1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SF_CTRL_ID0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> SF_CTRL_PROT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -192,10 +192,10 @@ impl crate::Readable for SF_CTRL_PROT_EN_SPEC {
 impl crate::Writable for SF_CTRL_PROT_EN_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets sf_ctrl_prot_en to value 0"]
+#[doc = "`reset()` method sets sf_ctrl_prot_en to value 0x07"]
 impl crate::Resettable for SF_CTRL_PROT_EN_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x07
     }
 }

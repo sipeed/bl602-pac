@@ -64,7 +64,7 @@ impl<'a> DEBUG_NDRESET_GATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> CPU_RTC_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> CPU_RTC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
@@ -162,7 +162,7 @@ impl<'a> CPU_RTC_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0001_ffff) | ((value as u32) & 0x0001_ffff);
+        self.w.bits = (self.w.bits & !0x0001_ffff) | (value as u32 & 0x0001_ffff);
         self.w
     }
 }
@@ -228,10 +228,10 @@ impl crate::Readable for CPU_CLK_CFG_SPEC {
 impl crate::Writable for CPU_CLK_CFG_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CPU_CLK_CFG to value 0"]
+#[doc = "`reset()` method sets CPU_CLK_CFG to value 0x0008_0010"]
 impl crate::Resettable for CPU_CLK_CFG_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0008_0010
     }
 }

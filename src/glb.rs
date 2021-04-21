@@ -112,33 +112,33 @@ pub struct RegisterBlock {
     #[doc = "0x138 - GPIO28 configuration"]
     pub gpio_cfgctl14: crate::Reg<gpio_cfgctl14::GPIO_CFGCTL14_SPEC>,
     _reserved52: [u8; 68usize],
-    #[doc = "0x180 - GPIO_CFGCTL30."]
+    #[doc = "0x180 - Input register for all GPIO pins. Input Enabled bit must be set in configuration register to work."]
     pub gpio_cfgctl30: crate::Reg<gpio_cfgctl30::GPIO_CFGCTL30_SPEC>,
-    #[doc = "0x184 - GPIO_CFGCTL31."]
+    #[doc = "0x184 - Reserved according to SDK."]
     pub gpio_cfgctl31: crate::Reg<gpio_cfgctl31::GPIO_CFGCTL31_SPEC>,
-    #[doc = "0x188 - GPIO_CFGCTL32."]
+    #[doc = "0x188 - Output register for all GPIO pins. Output Enabled bit must be set in Output Enable register to work."]
     pub gpio_cfgctl32: crate::Reg<gpio_cfgctl32::GPIO_CFGCTL32_SPEC>,
-    #[doc = "0x18c - GPIO_CFGCTL33."]
+    #[doc = "0x18c - Reserved according to SDK."]
     pub gpio_cfgctl33: crate::Reg<gpio_cfgctl33::GPIO_CFGCTL33_SPEC>,
-    #[doc = "0x190 - GPIO_CFGCTL34."]
+    #[doc = "0x190 - Output enable register for GPIO."]
     pub gpio_cfgctl34: crate::Reg<gpio_cfgctl34::GPIO_CFGCTL34_SPEC>,
-    #[doc = "0x194 - GPIO_CFGCTL35."]
+    #[doc = "0x194 - Reserved according to SDK."]
     pub gpio_cfgctl35: crate::Reg<gpio_cfgctl35::GPIO_CFGCTL35_SPEC>,
     _reserved58: [u8; 8usize],
-    #[doc = "0x1a0 - GPIO_INT_MASK1."]
+    #[doc = "0x1a0 - Interrupt masking register. The SDK limits the GPIO pins to < 32 although the docs do not mention more than 28 GPIO pins."]
     pub gpio_int_mask1: crate::Reg<gpio_int_mask1::GPIO_INT_MASK1_SPEC>,
     _reserved59: [u8; 4usize],
-    #[doc = "0x1a8 - GPIO_INT_STAT1."]
+    #[doc = "0x1a8 - Interrupt status register. The SDK limits the GPIO pins to < 32 although the docs do not mention more than 28 GPIO pins."]
     pub gpio_int_stat1: crate::Reg<gpio_int_stat1::GPIO_INT_STAT1_SPEC>,
     _reserved60: [u8; 4usize],
-    #[doc = "0x1b0 - GPIO_INT_CLR1."]
+    #[doc = "0x1b0 - Interrupt clearing register."]
     pub gpio_int_clr1: crate::Reg<gpio_int_clr1::GPIO_INT_CLR1_SPEC>,
     _reserved61: [u8; 12usize],
-    #[doc = "0x1c0 - GPIO_INT_MODE_SET1."]
+    #[doc = "0x1c0 - GPIO interrupt trigger and control register for GPIO0-GPIO9."]
     pub gpio_int_mode_set1: crate::Reg<gpio_int_mode_set1::GPIO_INT_MODE_SET1_SPEC>,
-    #[doc = "0x1c4 - GPIO_INT_MODE_SET2."]
+    #[doc = "0x1c4 - GPIO interrupt trigger and control register for GPIO10-GPIO19."]
     pub gpio_int_mode_set2: crate::Reg<gpio_int_mode_set2::GPIO_INT_MODE_SET2_SPEC>,
-    #[doc = "0x1c8 - GPIO_INT_MODE_SET3."]
+    #[doc = "0x1c8 - GPIO interrupt trigger and control register for GPIO20-GPIO29."]
     pub gpio_int_mode_set3: crate::Reg<gpio_int_mode_set3::GPIO_INT_MODE_SET3_SPEC>,
     _reserved64: [u8; 88usize],
     #[doc = "0x224 - led_driver."]
@@ -159,7 +159,7 @@ pub struct RegisterBlock {
     pub tzc_glb_ctrl_1: crate::Reg<tzc_glb_ctrl_1::TZC_GLB_CTRL_1_SPEC>,
     #[doc = "0xf08 - tzc_glb_ctrl_2."]
     pub tzc_glb_ctrl_2: crate::Reg<tzc_glb_ctrl_2::TZC_GLB_CTRL_2_SPEC>,
-    #[doc = "0xf0c - tzc_glb_ctrl_3."]
+    #[doc = "0xf0c - Reserved according to SDK."]
     pub tzc_glb_ctrl_3: crate::Reg<tzc_glb_ctrl_3::TZC_GLB_CTRL_3_SPEC>,
 }
 #[doc = "clk_cfg0 register accessor: an alias for `Reg<CLK_CFG0_SPEC>`"]
@@ -372,51 +372,51 @@ pub type GPIO_CFGCTL14 = crate::Reg<gpio_cfgctl14::GPIO_CFGCTL14_SPEC>;
 pub mod gpio_cfgctl14;
 #[doc = "GPIO_CFGCTL30 register accessor: an alias for `Reg<GPIO_CFGCTL30_SPEC>`"]
 pub type GPIO_CFGCTL30 = crate::Reg<gpio_cfgctl30::GPIO_CFGCTL30_SPEC>;
-#[doc = "GPIO_CFGCTL30."]
+#[doc = "Input register for all GPIO pins. Input Enabled bit must be set in configuration register to work."]
 pub mod gpio_cfgctl30;
 #[doc = "GPIO_CFGCTL31 register accessor: an alias for `Reg<GPIO_CFGCTL31_SPEC>`"]
 pub type GPIO_CFGCTL31 = crate::Reg<gpio_cfgctl31::GPIO_CFGCTL31_SPEC>;
-#[doc = "GPIO_CFGCTL31."]
+#[doc = "Reserved according to SDK."]
 pub mod gpio_cfgctl31;
 #[doc = "GPIO_CFGCTL32 register accessor: an alias for `Reg<GPIO_CFGCTL32_SPEC>`"]
 pub type GPIO_CFGCTL32 = crate::Reg<gpio_cfgctl32::GPIO_CFGCTL32_SPEC>;
-#[doc = "GPIO_CFGCTL32."]
+#[doc = "Output register for all GPIO pins. Output Enabled bit must be set in Output Enable register to work."]
 pub mod gpio_cfgctl32;
 #[doc = "GPIO_CFGCTL33 register accessor: an alias for `Reg<GPIO_CFGCTL33_SPEC>`"]
 pub type GPIO_CFGCTL33 = crate::Reg<gpio_cfgctl33::GPIO_CFGCTL33_SPEC>;
-#[doc = "GPIO_CFGCTL33."]
+#[doc = "Reserved according to SDK."]
 pub mod gpio_cfgctl33;
 #[doc = "GPIO_CFGCTL34 register accessor: an alias for `Reg<GPIO_CFGCTL34_SPEC>`"]
 pub type GPIO_CFGCTL34 = crate::Reg<gpio_cfgctl34::GPIO_CFGCTL34_SPEC>;
-#[doc = "GPIO_CFGCTL34."]
+#[doc = "Output enable register for GPIO."]
 pub mod gpio_cfgctl34;
 #[doc = "GPIO_CFGCTL35 register accessor: an alias for `Reg<GPIO_CFGCTL35_SPEC>`"]
 pub type GPIO_CFGCTL35 = crate::Reg<gpio_cfgctl35::GPIO_CFGCTL35_SPEC>;
-#[doc = "GPIO_CFGCTL35."]
+#[doc = "Reserved according to SDK."]
 pub mod gpio_cfgctl35;
 #[doc = "GPIO_INT_MASK1 register accessor: an alias for `Reg<GPIO_INT_MASK1_SPEC>`"]
 pub type GPIO_INT_MASK1 = crate::Reg<gpio_int_mask1::GPIO_INT_MASK1_SPEC>;
-#[doc = "GPIO_INT_MASK1."]
+#[doc = "Interrupt masking register. The SDK limits the GPIO pins to < 32 although the docs do not mention more than 28 GPIO pins."]
 pub mod gpio_int_mask1;
 #[doc = "GPIO_INT_STAT1 register accessor: an alias for `Reg<GPIO_INT_STAT1_SPEC>`"]
 pub type GPIO_INT_STAT1 = crate::Reg<gpio_int_stat1::GPIO_INT_STAT1_SPEC>;
-#[doc = "GPIO_INT_STAT1."]
+#[doc = "Interrupt status register. The SDK limits the GPIO pins to < 32 although the docs do not mention more than 28 GPIO pins."]
 pub mod gpio_int_stat1;
 #[doc = "GPIO_INT_CLR1 register accessor: an alias for `Reg<GPIO_INT_CLR1_SPEC>`"]
 pub type GPIO_INT_CLR1 = crate::Reg<gpio_int_clr1::GPIO_INT_CLR1_SPEC>;
-#[doc = "GPIO_INT_CLR1."]
+#[doc = "Interrupt clearing register."]
 pub mod gpio_int_clr1;
 #[doc = "GPIO_INT_MODE_SET1 register accessor: an alias for `Reg<GPIO_INT_MODE_SET1_SPEC>`"]
 pub type GPIO_INT_MODE_SET1 = crate::Reg<gpio_int_mode_set1::GPIO_INT_MODE_SET1_SPEC>;
-#[doc = "GPIO_INT_MODE_SET1."]
+#[doc = "GPIO interrupt trigger and control register for GPIO0-GPIO9."]
 pub mod gpio_int_mode_set1;
 #[doc = "GPIO_INT_MODE_SET2 register accessor: an alias for `Reg<GPIO_INT_MODE_SET2_SPEC>`"]
 pub type GPIO_INT_MODE_SET2 = crate::Reg<gpio_int_mode_set2::GPIO_INT_MODE_SET2_SPEC>;
-#[doc = "GPIO_INT_MODE_SET2."]
+#[doc = "GPIO interrupt trigger and control register for GPIO10-GPIO19."]
 pub mod gpio_int_mode_set2;
 #[doc = "GPIO_INT_MODE_SET3 register accessor: an alias for `Reg<GPIO_INT_MODE_SET3_SPEC>`"]
 pub type GPIO_INT_MODE_SET3 = crate::Reg<gpio_int_mode_set3::GPIO_INT_MODE_SET3_SPEC>;
-#[doc = "GPIO_INT_MODE_SET3."]
+#[doc = "GPIO interrupt trigger and control register for GPIO20-GPIO29."]
 pub mod gpio_int_mode_set3;
 #[doc = "led_driver register accessor: an alias for `Reg<LED_DRIVER_SPEC>`"]
 pub type LED_DRIVER = crate::Reg<led_driver::LED_DRIVER_SPEC>;
@@ -452,5 +452,5 @@ pub type TZC_GLB_CTRL_2 = crate::Reg<tzc_glb_ctrl_2::TZC_GLB_CTRL_2_SPEC>;
 pub mod tzc_glb_ctrl_2;
 #[doc = "tzc_glb_ctrl_3 register accessor: an alias for `Reg<TZC_GLB_CTRL_3_SPEC>`"]
 pub type TZC_GLB_CTRL_3 = crate::Reg<tzc_glb_ctrl_3::TZC_GLB_CTRL_3_SPEC>;
-#[doc = "tzc_glb_ctrl_3."]
+#[doc = "Reserved according to SDK."]
 pub mod tzc_glb_ctrl_3;

@@ -64,7 +64,7 @@ impl<'a> SE_GMAC_0_X_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SE_GMAC_0_H_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> SE_GMAC_0_T_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
@@ -172,7 +172,7 @@ impl<'a> SE_GMAC_0_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> SE_GMAC_0_INT_SET_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -244,7 +244,7 @@ impl<'a> SE_GMAC_0_INT_CLR_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -260,28 +260,6 @@ impl core::ops::Deref for SE_GMAC_0_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `se_gmac_0_int` writer - "]
-pub struct SE_GMAC_0_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_GMAC_0_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
     }
 }
 #[doc = "Field `se_gmac_0_en` reader - "]
@@ -316,7 +294,7 @@ impl<'a> SE_GMAC_0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -352,7 +330,7 @@ impl<'a> SE_GMAC_0_TRIG_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -368,28 +346,6 @@ impl core::ops::Deref for SE_GMAC_0_BUSY_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `se_gmac_0_busy` writer - "]
-pub struct SE_GMAC_0_BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_GMAC_0_BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -475,11 +431,6 @@ impl W {
     pub fn se_gmac_0_int_clr_1t(&mut self) -> SE_GMAC_0_INT_CLR_1T_W {
         SE_GMAC_0_INT_CLR_1T_W { w: self }
     }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn se_gmac_0_int(&mut self) -> SE_GMAC_0_INT_W {
-        SE_GMAC_0_INT_W { w: self }
-    }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn se_gmac_0_en(&mut self) -> SE_GMAC_0_EN_W {
@@ -489,11 +440,6 @@ impl W {
     #[inline(always)]
     pub fn se_gmac_0_trig_1t(&mut self) -> SE_GMAC_0_TRIG_1T_W {
         SE_GMAC_0_TRIG_1T_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn se_gmac_0_busy(&mut self) -> SE_GMAC_0_BUSY_W {
-        SE_GMAC_0_BUSY_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -514,10 +460,10 @@ impl crate::Readable for SE_GMAC_0_CTRL_0_SPEC {
 impl crate::Writable for SE_GMAC_0_CTRL_0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_gmac_0_ctrl_0 to value 0"]
+#[doc = "`reset()` method sets se_gmac_0_ctrl_0 to value 0x7000"]
 impl crate::Resettable for SE_GMAC_0_CTRL_0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x7000
     }
 }

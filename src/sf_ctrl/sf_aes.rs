@@ -46,18 +46,6 @@ impl core::ops::Deref for SF_AES_STATUS_R {
         &self.0
     }
 }
-#[doc = "Field `sf_aes_status` writer - "]
-pub struct SF_AES_STATUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_STATUS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff_ffff << 5)) | (((value as u32) & 0x07ff_ffff) << 5);
-        self.w
-    }
-}
 #[doc = "Field `sf_aes_pref_busy` reader - "]
 pub struct SF_AES_PREF_BUSY_R(crate::FieldReader<bool, bool>);
 impl SF_AES_PREF_BUSY_R {
@@ -70,28 +58,6 @@ impl core::ops::Deref for SF_AES_PREF_BUSY_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `sf_aes_pref_busy` writer - "]
-pub struct SF_AES_PREF_BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_PREF_BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
     }
 }
 #[doc = "Field `sf_aes_pref_trig` reader - "]
@@ -126,7 +92,7 @@ impl<'a> SF_AES_PREF_TRIG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -152,7 +118,7 @@ impl<'a> SF_AES_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | (((value as u32) & 0x03) << 1);
+        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
         self.w
     }
 }
@@ -188,7 +154,7 @@ impl<'a> SF_AES_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -220,16 +186,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 5:31"]
-    #[inline(always)]
-    pub fn sf_aes_status(&mut self) -> SF_AES_STATUS_W {
-        SF_AES_STATUS_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn sf_aes_pref_busy(&mut self) -> SF_AES_PREF_BUSY_W {
-        SF_AES_PREF_BUSY_W { w: self }
-    }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn sf_aes_pref_trig(&mut self) -> SF_AES_PREF_TRIG_W {
@@ -264,10 +220,10 @@ impl crate::Readable for SF_AES_SPEC {
 impl crate::Writable for SF_AES_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets sf_aes to value 0"]
+#[doc = "`reset()` method sets sf_aes to value 0x40"]
 impl crate::Resettable for SF_AES_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x40
     }
 }

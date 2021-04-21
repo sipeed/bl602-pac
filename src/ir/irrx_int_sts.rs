@@ -64,7 +64,7 @@ impl<'a> CR_IRRX_END_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> CR_IRRX_END_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> CR_IRRX_END_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -152,28 +152,6 @@ impl core::ops::Deref for IRRX_END_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `irrx_end_int` writer - "]
-pub struct IRRX_END_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRRX_END_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -214,11 +192,6 @@ impl W {
     pub fn cr_irrx_end_mask(&mut self) -> CR_IRRX_END_MASK_W {
         CR_IRRX_END_MASK_W { w: self }
     }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn irrx_end_int(&mut self) -> IRRX_END_INT_W {
-        IRRX_END_INT_W { w: self }
-    }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
@@ -238,10 +211,10 @@ impl crate::Readable for IRRX_INT_STS_SPEC {
 impl crate::Writable for IRRX_INT_STS_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets irrx_int_sts to value 0"]
+#[doc = "`reset()` method sets irrx_int_sts to value 0x0100_0100"]
 impl crate::Resettable for IRRX_INT_STS_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0100_0100
     }
 }

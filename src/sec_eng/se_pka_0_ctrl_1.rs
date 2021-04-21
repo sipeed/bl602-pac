@@ -64,7 +64,7 @@ impl<'a> SE_PKA_0_HBYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> SE_PKA_0_HBURST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
+        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
         self.w
     }
 }
@@ -136,10 +136,10 @@ impl crate::Readable for SE_PKA_0_CTRL_1_SPEC {
 impl crate::Writable for SE_PKA_0_CTRL_1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_pka_0_ctrl_1 to value 0"]
+#[doc = "`reset()` method sets se_pka_0_ctrl_1 to value 0x05"]
 impl crate::Resettable for SE_PKA_0_CTRL_1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x05
     }
 }

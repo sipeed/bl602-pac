@@ -64,7 +64,7 @@ impl<'a> CLKPLL_SDM_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> CLKPLL_SDM_FLAG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> CLKPLL_DITHER_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | (((value as u32) & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
         self.w
     }
 }
@@ -152,7 +152,7 @@ impl<'a> CLKPLL_SDMIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | ((value as u32) & 0x00ff_ffff);
+        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
         self.w
     }
 }
@@ -218,10 +218,10 @@ impl crate::Readable for CLKPLL_SDM_SPEC {
 impl crate::Writable for CLKPLL_SDM_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets clkpll_sdm to value 0"]
+#[doc = "`reset()` method sets clkpll_sdm to value 0x1060_0000"]
 impl crate::Resettable for CLKPLL_SDM_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x1060_0000
     }
 }

@@ -54,7 +54,7 @@ impl<'a> CR_SPI_STO_VALUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | ((value as u32) & 0x0fff);
+        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for SPI_STO_VALUE_SPEC {
 impl crate::Writable for SPI_STO_VALUE_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets spi_sto_value to value 0"]
+#[doc = "`reset()` method sets spi_sto_value to value 0x0fff"]
 impl crate::Resettable for SPI_STO_VALUE_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0fff
     }
 }

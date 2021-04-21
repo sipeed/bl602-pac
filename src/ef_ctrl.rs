@@ -1,39 +1,38 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    _reserved0: [u8; 2048usize],
-    #[doc = "0x800 - ef_if_ctrl_0."]
+    #[doc = "0x00 - ef_if_ctrl_0."]
     pub ef_if_ctrl_0: crate::Reg<ef_if_ctrl_0::EF_IF_CTRL_0_SPEC>,
-    #[doc = "0x804 - ef_if_cyc_0."]
+    #[doc = "0x04 - ef_if_cyc_0."]
     pub ef_if_cyc_0: crate::Reg<ef_if_cyc_0::EF_IF_CYC_0_SPEC>,
-    #[doc = "0x808 - ef_if_cyc_1."]
+    #[doc = "0x08 - ef_if_cyc_1."]
     pub ef_if_cyc_1: crate::Reg<ef_if_cyc_1::EF_IF_CYC_1_SPEC>,
-    #[doc = "0x80c - ef_if_0_manual."]
+    #[doc = "0x0c - ef_if_0_manual."]
     pub ef_if_0_manual: crate::Reg<ef_if_0_manual::EF_IF_0_MANUAL_SPEC>,
-    #[doc = "0x810 - ef_if_0_status."]
+    #[doc = "0x10 - ef_if_0_status."]
     pub ef_if_0_status: crate::Reg<ef_if_0_status::EF_IF_0_STATUS_SPEC>,
-    #[doc = "0x814 - ef_if_cfg_0."]
+    #[doc = "0x14 - ef_if_cfg_0."]
     pub ef_if_cfg_0: crate::Reg<ef_if_cfg_0::EF_IF_CFG_0_SPEC>,
-    #[doc = "0x818 - ef_sw_cfg_0."]
+    #[doc = "0x18 - ef_sw_cfg_0."]
     pub ef_sw_cfg_0: crate::Reg<ef_sw_cfg_0::EF_SW_CFG_0_SPEC>,
-    #[doc = "0x81c - ef_reserved."]
+    #[doc = "0x1c - ef_reserved."]
     pub ef_reserved: crate::Reg<ef_reserved::EF_RESERVED_SPEC>,
-    #[doc = "0x820 - ef_if_ana_trim_0."]
+    #[doc = "0x20 - ef_if_ana_trim_0."]
     pub ef_if_ana_trim_0: crate::Reg<ef_if_ana_trim_0::EF_IF_ANA_TRIM_0_SPEC>,
-    #[doc = "0x824 - ef_if_sw_usage_0."]
+    #[doc = "0x24 - ef_if_sw_usage_0."]
     pub ef_if_sw_usage_0: crate::Reg<ef_if_sw_usage_0::EF_IF_SW_USAGE_0_SPEC>,
     _reserved10: [u8; 472usize],
-    #[doc = "0xa00 - ef_crc_ctrl_0."]
+    #[doc = "0x200 - ef_crc_ctrl_0."]
     pub ef_crc_ctrl_0: crate::Reg<ef_crc_ctrl_0::EF_CRC_CTRL_0_SPEC>,
-    #[doc = "0xa04 - ef_crc_ctrl_1."]
+    #[doc = "0x204 - ef_crc_ctrl_1."]
     pub ef_crc_ctrl_1: crate::Reg<ef_crc_ctrl_1::EF_CRC_CTRL_1_SPEC>,
-    #[doc = "0xa08 - ef_crc_ctrl_2."]
+    #[doc = "0x208 - ef_crc_ctrl_2."]
     pub ef_crc_ctrl_2: crate::Reg<ef_crc_ctrl_2::EF_CRC_CTRL_2_SPEC>,
-    #[doc = "0xa0c - ef_crc_ctrl_3."]
+    #[doc = "0x20c - ef_crc_ctrl_3."]
     pub ef_crc_ctrl_3: crate::Reg<ef_crc_ctrl_3::EF_CRC_CTRL_3_SPEC>,
-    #[doc = "0xa10 - ef_crc_ctrl_4."]
+    #[doc = "0x210 - ef_crc_ctrl_4."]
     pub ef_crc_ctrl_4: crate::Reg<ef_crc_ctrl_4::EF_CRC_CTRL_4_SPEC>,
-    #[doc = "0xa14 - ef_crc_ctrl_5."]
+    #[doc = "0x214 - ef_crc_ctrl_5."]
     pub ef_crc_ctrl_5: crate::Reg<ef_crc_ctrl_5::EF_CRC_CTRL_5_SPEC>,
 }
 #[doc = "ef_if_ctrl_0 register accessor: an alias for `Reg<EF_IF_CTRL_0_SPEC>`"]

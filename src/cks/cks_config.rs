@@ -32,25 +32,72 @@ impl core::convert::From<crate::W<CKS_CONFIG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `cr_cks_byte_swap` reader - Endianness (0: little endian, 1: big endian)"]
-pub struct CR_CKS_BYTE_SWAP_R(crate::FieldReader<bool, bool>);
+#[doc = "Endianness.\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum CR_CKS_BYTE_SWAP_A {
+    #[doc = "0: Little endian."]
+    LITTLE_ENDIAN = 0,
+    #[doc = "1: Big endian."]
+    BIG_ENDIAN = 1,
+}
+impl From<CR_CKS_BYTE_SWAP_A> for bool {
+    #[inline(always)]
+    fn from(variant: CR_CKS_BYTE_SWAP_A) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `cr_cks_byte_swap` reader - Endianness."]
+pub struct CR_CKS_BYTE_SWAP_R(crate::FieldReader<bool, CR_CKS_BYTE_SWAP_A>);
 impl CR_CKS_BYTE_SWAP_R {
     pub(crate) fn new(bits: bool) -> Self {
         CR_CKS_BYTE_SWAP_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CR_CKS_BYTE_SWAP_A {
+        match self.bits {
+            false => CR_CKS_BYTE_SWAP_A::LITTLE_ENDIAN,
+            true => CR_CKS_BYTE_SWAP_A::BIG_ENDIAN,
+        }
+    }
+    #[doc = "Checks if the value of the field is `LITTLE_ENDIAN`"]
+    #[inline(always)]
+    pub fn is_little_endian(&self) -> bool {
+        **self == CR_CKS_BYTE_SWAP_A::LITTLE_ENDIAN
+    }
+    #[doc = "Checks if the value of the field is `BIG_ENDIAN`"]
+    #[inline(always)]
+    pub fn is_big_endian(&self) -> bool {
+        **self == CR_CKS_BYTE_SWAP_A::BIG_ENDIAN
+    }
 }
 impl core::ops::Deref for CR_CKS_BYTE_SWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, CR_CKS_BYTE_SWAP_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `cr_cks_byte_swap` writer - Endianness (0: little endian, 1: big endian)"]
+#[doc = "Field `cr_cks_byte_swap` writer - Endianness."]
 pub struct CR_CKS_BYTE_SWAP_W<'a> {
     w: &'a mut W,
 }
 impl<'a> CR_CKS_BYTE_SWAP_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CR_CKS_BYTE_SWAP_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "Little endian."]
+    #[inline(always)]
+    pub fn little_endian(self) -> &'a mut W {
+        self.variant(CR_CKS_BYTE_SWAP_A::LITTLE_ENDIAN)
+    }
+    #[doc = "Big endian."]
+    #[inline(always)]
+    pub fn big_endian(self) -> &'a mut W {
+        self.variant(CR_CKS_BYTE_SWAP_A::BIG_ENDIAN)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -64,7 +111,7 @@ impl<'a> CR_CKS_BYTE_SWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -100,12 +147,12 @@ impl<'a> CR_CKS_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
 impl R {
-    #[doc = "Bit 1 - Endianness (0: little endian, 1: big endian)"]
+    #[doc = "Bit 1 - Endianness."]
     #[inline(always)]
     pub fn cr_cks_byte_swap(&self) -> CR_CKS_BYTE_SWAP_R {
         CR_CKS_BYTE_SWAP_R::new(((self.bits >> 1) & 0x01) != 0)
@@ -117,7 +164,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 1 - Endianness (0: little endian, 1: big endian)"]
+    #[doc = "Bit 1 - Endianness."]
     #[inline(always)]
     pub fn cr_cks_byte_swap(&mut self) -> CR_CKS_BYTE_SWAP_W {
         CR_CKS_BYTE_SWAP_W { w: self }

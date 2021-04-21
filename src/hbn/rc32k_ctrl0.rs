@@ -54,7 +54,7 @@ impl<'a> RC32K_CODE_FR_EXT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 22)) | (((value as u32) & 0x03ff) << 22);
+        self.w.bits = (self.w.bits & !(0x03ff << 22)) | ((value as u32 & 0x03ff) << 22);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> RC32K_CAL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
@@ -126,7 +126,7 @@ impl<'a> RC32K_EXT_CODE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
@@ -162,7 +162,7 @@ impl<'a> RC32K_ALLOW_CAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
@@ -188,7 +188,7 @@ impl<'a> RC32K_VREF_DLY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
         self.w
     }
 }
@@ -206,18 +206,6 @@ impl core::ops::Deref for RC32K_DIG_CODE_FR_CAL_R {
         &self.0
     }
 }
-#[doc = "Field `rc32k_dig_code_fr_cal` writer - "]
-pub struct RC32K_DIG_CODE_FR_CAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RC32K_DIG_CODE_FR_CAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 6)) | (((value as u32) & 0x03ff) << 6);
-        self.w
-    }
-}
 #[doc = "Field `rc32k_cal_precharge` reader - "]
 pub struct RC32K_CAL_PRECHARGE_R(crate::FieldReader<bool, bool>);
 impl RC32K_CAL_PRECHARGE_R {
@@ -230,28 +218,6 @@ impl core::ops::Deref for RC32K_CAL_PRECHARGE_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `rc32k_cal_precharge` writer - "]
-pub struct RC32K_CAL_PRECHARGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RC32K_CAL_PRECHARGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
     }
 }
 #[doc = "Field `rc32k_cal_div` reader - "]
@@ -276,7 +242,7 @@ impl<'a> RC32K_CAL_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | (((value as u32) & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
         self.w
     }
 }
@@ -294,28 +260,6 @@ impl core::ops::Deref for RC32K_CAL_INPROGRESS_R {
         &self.0
     }
 }
-#[doc = "Field `rc32k_cal_inprogress` writer - "]
-pub struct RC32K_CAL_INPROGRESS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RC32K_CAL_INPROGRESS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
-    }
-}
 #[doc = "Field `rc32k_rdy` reader - "]
 pub struct RC32K_RDY_R(crate::FieldReader<bool, bool>);
 impl RC32K_RDY_R {
@@ -330,28 +274,6 @@ impl core::ops::Deref for RC32K_RDY_R {
         &self.0
     }
 }
-#[doc = "Field `rc32k_rdy` writer - "]
-pub struct RC32K_RDY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RC32K_RDY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `rc32k_cal_done` reader - "]
 pub struct RC32K_CAL_DONE_R(crate::FieldReader<bool, bool>);
 impl RC32K_CAL_DONE_R {
@@ -364,28 +286,6 @@ impl core::ops::Deref for RC32K_CAL_DONE_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `rc32k_cal_done` writer - "]
-pub struct RC32K_CAL_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RC32K_CAL_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -471,35 +371,10 @@ impl W {
     pub fn rc32k_vref_dly(&mut self) -> RC32K_VREF_DLY_W {
         RC32K_VREF_DLY_W { w: self }
     }
-    #[doc = "Bits 6:15"]
-    #[inline(always)]
-    pub fn rc32k_dig_code_fr_cal(&mut self) -> RC32K_DIG_CODE_FR_CAL_W {
-        RC32K_DIG_CODE_FR_CAL_W { w: self }
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn rc32k_cal_precharge(&mut self) -> RC32K_CAL_PRECHARGE_W {
-        RC32K_CAL_PRECHARGE_W { w: self }
-    }
     #[doc = "Bits 3:4"]
     #[inline(always)]
     pub fn rc32k_cal_div(&mut self) -> RC32K_CAL_DIV_W {
         RC32K_CAL_DIV_W { w: self }
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn rc32k_cal_inprogress(&mut self) -> RC32K_CAL_INPROGRESS_W {
-        RC32K_CAL_INPROGRESS_W { w: self }
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn rc32k_rdy(&mut self) -> RC32K_RDY_W {
-        RC32K_RDY_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn rc32k_cal_done(&mut self) -> RC32K_CAL_DONE_W {
-        RC32K_CAL_DONE_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
@@ -520,10 +395,10 @@ impl crate::Readable for RC32K_CTRL0_SPEC {
 impl crate::Writable for RC32K_CTRL0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets rc32k_ctrl0 to value 0"]
+#[doc = "`reset()` method sets rc32k_ctrl0 to value 0x5008_801b"]
 impl crate::Resettable for RC32K_CTRL0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x5008_801b
     }
 }

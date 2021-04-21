@@ -1,17 +1,3 @@
-#[doc = "Register `data_in` reader"]
-pub struct R(crate::R<DATA_IN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DATA_IN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::convert::From<crate::R<DATA_IN_SPEC>> for R {
-    fn from(reader: crate::R<DATA_IN_SPEC>) -> Self {
-        R(reader)
-    }
-}
 #[doc = "Register `data_in` writer"]
 pub struct W(crate::W<DATA_IN_SPEC>);
 impl core::ops::Deref for W {
@@ -32,20 +18,6 @@ impl core::convert::From<crate::W<DATA_IN_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `data_in` reader - "]
-pub struct DATA_IN_R(crate::FieldReader<u8, u8>);
-impl DATA_IN_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_IN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_IN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `data_in` writer - "]
 pub struct DATA_IN_W<'a> {
     w: &'a mut W,
@@ -54,15 +26,8 @@ impl<'a> DATA_IN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
-    }
-}
-impl R {
-    #[doc = "Bits 0:7"]
-    #[inline(always)]
-    pub fn data_in(&self) -> DATA_IN_R {
-        DATA_IN_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
@@ -77,14 +42,10 @@ impl W {
         self
     }
 }
-#[doc = "Checksum data in\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data_in](index.html) module"]
+#[doc = "Checksum data in\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data_in](index.html) module"]
 pub struct DATA_IN_SPEC;
 impl crate::RegisterSpec for DATA_IN_SPEC {
     type Ux = u32;
-}
-#[doc = "`read()` method returns [data_in::R](R) reader structure"]
-impl crate::Readable for DATA_IN_SPEC {
-    type Reader = R;
 }
 #[doc = "`write(|w| ..)` method takes [data_in::W](W) writer structure"]
 impl crate::Writable for DATA_IN_SPEC {

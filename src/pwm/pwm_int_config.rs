@@ -32,20 +32,6 @@ impl core::convert::From<crate::W<PWM_INT_CONFIG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `pwm_int_clear` reader - "]
-pub struct PWM_INT_CLEAR_R(crate::FieldReader<u8, u8>);
-impl PWM_INT_CLEAR_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        PWM_INT_CLEAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWM_INT_CLEAR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `pwm_int_clear` writer - "]
 pub struct PWM_INT_CLEAR_W<'a> {
     w: &'a mut W,
@@ -54,7 +40,7 @@ impl<'a> PWM_INT_CLEAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | (((value as u32) & 0x3f) << 8);
+        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
         self.w
     }
 }
@@ -72,24 +58,7 @@ impl core::ops::Deref for PWM_INTERRUPT_STS_R {
         &self.0
     }
 }
-#[doc = "Field `pwm_interrupt_sts` writer - "]
-pub struct PWM_INTERRUPT_STS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWM_INTERRUPT_STS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | ((value as u32) & 0x3f);
-        self.w
-    }
-}
 impl R {
-    #[doc = "Bits 8:13"]
-    #[inline(always)]
-    pub fn pwm_int_clear(&self) -> PWM_INT_CLEAR_R {
-        PWM_INT_CLEAR_R::new(((self.bits >> 8) & 0x3f) as u8)
-    }
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn pwm_interrupt_sts(&self) -> PWM_INTERRUPT_STS_R {
@@ -101,11 +70,6 @@ impl W {
     #[inline(always)]
     pub fn pwm_int_clear(&mut self) -> PWM_INT_CLEAR_W {
         PWM_INT_CLEAR_W { w: self }
-    }
-    #[doc = "Bits 0:5"]
-    #[inline(always)]
-    pub fn pwm_interrupt_sts(&mut self) -> PWM_INTERRUPT_STS_W {
-        PWM_INTERRUPT_STS_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

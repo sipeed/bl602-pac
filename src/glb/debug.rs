@@ -46,18 +46,6 @@ impl core::ops::Deref for DEBUG_I_R {
         &self.0
     }
 }
-#[doc = "Field `debug_i` writer - "]
-pub struct DEBUG_I_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DEBUG_I_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7fff_ffff << 1)) | (((value as u32) & 0x7fff_ffff) << 1);
-        self.w
-    }
-}
 #[doc = "Field `debug_oe` reader - "]
 pub struct DEBUG_OE_R(crate::FieldReader<bool, bool>);
 impl DEBUG_OE_R {
@@ -90,7 +78,7 @@ impl<'a> DEBUG_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -107,11 +95,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 1:31"]
-    #[inline(always)]
-    pub fn debug_i(&mut self) -> DEBUG_I_W {
-        DEBUG_I_W { w: self }
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn debug_oe(&mut self) -> DEBUG_OE_W {

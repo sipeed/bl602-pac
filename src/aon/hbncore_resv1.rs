@@ -54,7 +54,7 @@ impl<'a> HBNCORE_RESV1_DATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
+        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for HBNCORE_RESV1_SPEC {
 impl crate::Writable for HBNCORE_RESV1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets hbncore_resv1 to value 0"]
+#[doc = "`reset()` method sets hbncore_resv1 to value 0xffff_ffff"]
 impl crate::Resettable for HBNCORE_RESV1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xffff_ffff
     }
 }

@@ -54,7 +54,7 @@ impl<'a> L1C_HSEL_OPTION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
         self.w
     }
 }
@@ -72,28 +72,6 @@ impl core::ops::Deref for L1C_BMX_ERR_TZ_R {
         &self.0
     }
 }
-#[doc = "Field `l1c_bmx_err_tz` writer - "]
-pub struct L1C_BMX_ERR_TZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> L1C_BMX_ERR_TZ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
 #[doc = "Field `l1c_bmx_err_dec` reader - "]
 pub struct L1C_BMX_ERR_DEC_R(crate::FieldReader<bool, bool>);
 impl L1C_BMX_ERR_DEC_R {
@@ -106,28 +84,6 @@ impl core::ops::Deref for L1C_BMX_ERR_DEC_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `l1c_bmx_err_dec` writer - "]
-pub struct L1C_BMX_ERR_DEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> L1C_BMX_ERR_DEC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
     }
 }
 #[doc = "Field `l1c_bmx_err_addr_dis` reader - "]
@@ -162,7 +118,7 @@ impl<'a> L1C_BMX_ERR_ADDR_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -193,16 +149,6 @@ impl W {
     #[inline(always)]
     pub fn l1c_hsel_option(&mut self) -> L1C_HSEL_OPTION_W {
         L1C_HSEL_OPTION_W { w: self }
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn l1c_bmx_err_tz(&mut self) -> L1C_BMX_ERR_TZ_W {
-        L1C_BMX_ERR_TZ_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn l1c_bmx_err_dec(&mut self) -> L1C_BMX_ERR_DEC_W {
-        L1C_BMX_ERR_DEC_W { w: self }
     }
     #[doc = "Bit 0"]
     #[inline(always)]

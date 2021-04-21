@@ -54,7 +54,7 @@ impl<'a> CR_URX_RTO_VALUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for URX_RTO_TIMER_SPEC {
 impl crate::Writable for URX_RTO_TIMER_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets urx_rto_timer to value 0"]
+#[doc = "`reset()` method sets urx_rto_timer to value 0x0f"]
 impl crate::Resettable for URX_RTO_TIMER_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0f
     }
 }

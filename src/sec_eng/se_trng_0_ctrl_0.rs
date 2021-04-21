@@ -64,7 +64,7 @@ impl<'a> SE_TRNG_0_MANUAL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SE_TRNG_0_MANUAL_RESEED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> SE_TRNG_0_MANUAL_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -172,7 +172,7 @@ impl<'a> SE_TRNG_0_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> SE_TRNG_0_INT_SET_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -244,7 +244,7 @@ impl<'a> SE_TRNG_0_INT_CLR_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -262,28 +262,6 @@ impl core::ops::Deref for SE_TRNG_0_INT_R {
         &self.0
     }
 }
-#[doc = "Field `se_trng_0_int` writer - "]
-pub struct SE_TRNG_0_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_TRNG_0_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
 #[doc = "Field `se_trng_0_ht_error` reader - "]
 pub struct SE_TRNG_0_HT_ERROR_R(crate::FieldReader<bool, bool>);
 impl SE_TRNG_0_HT_ERROR_R {
@@ -296,28 +274,6 @@ impl core::ops::Deref for SE_TRNG_0_HT_ERROR_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `se_trng_0_ht_error` writer - "]
-pub struct SE_TRNG_0_HT_ERROR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_TRNG_0_HT_ERROR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
     }
 }
 #[doc = "Field `se_trng_0_dout_clr_1t` reader - "]
@@ -352,7 +308,7 @@ impl<'a> SE_TRNG_0_DOUT_CLR_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -388,7 +344,7 @@ impl<'a> SE_TRNG_0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -424,7 +380,7 @@ impl<'a> SE_TRNG_0_TRIG_1T_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -440,28 +396,6 @@ impl core::ops::Deref for SE_TRNG_0_BUSY_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `se_trng_0_busy` writer - "]
-pub struct SE_TRNG_0_BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_TRNG_0_BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -557,16 +491,6 @@ impl W {
     pub fn se_trng_0_int_clr_1t(&mut self) -> SE_TRNG_0_INT_CLR_1T_W {
         SE_TRNG_0_INT_CLR_1T_W { w: self }
     }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn se_trng_0_int(&mut self) -> SE_TRNG_0_INT_W {
-        SE_TRNG_0_INT_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn se_trng_0_ht_error(&mut self) -> SE_TRNG_0_HT_ERROR_W {
-        SE_TRNG_0_HT_ERROR_W { w: self }
-    }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn se_trng_0_dout_clr_1t(&mut self) -> SE_TRNG_0_DOUT_CLR_1T_W {
@@ -581,11 +505,6 @@ impl W {
     #[inline(always)]
     pub fn se_trng_0_trig_1t(&mut self) -> SE_TRNG_0_TRIG_1T_W {
         SE_TRNG_0_TRIG_1T_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn se_trng_0_busy(&mut self) -> SE_TRNG_0_BUSY_W {
-        SE_TRNG_0_BUSY_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

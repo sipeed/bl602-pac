@@ -54,7 +54,7 @@ impl<'a> WMR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
+        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for WMR_SPEC {
 impl crate::Writable for WMR_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets WMR to value 0"]
+#[doc = "`reset()` method sets WMR to value 0xffff"]
 impl crate::Resettable for WMR_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xffff
     }
 }

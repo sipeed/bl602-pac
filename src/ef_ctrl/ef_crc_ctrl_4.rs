@@ -54,7 +54,7 @@ impl<'a> EF_CRC_GOLDEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
+        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
         self.w
     }
 }
@@ -90,10 +90,10 @@ impl crate::Readable for EF_CRC_CTRL_4_SPEC {
 impl crate::Writable for EF_CRC_CTRL_4_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets ef_crc_ctrl_4 to value 0"]
+#[doc = "`reset()` method sets ef_crc_ctrl_4 to value 0xc2a8_fa9d"]
 impl crate::Resettable for EF_CRC_CTRL_4_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xc2a8_fa9d
     }
 }

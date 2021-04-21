@@ -1,65 +1,64 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    _reserved0: [u8; 2048usize],
-    #[doc = "0x800 - aon."]
+    #[doc = "0x00 - aon."]
     pub aon: crate::Reg<aon::AON_SPEC>,
-    #[doc = "0x804 - aon_common."]
+    #[doc = "0x04 - aon_common."]
     pub aon_common: crate::Reg<aon_common::AON_COMMON_SPEC>,
-    #[doc = "0x808 - aon_misc."]
+    #[doc = "0x08 - aon_misc."]
     pub aon_misc: crate::Reg<aon_misc::AON_MISC_SPEC>,
     _reserved3: [u8; 4usize],
-    #[doc = "0x810 - bg_sys_top."]
+    #[doc = "0x10 - bg_sys_top."]
     pub bg_sys_top: crate::Reg<bg_sys_top::BG_SYS_TOP_SPEC>,
-    #[doc = "0x814 - dcdc18_top_0."]
+    #[doc = "0x14 - dcdc18_top_0."]
     pub dcdc18_top_0: crate::Reg<dcdc18_top_0::DCDC18_TOP_0_SPEC>,
-    #[doc = "0x818 - dcdc18_top_1."]
+    #[doc = "0x18 - dcdc18_top_1."]
     pub dcdc18_top_1: crate::Reg<dcdc18_top_1::DCDC18_TOP_1_SPEC>,
-    #[doc = "0x81c - ldo11soc_and_dctest."]
+    #[doc = "0x1c - ldo11soc_and_dctest."]
     pub ldo11soc_and_dctest: crate::Reg<ldo11soc_and_dctest::LDO11SOC_AND_DCTEST_SPEC>,
-    #[doc = "0x820 - psw_irrcv."]
+    #[doc = "0x20 - psw_irrcv."]
     pub psw_irrcv: crate::Reg<psw_irrcv::PSW_IRRCV_SPEC>,
     _reserved8: [u8; 92usize],
-    #[doc = "0x880 - rf_top_aon."]
+    #[doc = "0x80 - rf_top_aon."]
     pub rf_top_aon: crate::Reg<rf_top_aon::RF_TOP_AON_SPEC>,
-    #[doc = "0x884 - xtal_cfg."]
+    #[doc = "0x84 - xtal_cfg."]
     pub xtal_cfg: crate::Reg<xtal_cfg::XTAL_CFG_SPEC>,
-    #[doc = "0x888 - tsen."]
+    #[doc = "0x88 - tsen."]
     pub tsen: crate::Reg<tsen::TSEN_SPEC>,
     _reserved11: [u8; 116usize],
-    #[doc = "0x900 - acomp0_ctrl."]
+    #[doc = "0x100 - acomp0_ctrl."]
     pub acomp0_ctrl: crate::Reg<acomp0_ctrl::ACOMP0_CTRL_SPEC>,
-    #[doc = "0x904 - acomp1_ctrl."]
+    #[doc = "0x104 - acomp1_ctrl."]
     pub acomp1_ctrl: crate::Reg<acomp1_ctrl::ACOMP1_CTRL_SPEC>,
-    #[doc = "0x908 - acomp_ctrl."]
+    #[doc = "0x108 - acomp_ctrl."]
     pub acomp_ctrl: crate::Reg<acomp_ctrl::ACOMP_CTRL_SPEC>,
-    #[doc = "0x90c - gpadc_reg_cmd."]
+    #[doc = "0x10c - gpadc_reg_cmd."]
     pub gpadc_reg_cmd: crate::Reg<gpadc_reg_cmd::GPADC_REG_CMD_SPEC>,
-    #[doc = "0x910 - gpadc_reg_config1."]
+    #[doc = "0x110 - gpadc_reg_config1."]
     pub gpadc_reg_config1: crate::Reg<gpadc_reg_config1::GPADC_REG_CONFIG1_SPEC>,
-    #[doc = "0x914 - gpadc_reg_config2."]
+    #[doc = "0x114 - gpadc_reg_config2."]
     pub gpadc_reg_config2: crate::Reg<gpadc_reg_config2::GPADC_REG_CONFIG2_SPEC>,
-    #[doc = "0x918 - adc converation sequence 1"]
+    #[doc = "0x118 - adc converation sequence 1"]
     pub gpadc_reg_scn_pos1: crate::Reg<gpadc_reg_scn_pos1::GPADC_REG_SCN_POS1_SPEC>,
-    #[doc = "0x91c - adc converation sequence 2"]
+    #[doc = "0x11c - adc converation sequence 2"]
     pub gpadc_reg_scn_pos2: crate::Reg<gpadc_reg_scn_pos2::GPADC_REG_SCN_POS2_SPEC>,
-    #[doc = "0x920 - adc converation sequence 3"]
+    #[doc = "0x120 - adc converation sequence 3"]
     pub gpadc_reg_scn_neg1: crate::Reg<gpadc_reg_scn_neg1::GPADC_REG_SCN_NEG1_SPEC>,
-    #[doc = "0x924 - adc converation sequence 4"]
+    #[doc = "0x124 - adc converation sequence 4"]
     pub gpadc_reg_scn_neg2: crate::Reg<gpadc_reg_scn_neg2::GPADC_REG_SCN_NEG2_SPEC>,
-    #[doc = "0x928 - gpadc_reg_status."]
+    #[doc = "0x128 - gpadc_reg_status."]
     pub gpadc_reg_status: crate::Reg<gpadc_reg_status::GPADC_REG_STATUS_SPEC>,
-    #[doc = "0x92c - gpadc_reg_isr."]
+    #[doc = "0x12c - gpadc_reg_isr."]
     pub gpadc_reg_isr: crate::Reg<gpadc_reg_isr::GPADC_REG_ISR_SPEC>,
-    #[doc = "0x930 - gpadc_reg_result."]
+    #[doc = "0x130 - gpadc_reg_result."]
     pub gpadc_reg_result: crate::Reg<gpadc_reg_result::GPADC_REG_RESULT_SPEC>,
-    #[doc = "0x934 - gpadc_reg_raw_result."]
+    #[doc = "0x134 - gpadc_reg_raw_result."]
     pub gpadc_reg_raw_result: crate::Reg<gpadc_reg_raw_result::GPADC_REG_RAW_RESULT_SPEC>,
-    #[doc = "0x938 - gpadc_reg_define."]
+    #[doc = "0x138 - gpadc_reg_define."]
     pub gpadc_reg_define: crate::Reg<gpadc_reg_define::GPADC_REG_DEFINE_SPEC>,
-    #[doc = "0x93c - hbncore_resv0."]
+    #[doc = "0x13c - hbncore_resv0."]
     pub hbncore_resv0: crate::Reg<hbncore_resv0::HBNCORE_RESV0_SPEC>,
-    #[doc = "0x940 - hbncore_resv1."]
+    #[doc = "0x140 - hbncore_resv1."]
     pub hbncore_resv1: crate::Reg<hbncore_resv1::HBNCORE_RESV1_SPEC>,
 }
 #[doc = "aon register accessor: an alias for `Reg<AON_SPEC>`"]

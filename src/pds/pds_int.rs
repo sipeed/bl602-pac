@@ -64,7 +64,7 @@ impl<'a> CR_PDS_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> CR_PDS_PLL_DONE_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> CR_PDS_RF_DONE_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
@@ -172,7 +172,7 @@ impl<'a> CR_PDS_IRQ_IN_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> CR_PDS_WAKE_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
@@ -226,28 +226,6 @@ impl core::ops::Deref for RO_PDS_PLL_DONE_INT_R {
         &self.0
     }
 }
-#[doc = "Field `ro_pds_pll_done_int` writer - "]
-pub struct RO_PDS_PLL_DONE_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_PDS_PLL_DONE_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
-    }
-}
 #[doc = "Field `ro_pds_rf_done_int` reader - "]
 pub struct RO_PDS_RF_DONE_INT_R(crate::FieldReader<bool, bool>);
 impl RO_PDS_RF_DONE_INT_R {
@@ -260,28 +238,6 @@ impl core::ops::Deref for RO_PDS_RF_DONE_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ro_pds_rf_done_int` writer - "]
-pub struct RO_PDS_RF_DONE_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_PDS_RF_DONE_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
     }
 }
 #[doc = "Field `ro_pds_irq_in` reader - "]
@@ -298,28 +254,6 @@ impl core::ops::Deref for RO_PDS_IRQ_IN_R {
         &self.0
     }
 }
-#[doc = "Field `ro_pds_irq_in` writer - "]
-pub struct RO_PDS_IRQ_IN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_PDS_IRQ_IN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `ro_pds_wake_int` reader - "]
 pub struct RO_PDS_WAKE_INT_R(crate::FieldReader<bool, bool>);
 impl RO_PDS_WAKE_INT_R {
@@ -332,28 +266,6 @@ impl core::ops::Deref for RO_PDS_WAKE_INT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `ro_pds_wake_int` writer - "]
-pub struct RO_PDS_WAKE_INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_PDS_WAKE_INT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
     }
 }
 impl R {
@@ -428,26 +340,6 @@ impl W {
     #[inline(always)]
     pub fn cr_pds_wake_int_mask(&mut self) -> CR_PDS_WAKE_INT_MASK_W {
         CR_PDS_WAKE_INT_MASK_W { w: self }
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn ro_pds_pll_done_int(&mut self) -> RO_PDS_PLL_DONE_INT_W {
-        RO_PDS_PLL_DONE_INT_W { w: self }
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn ro_pds_rf_done_int(&mut self) -> RO_PDS_RF_DONE_INT_W {
-        RO_PDS_RF_DONE_INT_W { w: self }
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn ro_pds_irq_in(&mut self) -> RO_PDS_IRQ_IN_W {
-        RO_PDS_IRQ_IN_W { w: self }
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn ro_pds_wake_int(&mut self) -> RO_PDS_WAKE_INT_W {
-        RO_PDS_WAKE_INT_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

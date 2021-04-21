@@ -54,7 +54,7 @@ impl<'a> CR_URX_BIT_PRD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
+        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> CR_UTX_BIT_PRD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
+        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
         self.w
     }
 }
@@ -126,10 +126,10 @@ impl crate::Readable for UART_BIT_PRD_SPEC {
 impl crate::Writable for UART_BIT_PRD_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets uart_bit_prd to value 0"]
+#[doc = "`reset()` method sets uart_bit_prd to value 0x00ff_00ff"]
 impl crate::Resettable for UART_BIT_PRD_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x00ff_00ff
     }
 }

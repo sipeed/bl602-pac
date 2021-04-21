@@ -64,7 +64,7 @@ impl<'a> CLKPLL_SHRTR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -90,7 +90,7 @@ impl<'a> CLKPLL_VCO_SPEED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
+        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
         self.w
     }
 }
@@ -136,10 +136,10 @@ impl crate::Readable for CLKPLL_VCO_SPEC {
 impl crate::Writable for CLKPLL_VCO_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets clkpll_vco to value 0"]
+#[doc = "`reset()` method sets clkpll_vco to value 0x07"]
 impl crate::Resettable for CLKPLL_VCO_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x07
     }
 }

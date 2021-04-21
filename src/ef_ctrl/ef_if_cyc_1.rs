@@ -54,7 +54,7 @@ impl<'a> EF_IF_CYC_PD_CS_H_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 26)) | (((value as u32) & 0x3f) << 26);
+        self.w.bits = (self.w.bits & !(0x3f << 26)) | ((value as u32 & 0x3f) << 26);
         self.w
     }
 }
@@ -80,7 +80,7 @@ impl<'a> EF_IF_CYC_PS_CS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 20)) | (((value as u32) & 0x3f) << 20);
+        self.w.bits = (self.w.bits & !(0x3f << 20)) | ((value as u32 & 0x3f) << 20);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> EF_IF_CYC_WR_ADR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 14)) | (((value as u32) & 0x3f) << 14);
+        self.w.bits = (self.w.bits & !(0x3f << 14)) | ((value as u32 & 0x3f) << 14);
         self.w
     }
 }
@@ -132,7 +132,7 @@ impl<'a> EF_IF_CYC_PP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 6)) | (((value as u32) & 0xff) << 6);
+        self.w.bits = (self.w.bits & !(0xff << 6)) | ((value as u32 & 0xff) << 6);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> EF_IF_CYC_PI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | ((value as u32) & 0x3f);
+        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
         self.w
     }
 }
@@ -234,10 +234,10 @@ impl crate::Readable for EF_IF_CYC_1_SPEC {
 impl crate::Writable for EF_IF_CYC_1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets ef_if_cyc_1 to value 0"]
+#[doc = "`reset()` method sets ef_if_cyc_1 to value 0x0020_6609"]
 impl crate::Resettable for EF_IF_CYC_1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0020_6609
     }
 }

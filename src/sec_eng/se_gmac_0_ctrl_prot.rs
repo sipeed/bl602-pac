@@ -64,7 +64,7 @@ impl<'a> SE_GMAC_ID1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl<'a> SE_GMAC_ID0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -136,7 +136,7 @@ impl<'a> SE_GMAC_PROT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -192,10 +192,10 @@ impl crate::Readable for SE_GMAC_0_CTRL_PROT_SPEC {
 impl crate::Writable for SE_GMAC_0_CTRL_PROT_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets se_gmac_0_ctrl_prot to value 0"]
+#[doc = "`reset()` method sets se_gmac_0_ctrl_prot to value 0x07"]
 impl crate::Resettable for SE_GMAC_0_CTRL_PROT_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x07
     }
 }

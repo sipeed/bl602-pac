@@ -60,28 +60,6 @@ impl core::ops::Deref for CHIP_RDY_R {
         &self.0
     }
 }
-#[doc = "Field `chip_rdy` writer - "]
-pub struct CHIP_RDY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHIP_RDY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
-        self.w
-    }
-}
 #[doc = "Field `fclk_sw_state` reader - "]
 pub struct FCLK_SW_STATE_R(crate::FieldReader<u8, u8>);
 impl FCLK_SW_STATE_R {
@@ -94,18 +72,6 @@ impl core::ops::Deref for FCLK_SW_STATE_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `fclk_sw_state` writer - "]
-pub struct FCLK_SW_STATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FCLK_SW_STATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 24)) | (((value as u32) & 0x07) << 24);
-        self.w
     }
 }
 #[doc = "Field `reg_bclk_div` reader - Base clock divider"]
@@ -130,7 +96,7 @@ impl<'a> REG_BCLK_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | (((value as u32) & 0xff) << 16);
+        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
         self.w
     }
 }
@@ -156,7 +122,7 @@ impl<'a> REG_HCLK_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -172,18 +138,6 @@ impl core::ops::Deref for HBN_ROOT_CLK_SEL_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
-}
-#[doc = "Field `hbn_root_clk_sel` writer - "]
-pub struct HBN_ROOT_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HBN_ROOT_CLK_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u32) & 0x03) << 6);
-        self.w
     }
 }
 #[doc = "Field `reg_pll_sel` reader - PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)"]
@@ -208,7 +162,7 @@ impl<'a> REG_PLL_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
         self.w
     }
 }
@@ -244,7 +198,7 @@ impl<'a> REG_BCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
@@ -280,7 +234,7 @@ impl<'a> REG_HCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -316,7 +270,7 @@ impl<'a> REG_FCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -352,7 +306,7 @@ impl<'a> REG_PLL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -414,16 +368,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn chip_rdy(&mut self) -> CHIP_RDY_W {
-        CHIP_RDY_W { w: self }
-    }
-    #[doc = "Bits 24:26"]
-    #[inline(always)]
-    pub fn fclk_sw_state(&mut self) -> FCLK_SW_STATE_W {
-        FCLK_SW_STATE_W { w: self }
-    }
     #[doc = "Bits 16:23 - Base clock divider"]
     #[inline(always)]
     pub fn reg_bclk_div(&mut self) -> REG_BCLK_DIV_W {
@@ -433,11 +377,6 @@ impl W {
     #[inline(always)]
     pub fn reg_hclk_div(&mut self) -> REG_HCLK_DIV_W {
         REG_HCLK_DIV_W { w: self }
-    }
-    #[doc = "Bits 6:7"]
-    #[inline(always)]
-    pub fn hbn_root_clk_sel(&mut self) -> HBN_ROOT_CLK_SEL_W {
-        HBN_ROOT_CLK_SEL_W { w: self }
     }
     #[doc = "Bits 4:5 - PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)"]
     #[inline(always)]
@@ -483,10 +422,10 @@ impl crate::Readable for CLK_CFG0_SPEC {
 impl crate::Writable for CLK_CFG0_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets clk_cfg0 to value 0"]
+#[doc = "`reset()` method sets clk_cfg0 to value 0x6000_000f"]
 impl crate::Resettable for CLK_CFG0_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x6000_000f
     }
 }
