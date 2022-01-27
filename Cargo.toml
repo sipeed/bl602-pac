@@ -14,13 +14,13 @@ categories = ["embedded", "hardware-support", "no-std"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-riscv = "0.6.0"
+riscv = "0.7.0"
 bare-metal = "1.0.0"
 vcell = "0.1.2"
 
 [dependencies.riscv-rt]
 optional = true
-version = "0.8.0"
+version = "0.8.1"
 
 [features]
 rt = ["riscv-rt"]
