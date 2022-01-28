@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SE_SHA_0_HASH_L_6_SPEC>> for R {
+impl From<crate::R<SE_SHA_0_HASH_L_6_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SE_SHA_0_HASH_L_6_SPEC>) -> Self {
         R(reader)
     }

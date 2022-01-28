@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     pub spi_int_sts: crate::Reg<spi_int_sts::SPI_INT_STS_SPEC>,
     #[doc = "0x08 - spi_bus_busy."]
     pub spi_bus_busy: crate::Reg<spi_bus_busy::SPI_BUS_BUSY_SPEC>,
-    _reserved3: [u8; 4usize],
+    _reserved3: [u8; 0x04],
     #[doc = "0x10 - spi_prd_0."]
     pub spi_prd_0: crate::Reg<spi_prd_0::SPI_PRD_0_SPEC>,
     #[doc = "0x14 - spi_prd_1."]
@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     pub spi_rxd_ignr: crate::Reg<spi_rxd_ignr::SPI_RXD_IGNR_SPEC>,
     #[doc = "0x1c - spi_sto_value."]
     pub spi_sto_value: crate::Reg<spi_sto_value::SPI_STO_VALUE_SPEC>,
-    _reserved7: [u8; 96usize],
+    _reserved7: [u8; 0x60],
     #[doc = "0x80 - spi_fifo_config_0."]
     pub spi_fifo_config_0: crate::Reg<spi_fifo_config_0::SPI_FIFO_CONFIG_0_SPEC>,
     #[doc = "0x84 - spi_fifo_config_1."]

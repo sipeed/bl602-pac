@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<I2C_FIFO_RDATA_SPEC>> for R {
+impl From<crate::R<I2C_FIFO_RDATA_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<I2C_FIFO_RDATA_SPEC>) -> Self {
         R(reader)
     }

@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     pub pds_ctl: crate::Reg<pds_ctl::PDS_CTL_SPEC>,
     #[doc = "0x04 - PDS_TIME1."]
     pub pds_time1: crate::Reg<pds_time1::PDS_TIME1_SPEC>,
-    _reserved2: [u8; 4usize],
+    _reserved2: [u8; 0x04],
     #[doc = "0x0c - PDS_INT."]
     pub pds_int: crate::Reg<pds_int::PDS_INT_SPEC>,
     #[doc = "0x10 - PDS_CTL2."]
@@ -18,12 +18,12 @@ pub struct RegisterBlock {
     pub pds_stat: crate::Reg<pds_stat::PDS_STAT_SPEC>,
     #[doc = "0x20 - pds_ram1."]
     pub pds_ram1: crate::Reg<pds_ram1::PDS_RAM1_SPEC>,
-    _reserved8: [u8; 732usize],
+    _reserved8: [u8; 0x02dc],
     #[doc = "0x300 - rc32m_ctrl0."]
     pub rc32m_ctrl0: crate::Reg<rc32m_ctrl0::RC32M_CTRL0_SPEC>,
     #[doc = "0x304 - rc32m_ctrl1."]
     pub rc32m_ctrl1: crate::Reg<rc32m_ctrl1::RC32M_CTRL1_SPEC>,
-    _reserved10: [u8; 248usize],
+    _reserved10: [u8; 0xf8],
     #[doc = "0x400 - pu_rst_clkpll."]
     pub pu_rst_clkpll: crate::Reg<pu_rst_clkpll::PU_RST_CLKPLL_SPEC>,
     #[doc = "0x404 - clkpll_top_ctrl."]

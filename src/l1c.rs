@@ -11,7 +11,7 @@ pub struct RegisterBlock {
     pub miss_cnt: crate::Reg<miss_cnt::MISS_CNT_SPEC>,
     #[doc = "0x10 - l1c_range."]
     pub l1c_range: crate::Reg<l1c_range::L1C_RANGE_SPEC>,
-    _reserved5: [u8; 492usize],
+    _reserved5: [u8; 0x01ec],
     #[doc = "0x200 - l1c_bmx_err_addr_en."]
     pub l1c_bmx_err_addr_en: crate::Reg<l1c_bmx_err_addr_en::L1C_BMX_ERR_ADDR_EN_SPEC>,
     #[doc = "0x204 - l1c_bmx_err_addr."]

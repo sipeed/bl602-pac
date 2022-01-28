@@ -13,7 +13,7 @@ pub struct RegisterBlock {
     pub irtx_pulse_width: crate::Reg<irtx_pulse_width::IRTX_PULSE_WIDTH_SPEC>,
     #[doc = "0x14 - irtx_pw."]
     pub irtx_pw: crate::Reg<irtx_pw::IRTX_PW_SPEC>,
-    _reserved6: [u8; 40usize],
+    _reserved6: [u8; 0x28],
     #[doc = "0x40 - irtx_swm_pw_0."]
     pub irtx_swm_pw_0: crate::Reg<irtx_swm_pw_0::IRTX_SWM_PW_0_SPEC>,
     #[doc = "0x44 - irtx_swm_pw_1."]
@@ -30,21 +30,21 @@ pub struct RegisterBlock {
     pub irtx_swm_pw_6: crate::Reg<irtx_swm_pw_6::IRTX_SWM_PW_6_SPEC>,
     #[doc = "0x5c - irtx_swm_pw_7."]
     pub irtx_swm_pw_7: crate::Reg<irtx_swm_pw_7::IRTX_SWM_PW_7_SPEC>,
-    _reserved14: [u8; 32usize],
+    _reserved14: [u8; 0x20],
     #[doc = "0x80 - irrx_config."]
     pub irrx_config: crate::Reg<irrx_config::IRRX_CONFIG_SPEC>,
     #[doc = "0x84 - irrx_int_sts."]
     pub irrx_int_sts: crate::Reg<irrx_int_sts::IRRX_INT_STS_SPEC>,
     #[doc = "0x88 - irrx_pw_config."]
     pub irrx_pw_config: crate::Reg<irrx_pw_config::IRRX_PW_CONFIG_SPEC>,
-    _reserved17: [u8; 4usize],
+    _reserved17: [u8; 0x04],
     #[doc = "0x90 - irrx_data_count."]
     pub irrx_data_count: crate::Reg<irrx_data_count::IRRX_DATA_COUNT_SPEC>,
     #[doc = "0x94 - irrx_data_word0."]
     pub irrx_data_word0: crate::Reg<irrx_data_word0::IRRX_DATA_WORD0_SPEC>,
     #[doc = "0x98 - irrx_data_word1."]
     pub irrx_data_word1: crate::Reg<irrx_data_word1::IRRX_DATA_WORD1_SPEC>,
-    _reserved20: [u8; 36usize],
+    _reserved20: [u8; 0x24],
     #[doc = "0xc0 - irrx_swm_fifo_config_0."]
     pub irrx_swm_fifo_config_0: crate::Reg<irrx_swm_fifo_config_0::IRRX_SWM_FIFO_CONFIG_0_SPEC>,
     #[doc = "0xc4 - irrx_swm_fifo_rdata."]

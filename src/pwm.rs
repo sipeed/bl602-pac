@@ -3,7 +3,7 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - pwm_int_config."]
     pub pwm_int_config: crate::Reg<pwm_int_config::PWM_INT_CONFIG_SPEC>,
-    _reserved1: [u8; 28usize],
+    _reserved1: [u8; 0x1c],
     #[doc = "0x20 - pwm0_clkdiv."]
     pub pwm0_clkdiv: crate::Reg<pwm0_clkdiv::PWM0_CLKDIV_SPEC>,
     #[doc = "0x24 - pwm0_thre1."]
@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     pub pwm0_config: crate::Reg<pwm0_config::PWM0_CONFIG_SPEC>,
     #[doc = "0x34 - pwm0_interrupt."]
     pub pwm0_interrupt: crate::Reg<pwm0_interrupt::PWM0_INTERRUPT_SPEC>,
-    _reserved7: [u8; 8usize],
+    _reserved7: [u8; 0x08],
     #[doc = "0x40 - pwm1_clkdiv."]
     pub pwm1_clkdiv: crate::Reg<pwm1_clkdiv::PWM1_CLKDIV_SPEC>,
     #[doc = "0x44 - pwm1_thre1."]
@@ -29,7 +29,7 @@ pub struct RegisterBlock {
     pub pwm1_config: crate::Reg<pwm1_config::PWM1_CONFIG_SPEC>,
     #[doc = "0x54 - pwm1_interrupt."]
     pub pwm1_interrupt: crate::Reg<pwm1_interrupt::PWM1_INTERRUPT_SPEC>,
-    _reserved13: [u8; 8usize],
+    _reserved13: [u8; 0x08],
     #[doc = "0x60 - pwm2_clkdiv."]
     pub pwm2_clkdiv: crate::Reg<pwm2_clkdiv::PWM2_CLKDIV_SPEC>,
     #[doc = "0x64 - pwm2_thre1."]
@@ -42,7 +42,7 @@ pub struct RegisterBlock {
     pub pwm2_config: crate::Reg<pwm2_config::PWM2_CONFIG_SPEC>,
     #[doc = "0x74 - pwm2_interrupt."]
     pub pwm2_interrupt: crate::Reg<pwm2_interrupt::PWM2_INTERRUPT_SPEC>,
-    _reserved19: [u8; 8usize],
+    _reserved19: [u8; 0x08],
     #[doc = "0x80 - pwm3_clkdiv."]
     pub pwm3_clkdiv: crate::Reg<pwm3_clkdiv::PWM3_CLKDIV_SPEC>,
     #[doc = "0x84 - pwm3_thre1."]
@@ -55,7 +55,7 @@ pub struct RegisterBlock {
     pub pwm3_config: crate::Reg<pwm3_config::PWM3_CONFIG_SPEC>,
     #[doc = "0x94 - pwm3_interrupt."]
     pub pwm3_interrupt: crate::Reg<pwm3_interrupt::PWM3_INTERRUPT_SPEC>,
-    _reserved25: [u8; 8usize],
+    _reserved25: [u8; 0x08],
     #[doc = "0xa0 - pwm4_clkdiv."]
     pub pwm4_clkdiv: crate::Reg<pwm4_clkdiv::PWM4_CLKDIV_SPEC>,
     #[doc = "0xa4 - pwm4_thre1."]

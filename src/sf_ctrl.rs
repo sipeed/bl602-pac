@@ -71,12 +71,12 @@ pub struct RegisterBlock {
     pub sf_if_iahb_6: crate::Reg<sf_if_iahb_6::SF_IF_IAHB_6_SPEC>,
     #[doc = "0x88 - sf_if_iahb_7."]
     pub sf_if_iahb_7: crate::Reg<sf_if_iahb_7::SF_IF_IAHB_7_SPEC>,
-    _reserved35: [u8; 116usize],
+    _reserved35: [u8; 0x74],
     #[doc = "0x100 - sf_ctrl_prot_en_rd."]
     pub sf_ctrl_prot_en_rd: crate::Reg<sf_ctrl_prot_en_rd::SF_CTRL_PROT_EN_RD_SPEC>,
     #[doc = "0x104 - sf_ctrl_prot_en."]
     pub sf_ctrl_prot_en: crate::Reg<sf_ctrl_prot_en::SF_CTRL_PROT_EN_SPEC>,
-    _reserved37: [u8; 248usize],
+    _reserved37: [u8; 0xf8],
     #[doc = "0x200 - sf_aes_key_r0_0."]
     pub sf_aes_key_r0_0: crate::Reg<sf_aes_key_r0_0::SF_AES_KEY_R0_0_SPEC>,
     #[doc = "0x204 - sf_aes_key_r0_1."]
@@ -103,7 +103,7 @@ pub struct RegisterBlock {
     pub sf_aes_iv_r0_w3: crate::Reg<sf_aes_iv_r0_w3::SF_AES_IV_R0_W3_SPEC>,
     #[doc = "0x230 - sf_aes_cfg_r0."]
     pub sf_aes_cfg_r0: crate::Reg<sf_aes_cfg_r0::SF_AES_CFG_R0_SPEC>,
-    _reserved50: [u8; 204usize],
+    _reserved50: [u8; 0xcc],
     #[doc = "0x300 - sf_aes_key_r1_0."]
     pub sf_aes_key_r1_0: crate::Reg<sf_aes_key_r1_0::SF_AES_KEY_R1_0_SPEC>,
     #[doc = "0x304 - sf_aes_key_r1_1."]
@@ -130,7 +130,7 @@ pub struct RegisterBlock {
     pub sf_aes_iv_r1_w3: crate::Reg<sf_aes_iv_r1_w3::SF_AES_IV_R1_W3_SPEC>,
     #[doc = "0x330 - sf_aes_r1."]
     pub sf_aes_r1: crate::Reg<sf_aes_r1::SF_AES_R1_SPEC>,
-    _reserved63: [u8; 204usize],
+    _reserved63: [u8; 0xcc],
     #[doc = "0x400 - sf_aes_key_r2_0."]
     pub sf_aes_key_r2_0: crate::Reg<sf_aes_key_r2_0::SF_AES_KEY_R2_0_SPEC>,
     #[doc = "0x404 - sf_aes_key_r2_1."]

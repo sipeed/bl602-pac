@@ -43,7 +43,7 @@ pub struct RegisterBlock {
     pub se_sha_0_hash_h_7: crate::Reg<se_sha_0_hash_h_7::SE_SHA_0_HASH_H_7_SPEC>,
     #[doc = "0x50 - se_sha_0_link."]
     pub se_sha_0_link: crate::Reg<se_sha_0_link::SE_SHA_0_LINK_SPEC>,
-    _reserved21: [u8; 168usize],
+    _reserved21: [u8; 0xa8],
     #[doc = "0xfc - se_sha_0_ctrl_prot."]
     pub se_sha_0_ctrl_prot: crate::Reg<se_sha_0_ctrl_prot::SE_SHA_0_CTRL_PROT_SPEC>,
     #[doc = "0x100 - se_aes_0_ctrl."]
@@ -88,7 +88,7 @@ pub struct RegisterBlock {
     pub se_aes_0_sboot: crate::Reg<se_aes_0_sboot::SE_AES_0_SBOOT_SPEC>,
     #[doc = "0x150 - se_aes_0_link."]
     pub se_aes_0_link: crate::Reg<se_aes_0_link::SE_AES_0_LINK_SPEC>,
-    _reserved43: [u8; 168usize],
+    _reserved43: [u8; 0xa8],
     #[doc = "0x1fc - se_aes_0_ctrl_prot."]
     pub se_aes_0_ctrl_prot: crate::Reg<se_aes_0_ctrl_prot::SE_AES_0_CTRL_PROT_SPEC>,
     #[doc = "0x200 - se_trng_0_ctrl_0."]
@@ -119,7 +119,7 @@ pub struct RegisterBlock {
     pub se_trng_0_ctrl_2: crate::Reg<se_trng_0_ctrl_2::SE_TRNG_0_CTRL_2_SPEC>,
     #[doc = "0x234 - se_trng_0_ctrl_3."]
     pub se_trng_0_ctrl_3: crate::Reg<se_trng_0_ctrl_3::SE_TRNG_0_CTRL_3_SPEC>,
-    _reserved58: [u8; 8usize],
+    _reserved58: [u8; 0x08],
     #[doc = "0x240 - se_trng_0_test_out_0."]
     pub se_trng_0_test_out_0: crate::Reg<se_trng_0_test_out_0::SE_TRNG_0_TEST_OUT_0_SPEC>,
     #[doc = "0x244 - se_trng_0_test_out_1."]
@@ -128,30 +128,30 @@ pub struct RegisterBlock {
     pub se_trng_0_test_out_2: crate::Reg<se_trng_0_test_out_2::SE_TRNG_0_TEST_OUT_2_SPEC>,
     #[doc = "0x24c - se_trng_0_test_out_3."]
     pub se_trng_0_test_out_3: crate::Reg<se_trng_0_test_out_3::SE_TRNG_0_TEST_OUT_3_SPEC>,
-    _reserved62: [u8; 172usize],
+    _reserved62: [u8; 0xac],
     #[doc = "0x2fc - se_trng_0_ctrl_prot."]
     pub se_trng_0_ctrl_prot: crate::Reg<se_trng_0_ctrl_prot::SE_TRNG_0_CTRL_PROT_SPEC>,
     #[doc = "0x300 - se_pka_0_ctrl_0."]
     pub se_pka_0_ctrl_0: crate::Reg<se_pka_0_ctrl_0::SE_PKA_0_CTRL_0_SPEC>,
-    _reserved64: [u8; 8usize],
+    _reserved64: [u8; 0x08],
     #[doc = "0x30c - se_pka_0_seed."]
     pub se_pka_0_seed: crate::Reg<se_pka_0_seed::SE_PKA_0_SEED_SPEC>,
     #[doc = "0x310 - se_pka_0_ctrl_1."]
     pub se_pka_0_ctrl_1: crate::Reg<se_pka_0_ctrl_1::SE_PKA_0_CTRL_1_SPEC>,
-    _reserved66: [u8; 44usize],
+    _reserved66: [u8; 0x2c],
     #[doc = "0x340 - se_pka_0_rw."]
     pub se_pka_0_rw: crate::Reg<se_pka_0_rw::SE_PKA_0_RW_SPEC>,
-    _reserved67: [u8; 28usize],
+    _reserved67: [u8; 0x1c],
     #[doc = "0x360 - se_pka_0_rw_burst."]
     pub se_pka_0_rw_burst: crate::Reg<se_pka_0_rw_burst::SE_PKA_0_RW_BURST_SPEC>,
-    _reserved68: [u8; 152usize],
+    _reserved68: [u8; 0x98],
     #[doc = "0x3fc - se_pka_0_ctrl_prot."]
     pub se_pka_0_ctrl_prot: crate::Reg<se_pka_0_ctrl_prot::SE_PKA_0_CTRL_PROT_SPEC>,
     #[doc = "0x400 - se_cdet_0_ctrl_0."]
     pub se_cdet_0_ctrl_0: crate::Reg<se_cdet_0_ctrl_0::SE_CDET_0_CTRL_0_SPEC>,
     #[doc = "0x404 - se_cdet_0_ctrl_1."]
     pub se_cdet_0_ctrl_1: crate::Reg<se_cdet_0_ctrl_1::SE_CDET_0_CTRL_1_SPEC>,
-    _reserved71: [u8; 244usize],
+    _reserved71: [u8; 0xf4],
     #[doc = "0x4fc - se_cdet_0_ctrl_prot."]
     pub se_cdet_0_ctrl_prot: crate::Reg<se_cdet_0_ctrl_prot::SE_CDET_0_CTRL_PROT_SPEC>,
     #[doc = "0x500 - se_gmac_0_ctrl_0."]
@@ -160,10 +160,10 @@ pub struct RegisterBlock {
     pub se_gmac_0_lca: crate::Reg<se_gmac_0_lca::SE_GMAC_0_LCA_SPEC>,
     #[doc = "0x508 - se_gmac_0_status."]
     pub se_gmac_0_status: crate::Reg<se_gmac_0_status::SE_GMAC_0_STATUS_SPEC>,
-    _reserved75: [u8; 240usize],
+    _reserved75: [u8; 0xf0],
     #[doc = "0x5fc - se_gmac_0_ctrl_prot."]
     pub se_gmac_0_ctrl_prot: crate::Reg<se_gmac_0_ctrl_prot::SE_GMAC_0_CTRL_PROT_SPEC>,
-    _reserved76: [u8; 2304usize],
+    _reserved76: [u8; 0x0900],
     #[doc = "0xf00 - se_ctrl_prot_rd."]
     pub se_ctrl_prot_rd: crate::Reg<se_ctrl_prot_rd::SE_CTRL_PROT_RD_SPEC>,
     #[doc = "0xf04 - se_ctrl_reserved_0."]

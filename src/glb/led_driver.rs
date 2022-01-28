@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<LED_DRIVER_SPEC>> for R {
+impl From<crate::R<LED_DRIVER_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<LED_DRIVER_SPEC>) -> Self {
         R(reader)
     }
@@ -27,7 +28,8 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<LED_DRIVER_SPEC>> for W {
+impl From<crate::W<LED_DRIVER_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<LED_DRIVER_SPEC>) -> Self {
         W(writer)
     }
@@ -292,6 +294,7 @@ impl W {
         LED_DIN_REG_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self

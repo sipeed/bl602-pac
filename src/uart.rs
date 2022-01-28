@@ -15,7 +15,7 @@ pub struct RegisterBlock {
     pub urx_ir_position: crate::Reg<urx_ir_position::URX_IR_POSITION_SPEC>,
     #[doc = "0x18 - urx_rto_timer."]
     pub urx_rto_timer: crate::Reg<urx_rto_timer::URX_RTO_TIMER_SPEC>,
-    _reserved7: [u8; 4usize],
+    _reserved7: [u8; 0x04],
     #[doc = "0x20 - UART interrupt status"]
     pub uart_int_sts: crate::Reg<uart_int_sts::UART_INT_STS_SPEC>,
     #[doc = "0x24 - UART interrupt mask"]
@@ -28,7 +28,7 @@ pub struct RegisterBlock {
     pub uart_status: crate::Reg<uart_status::UART_STATUS_SPEC>,
     #[doc = "0x34 - sts_urx_abr_prd."]
     pub sts_urx_abr_prd: crate::Reg<sts_urx_abr_prd::STS_URX_ABR_PRD_SPEC>,
-    _reserved13: [u8; 72usize],
+    _reserved13: [u8; 0x48],
     #[doc = "0x80 - uart_fifo_config_0."]
     pub uart_fifo_config_0: crate::Reg<uart_fifo_config_0::UART_FIFO_CONFIG_0_SPEC>,
     #[doc = "0x84 - uart_fifo_config_1."]

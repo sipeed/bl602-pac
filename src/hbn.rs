@@ -29,7 +29,7 @@ pub struct RegisterBlock {
     pub hbn_glb: crate::Reg<hbn_glb::HBN_GLB_SPEC>,
     #[doc = "0x34 - HBN_SRAM."]
     pub hbn_sram: crate::Reg<hbn_sram::HBN_SRAM_SPEC>,
-    _reserved14: [u8; 200usize],
+    _reserved14: [u8; 0xc8],
     #[doc = "0x100 - HBN_RSV0."]
     pub hbn_rsv0: crate::Reg<hbn_rsv0::HBN_RSV0_SPEC>,
     #[doc = "0x104 - HBN_RSV1."]
@@ -38,7 +38,7 @@ pub struct RegisterBlock {
     pub hbn_rsv2: crate::Reg<hbn_rsv2::HBN_RSV2_SPEC>,
     #[doc = "0x10c - HBN_RSV3."]
     pub hbn_rsv3: crate::Reg<hbn_rsv3::HBN_RSV3_SPEC>,
-    _reserved18: [u8; 240usize],
+    _reserved18: [u8; 0xf0],
     #[doc = "0x200 - rc32k_ctrl0."]
     pub rc32k_ctrl0: crate::Reg<rc32k_ctrl0::RC32K_CTRL0_SPEC>,
     #[doc = "0x204 - xtal32k."]

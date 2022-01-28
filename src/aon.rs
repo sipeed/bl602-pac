@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     pub aon_common: crate::Reg<aon_common::AON_COMMON_SPEC>,
     #[doc = "0x08 - aon_misc."]
     pub aon_misc: crate::Reg<aon_misc::AON_MISC_SPEC>,
-    _reserved3: [u8; 4usize],
+    _reserved3: [u8; 0x04],
     #[doc = "0x10 - bg_sys_top."]
     pub bg_sys_top: crate::Reg<bg_sys_top::BG_SYS_TOP_SPEC>,
     #[doc = "0x14 - dcdc18_top_0."]
@@ -18,14 +18,14 @@ pub struct RegisterBlock {
     pub ldo11soc_and_dctest: crate::Reg<ldo11soc_and_dctest::LDO11SOC_AND_DCTEST_SPEC>,
     #[doc = "0x20 - psw_irrcv."]
     pub psw_irrcv: crate::Reg<psw_irrcv::PSW_IRRCV_SPEC>,
-    _reserved8: [u8; 92usize],
+    _reserved8: [u8; 0x5c],
     #[doc = "0x80 - rf_top_aon."]
     pub rf_top_aon: crate::Reg<rf_top_aon::RF_TOP_AON_SPEC>,
     #[doc = "0x84 - xtal_cfg."]
     pub xtal_cfg: crate::Reg<xtal_cfg::XTAL_CFG_SPEC>,
     #[doc = "0x88 - tsen."]
     pub tsen: crate::Reg<tsen::TSEN_SPEC>,
-    _reserved11: [u8; 116usize],
+    _reserved11: [u8; 0x74],
     #[doc = "0x100 - acomp0_ctrl."]
     pub acomp0_ctrl: crate::Reg<acomp0_ctrl::ACOMP0_CTRL_SPEC>,
     #[doc = "0x104 - acomp1_ctrl."]

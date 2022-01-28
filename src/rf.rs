@@ -75,7 +75,7 @@ pub struct RegisterBlock {
     pub adda1: crate::Reg<adda1::ADDA1_SPEC>,
     #[doc = "0x90 - adda2."]
     pub adda2: crate::Reg<adda2::ADDA2_SPEC>,
-    _reserved37: [u8; 12usize],
+    _reserved37: [u8; 0x0c],
     #[doc = "0xa0 - vco1."]
     pub vco1: crate::Reg<vco1::VCO1_SPEC>,
     #[doc = "0xa4 - vco2."]
@@ -98,7 +98,7 @@ pub struct RegisterBlock {
     pub sdm2: crate::Reg<sdm2::SDM2_SPEC>,
     #[doc = "0xc8 - sdm3."]
     pub sdm3: crate::Reg<sdm3::SDM3_SPEC>,
-    _reserved48: [u8; 32usize],
+    _reserved48: [u8; 0x20],
     #[doc = "0xec - rf_resv_reg_0."]
     pub rf_resv_reg_0: crate::Reg<rf_resv_reg_0::RF_RESV_REG_0_SPEC>,
     #[doc = "0xf0 - rf_resv_reg_1."]
@@ -215,7 +215,7 @@ pub struct RegisterBlock {
     pub lo_sdm_ctrl_hw8: crate::Reg<lo_sdm_ctrl_hw8::LO_SDM_CTRL_HW8_SPEC>,
     #[doc = "0x1d0 - rbb_bw_ctrl_hw."]
     pub rbb_bw_ctrl_hw: crate::Reg<rbb_bw_ctrl_hw::RBB_BW_CTRL_HW_SPEC>,
-    _reserved106: [u8; 56usize],
+    _reserved106: [u8; 0x38],
     #[doc = "0x20c - singen_ctrl0."]
     pub singen_ctrl0: crate::Reg<singen_ctrl0::SINGEN_CTRL0_SPEC>,
     #[doc = "0x210 - singen_ctrl1."]
@@ -268,7 +268,7 @@ pub struct RegisterBlock {
     pub rf_fsm_ctrl2: crate::Reg<rf_fsm_ctrl2::RF_FSM_CTRL2_SPEC>,
     #[doc = "0x270 - rf_pkdet_ctrl0."]
     pub rf_pkdet_ctrl0: crate::Reg<rf_pkdet_ctrl0::RF_PKDET_CTRL0_SPEC>,
-    _reserved132: [u8; 908usize],
+    _reserved132: [u8; 0x038c],
     #[doc = "0x600 - dfe_ctrl_0."]
     pub dfe_ctrl_0: crate::Reg<dfe_ctrl_0::DFE_CTRL_0_SPEC>,
     #[doc = "0x604 - dfe_ctrl_1."]

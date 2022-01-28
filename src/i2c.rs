@@ -15,7 +15,7 @@ pub struct RegisterBlock {
     pub i2c_prd_stop: crate::Reg<i2c_prd_stop::I2C_PRD_STOP_SPEC>,
     #[doc = "0x18 - i2c_prd_data."]
     pub i2c_prd_data: crate::Reg<i2c_prd_data::I2C_PRD_DATA_SPEC>,
-    _reserved7: [u8; 100usize],
+    _reserved7: [u8; 0x64],
     #[doc = "0x80 - i2c_fifo_config_0."]
     pub i2c_fifo_config_0: crate::Reg<i2c_fifo_config_0::I2C_FIFO_CONFIG_0_SPEC>,
     #[doc = "0x84 - i2c_fifo_config_1."]

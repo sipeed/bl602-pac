@@ -21,7 +21,7 @@ pub struct RegisterBlock {
     pub ef_if_ana_trim_0: crate::Reg<ef_if_ana_trim_0::EF_IF_ANA_TRIM_0_SPEC>,
     #[doc = "0x24 - ef_if_sw_usage_0."]
     pub ef_if_sw_usage_0: crate::Reg<ef_if_sw_usage_0::EF_IF_SW_USAGE_0_SPEC>,
-    _reserved10: [u8; 472usize],
+    _reserved10: [u8; 0x01d8],
     #[doc = "0x200 - ef_crc_ctrl_0."]
     pub ef_crc_ctrl_0: crate::Reg<ef_crc_ctrl_0::EF_CRC_CTRL_0_SPEC>,
     #[doc = "0x204 - ef_crc_ctrl_1."]

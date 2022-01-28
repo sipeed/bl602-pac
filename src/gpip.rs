@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     pub gpadc_config: crate::Reg<gpadc_config::GPADC_CONFIG_SPEC>,
     #[doc = "0x04 - gpadc_dma_rdata."]
     pub gpadc_dma_rdata: crate::Reg<gpadc_dma_rdata::GPADC_DMA_RDATA_SPEC>,
-    _reserved2: [u8; 56usize],
+    _reserved2: [u8; 0x38],
     #[doc = "0x40 - gpdac_config."]
     pub gpdac_config: crate::Reg<gpdac_config::GPDAC_CONFIG_SPEC>,
     #[doc = "0x44 - gpdac_dma_config."]

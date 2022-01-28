@@ -1,7 +1,7 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    _reserved0: [u8; 64usize],
+    _reserved0: [u8; 0x40],
     #[doc = "0x40 - tzc_rom_ctrl."]
     pub tzc_rom_ctrl: crate::Reg<tzc_rom_ctrl::TZC_ROM_CTRL_SPEC>,
     #[doc = "0x44 - tzc_rom0_r0."]

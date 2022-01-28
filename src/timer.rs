@@ -3,7 +3,7 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - TCCR."]
     pub tccr: crate::Reg<tccr::TCCR_SPEC>,
-    _reserved1: [u8; 12usize],
+    _reserved1: [u8; 0x0c],
     #[doc = "0x10 - TMR2_0."]
     pub tmr2_0: crate::Reg<tmr2_0::TMR2_0_SPEC>,
     #[doc = "0x14 - TMR2_1."]
@@ -16,27 +16,27 @@ pub struct RegisterBlock {
     pub tmr3_1: crate::Reg<tmr3_1::TMR3_1_SPEC>,
     #[doc = "0x24 - TMR3_2."]
     pub tmr3_2: crate::Reg<tmr3_2::TMR3_2_SPEC>,
-    _reserved7: [u8; 4usize],
+    _reserved7: [u8; 0x04],
     #[doc = "0x2c - TCR2."]
     pub tcr2: crate::Reg<tcr2::TCR2_SPEC>,
     #[doc = "0x30 - TCR3."]
     pub tcr3: crate::Reg<tcr3::TCR3_SPEC>,
-    _reserved9: [u8; 4usize],
+    _reserved9: [u8; 0x04],
     #[doc = "0x38 - TMSR2."]
     pub tmsr2: crate::Reg<tmsr2::TMSR2_SPEC>,
     #[doc = "0x3c - TMSR3."]
     pub tmsr3: crate::Reg<tmsr3::TMSR3_SPEC>,
-    _reserved11: [u8; 4usize],
+    _reserved11: [u8; 0x04],
     #[doc = "0x44 - TIER2."]
     pub tier2: crate::Reg<tier2::TIER2_SPEC>,
     #[doc = "0x48 - TIER3."]
     pub tier3: crate::Reg<tier3::TIER3_SPEC>,
-    _reserved13: [u8; 4usize],
+    _reserved13: [u8; 0x04],
     #[doc = "0x50 - TPLVR2."]
     pub tplvr2: crate::Reg<tplvr2::TPLVR2_SPEC>,
     #[doc = "0x54 - TPLVR3."]
     pub tplvr3: crate::Reg<tplvr3::TPLVR3_SPEC>,
-    _reserved15: [u8; 4usize],
+    _reserved15: [u8; 0x04],
     #[doc = "0x5c - TPLCR2."]
     pub tplcr2: crate::Reg<tplcr2::TPLCR2_SPEC>,
     #[doc = "0x60 - TPLCR3."]
@@ -49,7 +49,7 @@ pub struct RegisterBlock {
     pub wvr: crate::Reg<wvr::WVR_SPEC>,
     #[doc = "0x70 - WSR."]
     pub wsr: crate::Reg<wsr::WSR_SPEC>,
-    _reserved21: [u8; 4usize],
+    _reserved21: [u8; 0x04],
     #[doc = "0x78 - TICR2."]
     pub ticr2: crate::Reg<ticr2::TICR2_SPEC>,
     #[doc = "0x7c - TICR3."]
@@ -60,7 +60,7 @@ pub struct RegisterBlock {
     pub tcer: crate::Reg<tcer::TCER_SPEC>,
     #[doc = "0x88 - TCMR."]
     pub tcmr: crate::Reg<tcmr::TCMR_SPEC>,
-    _reserved26: [u8; 4usize],
+    _reserved26: [u8; 0x04],
     #[doc = "0x90 - TILR2."]
     pub tilr2: crate::Reg<tilr2::TILR2_SPEC>,
     #[doc = "0x94 - TILR3."]
@@ -71,12 +71,12 @@ pub struct RegisterBlock {
     pub wfar: crate::Reg<wfar::WFAR_SPEC>,
     #[doc = "0xa0 - WSAR."]
     pub wsar: crate::Reg<wsar::WSAR_SPEC>,
-    _reserved31: [u8; 4usize],
+    _reserved31: [u8; 0x04],
     #[doc = "0xa8 - TCVWR2."]
     pub tcvwr2: crate::Reg<tcvwr2::TCVWR2_SPEC>,
     #[doc = "0xac - TCVWR3."]
     pub tcvwr3: crate::Reg<tcvwr3::TCVWR3_SPEC>,
-    _reserved33: [u8; 4usize],
+    _reserved33: [u8; 0x04],
     #[doc = "0xb4 - TCVSYN2."]
     pub tcvsyn2: crate::Reg<tcvsyn2::TCVSYN2_SPEC>,
     #[doc = "0xb8 - TCVSYN3."]

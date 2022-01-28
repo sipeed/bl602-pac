@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<I2C_FIFO_CONFIG_0_SPEC>> for R {
+impl From<crate::R<I2C_FIFO_CONFIG_0_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<I2C_FIFO_CONFIG_0_SPEC>) -> Self {
         R(reader)
     }
@@ -27,7 +28,8 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<I2C_FIFO_CONFIG_0_SPEC>> for W {
+impl From<crate::W<I2C_FIFO_CONFIG_0_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<I2C_FIFO_CONFIG_0_SPEC>) -> Self {
         W(writer)
     }
@@ -296,6 +298,7 @@ impl W {
         I2C_DMA_TX_EN_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self

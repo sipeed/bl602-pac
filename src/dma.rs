@@ -29,7 +29,7 @@ pub struct RegisterBlock {
     pub dma_top_config: crate::Reg<dma_top_config::DMA_TOP_CONFIG_SPEC>,
     #[doc = "0x34 - DMA_Sync."]
     pub dma_sync: crate::Reg<dma_sync::DMA_SYNC_SPEC>,
-    _reserved14: [u8; 200usize],
+    _reserved14: [u8; 0xc8],
     #[doc = "0x100 - DMA_C0SrcAddr."]
     pub dma_c0src_addr: crate::Reg<dma_c0src_addr::DMA_C0SRCADDR_SPEC>,
     #[doc = "0x104 - DMA_C0DstAddr."]
@@ -40,7 +40,7 @@ pub struct RegisterBlock {
     pub dma_c0control: crate::Reg<dma_c0control::DMA_C0CONTROL_SPEC>,
     #[doc = "0x110 - DMA_C0Config."]
     pub dma_c0config: crate::Reg<dma_c0config::DMA_C0CONFIG_SPEC>,
-    _reserved19: [u8; 236usize],
+    _reserved19: [u8; 0xec],
     #[doc = "0x200 - DMA_C1SrcAddr."]
     pub dma_c1src_addr: crate::Reg<dma_c1src_addr::DMA_C1SRCADDR_SPEC>,
     #[doc = "0x204 - DMA_C1DstAddr."]
@@ -51,7 +51,7 @@ pub struct RegisterBlock {
     pub dma_c1control: crate::Reg<dma_c1control::DMA_C1CONTROL_SPEC>,
     #[doc = "0x210 - DMA_C1Config."]
     pub dma_c1config: crate::Reg<dma_c1config::DMA_C1CONFIG_SPEC>,
-    _reserved24: [u8; 236usize],
+    _reserved24: [u8; 0xec],
     #[doc = "0x300 - DMA_C2SrcAddr."]
     pub dma_c2src_addr: crate::Reg<dma_c2src_addr::DMA_C2SRCADDR_SPEC>,
     #[doc = "0x304 - DMA_C2DstAddr."]
@@ -62,7 +62,7 @@ pub struct RegisterBlock {
     pub dma_c2control: crate::Reg<dma_c2control::DMA_C2CONTROL_SPEC>,
     #[doc = "0x310 - DMA_C2Config."]
     pub dma_c2config: crate::Reg<dma_c2config::DMA_C2CONFIG_SPEC>,
-    _reserved29: [u8; 236usize],
+    _reserved29: [u8; 0xec],
     #[doc = "0x400 - DMA_C3SrcAddr."]
     pub dma_c3src_addr: crate::Reg<dma_c3src_addr::DMA_C3SRCADDR_SPEC>,
     #[doc = "0x404 - DMA_C3DstAddr."]

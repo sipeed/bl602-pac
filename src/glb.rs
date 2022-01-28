@@ -29,7 +29,7 @@ pub struct RegisterBlock {
     pub mbist_ctl: crate::Reg<mbist_ctl::MBIST_CTL_SPEC>,
     #[doc = "0x34 - MBIST_STAT."]
     pub mbist_stat: crate::Reg<mbist_stat::MBIST_STAT_SPEC>,
-    _reserved14: [u8; 24usize],
+    _reserved14: [u8; 0x18],
     #[doc = "0x50 - bmx_cfg1."]
     pub bmx_cfg1: crate::Reg<bmx_cfg1::BMX_CFG1_SPEC>,
     #[doc = "0x54 - bmx_cfg2."]
@@ -56,20 +56,20 @@ pub struct RegisterBlock {
     pub seam_misc: crate::Reg<seam_misc::SEAM_MISC_SPEC>,
     #[doc = "0x80 - glb_parm."]
     pub glb_parm: crate::Reg<glb_parm::GLB_PARM_SPEC>,
-    _reserved27: [u8; 12usize],
+    _reserved27: [u8; 0x0c],
     #[doc = "0x90 - CPU_CLK_CFG."]
     pub cpu_clk_cfg: crate::Reg<cpu_clk_cfg::CPU_CLK_CFG_SPEC>,
-    _reserved28: [u8; 16usize],
+    _reserved28: [u8; 0x10],
     #[doc = "0xa4 - Clock configuration for GPADC"]
     pub gpadc_32m_src_ctrl: crate::Reg<gpadc_32m_src_ctrl::GPADC_32M_SRC_CTRL_SPEC>,
     #[doc = "0xa8 - DIG32K_WAKEUP_CTRL."]
     pub dig32k_wakeup_ctrl: crate::Reg<dig32k_wakeup_ctrl::DIG32K_WAKEUP_CTRL_SPEC>,
     #[doc = "0xac - WIFI_BT_COEX_CTRL."]
     pub wifi_bt_coex_ctrl: crate::Reg<wifi_bt_coex_ctrl::WIFI_BT_COEX_CTRL_SPEC>,
-    _reserved31: [u8; 16usize],
+    _reserved31: [u8; 0x10],
     #[doc = "0xc0 - UART_SIG_SEL_0."]
     pub uart_sig_sel_0: crate::Reg<uart_sig_sel_0::UART_SIG_SEL_0_SPEC>,
-    _reserved32: [u8; 12usize],
+    _reserved32: [u8; 0x0c],
     #[doc = "0xd0 - DBG_SEL_LL."]
     pub dbg_sel_ll: crate::Reg<dbg_sel_ll::DBG_SEL_LL_SPEC>,
     #[doc = "0xd4 - DBG_SEL_LH."]
@@ -80,7 +80,7 @@ pub struct RegisterBlock {
     pub dbg_sel_hh: crate::Reg<dbg_sel_hh::DBG_SEL_HH_SPEC>,
     #[doc = "0xe0 - debug."]
     pub debug: crate::Reg<debug::DEBUG_SPEC>,
-    _reserved37: [u8; 28usize],
+    _reserved37: [u8; 0x1c],
     #[doc = "0x100 - GPIO0, GPIO1 configuration"]
     pub gpio_cfgctl0: crate::Reg<gpio_cfgctl0::GPIO_CFGCTL0_SPEC>,
     #[doc = "0x104 - GPIO2, GPIO3 configuration"]
@@ -111,7 +111,7 @@ pub struct RegisterBlock {
     pub gpio_cfgctl13: crate::Reg<gpio_cfgctl13::GPIO_CFGCTL13_SPEC>,
     #[doc = "0x138 - GPIO28 configuration"]
     pub gpio_cfgctl14: crate::Reg<gpio_cfgctl14::GPIO_CFGCTL14_SPEC>,
-    _reserved52: [u8; 68usize],
+    _reserved52: [u8; 0x44],
     #[doc = "0x180 - Input register for all GPIO pins. Input Enabled bit must be set in configuration register to work."]
     pub gpio_cfgctl30: crate::Reg<gpio_cfgctl30::GPIO_CFGCTL30_SPEC>,
     #[doc = "0x184 - Reserved according to SDK."]
@@ -124,26 +124,26 @@ pub struct RegisterBlock {
     pub gpio_cfgctl34: crate::Reg<gpio_cfgctl34::GPIO_CFGCTL34_SPEC>,
     #[doc = "0x194 - Reserved according to SDK."]
     pub gpio_cfgctl35: crate::Reg<gpio_cfgctl35::GPIO_CFGCTL35_SPEC>,
-    _reserved58: [u8; 8usize],
+    _reserved58: [u8; 0x08],
     #[doc = "0x1a0 - Interrupt masking register. The SDK limits the GPIO pins to < 32 although the docs do not mention more than 28 GPIO pins."]
     pub gpio_int_mask1: crate::Reg<gpio_int_mask1::GPIO_INT_MASK1_SPEC>,
-    _reserved59: [u8; 4usize],
+    _reserved59: [u8; 0x04],
     #[doc = "0x1a8 - Interrupt status register. The SDK limits the GPIO pins to < 32 although the docs do not mention more than 28 GPIO pins."]
     pub gpio_int_stat1: crate::Reg<gpio_int_stat1::GPIO_INT_STAT1_SPEC>,
-    _reserved60: [u8; 4usize],
+    _reserved60: [u8; 0x04],
     #[doc = "0x1b0 - Interrupt clearing register."]
     pub gpio_int_clr1: crate::Reg<gpio_int_clr1::GPIO_INT_CLR1_SPEC>,
-    _reserved61: [u8; 12usize],
+    _reserved61: [u8; 0x0c],
     #[doc = "0x1c0 - GPIO interrupt trigger and control register for GPIO0-GPIO9."]
     pub gpio_int_mode_set1: crate::Reg<gpio_int_mode_set1::GPIO_INT_MODE_SET1_SPEC>,
     #[doc = "0x1c4 - GPIO interrupt trigger and control register for GPIO10-GPIO19."]
     pub gpio_int_mode_set2: crate::Reg<gpio_int_mode_set2::GPIO_INT_MODE_SET2_SPEC>,
     #[doc = "0x1c8 - GPIO interrupt trigger and control register for GPIO20-GPIO29."]
     pub gpio_int_mode_set3: crate::Reg<gpio_int_mode_set3::GPIO_INT_MODE_SET3_SPEC>,
-    _reserved64: [u8; 88usize],
+    _reserved64: [u8; 0x58],
     #[doc = "0x224 - led_driver."]
     pub led_driver: crate::Reg<led_driver::LED_DRIVER_SPEC>,
-    _reserved65: [u8; 224usize],
+    _reserved65: [u8; 0xe0],
     #[doc = "0x308 - gpdac_ctrl."]
     pub gpdac_ctrl: crate::Reg<gpdac_ctrl::GPDAC_CTRL_SPEC>,
     #[doc = "0x30c - gpdac_actrl."]
@@ -152,7 +152,7 @@ pub struct RegisterBlock {
     pub gpdac_bctrl: crate::Reg<gpdac_bctrl::GPDAC_BCTRL_SPEC>,
     #[doc = "0x314 - gpdac_data."]
     pub gpdac_data: crate::Reg<gpdac_data::GPDAC_DATA_SPEC>,
-    _reserved69: [u8; 3048usize],
+    _reserved69: [u8; 0x0be8],
     #[doc = "0xf00 - tzc_glb_ctrl_0."]
     pub tzc_glb_ctrl_0: crate::Reg<tzc_glb_ctrl_0::TZC_GLB_CTRL_0_SPEC>,
     #[doc = "0xf04 - tzc_glb_ctrl_1."]

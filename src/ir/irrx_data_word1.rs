@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<IRRX_DATA_WORD1_SPEC>> for R {
+impl From<crate::R<IRRX_DATA_WORD1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<IRRX_DATA_WORD1_SPEC>) -> Self {
         R(reader)
     }
