@@ -19,10 +19,6 @@ jobs:
         # Run checks on stable and nightly Rust
         rust: [stable, nightly]
 
-        include:
-          # Run check with MSRV as well
-          - rust: 1.42.0
-
     steps:
       - uses: actions/checkout@v2
       - name: Install Rust ${{ matrix.rust }}
