@@ -12,7 +12,7 @@ if [ $# -lt 2 ]; then
   exit 1
 fi
 
-command -v svd2rust > /dev/null || fail "Please install rust2vd (https://github.com/rust-embedded/svd2rust)"
+command -v svd2rust > /dev/null || fail "Please install svd2rust (https://github.com/rust-embedded/svd2rust)"
 command -v form > /dev/null || fail "Please install form (https://github.com/djmcgill/form)"
 command -v rustfmt > /dev/null || fail "Please install rustfmt"
 
