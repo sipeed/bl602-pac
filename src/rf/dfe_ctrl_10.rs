@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_10_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_10_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_10_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_10_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_10_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_10_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `dfe_dac_raw_q` reader - "]
-pub struct DFE_DAC_RAW_Q_R(crate::FieldReader<u16, u16>);
-impl DFE_DAC_RAW_Q_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        DFE_DAC_RAW_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DFE_DAC_RAW_Q_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dfe_dac_raw_q` writer - "]
-pub struct DFE_DAC_RAW_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DFE_DAC_RAW_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 16)) | ((value as u32 & 0x07ff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `dfe_dac_raw_i` reader - "]
-pub struct DFE_DAC_RAW_I_R(crate::FieldReader<u16, u16>);
-impl DFE_DAC_RAW_I_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        DFE_DAC_RAW_I_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DFE_DAC_RAW_I_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DFE_DAC_RAW_I_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `dfe_dac_raw_i` writer - "]
-pub struct DFE_DAC_RAW_I_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DFE_DAC_RAW_I_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type DFE_DAC_RAW_I_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_10_SPEC, u16, u16, 11, O>;
+#[doc = "Field `dfe_dac_raw_q` reader - "]
+pub type DFE_DAC_RAW_Q_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `dfe_dac_raw_q` writer - "]
+pub type DFE_DAC_RAW_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_10_SPEC, u16, u16, 11, O>;
 impl R {
-    #[doc = "Bits 16:26"]
-    #[inline(always)]
-    pub fn dfe_dac_raw_q(&self) -> DFE_DAC_RAW_Q_R {
-        DFE_DAC_RAW_Q_R::new(((self.bits >> 16) & 0x07ff) as u16)
-    }
     #[doc = "Bits 0:10"]
     #[inline(always)]
     pub fn dfe_dac_raw_i(&self) -> DFE_DAC_RAW_I_R {
         DFE_DAC_RAW_I_R::new((self.bits & 0x07ff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:26"]
     #[inline(always)]
-    pub fn dfe_dac_raw_q(&mut self) -> DFE_DAC_RAW_Q_W {
-        DFE_DAC_RAW_Q_W { w: self }
+    pub fn dfe_dac_raw_q(&self) -> DFE_DAC_RAW_Q_R {
+        DFE_DAC_RAW_Q_R::new(((self.bits >> 16) & 0x07ff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn dfe_dac_raw_i(&mut self) -> DFE_DAC_RAW_I_W {
-        DFE_DAC_RAW_I_W { w: self }
+    #[must_use]
+    pub fn dfe_dac_raw_i(&mut self) -> DFE_DAC_RAW_I_W<0> {
+        DFE_DAC_RAW_I_W::new(self)
+    }
+    #[doc = "Bits 16:26"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dfe_dac_raw_q(&mut self) -> DFE_DAC_RAW_Q_W<16> {
+        DFE_DAC_RAW_Q_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for DFE_CTRL_10_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_10::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_10_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_10 to value 0"]
 impl crate::Resettable for DFE_CTRL_10_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

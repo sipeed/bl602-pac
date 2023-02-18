@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SF_AES_IV_R2_W0_SPEC>> for R {
+impl From<crate::R<SF_AES_IV_R2_W0_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SF_AES_IV_R2_W0_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SF_AES_IV_R2_W0_SPEC>> for W {
+impl From<crate::W<SF_AES_IV_R2_W0_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SF_AES_IV_R2_W0_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `sf_aes_iv_r2_w0` reader - "]
-pub struct SF_AES_IV_R2_W0_R(crate::FieldReader<u32, u32>);
-impl SF_AES_IV_R2_W0_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        SF_AES_IV_R2_W0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_AES_IV_R2_W0_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SF_AES_IV_R2_W0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `sf_aes_iv_r2_w0` writer - "]
-pub struct SF_AES_IV_R2_W0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_IV_R2_W0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type SF_AES_IV_R2_W0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF_AES_IV_R2_W0_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn sf_aes_iv_r2_w0(&self) -> SF_AES_IV_R2_W0_R {
-        SF_AES_IV_R2_W0_R::new((self.bits & 0xffff_ffff) as u32)
+        SF_AES_IV_R2_W0_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sf_aes_iv_r2_w0(&mut self) -> SF_AES_IV_R2_W0_W {
-        SF_AES_IV_R2_W0_W { w: self }
+    #[must_use]
+    pub fn sf_aes_iv_r2_w0(&mut self) -> SF_AES_IV_R2_W0_W<0> {
+        SF_AES_IV_R2_W0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for SF_AES_IV_R2_W0_SPEC {
 #[doc = "`write(|w| ..)` method takes [sf_aes_iv_r2_w0::W](W) writer structure"]
 impl crate::Writable for SF_AES_IV_R2_W0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sf_aes_iv_r2_w0 to value 0"]
 impl crate::Resettable for SF_AES_IV_R2_W0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

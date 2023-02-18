@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<PUCR2_SPEC>> for R {
+impl From<crate::R<PUCR2_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<PUCR2_SPEC>) -> Self {
         R(reader)
     }
@@ -27,13 +28,15 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<PUCR2_SPEC>> for W {
+impl From<crate::W<PUCR2_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<PUCR2_SPEC>) -> Self {
         W(writer)
     }
 }
 impl W {
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -51,11 +54,10 @@ impl crate::Readable for PUCR2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pucr2::W](W) writer structure"]
 impl crate::Writable for PUCR2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets pucr2 to value 0"]
 impl crate::Resettable for PUCR2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

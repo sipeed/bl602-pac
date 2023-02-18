@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SD_DBG_PWD_LOW_SPEC>> for R {
+impl From<crate::R<SD_DBG_PWD_LOW_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SD_DBG_PWD_LOW_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SD_DBG_PWD_LOW_SPEC>> for W {
+impl From<crate::W<SD_DBG_PWD_LOW_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SD_DBG_PWD_LOW_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `sd_dbg_pwd_low` reader - "]
-pub struct SD_DBG_PWD_LOW_R(crate::FieldReader<u32, u32>);
-impl SD_DBG_PWD_LOW_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        SD_DBG_PWD_LOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SD_DBG_PWD_LOW_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SD_DBG_PWD_LOW_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `sd_dbg_pwd_low` writer - "]
-pub struct SD_DBG_PWD_LOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SD_DBG_PWD_LOW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type SD_DBG_PWD_LOW_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SD_DBG_PWD_LOW_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn sd_dbg_pwd_low(&self) -> SD_DBG_PWD_LOW_R {
-        SD_DBG_PWD_LOW_R::new((self.bits & 0xffff_ffff) as u32)
+        SD_DBG_PWD_LOW_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sd_dbg_pwd_low(&mut self) -> SD_DBG_PWD_LOW_W {
-        SD_DBG_PWD_LOW_W { w: self }
+    #[must_use]
+    pub fn sd_dbg_pwd_low(&mut self) -> SD_DBG_PWD_LOW_W<0> {
+        SD_DBG_PWD_LOW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for SD_DBG_PWD_LOW_SPEC {
 #[doc = "`write(|w| ..)` method takes [sd_dbg_pwd_low::W](W) writer structure"]
 impl crate::Writable for SD_DBG_PWD_LOW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sd_dbg_pwd_low to value 0"]
 impl crate::Resettable for SD_DBG_PWD_LOW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

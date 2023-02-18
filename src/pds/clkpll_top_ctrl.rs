@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<CLKPLL_TOP_CTRL_SPEC>> for R {
+impl From<crate::R<CLKPLL_TOP_CTRL_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<CLKPLL_TOP_CTRL_SPEC>) -> Self {
         R(reader)
     }
@@ -27,251 +28,113 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<CLKPLL_TOP_CTRL_SPEC>> for W {
+impl From<crate::W<CLKPLL_TOP_CTRL_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<CLKPLL_TOP_CTRL_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `clkpll_vg13_sel` reader - "]
-pub struct CLKPLL_VG13_SEL_R(crate::FieldReader<u8, u8>);
-impl CLKPLL_VG13_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKPLL_VG13_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKPLL_VG13_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `clkpll_vg13_sel` writer - "]
-pub struct CLKPLL_VG13_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKPLL_VG13_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
-        self.w
-    }
-}
-#[doc = "Field `clkpll_vg11_sel` reader - "]
-pub struct CLKPLL_VG11_SEL_R(crate::FieldReader<u8, u8>);
-impl CLKPLL_VG11_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKPLL_VG11_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKPLL_VG11_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `clkpll_vg11_sel` writer - "]
-pub struct CLKPLL_VG11_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKPLL_VG11_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
-        self.w
-    }
-}
-#[doc = "Field `clkpll_refclk_sel` reader - "]
-pub struct CLKPLL_REFCLK_SEL_R(crate::FieldReader<bool, bool>);
-impl CLKPLL_REFCLK_SEL_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CLKPLL_REFCLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKPLL_REFCLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `clkpll_refclk_sel` writer - "]
-pub struct CLKPLL_REFCLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKPLL_REFCLK_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Field `clkpll_xtal_rc32m_sel` reader - "]
-pub struct CLKPLL_XTAL_RC32M_SEL_R(crate::FieldReader<bool, bool>);
-impl CLKPLL_XTAL_RC32M_SEL_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CLKPLL_XTAL_RC32M_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKPLL_XTAL_RC32M_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `clkpll_xtal_rc32m_sel` writer - "]
-pub struct CLKPLL_XTAL_RC32M_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKPLL_XTAL_RC32M_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `clkpll_refdiv_ratio` reader - "]
-pub struct CLKPLL_REFDIV_RATIO_R(crate::FieldReader<u8, u8>);
-impl CLKPLL_REFDIV_RATIO_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKPLL_REFDIV_RATIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKPLL_REFDIV_RATIO_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `clkpll_refdiv_ratio` writer - "]
-pub struct CLKPLL_REFDIV_RATIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKPLL_REFDIV_RATIO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
 #[doc = "Field `clkpll_postdiv` reader - "]
-pub struct CLKPLL_POSTDIV_R(crate::FieldReader<u8, u8>);
-impl CLKPLL_POSTDIV_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKPLL_POSTDIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKPLL_POSTDIV_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLKPLL_POSTDIV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `clkpll_postdiv` writer - "]
-pub struct CLKPLL_POSTDIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKPLL_POSTDIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type CLKPLL_POSTDIV_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLKPLL_TOP_CTRL_SPEC, u8, u8, 7, O>;
+#[doc = "Field `clkpll_refdiv_ratio` reader - "]
+pub type CLKPLL_REFDIV_RATIO_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `clkpll_refdiv_ratio` writer - "]
+pub type CLKPLL_REFDIV_RATIO_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLKPLL_TOP_CTRL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `clkpll_xtal_rc32m_sel` reader - "]
+pub type CLKPLL_XTAL_RC32M_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `clkpll_xtal_rc32m_sel` writer - "]
+pub type CLKPLL_XTAL_RC32M_SEL_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLKPLL_TOP_CTRL_SPEC, bool, O>;
+#[doc = "Field `clkpll_refclk_sel` reader - "]
+pub type CLKPLL_REFCLK_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `clkpll_refclk_sel` writer - "]
+pub type CLKPLL_REFCLK_SEL_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLKPLL_TOP_CTRL_SPEC, bool, O>;
+#[doc = "Field `clkpll_vg11_sel` reader - "]
+pub type CLKPLL_VG11_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `clkpll_vg11_sel` writer - "]
+pub type CLKPLL_VG11_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLKPLL_TOP_CTRL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `clkpll_vg13_sel` reader - "]
+pub type CLKPLL_VG13_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `clkpll_vg13_sel` writer - "]
+pub type CLKPLL_VG13_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLKPLL_TOP_CTRL_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 24:25"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn clkpll_vg13_sel(&self) -> CLKPLL_VG13_SEL_R {
-        CLKPLL_VG13_SEL_R::new(((self.bits >> 24) & 0x03) as u8)
-    }
-    #[doc = "Bits 20:21"]
-    #[inline(always)]
-    pub fn clkpll_vg11_sel(&self) -> CLKPLL_VG11_SEL_R {
-        CLKPLL_VG11_SEL_R::new(((self.bits >> 20) & 0x03) as u8)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn clkpll_refclk_sel(&self) -> CLKPLL_REFCLK_SEL_R {
-        CLKPLL_REFCLK_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn clkpll_xtal_rc32m_sel(&self) -> CLKPLL_XTAL_RC32M_SEL_R {
-        CLKPLL_XTAL_RC32M_SEL_R::new(((self.bits >> 12) & 0x01) != 0)
+    pub fn clkpll_postdiv(&self) -> CLKPLL_POSTDIV_R {
+        CLKPLL_POSTDIV_R::new((self.bits & 0x7f) as u8)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     pub fn clkpll_refdiv_ratio(&self) -> CLKPLL_REFDIV_RATIO_R {
         CLKPLL_REFDIV_RATIO_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:6"]
+    #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn clkpll_postdiv(&self) -> CLKPLL_POSTDIV_R {
-        CLKPLL_POSTDIV_R::new((self.bits & 0x7f) as u8)
-    }
-}
-impl W {
-    #[doc = "Bits 24:25"]
-    #[inline(always)]
-    pub fn clkpll_vg13_sel(&mut self) -> CLKPLL_VG13_SEL_W {
-        CLKPLL_VG13_SEL_W { w: self }
-    }
-    #[doc = "Bits 20:21"]
-    #[inline(always)]
-    pub fn clkpll_vg11_sel(&mut self) -> CLKPLL_VG11_SEL_W {
-        CLKPLL_VG11_SEL_W { w: self }
+    pub fn clkpll_xtal_rc32m_sel(&self) -> CLKPLL_XTAL_RC32M_SEL_R {
+        CLKPLL_XTAL_RC32M_SEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn clkpll_refclk_sel(&mut self) -> CLKPLL_REFCLK_SEL_W {
-        CLKPLL_REFCLK_SEL_W { w: self }
+    pub fn clkpll_refclk_sel(&self) -> CLKPLL_REFCLK_SEL_R {
+        CLKPLL_REFCLK_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 12"]
+    #[doc = "Bits 20:21"]
     #[inline(always)]
-    pub fn clkpll_xtal_rc32m_sel(&mut self) -> CLKPLL_XTAL_RC32M_SEL_W {
-        CLKPLL_XTAL_RC32M_SEL_W { w: self }
+    pub fn clkpll_vg11_sel(&self) -> CLKPLL_VG11_SEL_R {
+        CLKPLL_VG11_SEL_R::new(((self.bits >> 20) & 3) as u8)
+    }
+    #[doc = "Bits 24:25"]
+    #[inline(always)]
+    pub fn clkpll_vg13_sel(&self) -> CLKPLL_VG13_SEL_R {
+        CLKPLL_VG13_SEL_R::new(((self.bits >> 24) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn clkpll_postdiv(&mut self) -> CLKPLL_POSTDIV_W<0> {
+        CLKPLL_POSTDIV_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn clkpll_refdiv_ratio(&mut self) -> CLKPLL_REFDIV_RATIO_W {
-        CLKPLL_REFDIV_RATIO_W { w: self }
+    #[must_use]
+    pub fn clkpll_refdiv_ratio(&mut self) -> CLKPLL_REFDIV_RATIO_W<8> {
+        CLKPLL_REFDIV_RATIO_W::new(self)
     }
-    #[doc = "Bits 0:6"]
+    #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn clkpll_postdiv(&mut self) -> CLKPLL_POSTDIV_W {
-        CLKPLL_POSTDIV_W { w: self }
+    #[must_use]
+    pub fn clkpll_xtal_rc32m_sel(&mut self) -> CLKPLL_XTAL_RC32M_SEL_W<12> {
+        CLKPLL_XTAL_RC32M_SEL_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn clkpll_refclk_sel(&mut self) -> CLKPLL_REFCLK_SEL_W<16> {
+        CLKPLL_REFCLK_SEL_W::new(self)
+    }
+    #[doc = "Bits 20:21"]
+    #[inline(always)]
+    #[must_use]
+    pub fn clkpll_vg11_sel(&mut self) -> CLKPLL_VG11_SEL_W<20> {
+        CLKPLL_VG11_SEL_W::new(self)
+    }
+    #[doc = "Bits 24:25"]
+    #[inline(always)]
+    #[must_use]
+    pub fn clkpll_vg13_sel(&mut self) -> CLKPLL_VG13_SEL_W<24> {
+        CLKPLL_VG13_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -289,11 +152,10 @@ impl crate::Readable for CLKPLL_TOP_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [clkpll_top_ctrl::W](W) writer structure"]
 impl crate::Writable for CLKPLL_TOP_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets clkpll_top_ctrl to value 0x0110_0414"]
 impl crate::Resettable for CLKPLL_TOP_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0110_0414
-    }
+    const RESET_VALUE: Self::Ux = 0x0110_0414;
 }

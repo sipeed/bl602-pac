@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<BG_SYS_TOP_SPEC>> for R {
+impl From<crate::R<BG_SYS_TOP_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<BG_SYS_TOP_SPEC>) -> Self {
         R(reader)
     }
@@ -27,143 +28,63 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<BG_SYS_TOP_SPEC>> for W {
+impl From<crate::W<BG_SYS_TOP_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<BG_SYS_TOP_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `bg_sys_start_ctrl_aon` reader - "]
-pub struct BG_SYS_START_CTRL_AON_R(crate::FieldReader<bool, bool>);
-impl BG_SYS_START_CTRL_AON_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BG_SYS_START_CTRL_AON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BG_SYS_START_CTRL_AON_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `bg_sys_start_ctrl_aon` writer - "]
-pub struct BG_SYS_START_CTRL_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BG_SYS_START_CTRL_AON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `pu_bg_sys_aon` reader - "]
-pub struct PU_BG_SYS_AON_R(crate::FieldReader<bool, bool>);
-impl PU_BG_SYS_AON_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PU_BG_SYS_AON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PU_BG_SYS_AON_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pu_bg_sys_aon` writer - "]
-pub struct PU_BG_SYS_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PU_BG_SYS_AON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
 #[doc = "Field `pmip_resv` reader - "]
-pub struct PMIP_RESV_R(crate::FieldReader<u8, u8>);
-impl PMIP_RESV_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        PMIP_RESV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMIP_RESV_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMIP_RESV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `pmip_resv` writer - "]
-pub struct PMIP_RESV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMIP_RESV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type PMIP_RESV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BG_SYS_TOP_SPEC, u8, u8, 8, O>;
+#[doc = "Field `pu_bg_sys_aon` reader - "]
+pub type PU_BG_SYS_AON_R = crate::BitReader<bool>;
+#[doc = "Field `pu_bg_sys_aon` writer - "]
+pub type PU_BG_SYS_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, BG_SYS_TOP_SPEC, bool, O>;
+#[doc = "Field `bg_sys_start_ctrl_aon` reader - "]
+pub type BG_SYS_START_CTRL_AON_R = crate::BitReader<bool>;
+#[doc = "Field `bg_sys_start_ctrl_aon` writer - "]
+pub type BG_SYS_START_CTRL_AON_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, BG_SYS_TOP_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn bg_sys_start_ctrl_aon(&self) -> BG_SYS_START_CTRL_AON_R {
-        BG_SYS_START_CTRL_AON_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn pu_bg_sys_aon(&self) -> PU_BG_SYS_AON_R {
-        PU_BG_SYS_AON_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn pmip_resv(&self) -> PMIP_RESV_R {
         PMIP_RESV_R::new((self.bits & 0xff) as u8)
     }
-}
-impl W {
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn pu_bg_sys_aon(&self) -> PU_BG_SYS_AON_R {
+        PU_BG_SYS_AON_R::new(((self.bits >> 8) & 1) != 0)
+    }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn bg_sys_start_ctrl_aon(&mut self) -> BG_SYS_START_CTRL_AON_W {
-        BG_SYS_START_CTRL_AON_W { w: self }
+    pub fn bg_sys_start_ctrl_aon(&self) -> BG_SYS_START_CTRL_AON_R {
+        BG_SYS_START_CTRL_AON_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pmip_resv(&mut self) -> PMIP_RESV_W<0> {
+        PMIP_RESV_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn pu_bg_sys_aon(&mut self) -> PU_BG_SYS_AON_W {
-        PU_BG_SYS_AON_W { w: self }
+    #[must_use]
+    pub fn pu_bg_sys_aon(&mut self) -> PU_BG_SYS_AON_W<8> {
+        PU_BG_SYS_AON_W::new(self)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn pmip_resv(&mut self) -> PMIP_RESV_W {
-        PMIP_RESV_W { w: self }
+    #[must_use]
+    pub fn bg_sys_start_ctrl_aon(&mut self) -> BG_SYS_START_CTRL_AON_W<12> {
+        BG_SYS_START_CTRL_AON_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -181,11 +102,10 @@ impl crate::Readable for BG_SYS_TOP_SPEC {
 #[doc = "`write(|w| ..)` method takes [bg_sys_top::W](W) writer structure"]
 impl crate::Writable for BG_SYS_TOP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets bg_sys_top to value 0x1100"]
 impl crate::Resettable for BG_SYS_TOP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1100
-    }
+    const RESET_VALUE: Self::Ux = 0x1100;
 }

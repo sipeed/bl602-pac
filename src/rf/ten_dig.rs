@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TEN_DIG_SPEC>> for R {
+impl From<crate::R<TEN_DIG_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TEN_DIG_SPEC>) -> Self {
         R(reader)
     }
@@ -27,475 +28,168 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TEN_DIG_SPEC>> for W {
+impl From<crate::W<TEN_DIG_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TEN_DIG_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `rf_dtest_en` reader - "]
-pub struct RF_DTEST_EN_R(crate::FieldReader<bool, bool>);
-impl RF_DTEST_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        RF_DTEST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RF_DTEST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rf_dtest_en` writer - "]
-pub struct RF_DTEST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RF_DTEST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
-        self.w
-    }
-}
-#[doc = "Field `dtest_pull_down` reader - "]
-pub struct DTEST_PULL_DOWN_R(crate::FieldReader<bool, bool>);
-impl DTEST_PULL_DOWN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEST_PULL_DOWN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEST_PULL_DOWN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dtest_pull_down` writer - "]
-pub struct DTEST_PULL_DOWN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEST_PULL_DOWN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Field `dten_lo_fref` reader - "]
-pub struct DTEN_LO_FREF_R(crate::FieldReader<bool, bool>);
-impl DTEN_LO_FREF_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_LO_FREF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_LO_FREF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_lo_fref` writer - "]
-pub struct DTEN_LO_FREF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_LO_FREF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Field `dten_lo_fsdm` reader - "]
-pub struct DTEN_LO_FSDM_R(crate::FieldReader<bool, bool>);
-impl DTEN_LO_FSDM_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_LO_FSDM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_LO_FSDM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_lo_fsdm` writer - "]
-pub struct DTEN_LO_FSDM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_LO_FSDM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Field `dten_clkpll_fin` reader - "]
-pub struct DTEN_CLKPLL_FIN_R(crate::FieldReader<bool, bool>);
-impl DTEN_CLKPLL_FIN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_CLKPLL_FIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_CLKPLL_FIN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_clkpll_fin` writer - "]
-pub struct DTEN_CLKPLL_FIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_CLKPLL_FIN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `dten_clkpll_fref` reader - "]
-pub struct DTEN_CLKPLL_FREF_R(crate::FieldReader<bool, bool>);
-impl DTEN_CLKPLL_FREF_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_CLKPLL_FREF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_CLKPLL_FREF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_clkpll_fref` writer - "]
-pub struct DTEN_CLKPLL_FREF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_CLKPLL_FREF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `dten_clkpll_fsdm` reader - "]
-pub struct DTEN_CLKPLL_FSDM_R(crate::FieldReader<bool, bool>);
-impl DTEN_CLKPLL_FSDM_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_CLKPLL_FSDM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_CLKPLL_FSDM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_clkpll_fsdm` writer - "]
-pub struct DTEN_CLKPLL_FSDM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_CLKPLL_FSDM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `dten_clkpll_clk32m` reader - "]
-pub struct DTEN_CLKPLL_CLK32M_R(crate::FieldReader<bool, bool>);
-impl DTEN_CLKPLL_CLK32M_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_CLKPLL_CLK32M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_CLKPLL_CLK32M_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_clkpll_clk32m` writer - "]
-pub struct DTEN_CLKPLL_CLK32M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_CLKPLL_CLK32M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `dten_clkpll_clk96m` reader - "]
-pub struct DTEN_CLKPLL_CLK96M_R(crate::FieldReader<bool, bool>);
-impl DTEN_CLKPLL_CLK96M_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_CLKPLL_CLK96M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_CLKPLL_CLK96M_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `dten_clkpll_clk96m` writer - "]
-pub struct DTEN_CLKPLL_CLK96M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_CLKPLL_CLK96M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `dten_clkpll_postdiv_clk` reader - "]
-pub struct DTEN_CLKPLL_POSTDIV_CLK_R(crate::FieldReader<bool, bool>);
-impl DTEN_CLKPLL_POSTDIV_CLK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DTEN_CLKPLL_POSTDIV_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEN_CLKPLL_POSTDIV_CLK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTEN_CLKPLL_POSTDIV_CLK_R = crate::BitReader<bool>;
 #[doc = "Field `dten_clkpll_postdiv_clk` writer - "]
-pub struct DTEN_CLKPLL_POSTDIV_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEN_CLKPLL_POSTDIV_CLK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type DTEN_CLKPLL_POSTDIV_CLK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_clkpll_clk96m` reader - "]
+pub type DTEN_CLKPLL_CLK96M_R = crate::BitReader<bool>;
+#[doc = "Field `dten_clkpll_clk96m` writer - "]
+pub type DTEN_CLKPLL_CLK96M_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_clkpll_clk32m` reader - "]
+pub type DTEN_CLKPLL_CLK32M_R = crate::BitReader<bool>;
+#[doc = "Field `dten_clkpll_clk32m` writer - "]
+pub type DTEN_CLKPLL_CLK32M_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_clkpll_fsdm` reader - "]
+pub type DTEN_CLKPLL_FSDM_R = crate::BitReader<bool>;
+#[doc = "Field `dten_clkpll_fsdm` writer - "]
+pub type DTEN_CLKPLL_FSDM_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_clkpll_fref` reader - "]
+pub type DTEN_CLKPLL_FREF_R = crate::BitReader<bool>;
+#[doc = "Field `dten_clkpll_fref` writer - "]
+pub type DTEN_CLKPLL_FREF_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_clkpll_fin` reader - "]
+pub type DTEN_CLKPLL_FIN_R = crate::BitReader<bool>;
+#[doc = "Field `dten_clkpll_fin` writer - "]
+pub type DTEN_CLKPLL_FIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_lo_fsdm` reader - "]
+pub type DTEN_LO_FSDM_R = crate::BitReader<bool>;
+#[doc = "Field `dten_lo_fsdm` writer - "]
+pub type DTEN_LO_FSDM_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dten_lo_fref` reader - "]
+pub type DTEN_LO_FREF_R = crate::BitReader<bool>;
+#[doc = "Field `dten_lo_fref` writer - "]
+pub type DTEN_LO_FREF_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `dtest_pull_down` reader - "]
+pub type DTEST_PULL_DOWN_R = crate::BitReader<bool>;
+#[doc = "Field `dtest_pull_down` writer - "]
+pub type DTEST_PULL_DOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
+#[doc = "Field `rf_dtest_en` reader - "]
+pub type RF_DTEST_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rf_dtest_en` writer - "]
+pub type RF_DTEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEN_DIG_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 23"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn rf_dtest_en(&self) -> RF_DTEST_EN_R {
-        RF_DTEST_EN_R::new(((self.bits >> 23) & 0x01) != 0)
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    pub fn dtest_pull_down(&self) -> DTEST_PULL_DOWN_R {
-        DTEST_PULL_DOWN_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn dten_lo_fref(&self) -> DTEN_LO_FREF_R {
-        DTEN_LO_FREF_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn dten_lo_fsdm(&self) -> DTEN_LO_FSDM_R {
-        DTEN_LO_FSDM_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn dten_clkpll_fin(&self) -> DTEN_CLKPLL_FIN_R {
-        DTEN_CLKPLL_FIN_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn dten_clkpll_fref(&self) -> DTEN_CLKPLL_FREF_R {
-        DTEN_CLKPLL_FREF_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn dten_clkpll_fsdm(&self) -> DTEN_CLKPLL_FSDM_R {
-        DTEN_CLKPLL_FSDM_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn dten_clkpll_clk32m(&self) -> DTEN_CLKPLL_CLK32M_R {
-        DTEN_CLKPLL_CLK32M_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn dten_clkpll_postdiv_clk(&self) -> DTEN_CLKPLL_POSTDIV_CLK_R {
+        DTEN_CLKPLL_POSTDIV_CLK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn dten_clkpll_clk96m(&self) -> DTEN_CLKPLL_CLK96M_R {
-        DTEN_CLKPLL_CLK96M_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn dten_clkpll_postdiv_clk(&self) -> DTEN_CLKPLL_POSTDIV_CLK_R {
-        DTEN_CLKPLL_POSTDIV_CLK_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 23"]
-    #[inline(always)]
-    pub fn rf_dtest_en(&mut self) -> RF_DTEST_EN_W {
-        RF_DTEST_EN_W { w: self }
-    }
-    #[doc = "Bit 9"]
-    #[inline(always)]
-    pub fn dtest_pull_down(&mut self) -> DTEST_PULL_DOWN_W {
-        DTEST_PULL_DOWN_W { w: self }
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn dten_lo_fref(&mut self) -> DTEN_LO_FREF_W {
-        DTEN_LO_FREF_W { w: self }
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn dten_lo_fsdm(&mut self) -> DTEN_LO_FSDM_W {
-        DTEN_LO_FSDM_W { w: self }
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn dten_clkpll_fin(&mut self) -> DTEN_CLKPLL_FIN_W {
-        DTEN_CLKPLL_FIN_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn dten_clkpll_fref(&mut self) -> DTEN_CLKPLL_FREF_W {
-        DTEN_CLKPLL_FREF_W { w: self }
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn dten_clkpll_fsdm(&mut self) -> DTEN_CLKPLL_FSDM_W {
-        DTEN_CLKPLL_FSDM_W { w: self }
+        DTEN_CLKPLL_CLK96M_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn dten_clkpll_clk32m(&mut self) -> DTEN_CLKPLL_CLK32M_W {
-        DTEN_CLKPLL_CLK32M_W { w: self }
+    pub fn dten_clkpll_clk32m(&self) -> DTEN_CLKPLL_CLK32M_R {
+        DTEN_CLKPLL_CLK32M_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn dten_clkpll_fsdm(&self) -> DTEN_CLKPLL_FSDM_R {
+        DTEN_CLKPLL_FSDM_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn dten_clkpll_fref(&self) -> DTEN_CLKPLL_FREF_R {
+        DTEN_CLKPLL_FREF_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn dten_clkpll_fin(&self) -> DTEN_CLKPLL_FIN_R {
+        DTEN_CLKPLL_FIN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn dten_lo_fsdm(&self) -> DTEN_LO_FSDM_R {
+        DTEN_LO_FSDM_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn dten_lo_fref(&self) -> DTEN_LO_FREF_R {
+        DTEN_LO_FREF_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    pub fn dtest_pull_down(&self) -> DTEST_PULL_DOWN_R {
+        DTEST_PULL_DOWN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn rf_dtest_en(&self) -> RF_DTEST_EN_R {
+        RF_DTEST_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_clkpll_postdiv_clk(&mut self) -> DTEN_CLKPLL_POSTDIV_CLK_W<0> {
+        DTEN_CLKPLL_POSTDIV_CLK_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn dten_clkpll_clk96m(&mut self) -> DTEN_CLKPLL_CLK96M_W {
-        DTEN_CLKPLL_CLK96M_W { w: self }
+    #[must_use]
+    pub fn dten_clkpll_clk96m(&mut self) -> DTEN_CLKPLL_CLK96M_W<1> {
+        DTEN_CLKPLL_CLK96M_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn dten_clkpll_postdiv_clk(&mut self) -> DTEN_CLKPLL_POSTDIV_CLK_W {
-        DTEN_CLKPLL_POSTDIV_CLK_W { w: self }
+    #[must_use]
+    pub fn dten_clkpll_clk32m(&mut self) -> DTEN_CLKPLL_CLK32M_W<2> {
+        DTEN_CLKPLL_CLK32M_W::new(self)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_clkpll_fsdm(&mut self) -> DTEN_CLKPLL_FSDM_W<3> {
+        DTEN_CLKPLL_FSDM_W::new(self)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_clkpll_fref(&mut self) -> DTEN_CLKPLL_FREF_W<4> {
+        DTEN_CLKPLL_FREF_W::new(self)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_clkpll_fin(&mut self) -> DTEN_CLKPLL_FIN_W<5> {
+        DTEN_CLKPLL_FIN_W::new(self)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_lo_fsdm(&mut self) -> DTEN_LO_FSDM_W<6> {
+        DTEN_LO_FSDM_W::new(self)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dten_lo_fref(&mut self) -> DTEN_LO_FREF_W<8> {
+        DTEN_LO_FREF_W::new(self)
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dtest_pull_down(&mut self) -> DTEST_PULL_DOWN_W<9> {
+        DTEST_PULL_DOWN_W::new(self)
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rf_dtest_en(&mut self) -> RF_DTEST_EN_W<23> {
+        RF_DTEST_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -513,11 +207,10 @@ impl crate::Readable for TEN_DIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [ten_dig::W](W) writer structure"]
 impl crate::Writable for TEN_DIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ten_dig to value 0"]
 impl crate::Resettable for TEN_DIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

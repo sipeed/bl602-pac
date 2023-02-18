@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<HBN_RSV2_SPEC>> for R {
+impl From<crate::R<HBN_RSV2_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<HBN_RSV2_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,32 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<HBN_RSV2_SPEC>> for W {
+impl From<crate::W<HBN_RSV2_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<HBN_RSV2_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `HBN_RSV2` reader - "]
-pub struct HBN_RSV2_R(crate::FieldReader<u32, u32>);
-impl HBN_RSV2_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        HBN_RSV2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HBN_RSV2_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HBN_RSV2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HBN_RSV2` writer - "]
-pub struct HBN_RSV2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HBN_RSV2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type HBN_RSV2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HBN_RSV2_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn hbn_rsv2(&self) -> HBN_RSV2_R {
-        HBN_RSV2_R::new((self.bits & 0xffff_ffff) as u32)
+        HBN_RSV2_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn hbn_rsv2(&mut self) -> HBN_RSV2_W {
-        HBN_RSV2_W { w: self }
+    #[must_use]
+    pub fn hbn_rsv2(&mut self) -> HBN_RSV2_W<0> {
+        HBN_RSV2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +71,10 @@ impl crate::Readable for HBN_RSV2_SPEC {
 #[doc = "`write(|w| ..)` method takes [hbn_rsv2::W](W) writer structure"]
 impl crate::Writable for HBN_RSV2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HBN_RSV2 to value 0"]
 impl crate::Resettable for HBN_RSV2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

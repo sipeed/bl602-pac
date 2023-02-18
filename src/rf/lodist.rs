@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<LODIST_SPEC>> for R {
+impl From<crate::R<LODIST_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<LODIST_SPEC>) -> Self {
         R(reader)
     }
@@ -27,363 +28,138 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<LODIST_SPEC>> for W {
+impl From<crate::W<LODIST_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<LODIST_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `lo_lodist_rxbuf_stre` reader - "]
-pub struct LO_LODIST_RXBUF_STRE_R(crate::FieldReader<bool, bool>);
-impl LO_LODIST_RXBUF_STRE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_LODIST_RXBUF_STRE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_LODIST_RXBUF_STRE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_lodist_rxbuf_stre` writer - "]
-pub struct LO_LODIST_RXBUF_STRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_LODIST_RXBUF_STRE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
-        self.w
-    }
-}
-#[doc = "Field `lo_lodist_txbuf_stre` reader - "]
-pub struct LO_LODIST_TXBUF_STRE_R(crate::FieldReader<bool, bool>);
-impl LO_LODIST_TXBUF_STRE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_LODIST_TXBUF_STRE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_LODIST_TXBUF_STRE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_lodist_txbuf_stre` writer - "]
-pub struct LO_LODIST_TXBUF_STRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_LODIST_TXBUF_STRE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
-        self.w
-    }
-}
-#[doc = "Field `lo_osmx_cap` reader - "]
-pub struct LO_OSMX_CAP_R(crate::FieldReader<u8, u8>);
-impl LO_OSMX_CAP_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_OSMX_CAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_OSMX_CAP_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_osmx_cap` writer - "]
-pub struct LO_OSMX_CAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_OSMX_CAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
-#[doc = "Field `lo_osmx_capbank_bias` reader - "]
-pub struct LO_OSMX_CAPBANK_BIAS_R(crate::FieldReader<u8, u8>);
-impl LO_OSMX_CAPBANK_BIAS_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_OSMX_CAPBANK_BIAS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_OSMX_CAPBANK_BIAS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_osmx_capbank_bias` writer - "]
-pub struct LO_OSMX_CAPBANK_BIAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_OSMX_CAPBANK_BIAS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
-        self.w
-    }
-}
-#[doc = "Field `lo_osmx_vbuf_stre` reader - "]
-pub struct LO_OSMX_VBUF_STRE_R(crate::FieldReader<bool, bool>);
-impl LO_OSMX_VBUF_STRE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_OSMX_VBUF_STRE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_OSMX_VBUF_STRE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_osmx_vbuf_stre` writer - "]
-pub struct LO_OSMX_VBUF_STRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_OSMX_VBUF_STRE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `lo_osmx_fix_cap` reader - "]
-pub struct LO_OSMX_FIX_CAP_R(crate::FieldReader<bool, bool>);
-impl LO_OSMX_FIX_CAP_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_OSMX_FIX_CAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_OSMX_FIX_CAP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_osmx_fix_cap` writer - "]
-pub struct LO_OSMX_FIX_CAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_OSMX_FIX_CAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Field `lo_osmx_en_xgm` reader - "]
-pub struct LO_OSMX_EN_XGM_R(crate::FieldReader<bool, bool>);
-impl LO_OSMX_EN_XGM_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_OSMX_EN_XGM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_OSMX_EN_XGM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_osmx_en_xgm` writer - "]
-pub struct LO_OSMX_EN_XGM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_OSMX_EN_XGM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
 #[doc = "Field `lo_osmx_xgm_boost` reader - "]
-pub struct LO_OSMX_XGM_BOOST_R(crate::FieldReader<bool, bool>);
-impl LO_OSMX_XGM_BOOST_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_OSMX_XGM_BOOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_OSMX_XGM_BOOST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LO_OSMX_XGM_BOOST_R = crate::BitReader<bool>;
 #[doc = "Field `lo_osmx_xgm_boost` writer - "]
-pub struct LO_OSMX_XGM_BOOST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_OSMX_XGM_BOOST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LO_OSMX_XGM_BOOST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LODIST_SPEC, bool, O>;
+#[doc = "Field `lo_osmx_en_xgm` reader - "]
+pub type LO_OSMX_EN_XGM_R = crate::BitReader<bool>;
+#[doc = "Field `lo_osmx_en_xgm` writer - "]
+pub type LO_OSMX_EN_XGM_W<'a, const O: u8> = crate::BitWriter<'a, u32, LODIST_SPEC, bool, O>;
+#[doc = "Field `lo_osmx_fix_cap` reader - "]
+pub type LO_OSMX_FIX_CAP_R = crate::BitReader<bool>;
+#[doc = "Field `lo_osmx_fix_cap` writer - "]
+pub type LO_OSMX_FIX_CAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, LODIST_SPEC, bool, O>;
+#[doc = "Field `lo_osmx_vbuf_stre` reader - "]
+pub type LO_OSMX_VBUF_STRE_R = crate::BitReader<bool>;
+#[doc = "Field `lo_osmx_vbuf_stre` writer - "]
+pub type LO_OSMX_VBUF_STRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LODIST_SPEC, bool, O>;
+#[doc = "Field `lo_osmx_capbank_bias` reader - "]
+pub type LO_OSMX_CAPBANK_BIAS_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `lo_osmx_capbank_bias` writer - "]
+pub type LO_OSMX_CAPBANK_BIAS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LODIST_SPEC, u8, u8, 2, O>;
+#[doc = "Field `lo_osmx_cap` reader - "]
+pub type LO_OSMX_CAP_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `lo_osmx_cap` writer - "]
+pub type LO_OSMX_CAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LODIST_SPEC, u8, u8, 4, O>;
+#[doc = "Field `lo_lodist_txbuf_stre` reader - "]
+pub type LO_LODIST_TXBUF_STRE_R = crate::BitReader<bool>;
+#[doc = "Field `lo_lodist_txbuf_stre` writer - "]
+pub type LO_LODIST_TXBUF_STRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LODIST_SPEC, bool, O>;
+#[doc = "Field `lo_lodist_rxbuf_stre` reader - "]
+pub type LO_LODIST_RXBUF_STRE_R = crate::BitReader<bool>;
+#[doc = "Field `lo_lodist_rxbuf_stre` writer - "]
+pub type LO_LODIST_RXBUF_STRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LODIST_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 28"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn lo_lodist_rxbuf_stre(&self) -> LO_LODIST_RXBUF_STRE_R {
-        LO_LODIST_RXBUF_STRE_R::new(((self.bits >> 28) & 0x01) != 0)
+    pub fn lo_osmx_xgm_boost(&self) -> LO_OSMX_XGM_BOOST_R {
+        LO_OSMX_XGM_BOOST_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 24"]
+    #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn lo_lodist_txbuf_stre(&self) -> LO_LODIST_TXBUF_STRE_R {
-        LO_LODIST_TXBUF_STRE_R::new(((self.bits >> 24) & 0x01) != 0)
+    pub fn lo_osmx_en_xgm(&self) -> LO_OSMX_EN_XGM_R {
+        LO_OSMX_EN_XGM_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn lo_osmx_fix_cap(&self) -> LO_OSMX_FIX_CAP_R {
+        LO_OSMX_FIX_CAP_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn lo_osmx_vbuf_stre(&self) -> LO_OSMX_VBUF_STRE_R {
+        LO_OSMX_VBUF_STRE_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bits 16:17"]
+    #[inline(always)]
+    pub fn lo_osmx_capbank_bias(&self) -> LO_OSMX_CAPBANK_BIAS_R {
+        LO_OSMX_CAPBANK_BIAS_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
     pub fn lo_osmx_cap(&self) -> LO_OSMX_CAP_R {
         LO_OSMX_CAP_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
-    #[doc = "Bits 16:17"]
+    #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn lo_osmx_capbank_bias(&self) -> LO_OSMX_CAPBANK_BIAS_R {
-        LO_OSMX_CAPBANK_BIAS_R::new(((self.bits >> 16) & 0x03) as u8)
+    pub fn lo_lodist_txbuf_stre(&self) -> LO_LODIST_TXBUF_STRE_R {
+        LO_LODIST_TXBUF_STRE_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 12"]
+    #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn lo_osmx_vbuf_stre(&self) -> LO_OSMX_VBUF_STRE_R {
-        LO_OSMX_VBUF_STRE_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn lo_osmx_fix_cap(&self) -> LO_OSMX_FIX_CAP_R {
-        LO_OSMX_FIX_CAP_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn lo_osmx_en_xgm(&self) -> LO_OSMX_EN_XGM_R {
-        LO_OSMX_EN_XGM_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn lo_osmx_xgm_boost(&self) -> LO_OSMX_XGM_BOOST_R {
-        LO_OSMX_XGM_BOOST_R::new((self.bits & 0x01) != 0)
+    pub fn lo_lodist_rxbuf_stre(&self) -> LO_LODIST_RXBUF_STRE_R {
+        LO_LODIST_RXBUF_STRE_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 28"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn lo_lodist_rxbuf_stre(&mut self) -> LO_LODIST_RXBUF_STRE_W {
-        LO_LODIST_RXBUF_STRE_W { w: self }
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    pub fn lo_lodist_txbuf_stre(&mut self) -> LO_LODIST_TXBUF_STRE_W {
-        LO_LODIST_TXBUF_STRE_W { w: self }
-    }
-    #[doc = "Bits 20:23"]
-    #[inline(always)]
-    pub fn lo_osmx_cap(&mut self) -> LO_OSMX_CAP_W {
-        LO_OSMX_CAP_W { w: self }
-    }
-    #[doc = "Bits 16:17"]
-    #[inline(always)]
-    pub fn lo_osmx_capbank_bias(&mut self) -> LO_OSMX_CAPBANK_BIAS_W {
-        LO_OSMX_CAPBANK_BIAS_W { w: self }
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn lo_osmx_vbuf_stre(&mut self) -> LO_OSMX_VBUF_STRE_W {
-        LO_OSMX_VBUF_STRE_W { w: self }
-    }
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn lo_osmx_fix_cap(&mut self) -> LO_OSMX_FIX_CAP_W {
-        LO_OSMX_FIX_CAP_W { w: self }
+    #[must_use]
+    pub fn lo_osmx_xgm_boost(&mut self) -> LO_OSMX_XGM_BOOST_W<0> {
+        LO_OSMX_XGM_BOOST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn lo_osmx_en_xgm(&mut self) -> LO_OSMX_EN_XGM_W {
-        LO_OSMX_EN_XGM_W { w: self }
+    #[must_use]
+    pub fn lo_osmx_en_xgm(&mut self) -> LO_OSMX_EN_XGM_W<4> {
+        LO_OSMX_EN_XGM_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn lo_osmx_xgm_boost(&mut self) -> LO_OSMX_XGM_BOOST_W {
-        LO_OSMX_XGM_BOOST_W { w: self }
+    #[must_use]
+    pub fn lo_osmx_fix_cap(&mut self) -> LO_OSMX_FIX_CAP_W<8> {
+        LO_OSMX_FIX_CAP_W::new(self)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_osmx_vbuf_stre(&mut self) -> LO_OSMX_VBUF_STRE_W<12> {
+        LO_OSMX_VBUF_STRE_W::new(self)
+    }
+    #[doc = "Bits 16:17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_osmx_capbank_bias(&mut self) -> LO_OSMX_CAPBANK_BIAS_W<16> {
+        LO_OSMX_CAPBANK_BIAS_W::new(self)
+    }
+    #[doc = "Bits 20:23"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_osmx_cap(&mut self) -> LO_OSMX_CAP_W<20> {
+        LO_OSMX_CAP_W::new(self)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_lodist_txbuf_stre(&mut self) -> LO_LODIST_TXBUF_STRE_W<24> {
+        LO_LODIST_TXBUF_STRE_W::new(self)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_lodist_rxbuf_stre(&mut self) -> LO_LODIST_RXBUF_STRE_W<28> {
+        LO_LODIST_RXBUF_STRE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -401,11 +177,10 @@ impl crate::Readable for LODIST_SPEC {
 #[doc = "`write(|w| ..)` method takes [lodist::W](W) writer structure"]
 impl crate::Writable for LODIST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets lodist to value 0"]
 impl crate::Resettable for LODIST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

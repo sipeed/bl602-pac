@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SWRST_CFG0_SPEC>> for R {
+impl From<crate::R<SWRST_CFG0_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SWRST_CFG0_SPEC>) -> Self {
         R(reader)
     }
@@ -27,199 +28,77 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SWRST_CFG0_SPEC>> for W {
+impl From<crate::W<SWRST_CFG0_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SWRST_CFG0_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `swrst_s30` reader - "]
-pub struct SWRST_S30_R(crate::FieldReader<bool, bool>);
-impl SWRST_S30_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SWRST_S30_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWRST_S30_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `swrst_s30` writer - "]
-pub struct SWRST_S30_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWRST_S30_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Field `swrst_s20` reader - "]
-pub struct SWRST_S20_R(crate::FieldReader<bool, bool>);
-impl SWRST_S20_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SWRST_S20_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWRST_S20_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `swrst_s20` writer - "]
-pub struct SWRST_S20_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWRST_S20_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `swrst_s01` reader - "]
-pub struct SWRST_S01_R(crate::FieldReader<bool, bool>);
-impl SWRST_S01_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SWRST_S01_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWRST_S01_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `swrst_s01` writer - "]
-pub struct SWRST_S01_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWRST_S01_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `swrst_s00` reader - "]
-pub struct SWRST_S00_R(crate::FieldReader<bool, bool>);
-impl SWRST_S00_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SWRST_S00_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWRST_S00_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SWRST_S00_R = crate::BitReader<bool>;
 #[doc = "Field `swrst_s00` writer - "]
-pub struct SWRST_S00_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWRST_S00_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SWRST_S00_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s01` reader - "]
+pub type SWRST_S01_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s01` writer - "]
+pub type SWRST_S01_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s20` reader - "]
+pub type SWRST_S20_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s20` writer - "]
+pub type SWRST_S20_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
+#[doc = "Field `swrst_s30` reader - "]
+pub type SWRST_S30_R = crate::BitReader<bool>;
+#[doc = "Field `swrst_s30` writer - "]
+pub type SWRST_S30_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG0_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 8"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn swrst_s30(&self) -> SWRST_S30_R {
-        SWRST_S30_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn swrst_s20(&self) -> SWRST_S20_R {
-        SWRST_S20_R::new(((self.bits >> 4) & 0x01) != 0)
+    pub fn swrst_s00(&self) -> SWRST_S00_R {
+        SWRST_S00_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn swrst_s01(&self) -> SWRST_S01_R {
-        SWRST_S01_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn swrst_s00(&self) -> SWRST_S00_R {
-        SWRST_S00_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 8"]
-    #[inline(always)]
-    pub fn swrst_s30(&mut self) -> SWRST_S30_W {
-        SWRST_S30_W { w: self }
+        SWRST_S01_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn swrst_s20(&mut self) -> SWRST_S20_W {
-        SWRST_S20_W { w: self }
+    pub fn swrst_s20(&self) -> SWRST_S20_R {
+        SWRST_S20_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn swrst_s30(&self) -> SWRST_S30_R {
+        SWRST_S30_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s00(&mut self) -> SWRST_S00_W<0> {
+        SWRST_S00_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn swrst_s01(&mut self) -> SWRST_S01_W {
-        SWRST_S01_W { w: self }
+    #[must_use]
+    pub fn swrst_s01(&mut self) -> SWRST_S01_W<1> {
+        SWRST_S01_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn swrst_s00(&mut self) -> SWRST_S00_W {
-        SWRST_S00_W { w: self }
+    #[must_use]
+    pub fn swrst_s20(&mut self) -> SWRST_S20_W<4> {
+        SWRST_S20_W::new(self)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swrst_s30(&mut self) -> SWRST_S30_W<8> {
+        SWRST_S30_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -237,11 +116,10 @@ impl crate::Readable for SWRST_CFG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [swrst_cfg0::W](W) writer structure"]
 impl crate::Writable for SWRST_CFG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets swrst_cfg0 to value 0"]
 impl crate::Resettable for SWRST_CFG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

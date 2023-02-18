@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<CCI_WDATA_SPEC>> for R {
+impl From<crate::R<CCI_WDATA_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<CCI_WDATA_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<CCI_WDATA_SPEC>> for W {
+impl From<crate::W<CCI_WDATA_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<CCI_WDATA_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `apb_cci_wdata` reader - "]
-pub struct APB_CCI_WDATA_R(crate::FieldReader<u32, u32>);
-impl APB_CCI_WDATA_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        APB_CCI_WDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_CCI_WDATA_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_CCI_WDATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `apb_cci_wdata` writer - "]
-pub struct APB_CCI_WDATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_CCI_WDATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type APB_CCI_WDATA_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CCI_WDATA_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn apb_cci_wdata(&self) -> APB_CCI_WDATA_R {
-        APB_CCI_WDATA_R::new((self.bits & 0xffff_ffff) as u32)
+        APB_CCI_WDATA_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn apb_cci_wdata(&mut self) -> APB_CCI_WDATA_W {
-        APB_CCI_WDATA_W { w: self }
+    #[must_use]
+    pub fn apb_cci_wdata(&mut self) -> APB_CCI_WDATA_W<0> {
+        APB_CCI_WDATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for CCI_WDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [cci_wdata::W](W) writer structure"]
 impl crate::Writable for CCI_WDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets cci_wdata to value 0"]
 impl crate::Resettable for CCI_WDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

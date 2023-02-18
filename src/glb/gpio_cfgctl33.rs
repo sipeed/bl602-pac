@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<GPIO_CFGCTL33_SPEC>> for R {
+impl From<crate::R<GPIO_CFGCTL33_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<GPIO_CFGCTL33_SPEC>) -> Self {
         R(reader)
     }
@@ -27,13 +28,15 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<GPIO_CFGCTL33_SPEC>> for W {
+impl From<crate::W<GPIO_CFGCTL33_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<GPIO_CFGCTL33_SPEC>) -> Self {
         W(writer)
     }
 }
 impl W {
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -51,11 +54,10 @@ impl crate::Readable for GPIO_CFGCTL33_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_cfgctl33::W](W) writer structure"]
 impl crate::Writable for GPIO_CFGCTL33_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_CFGCTL33 to value 0"]
 impl crate::Resettable for GPIO_CFGCTL33_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TX_IQ_GAIN_HW6_SPEC>> for R {
+impl From<crate::R<TX_IQ_GAIN_HW6_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TX_IQ_GAIN_HW6_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TX_IQ_GAIN_HW6_SPEC>> for W {
+impl From<crate::W<TX_IQ_GAIN_HW6_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TX_IQ_GAIN_HW6_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `tx_iq_gain_comp_gc6` reader - "]
-pub struct TX_IQ_GAIN_COMP_GC6_R(crate::FieldReader<u16, u16>);
-impl TX_IQ_GAIN_COMP_GC6_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        TX_IQ_GAIN_COMP_GC6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_IQ_GAIN_COMP_GC6_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_iq_gain_comp_gc6` writer - "]
-pub struct TX_IQ_GAIN_COMP_GC6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_IQ_GAIN_COMP_GC6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 16)) | ((value as u32 & 0x07ff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `tx_iq_phase_comp_gc6` reader - "]
-pub struct TX_IQ_PHASE_COMP_GC6_R(crate::FieldReader<u16, u16>);
-impl TX_IQ_PHASE_COMP_GC6_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        TX_IQ_PHASE_COMP_GC6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_IQ_PHASE_COMP_GC6_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_IQ_PHASE_COMP_GC6_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `tx_iq_phase_comp_gc6` writer - "]
-pub struct TX_IQ_PHASE_COMP_GC6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_IQ_PHASE_COMP_GC6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type TX_IQ_PHASE_COMP_GC6_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TX_IQ_GAIN_HW6_SPEC, u16, u16, 10, O>;
+#[doc = "Field `tx_iq_gain_comp_gc6` reader - "]
+pub type TX_IQ_GAIN_COMP_GC6_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `tx_iq_gain_comp_gc6` writer - "]
+pub type TX_IQ_GAIN_COMP_GC6_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TX_IQ_GAIN_HW6_SPEC, u16, u16, 11, O>;
 impl R {
-    #[doc = "Bits 16:26"]
-    #[inline(always)]
-    pub fn tx_iq_gain_comp_gc6(&self) -> TX_IQ_GAIN_COMP_GC6_R {
-        TX_IQ_GAIN_COMP_GC6_R::new(((self.bits >> 16) & 0x07ff) as u16)
-    }
     #[doc = "Bits 0:9"]
     #[inline(always)]
     pub fn tx_iq_phase_comp_gc6(&self) -> TX_IQ_PHASE_COMP_GC6_R {
         TX_IQ_PHASE_COMP_GC6_R::new((self.bits & 0x03ff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:26"]
     #[inline(always)]
-    pub fn tx_iq_gain_comp_gc6(&mut self) -> TX_IQ_GAIN_COMP_GC6_W {
-        TX_IQ_GAIN_COMP_GC6_W { w: self }
+    pub fn tx_iq_gain_comp_gc6(&self) -> TX_IQ_GAIN_COMP_GC6_R {
+        TX_IQ_GAIN_COMP_GC6_R::new(((self.bits >> 16) & 0x07ff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn tx_iq_phase_comp_gc6(&mut self) -> TX_IQ_PHASE_COMP_GC6_W {
-        TX_IQ_PHASE_COMP_GC6_W { w: self }
+    #[must_use]
+    pub fn tx_iq_phase_comp_gc6(&mut self) -> TX_IQ_PHASE_COMP_GC6_W<0> {
+        TX_IQ_PHASE_COMP_GC6_W::new(self)
+    }
+    #[doc = "Bits 16:26"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_iq_gain_comp_gc6(&mut self) -> TX_IQ_GAIN_COMP_GC6_W<16> {
+        TX_IQ_GAIN_COMP_GC6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for TX_IQ_GAIN_HW6_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_iq_gain_hw6::W](W) writer structure"]
 impl crate::Writable for TX_IQ_GAIN_HW6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets tx_iq_gain_hw6 to value 0"]
 impl crate::Resettable for TX_IQ_GAIN_HW6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

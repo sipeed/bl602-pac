@@ -13,30 +13,24 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<GPDAC_DMA_WDATA_SPEC>> for W {
+impl From<crate::W<GPDAC_DMA_WDATA_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<GPDAC_DMA_WDATA_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `gpdac_dma_wdata` writer - "]
-pub struct GPDAC_DMA_WDATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPDAC_DMA_WDATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type GPDAC_DMA_WDATA_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPDAC_DMA_WDATA_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn gpdac_dma_wdata(&mut self) -> GPDAC_DMA_WDATA_W {
-        GPDAC_DMA_WDATA_W { w: self }
+    #[must_use]
+    pub fn gpdac_dma_wdata(&mut self) -> GPDAC_DMA_WDATA_W<0> {
+        GPDAC_DMA_WDATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -50,11 +44,10 @@ impl crate::RegisterSpec for GPDAC_DMA_WDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpdac_dma_wdata::W](W) writer structure"]
 impl crate::Writable for GPDAC_DMA_WDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets gpdac_dma_wdata to value 0"]
 impl crate::Resettable for GPDAC_DMA_WDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

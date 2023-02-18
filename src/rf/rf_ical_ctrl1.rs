@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<RF_ICAL_CTRL1_SPEC>> for R {
+impl From<crate::R<RF_ICAL_CTRL1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<RF_ICAL_CTRL1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,123 +28,65 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<RF_ICAL_CTRL1_SPEC>> for W {
+impl From<crate::W<RF_ICAL_CTRL1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<RF_ICAL_CTRL1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `rf_ical_r_os_i` reader - "]
-pub struct RF_ICAL_R_OS_I_R(crate::FieldReader<u16, u16>);
-impl RF_ICAL_R_OS_I_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RF_ICAL_R_OS_I_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RF_ICAL_R_OS_I_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rf_ical_r_os_i` writer - "]
-pub struct RF_ICAL_R_OS_I_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RF_ICAL_R_OS_I_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 20)) | ((value as u32 & 0x03ff) << 20);
-        self.w
-    }
-}
-#[doc = "Field `rf_ical_r_os_q` reader - "]
-pub struct RF_ICAL_R_OS_Q_R(crate::FieldReader<u16, u16>);
-impl RF_ICAL_R_OS_Q_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RF_ICAL_R_OS_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RF_ICAL_R_OS_Q_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rf_ical_r_os_q` writer - "]
-pub struct RF_ICAL_R_OS_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RF_ICAL_R_OS_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 10)) | ((value as u32 & 0x03ff) << 10);
-        self.w
-    }
-}
 #[doc = "Field `rf_ical_r_avg_n` reader - "]
-pub struct RF_ICAL_R_AVG_N_R(crate::FieldReader<u8, u8>);
-impl RF_ICAL_R_AVG_N_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        RF_ICAL_R_AVG_N_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RF_ICAL_R_AVG_N_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RF_ICAL_R_AVG_N_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `rf_ical_r_avg_n` writer - "]
-pub struct RF_ICAL_R_AVG_N_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RF_ICAL_R_AVG_N_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type RF_ICAL_R_AVG_N_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_ICAL_CTRL1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `rf_ical_r_os_q` reader - "]
+pub type RF_ICAL_R_OS_Q_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `rf_ical_r_os_q` writer - "]
+pub type RF_ICAL_R_OS_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_ICAL_CTRL1_SPEC, u16, u16, 10, O>;
+#[doc = "Field `rf_ical_r_os_i` reader - "]
+pub type RF_ICAL_R_OS_I_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `rf_ical_r_os_i` writer - "]
+pub type RF_ICAL_R_OS_I_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_ICAL_CTRL1_SPEC, u16, u16, 10, O>;
 impl R {
-    #[doc = "Bits 20:29"]
+    #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn rf_ical_r_os_i(&self) -> RF_ICAL_R_OS_I_R {
-        RF_ICAL_R_OS_I_R::new(((self.bits >> 20) & 0x03ff) as u16)
+    pub fn rf_ical_r_avg_n(&self) -> RF_ICAL_R_AVG_N_R {
+        RF_ICAL_R_AVG_N_R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 10:19"]
     #[inline(always)]
     pub fn rf_ical_r_os_q(&self) -> RF_ICAL_R_OS_Q_R {
         RF_ICAL_R_OS_Q_R::new(((self.bits >> 10) & 0x03ff) as u16)
     }
-    #[doc = "Bits 0:4"]
+    #[doc = "Bits 20:29"]
     #[inline(always)]
-    pub fn rf_ical_r_avg_n(&self) -> RF_ICAL_R_AVG_N_R {
-        RF_ICAL_R_AVG_N_R::new((self.bits & 0x1f) as u8)
+    pub fn rf_ical_r_os_i(&self) -> RF_ICAL_R_OS_I_R {
+        RF_ICAL_R_OS_I_R::new(((self.bits >> 20) & 0x03ff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 20:29"]
+    #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn rf_ical_r_os_i(&mut self) -> RF_ICAL_R_OS_I_W {
-        RF_ICAL_R_OS_I_W { w: self }
+    #[must_use]
+    pub fn rf_ical_r_avg_n(&mut self) -> RF_ICAL_R_AVG_N_W<0> {
+        RF_ICAL_R_AVG_N_W::new(self)
     }
     #[doc = "Bits 10:19"]
     #[inline(always)]
-    pub fn rf_ical_r_os_q(&mut self) -> RF_ICAL_R_OS_Q_W {
-        RF_ICAL_R_OS_Q_W { w: self }
+    #[must_use]
+    pub fn rf_ical_r_os_q(&mut self) -> RF_ICAL_R_OS_Q_W<10> {
+        RF_ICAL_R_OS_Q_W::new(self)
     }
-    #[doc = "Bits 0:4"]
+    #[doc = "Bits 20:29"]
     #[inline(always)]
-    pub fn rf_ical_r_avg_n(&mut self) -> RF_ICAL_R_AVG_N_W {
-        RF_ICAL_R_AVG_N_W { w: self }
+    #[must_use]
+    pub fn rf_ical_r_os_i(&mut self) -> RF_ICAL_R_OS_I_W<20> {
+        RF_ICAL_R_OS_I_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -161,11 +104,10 @@ impl crate::Readable for RF_ICAL_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [rf_ical_ctrl1::W](W) writer structure"]
 impl crate::Writable for RF_ICAL_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets rf_ical_ctrl1 to value 0"]
 impl crate::Resettable for RF_ICAL_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

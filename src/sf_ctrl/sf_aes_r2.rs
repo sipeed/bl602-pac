@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SF_AES_R2_SPEC>> for R {
+impl From<crate::R<SF_AES_R2_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SF_AES_R2_SPEC>) -> Self {
         R(reader)
     }
@@ -27,225 +28,95 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SF_AES_R2_SPEC>> for W {
+impl From<crate::W<SF_AES_R2_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SF_AES_R2_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `sf_aes_r2_lock` reader - "]
-pub struct SF_AES_R2_LOCK_R(crate::FieldReader<bool, bool>);
-impl SF_AES_R2_LOCK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SF_AES_R2_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_AES_R2_LOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf_aes_r2_lock` writer - "]
-pub struct SF_AES_R2_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_R2_LOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
-#[doc = "Field `sf_aes_r2_en` reader - "]
-pub struct SF_AES_R2_EN_R(crate::FieldReader<bool, bool>);
-impl SF_AES_R2_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SF_AES_R2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_AES_R2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf_aes_r2_en` writer - "]
-pub struct SF_AES_R2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_R2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
-        self.w
-    }
-}
-#[doc = "Field `sf_aes_r2_hw_key_en` reader - "]
-pub struct SF_AES_R2_HW_KEY_EN_R(crate::FieldReader<bool, bool>);
-impl SF_AES_R2_HW_KEY_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SF_AES_R2_HW_KEY_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_AES_R2_HW_KEY_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf_aes_r2_hw_key_en` writer - "]
-pub struct SF_AES_R2_HW_KEY_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_R2_HW_KEY_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
-        self.w
-    }
-}
-#[doc = "Field `sf_aes_r2_start` reader - "]
-pub struct SF_AES_R2_START_R(crate::FieldReader<u16, u16>);
-impl SF_AES_R2_START_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        SF_AES_R2_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_AES_R2_START_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf_aes_r2_start` writer - "]
-pub struct SF_AES_R2_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_R2_START_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3fff << 14)) | ((value as u32 & 0x3fff) << 14);
-        self.w
-    }
-}
 #[doc = "Field `sf_aes_r2_end` reader - "]
-pub struct SF_AES_R2_END_R(crate::FieldReader<u16, u16>);
-impl SF_AES_R2_END_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        SF_AES_R2_END_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_AES_R2_END_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SF_AES_R2_END_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `sf_aes_r2_end` writer - "]
-pub struct SF_AES_R2_END_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_AES_R2_END_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type SF_AES_R2_END_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF_AES_R2_SPEC, u16, u16, 14, O>;
+#[doc = "Field `sf_aes_r2_start` reader - "]
+pub type SF_AES_R2_START_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `sf_aes_r2_start` writer - "]
+pub type SF_AES_R2_START_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF_AES_R2_SPEC, u16, u16, 14, O>;
+#[doc = "Field `sf_aes_r2_hw_key_en` reader - "]
+pub type SF_AES_R2_HW_KEY_EN_R = crate::BitReader<bool>;
+#[doc = "Field `sf_aes_r2_hw_key_en` writer - "]
+pub type SF_AES_R2_HW_KEY_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SF_AES_R2_SPEC, bool, O>;
+#[doc = "Field `sf_aes_r2_en` reader - "]
+pub type SF_AES_R2_EN_R = crate::BitReader<bool>;
+#[doc = "Field `sf_aes_r2_en` writer - "]
+pub type SF_AES_R2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_AES_R2_SPEC, bool, O>;
+#[doc = "Field `sf_aes_r2_lock` reader - "]
+pub type SF_AES_R2_LOCK_R = crate::BitReader<bool>;
+#[doc = "Field `sf_aes_r2_lock` writer - "]
+pub type SF_AES_R2_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_AES_R2_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 31"]
+    #[doc = "Bits 0:13"]
     #[inline(always)]
-    pub fn sf_aes_r2_lock(&self) -> SF_AES_R2_LOCK_R {
-        SF_AES_R2_LOCK_R::new(((self.bits >> 31) & 0x01) != 0)
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn sf_aes_r2_en(&self) -> SF_AES_R2_EN_R {
-        SF_AES_R2_EN_R::new(((self.bits >> 30) & 0x01) != 0)
-    }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn sf_aes_r2_hw_key_en(&self) -> SF_AES_R2_HW_KEY_EN_R {
-        SF_AES_R2_HW_KEY_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+    pub fn sf_aes_r2_end(&self) -> SF_AES_R2_END_R {
+        SF_AES_R2_END_R::new((self.bits & 0x3fff) as u16)
     }
     #[doc = "Bits 14:27"]
     #[inline(always)]
     pub fn sf_aes_r2_start(&self) -> SF_AES_R2_START_R {
         SF_AES_R2_START_R::new(((self.bits >> 14) & 0x3fff) as u16)
     }
-    #[doc = "Bits 0:13"]
+    #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn sf_aes_r2_end(&self) -> SF_AES_R2_END_R {
-        SF_AES_R2_END_R::new((self.bits & 0x3fff) as u16)
-    }
-}
-impl W {
-    #[doc = "Bit 31"]
-    #[inline(always)]
-    pub fn sf_aes_r2_lock(&mut self) -> SF_AES_R2_LOCK_W {
-        SF_AES_R2_LOCK_W { w: self }
+    pub fn sf_aes_r2_hw_key_en(&self) -> SF_AES_R2_HW_KEY_EN_R {
+        SF_AES_R2_HW_KEY_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn sf_aes_r2_en(&mut self) -> SF_AES_R2_EN_W {
-        SF_AES_R2_EN_W { w: self }
+    pub fn sf_aes_r2_en(&self) -> SF_AES_R2_EN_R {
+        SF_AES_R2_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 29"]
+    #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn sf_aes_r2_hw_key_en(&mut self) -> SF_AES_R2_HW_KEY_EN_W {
-        SF_AES_R2_HW_KEY_EN_W { w: self }
+    pub fn sf_aes_r2_lock(&self) -> SF_AES_R2_LOCK_R {
+        SF_AES_R2_LOCK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sf_aes_r2_end(&mut self) -> SF_AES_R2_END_W<0> {
+        SF_AES_R2_END_W::new(self)
     }
     #[doc = "Bits 14:27"]
     #[inline(always)]
-    pub fn sf_aes_r2_start(&mut self) -> SF_AES_R2_START_W {
-        SF_AES_R2_START_W { w: self }
+    #[must_use]
+    pub fn sf_aes_r2_start(&mut self) -> SF_AES_R2_START_W<14> {
+        SF_AES_R2_START_W::new(self)
     }
-    #[doc = "Bits 0:13"]
+    #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn sf_aes_r2_end(&mut self) -> SF_AES_R2_END_W {
-        SF_AES_R2_END_W { w: self }
+    #[must_use]
+    pub fn sf_aes_r2_hw_key_en(&mut self) -> SF_AES_R2_HW_KEY_EN_W<29> {
+        SF_AES_R2_HW_KEY_EN_W::new(self)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sf_aes_r2_en(&mut self) -> SF_AES_R2_EN_W<30> {
+        SF_AES_R2_EN_W::new(self)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sf_aes_r2_lock(&mut self) -> SF_AES_R2_LOCK_W<31> {
+        SF_AES_R2_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -263,11 +134,10 @@ impl crate::Readable for SF_AES_R2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sf_aes_r2::W](W) writer structure"]
 impl crate::Writable for SF_AES_R2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sf_aes_r2 to value 0x3fff"]
 impl crate::Resettable for SF_AES_R2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3fff
-    }
+    const RESET_VALUE: Self::Ux = 0x3fff;
 }

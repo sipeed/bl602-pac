@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TOSDAC_CTRL_HW2_SPEC>> for R {
+impl From<crate::R<TOSDAC_CTRL_HW2_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TOSDAC_CTRL_HW2_SPEC>) -> Self {
         R(reader)
     }
@@ -27,159 +28,81 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TOSDAC_CTRL_HW2_SPEC>> for W {
+impl From<crate::W<TOSDAC_CTRL_HW2_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TOSDAC_CTRL_HW2_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `tbb_tosdac_q_gc3` reader - "]
-pub struct TBB_TOSDAC_Q_GC3_R(crate::FieldReader<u8, u8>);
-impl TBB_TOSDAC_Q_GC3_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TBB_TOSDAC_Q_GC3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBB_TOSDAC_Q_GC3_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tbb_tosdac_q_gc3` writer - "]
-pub struct TBB_TOSDAC_Q_GC3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBB_TOSDAC_Q_GC3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 24)) | ((value as u32 & 0x3f) << 24);
-        self.w
-    }
-}
-#[doc = "Field `tbb_tosdac_i_gc3` reader - "]
-pub struct TBB_TOSDAC_I_GC3_R(crate::FieldReader<u8, u8>);
-impl TBB_TOSDAC_I_GC3_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TBB_TOSDAC_I_GC3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBB_TOSDAC_I_GC3_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tbb_tosdac_i_gc3` writer - "]
-pub struct TBB_TOSDAC_I_GC3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBB_TOSDAC_I_GC3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 16)) | ((value as u32 & 0x3f) << 16);
-        self.w
-    }
-}
-#[doc = "Field `tbb_tosdac_q_gc2` reader - "]
-pub struct TBB_TOSDAC_Q_GC2_R(crate::FieldReader<u8, u8>);
-impl TBB_TOSDAC_Q_GC2_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TBB_TOSDAC_Q_GC2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBB_TOSDAC_Q_GC2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tbb_tosdac_q_gc2` writer - "]
-pub struct TBB_TOSDAC_Q_GC2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBB_TOSDAC_Q_GC2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
-        self.w
-    }
-}
 #[doc = "Field `tbb_tosdac_i_gc2` reader - "]
-pub struct TBB_TOSDAC_I_GC2_R(crate::FieldReader<u8, u8>);
-impl TBB_TOSDAC_I_GC2_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TBB_TOSDAC_I_GC2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBB_TOSDAC_I_GC2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBB_TOSDAC_I_GC2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `tbb_tosdac_i_gc2` writer - "]
-pub struct TBB_TOSDAC_I_GC2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBB_TOSDAC_I_GC2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type TBB_TOSDAC_I_GC2_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TOSDAC_CTRL_HW2_SPEC, u8, u8, 6, O>;
+#[doc = "Field `tbb_tosdac_q_gc2` reader - "]
+pub type TBB_TOSDAC_Q_GC2_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tbb_tosdac_q_gc2` writer - "]
+pub type TBB_TOSDAC_Q_GC2_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TOSDAC_CTRL_HW2_SPEC, u8, u8, 6, O>;
+#[doc = "Field `tbb_tosdac_i_gc3` reader - "]
+pub type TBB_TOSDAC_I_GC3_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tbb_tosdac_i_gc3` writer - "]
+pub type TBB_TOSDAC_I_GC3_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TOSDAC_CTRL_HW2_SPEC, u8, u8, 6, O>;
+#[doc = "Field `tbb_tosdac_q_gc3` reader - "]
+pub type TBB_TOSDAC_Q_GC3_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tbb_tosdac_q_gc3` writer - "]
+pub type TBB_TOSDAC_Q_GC3_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TOSDAC_CTRL_HW2_SPEC, u8, u8, 6, O>;
 impl R {
-    #[doc = "Bits 24:29"]
+    #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn tbb_tosdac_q_gc3(&self) -> TBB_TOSDAC_Q_GC3_R {
-        TBB_TOSDAC_Q_GC3_R::new(((self.bits >> 24) & 0x3f) as u8)
-    }
-    #[doc = "Bits 16:21"]
-    #[inline(always)]
-    pub fn tbb_tosdac_i_gc3(&self) -> TBB_TOSDAC_I_GC3_R {
-        TBB_TOSDAC_I_GC3_R::new(((self.bits >> 16) & 0x3f) as u8)
+    pub fn tbb_tosdac_i_gc2(&self) -> TBB_TOSDAC_I_GC2_R {
+        TBB_TOSDAC_I_GC2_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
     pub fn tbb_tosdac_q_gc2(&self) -> TBB_TOSDAC_Q_GC2_R {
         TBB_TOSDAC_Q_GC2_R::new(((self.bits >> 8) & 0x3f) as u8)
     }
-    #[doc = "Bits 0:5"]
+    #[doc = "Bits 16:21"]
     #[inline(always)]
-    pub fn tbb_tosdac_i_gc2(&self) -> TBB_TOSDAC_I_GC2_R {
-        TBB_TOSDAC_I_GC2_R::new((self.bits & 0x3f) as u8)
+    pub fn tbb_tosdac_i_gc3(&self) -> TBB_TOSDAC_I_GC3_R {
+        TBB_TOSDAC_I_GC3_R::new(((self.bits >> 16) & 0x3f) as u8)
+    }
+    #[doc = "Bits 24:29"]
+    #[inline(always)]
+    pub fn tbb_tosdac_q_gc3(&self) -> TBB_TOSDAC_Q_GC3_R {
+        TBB_TOSDAC_Q_GC3_R::new(((self.bits >> 24) & 0x3f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 24:29"]
+    #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn tbb_tosdac_q_gc3(&mut self) -> TBB_TOSDAC_Q_GC3_W {
-        TBB_TOSDAC_Q_GC3_W { w: self }
-    }
-    #[doc = "Bits 16:21"]
-    #[inline(always)]
-    pub fn tbb_tosdac_i_gc3(&mut self) -> TBB_TOSDAC_I_GC3_W {
-        TBB_TOSDAC_I_GC3_W { w: self }
+    #[must_use]
+    pub fn tbb_tosdac_i_gc2(&mut self) -> TBB_TOSDAC_I_GC2_W<0> {
+        TBB_TOSDAC_I_GC2_W::new(self)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
-    pub fn tbb_tosdac_q_gc2(&mut self) -> TBB_TOSDAC_Q_GC2_W {
-        TBB_TOSDAC_Q_GC2_W { w: self }
+    #[must_use]
+    pub fn tbb_tosdac_q_gc2(&mut self) -> TBB_TOSDAC_Q_GC2_W<8> {
+        TBB_TOSDAC_Q_GC2_W::new(self)
     }
-    #[doc = "Bits 0:5"]
+    #[doc = "Bits 16:21"]
     #[inline(always)]
-    pub fn tbb_tosdac_i_gc2(&mut self) -> TBB_TOSDAC_I_GC2_W {
-        TBB_TOSDAC_I_GC2_W { w: self }
+    #[must_use]
+    pub fn tbb_tosdac_i_gc3(&mut self) -> TBB_TOSDAC_I_GC3_W<16> {
+        TBB_TOSDAC_I_GC3_W::new(self)
+    }
+    #[doc = "Bits 24:29"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tbb_tosdac_q_gc3(&mut self) -> TBB_TOSDAC_Q_GC3_W<24> {
+        TBB_TOSDAC_Q_GC3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -197,11 +120,10 @@ impl crate::Readable for TOSDAC_CTRL_HW2_SPEC {
 #[doc = "`write(|w| ..)` method takes [tosdac_ctrl_hw2::W](W) writer structure"]
 impl crate::Writable for TOSDAC_CTRL_HW2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets tosdac_ctrl_hw2 to value 0"]
 impl crate::Resettable for TOSDAC_CTRL_HW2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

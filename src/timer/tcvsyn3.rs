@@ -7,30 +7,19 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TCVSYN3_SPEC>> for R {
+impl From<crate::R<TCVSYN3_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TCVSYN3_SPEC>) -> Self {
         R(reader)
     }
 }
 #[doc = "Field `tcvsyn3` reader - "]
-pub struct TCVSYN3_R(crate::FieldReader<u32, u32>);
-impl TCVSYN3_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        TCVSYN3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TCVSYN3_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TCVSYN3_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn tcvsyn3(&self) -> TCVSYN3_R {
-        TCVSYN3_R::new((self.bits & 0xffff_ffff) as u32)
+        TCVSYN3_R::new(self.bits)
     }
 }
 #[doc = "TCVSYN3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tcvsyn3](index.html) module"]
@@ -44,8 +33,5 @@ impl crate::Readable for TCVSYN3_SPEC {
 }
 #[doc = "`reset()` method sets TCVSYN3 to value 0"]
 impl crate::Resettable for TCVSYN3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

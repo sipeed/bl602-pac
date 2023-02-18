@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SF_IF_IAHB_1_SPEC>> for R {
+impl From<crate::R<SF_IF_IAHB_1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SF_IF_IAHB_1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SF_IF_IAHB_1_SPEC>> for W {
+impl From<crate::W<SF_IF_IAHB_1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SF_IF_IAHB_1_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `sf_if_1_cmd_buf_0` reader - "]
-pub struct SF_IF_1_CMD_BUF_0_R(crate::FieldReader<u32, u32>);
-impl SF_IF_1_CMD_BUF_0_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        SF_IF_1_CMD_BUF_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_IF_1_CMD_BUF_0_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SF_IF_1_CMD_BUF_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `sf_if_1_cmd_buf_0` writer - "]
-pub struct SF_IF_1_CMD_BUF_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_IF_1_CMD_BUF_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type SF_IF_1_CMD_BUF_0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF_IF_IAHB_1_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn sf_if_1_cmd_buf_0(&self) -> SF_IF_1_CMD_BUF_0_R {
-        SF_IF_1_CMD_BUF_0_R::new((self.bits & 0xffff_ffff) as u32)
+        SF_IF_1_CMD_BUF_0_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sf_if_1_cmd_buf_0(&mut self) -> SF_IF_1_CMD_BUF_0_W {
-        SF_IF_1_CMD_BUF_0_W { w: self }
+    #[must_use]
+    pub fn sf_if_1_cmd_buf_0(&mut self) -> SF_IF_1_CMD_BUF_0_W<0> {
+        SF_IF_1_CMD_BUF_0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for SF_IF_IAHB_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sf_if_iahb_1::W](W) writer structure"]
 impl crate::Writable for SF_IF_IAHB_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sf_if_iahb_1 to value 0x0300_0000"]
 impl crate::Resettable for SF_IF_IAHB_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0300_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0300_0000;
 }

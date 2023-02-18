@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SARADC_RESV_SPEC>> for R {
+impl From<crate::R<SARADC_RESV_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SARADC_RESV_SPEC>) -> Self {
         R(reader)
     }
@@ -27,13 +28,15 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SARADC_RESV_SPEC>> for W {
+impl From<crate::W<SARADC_RESV_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SARADC_RESV_SPEC>) -> Self {
         W(writer)
     }
 }
 impl W {
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -51,11 +54,10 @@ impl crate::Readable for SARADC_RESV_SPEC {
 #[doc = "`write(|w| ..)` method takes [saradc_resv::W](W) writer structure"]
 impl crate::Writable for SARADC_RESV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets saradc_resv to value 0"]
 impl crate::Resettable for SARADC_RESV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

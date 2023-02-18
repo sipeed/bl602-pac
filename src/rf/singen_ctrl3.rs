@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SINGEN_CTRL3_SPEC>> for R {
+impl From<crate::R<SINGEN_CTRL3_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SINGEN_CTRL3_SPEC>) -> Self {
         R(reader)
     }
@@ -27,123 +28,65 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SINGEN_CTRL3_SPEC>> for W {
+impl From<crate::W<SINGEN_CTRL3_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SINGEN_CTRL3_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `singen_start_addr0_q` reader - "]
-pub struct SINGEN_START_ADDR0_Q_R(crate::FieldReader<u16, u16>);
-impl SINGEN_START_ADDR0_Q_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        SINGEN_START_ADDR0_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGEN_START_ADDR0_Q_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `singen_start_addr0_q` writer - "]
-pub struct SINGEN_START_ADDR0_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGEN_START_ADDR0_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 22)) | ((value as u32 & 0x03ff) << 22);
-        self.w
-    }
-}
-#[doc = "Field `singen_start_addr1_q` reader - "]
-pub struct SINGEN_START_ADDR1_Q_R(crate::FieldReader<u16, u16>);
-impl SINGEN_START_ADDR1_Q_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        SINGEN_START_ADDR1_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGEN_START_ADDR1_Q_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `singen_start_addr1_q` writer - "]
-pub struct SINGEN_START_ADDR1_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGEN_START_ADDR1_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 12)) | ((value as u32 & 0x03ff) << 12);
-        self.w
-    }
-}
 #[doc = "Field `singen_gain_q` reader - "]
-pub struct SINGEN_GAIN_Q_R(crate::FieldReader<u16, u16>);
-impl SINGEN_GAIN_Q_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        SINGEN_GAIN_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGEN_GAIN_Q_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGEN_GAIN_Q_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `singen_gain_q` writer - "]
-pub struct SINGEN_GAIN_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGEN_GAIN_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type SINGEN_GAIN_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SINGEN_CTRL3_SPEC, u16, u16, 11, O>;
+#[doc = "Field `singen_start_addr1_q` reader - "]
+pub type SINGEN_START_ADDR1_Q_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `singen_start_addr1_q` writer - "]
+pub type SINGEN_START_ADDR1_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SINGEN_CTRL3_SPEC, u16, u16, 10, O>;
+#[doc = "Field `singen_start_addr0_q` reader - "]
+pub type SINGEN_START_ADDR0_Q_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `singen_start_addr0_q` writer - "]
+pub type SINGEN_START_ADDR0_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SINGEN_CTRL3_SPEC, u16, u16, 10, O>;
 impl R {
-    #[doc = "Bits 22:31"]
+    #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn singen_start_addr0_q(&self) -> SINGEN_START_ADDR0_Q_R {
-        SINGEN_START_ADDR0_Q_R::new(((self.bits >> 22) & 0x03ff) as u16)
+    pub fn singen_gain_q(&self) -> SINGEN_GAIN_Q_R {
+        SINGEN_GAIN_Q_R::new((self.bits & 0x07ff) as u16)
     }
     #[doc = "Bits 12:21"]
     #[inline(always)]
     pub fn singen_start_addr1_q(&self) -> SINGEN_START_ADDR1_Q_R {
         SINGEN_START_ADDR1_Q_R::new(((self.bits >> 12) & 0x03ff) as u16)
     }
-    #[doc = "Bits 0:10"]
+    #[doc = "Bits 22:31"]
     #[inline(always)]
-    pub fn singen_gain_q(&self) -> SINGEN_GAIN_Q_R {
-        SINGEN_GAIN_Q_R::new((self.bits & 0x07ff) as u16)
+    pub fn singen_start_addr0_q(&self) -> SINGEN_START_ADDR0_Q_R {
+        SINGEN_START_ADDR0_Q_R::new(((self.bits >> 22) & 0x03ff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 22:31"]
+    #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn singen_start_addr0_q(&mut self) -> SINGEN_START_ADDR0_Q_W {
-        SINGEN_START_ADDR0_Q_W { w: self }
+    #[must_use]
+    pub fn singen_gain_q(&mut self) -> SINGEN_GAIN_Q_W<0> {
+        SINGEN_GAIN_Q_W::new(self)
     }
     #[doc = "Bits 12:21"]
     #[inline(always)]
-    pub fn singen_start_addr1_q(&mut self) -> SINGEN_START_ADDR1_Q_W {
-        SINGEN_START_ADDR1_Q_W { w: self }
+    #[must_use]
+    pub fn singen_start_addr1_q(&mut self) -> SINGEN_START_ADDR1_Q_W<12> {
+        SINGEN_START_ADDR1_Q_W::new(self)
     }
-    #[doc = "Bits 0:10"]
+    #[doc = "Bits 22:31"]
     #[inline(always)]
-    pub fn singen_gain_q(&mut self) -> SINGEN_GAIN_Q_W {
-        SINGEN_GAIN_Q_W { w: self }
+    #[must_use]
+    pub fn singen_start_addr0_q(&mut self) -> SINGEN_START_ADDR0_Q_W<22> {
+        SINGEN_START_ADDR0_Q_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -161,11 +104,10 @@ impl crate::Readable for SINGEN_CTRL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [singen_ctrl3::W](W) writer structure"]
 impl crate::Writable for SINGEN_CTRL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets singen_ctrl3 to value 0"]
 impl crate::Resettable for SINGEN_CTRL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

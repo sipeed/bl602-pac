@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<PWM2_INTERRUPT_SPEC>> for R {
+impl From<crate::R<PWM2_INTERRUPT_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<PWM2_INTERRUPT_SPEC>) -> Self {
         R(reader)
     }
@@ -27,97 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<PWM2_INTERRUPT_SPEC>> for W {
+impl From<crate::W<PWM2_INTERRUPT_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<PWM2_INTERRUPT_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `pwm_int_enable` reader - "]
-pub struct PWM_INT_ENABLE_R(crate::FieldReader<bool, bool>);
-impl PWM_INT_ENABLE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PWM_INT_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWM_INT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pwm_int_enable` writer - "]
-pub struct PWM_INT_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWM_INT_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
 #[doc = "Field `pwm_int_period_cnt` reader - "]
-pub struct PWM_INT_PERIOD_CNT_R(crate::FieldReader<u16, u16>);
-impl PWM_INT_PERIOD_CNT_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        PWM_INT_PERIOD_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWM_INT_PERIOD_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWM_INT_PERIOD_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `pwm_int_period_cnt` writer - "]
-pub struct PWM_INT_PERIOD_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWM_INT_PERIOD_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type PWM_INT_PERIOD_CNT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PWM2_INTERRUPT_SPEC, u16, u16, 16, O>;
+#[doc = "Field `pwm_int_enable` reader - "]
+pub type PWM_INT_ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `pwm_int_enable` writer - "]
+pub type PWM_INT_ENABLE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PWM2_INTERRUPT_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn pwm_int_enable(&self) -> PWM_INT_ENABLE_R {
-        PWM_INT_ENABLE_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn pwm_int_period_cnt(&self) -> PWM_INT_PERIOD_CNT_R {
         PWM_INT_PERIOD_CNT_R::new((self.bits & 0xffff) as u16)
     }
-}
-impl W {
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn pwm_int_enable(&mut self) -> PWM_INT_ENABLE_W {
-        PWM_INT_ENABLE_W { w: self }
+    pub fn pwm_int_enable(&self) -> PWM_INT_ENABLE_R {
+        PWM_INT_ENABLE_R::new(((self.bits >> 16) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn pwm_int_period_cnt(&mut self) -> PWM_INT_PERIOD_CNT_W {
-        PWM_INT_PERIOD_CNT_W { w: self }
+    #[must_use]
+    pub fn pwm_int_period_cnt(&mut self) -> PWM_INT_PERIOD_CNT_W<0> {
+        PWM_INT_PERIOD_CNT_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pwm_int_enable(&mut self) -> PWM_INT_ENABLE_W<16> {
+        PWM_INT_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -135,11 +88,10 @@ impl crate::Readable for PWM2_INTERRUPT_SPEC {
 #[doc = "`write(|w| ..)` method takes [pwm2_interrupt::W](W) writer structure"]
 impl crate::Writable for PWM2_INTERRUPT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets pwm2_interrupt to value 0"]
 impl crate::Resettable for PWM2_INTERRUPT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

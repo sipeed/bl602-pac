@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<HBN_PIR_INTERVAL_SPEC>> for R {
+impl From<crate::R<HBN_PIR_INTERVAL_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<HBN_PIR_INTERVAL_SPEC>) -> Self {
         R(reader)
     }
@@ -27,37 +28,17 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<HBN_PIR_INTERVAL_SPEC>> for W {
+impl From<crate::W<HBN_PIR_INTERVAL_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<HBN_PIR_INTERVAL_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `pir_interval` reader - "]
-pub struct PIR_INTERVAL_R(crate::FieldReader<u16, u16>);
-impl PIR_INTERVAL_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        PIR_INTERVAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIR_INTERVAL_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIR_INTERVAL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `pir_interval` writer - "]
-pub struct PIR_INTERVAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIR_INTERVAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type PIR_INTERVAL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, HBN_PIR_INTERVAL_SPEC, u16, u16, 12, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -68,10 +49,12 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn pir_interval(&mut self) -> PIR_INTERVAL_W {
-        PIR_INTERVAL_W { w: self }
+    #[must_use]
+    pub fn pir_interval(&mut self) -> PIR_INTERVAL_W<0> {
+        PIR_INTERVAL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for HBN_PIR_INTERVAL_SPEC {
 #[doc = "`write(|w| ..)` method takes [hbn_pir_interval::W](W) writer structure"]
 impl crate::Writable for HBN_PIR_INTERVAL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HBN_PIR_INTERVAL to value 0x0a3d"]
 impl crate::Resettable for HBN_PIR_INTERVAL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0a3d
-    }
+    const RESET_VALUE: Self::Ux = 0x0a3d;
 }

@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<GPDAC_BCTRL_SPEC>> for R {
+impl From<crate::R<GPDAC_BCTRL_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<GPDAC_BCTRL_SPEC>) -> Self {
         R(reader)
     }
@@ -27,179 +28,79 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<GPDAC_BCTRL_SPEC>> for W {
+impl From<crate::W<GPDAC_BCTRL_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<GPDAC_BCTRL_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `gpdac_b_outmux` reader - "]
-pub struct GPDAC_B_OUTMUX_R(crate::FieldReader<u8, u8>);
-impl GPDAC_B_OUTMUX_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPDAC_B_OUTMUX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPDAC_B_OUTMUX_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpdac_b_outmux` writer - "]
-pub struct GPDAC_B_OUTMUX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPDAC_B_OUTMUX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 20)) | ((value as u32 & 0x07) << 20);
-        self.w
-    }
-}
-#[doc = "Field `gpdac_b_rng` reader - "]
-pub struct GPDAC_B_RNG_R(crate::FieldReader<u8, u8>);
-impl GPDAC_B_RNG_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPDAC_B_RNG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPDAC_B_RNG_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpdac_b_rng` writer - "]
-pub struct GPDAC_B_RNG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPDAC_B_RNG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
-        self.w
-    }
-}
-#[doc = "Field `gpdac_iob_en` reader - "]
-pub struct GPDAC_IOB_EN_R(crate::FieldReader<bool, bool>);
-impl GPDAC_IOB_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GPDAC_IOB_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPDAC_IOB_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpdac_iob_en` writer - "]
-pub struct GPDAC_IOB_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPDAC_IOB_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `gpdac_b_en` reader - "]
-pub struct GPDAC_B_EN_R(crate::FieldReader<bool, bool>);
-impl GPDAC_B_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        GPDAC_B_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPDAC_B_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPDAC_B_EN_R = crate::BitReader<bool>;
 #[doc = "Field `gpdac_b_en` writer - "]
-pub struct GPDAC_B_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPDAC_B_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type GPDAC_B_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPDAC_BCTRL_SPEC, bool, O>;
+#[doc = "Field `gpdac_iob_en` reader - "]
+pub type GPDAC_IOB_EN_R = crate::BitReader<bool>;
+#[doc = "Field `gpdac_iob_en` writer - "]
+pub type GPDAC_IOB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPDAC_BCTRL_SPEC, bool, O>;
+#[doc = "Field `gpdac_b_rng` reader - "]
+pub type GPDAC_B_RNG_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpdac_b_rng` writer - "]
+pub type GPDAC_B_RNG_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPDAC_BCTRL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `gpdac_b_outmux` reader - "]
+pub type GPDAC_B_OUTMUX_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpdac_b_outmux` writer - "]
+pub type GPDAC_B_OUTMUX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPDAC_BCTRL_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 20:22"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn gpdac_b_outmux(&self) -> GPDAC_B_OUTMUX_R {
-        GPDAC_B_OUTMUX_R::new(((self.bits >> 20) & 0x07) as u8)
-    }
-    #[doc = "Bits 18:19"]
-    #[inline(always)]
-    pub fn gpdac_b_rng(&self) -> GPDAC_B_RNG_R {
-        GPDAC_B_RNG_R::new(((self.bits >> 18) & 0x03) as u8)
+    pub fn gpdac_b_en(&self) -> GPDAC_B_EN_R {
+        GPDAC_B_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn gpdac_iob_en(&self) -> GPDAC_IOB_EN_R {
-        GPDAC_IOB_EN_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn gpdac_b_en(&self) -> GPDAC_B_EN_R {
-        GPDAC_B_EN_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bits 20:22"]
-    #[inline(always)]
-    pub fn gpdac_b_outmux(&mut self) -> GPDAC_B_OUTMUX_W {
-        GPDAC_B_OUTMUX_W { w: self }
+        GPDAC_IOB_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    pub fn gpdac_b_rng(&mut self) -> GPDAC_B_RNG_W {
-        GPDAC_B_RNG_W { w: self }
+    pub fn gpdac_b_rng(&self) -> GPDAC_B_RNG_R {
+        GPDAC_B_RNG_R::new(((self.bits >> 18) & 3) as u8)
+    }
+    #[doc = "Bits 20:22"]
+    #[inline(always)]
+    pub fn gpdac_b_outmux(&self) -> GPDAC_B_OUTMUX_R {
+        GPDAC_B_OUTMUX_R::new(((self.bits >> 20) & 7) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpdac_b_en(&mut self) -> GPDAC_B_EN_W<0> {
+        GPDAC_B_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn gpdac_iob_en(&mut self) -> GPDAC_IOB_EN_W {
-        GPDAC_IOB_EN_W { w: self }
+    #[must_use]
+    pub fn gpdac_iob_en(&mut self) -> GPDAC_IOB_EN_W<1> {
+        GPDAC_IOB_EN_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bits 18:19"]
     #[inline(always)]
-    pub fn gpdac_b_en(&mut self) -> GPDAC_B_EN_W {
-        GPDAC_B_EN_W { w: self }
+    #[must_use]
+    pub fn gpdac_b_rng(&mut self) -> GPDAC_B_RNG_W<18> {
+        GPDAC_B_RNG_W::new(self)
+    }
+    #[doc = "Bits 20:22"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpdac_b_outmux(&mut self) -> GPDAC_B_OUTMUX_W<20> {
+        GPDAC_B_OUTMUX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -217,11 +118,10 @@ impl crate::Readable for GPDAC_BCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpdac_bctrl::W](W) writer structure"]
 impl crate::Writable for GPDAC_BCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets gpdac_bctrl to value 0x000c_0000"]
 impl crate::Resettable for GPDAC_BCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000c_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x000c_0000;
 }

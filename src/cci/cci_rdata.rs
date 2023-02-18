@@ -7,33 +7,51 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<CCI_RDATA_SPEC>> for R {
+impl From<crate::R<CCI_RDATA_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<CCI_RDATA_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Field `apb_cci_rdata` reader - "]
-pub struct APB_CCI_RDATA_R(crate::FieldReader<u32, u32>);
-impl APB_CCI_RDATA_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        APB_CCI_RDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_CCI_RDATA_R {
-    type Target = crate::FieldReader<u32, u32>;
+#[doc = "Register `cci_rdata` writer"]
+pub struct W(crate::W<CCI_RDATA_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CCI_RDATA_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CCI_RDATA_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CCI_RDATA_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `apb_cci_rdata` reader - "]
+pub type APB_CCI_RDATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn apb_cci_rdata(&self) -> APB_CCI_RDATA_R {
-        APB_CCI_RDATA_R::new((self.bits & 0xffff_ffff) as u32)
+        APB_CCI_RDATA_R::new(self.bits)
     }
 }
-#[doc = "cci_rdata.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cci_rdata](index.html) module"]
+impl W {
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "cci_rdata.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cci_rdata](index.html) module"]
 pub struct CCI_RDATA_SPEC;
 impl crate::RegisterSpec for CCI_RDATA_SPEC {
     type Ux = u32;
@@ -42,10 +60,13 @@ impl crate::RegisterSpec for CCI_RDATA_SPEC {
 impl crate::Readable for CCI_RDATA_SPEC {
     type Reader = R;
 }
+#[doc = "`write(|w| ..)` method takes [cci_rdata::W](W) writer structure"]
+impl crate::Writable for CCI_RDATA_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
 #[doc = "`reset()` method sets cci_rdata to value 0"]
 impl crate::Resettable for CCI_RDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TBB_GAIN_INDEX1_SPEC>> for R {
+impl From<crate::R<TBB_GAIN_INDEX1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TBB_GAIN_INDEX1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,303 +28,145 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TBB_GAIN_INDEX1_SPEC>> for W {
+impl From<crate::W<TBB_GAIN_INDEX1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TBB_GAIN_INDEX1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `gain_ctrl1_gc_tbb_boost` reader - "]
-pub struct GAIN_CTRL1_GC_TBB_BOOST_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL1_GC_TBB_BOOST_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL1_GC_TBB_BOOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL1_GC_TBB_BOOST_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl1_gc_tbb_boost` writer - "]
-pub struct GAIN_CTRL1_GC_TBB_BOOST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL1_GC_TBB_BOOST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
-        self.w
-    }
-}
-#[doc = "Field `gain_ctrl1_dac_bias_sel` reader - "]
-pub struct GAIN_CTRL1_DAC_BIAS_SEL_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL1_DAC_BIAS_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL1_DAC_BIAS_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL1_DAC_BIAS_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl1_dac_bias_sel` writer - "]
-pub struct GAIN_CTRL1_DAC_BIAS_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL1_DAC_BIAS_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
-        self.w
-    }
-}
-#[doc = "Field `gain_ctrl1_gc_tmx` reader - "]
-pub struct GAIN_CTRL1_GC_TMX_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL1_GC_TMX_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL1_GC_TMX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL1_GC_TMX_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl1_gc_tmx` writer - "]
-pub struct GAIN_CTRL1_GC_TMX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL1_GC_TMX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 24)) | ((value as u32 & 0x07) << 24);
-        self.w
-    }
-}
-#[doc = "Field `gain_ctrl1_gc_tbb` reader - "]
-pub struct GAIN_CTRL1_GC_TBB_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL1_GC_TBB_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL1_GC_TBB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL1_GC_TBB_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl1_gc_tbb` writer - "]
-pub struct GAIN_CTRL1_GC_TBB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL1_GC_TBB_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 16)) | ((value as u32 & 0x1f) << 16);
-        self.w
-    }
-}
-#[doc = "Field `gain_ctrl0_gc_tbb_boost` reader - "]
-pub struct GAIN_CTRL0_GC_TBB_BOOST_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL0_GC_TBB_BOOST_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL0_GC_TBB_BOOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL0_GC_TBB_BOOST_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl0_gc_tbb_boost` writer - "]
-pub struct GAIN_CTRL0_GC_TBB_BOOST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL0_GC_TBB_BOOST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
-        self.w
-    }
-}
-#[doc = "Field `gain_ctrl0_dac_bias_sel` reader - "]
-pub struct GAIN_CTRL0_DAC_BIAS_SEL_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL0_DAC_BIAS_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL0_DAC_BIAS_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL0_DAC_BIAS_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl0_dac_bias_sel` writer - "]
-pub struct GAIN_CTRL0_DAC_BIAS_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL0_DAC_BIAS_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
-        self.w
-    }
-}
-#[doc = "Field `gain_ctrl0_gc_tmx` reader - "]
-pub struct GAIN_CTRL0_GC_TMX_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL0_GC_TMX_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL0_GC_TMX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL0_GC_TMX_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gain_ctrl0_gc_tmx` writer - "]
-pub struct GAIN_CTRL0_GC_TMX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL0_GC_TMX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
-        self.w
-    }
-}
 #[doc = "Field `gain_ctrl0_gc_tbb` reader - "]
-pub struct GAIN_CTRL0_GC_TBB_R(crate::FieldReader<u8, u8>);
-impl GAIN_CTRL0_GC_TBB_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GAIN_CTRL0_GC_TBB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GAIN_CTRL0_GC_TBB_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GAIN_CTRL0_GC_TBB_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `gain_ctrl0_gc_tbb` writer - "]
-pub struct GAIN_CTRL0_GC_TBB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GAIN_CTRL0_GC_TBB_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type GAIN_CTRL0_GC_TBB_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gain_ctrl0_gc_tmx` reader - "]
+pub type GAIN_CTRL0_GC_TMX_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl0_gc_tmx` writer - "]
+pub type GAIN_CTRL0_GC_TMX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 3, O>;
+#[doc = "Field `gain_ctrl0_dac_bias_sel` reader - "]
+pub type GAIN_CTRL0_DAC_BIAS_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl0_dac_bias_sel` writer - "]
+pub type GAIN_CTRL0_DAC_BIAS_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `gain_ctrl0_gc_tbb_boost` reader - "]
+pub type GAIN_CTRL0_GC_TBB_BOOST_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl0_gc_tbb_boost` writer - "]
+pub type GAIN_CTRL0_GC_TBB_BOOST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `gain_ctrl1_gc_tbb` reader - "]
+pub type GAIN_CTRL1_GC_TBB_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl1_gc_tbb` writer - "]
+pub type GAIN_CTRL1_GC_TBB_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gain_ctrl1_gc_tmx` reader - "]
+pub type GAIN_CTRL1_GC_TMX_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl1_gc_tmx` writer - "]
+pub type GAIN_CTRL1_GC_TMX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 3, O>;
+#[doc = "Field `gain_ctrl1_dac_bias_sel` reader - "]
+pub type GAIN_CTRL1_DAC_BIAS_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl1_dac_bias_sel` writer - "]
+pub type GAIN_CTRL1_DAC_BIAS_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `gain_ctrl1_gc_tbb_boost` reader - "]
+pub type GAIN_CTRL1_GC_TBB_BOOST_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gain_ctrl1_gc_tbb_boost` writer - "]
+pub type GAIN_CTRL1_GC_TBB_BOOST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TBB_GAIN_INDEX1_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 30:31"]
+    #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn gain_ctrl1_gc_tbb_boost(&self) -> GAIN_CTRL1_GC_TBB_BOOST_R {
-        GAIN_CTRL1_GC_TBB_BOOST_R::new(((self.bits >> 30) & 0x03) as u8)
+    pub fn gain_ctrl0_gc_tbb(&self) -> GAIN_CTRL0_GC_TBB_R {
+        GAIN_CTRL0_GC_TBB_R::new((self.bits & 0x1f) as u8)
     }
-    #[doc = "Bits 28:29"]
+    #[doc = "Bits 8:10"]
     #[inline(always)]
-    pub fn gain_ctrl1_dac_bias_sel(&self) -> GAIN_CTRL1_DAC_BIAS_SEL_R {
-        GAIN_CTRL1_DAC_BIAS_SEL_R::new(((self.bits >> 28) & 0x03) as u8)
+    pub fn gain_ctrl0_gc_tmx(&self) -> GAIN_CTRL0_GC_TMX_R {
+        GAIN_CTRL0_GC_TMX_R::new(((self.bits >> 8) & 7) as u8)
     }
-    #[doc = "Bits 24:26"]
+    #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn gain_ctrl1_gc_tmx(&self) -> GAIN_CTRL1_GC_TMX_R {
-        GAIN_CTRL1_GC_TMX_R::new(((self.bits >> 24) & 0x07) as u8)
+    pub fn gain_ctrl0_dac_bias_sel(&self) -> GAIN_CTRL0_DAC_BIAS_SEL_R {
+        GAIN_CTRL0_DAC_BIAS_SEL_R::new(((self.bits >> 12) & 3) as u8)
+    }
+    #[doc = "Bits 14:15"]
+    #[inline(always)]
+    pub fn gain_ctrl0_gc_tbb_boost(&self) -> GAIN_CTRL0_GC_TBB_BOOST_R {
+        GAIN_CTRL0_GC_TBB_BOOST_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
     pub fn gain_ctrl1_gc_tbb(&self) -> GAIN_CTRL1_GC_TBB_R {
         GAIN_CTRL1_GC_TBB_R::new(((self.bits >> 16) & 0x1f) as u8)
     }
-    #[doc = "Bits 14:15"]
+    #[doc = "Bits 24:26"]
     #[inline(always)]
-    pub fn gain_ctrl0_gc_tbb_boost(&self) -> GAIN_CTRL0_GC_TBB_BOOST_R {
-        GAIN_CTRL0_GC_TBB_BOOST_R::new(((self.bits >> 14) & 0x03) as u8)
-    }
-    #[doc = "Bits 12:13"]
-    #[inline(always)]
-    pub fn gain_ctrl0_dac_bias_sel(&self) -> GAIN_CTRL0_DAC_BIAS_SEL_R {
-        GAIN_CTRL0_DAC_BIAS_SEL_R::new(((self.bits >> 12) & 0x03) as u8)
-    }
-    #[doc = "Bits 8:10"]
-    #[inline(always)]
-    pub fn gain_ctrl0_gc_tmx(&self) -> GAIN_CTRL0_GC_TMX_R {
-        GAIN_CTRL0_GC_TMX_R::new(((self.bits >> 8) & 0x07) as u8)
-    }
-    #[doc = "Bits 0:4"]
-    #[inline(always)]
-    pub fn gain_ctrl0_gc_tbb(&self) -> GAIN_CTRL0_GC_TBB_R {
-        GAIN_CTRL0_GC_TBB_R::new((self.bits & 0x1f) as u8)
-    }
-}
-impl W {
-    #[doc = "Bits 30:31"]
-    #[inline(always)]
-    pub fn gain_ctrl1_gc_tbb_boost(&mut self) -> GAIN_CTRL1_GC_TBB_BOOST_W {
-        GAIN_CTRL1_GC_TBB_BOOST_W { w: self }
+    pub fn gain_ctrl1_gc_tmx(&self) -> GAIN_CTRL1_GC_TMX_R {
+        GAIN_CTRL1_GC_TMX_R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
-    pub fn gain_ctrl1_dac_bias_sel(&mut self) -> GAIN_CTRL1_DAC_BIAS_SEL_W {
-        GAIN_CTRL1_DAC_BIAS_SEL_W { w: self }
+    pub fn gain_ctrl1_dac_bias_sel(&self) -> GAIN_CTRL1_DAC_BIAS_SEL_R {
+        GAIN_CTRL1_DAC_BIAS_SEL_R::new(((self.bits >> 28) & 3) as u8)
     }
-    #[doc = "Bits 24:26"]
+    #[doc = "Bits 30:31"]
     #[inline(always)]
-    pub fn gain_ctrl1_gc_tmx(&mut self) -> GAIN_CTRL1_GC_TMX_W {
-        GAIN_CTRL1_GC_TMX_W { w: self }
+    pub fn gain_ctrl1_gc_tbb_boost(&self) -> GAIN_CTRL1_GC_TBB_BOOST_R {
+        GAIN_CTRL1_GC_TBB_BOOST_R::new(((self.bits >> 30) & 3) as u8)
     }
-    #[doc = "Bits 16:20"]
+}
+impl W {
+    #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn gain_ctrl1_gc_tbb(&mut self) -> GAIN_CTRL1_GC_TBB_W {
-        GAIN_CTRL1_GC_TBB_W { w: self }
-    }
-    #[doc = "Bits 14:15"]
-    #[inline(always)]
-    pub fn gain_ctrl0_gc_tbb_boost(&mut self) -> GAIN_CTRL0_GC_TBB_BOOST_W {
-        GAIN_CTRL0_GC_TBB_BOOST_W { w: self }
-    }
-    #[doc = "Bits 12:13"]
-    #[inline(always)]
-    pub fn gain_ctrl0_dac_bias_sel(&mut self) -> GAIN_CTRL0_DAC_BIAS_SEL_W {
-        GAIN_CTRL0_DAC_BIAS_SEL_W { w: self }
+    #[must_use]
+    pub fn gain_ctrl0_gc_tbb(&mut self) -> GAIN_CTRL0_GC_TBB_W<0> {
+        GAIN_CTRL0_GC_TBB_W::new(self)
     }
     #[doc = "Bits 8:10"]
     #[inline(always)]
-    pub fn gain_ctrl0_gc_tmx(&mut self) -> GAIN_CTRL0_GC_TMX_W {
-        GAIN_CTRL0_GC_TMX_W { w: self }
+    #[must_use]
+    pub fn gain_ctrl0_gc_tmx(&mut self) -> GAIN_CTRL0_GC_TMX_W<8> {
+        GAIN_CTRL0_GC_TMX_W::new(self)
     }
-    #[doc = "Bits 0:4"]
+    #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn gain_ctrl0_gc_tbb(&mut self) -> GAIN_CTRL0_GC_TBB_W {
-        GAIN_CTRL0_GC_TBB_W { w: self }
+    #[must_use]
+    pub fn gain_ctrl0_dac_bias_sel(&mut self) -> GAIN_CTRL0_DAC_BIAS_SEL_W<12> {
+        GAIN_CTRL0_DAC_BIAS_SEL_W::new(self)
+    }
+    #[doc = "Bits 14:15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gain_ctrl0_gc_tbb_boost(&mut self) -> GAIN_CTRL0_GC_TBB_BOOST_W<14> {
+        GAIN_CTRL0_GC_TBB_BOOST_W::new(self)
+    }
+    #[doc = "Bits 16:20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gain_ctrl1_gc_tbb(&mut self) -> GAIN_CTRL1_GC_TBB_W<16> {
+        GAIN_CTRL1_GC_TBB_W::new(self)
+    }
+    #[doc = "Bits 24:26"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gain_ctrl1_gc_tmx(&mut self) -> GAIN_CTRL1_GC_TMX_W<24> {
+        GAIN_CTRL1_GC_TMX_W::new(self)
+    }
+    #[doc = "Bits 28:29"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gain_ctrl1_dac_bias_sel(&mut self) -> GAIN_CTRL1_DAC_BIAS_SEL_W<28> {
+        GAIN_CTRL1_DAC_BIAS_SEL_W::new(self)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gain_ctrl1_gc_tbb_boost(&mut self) -> GAIN_CTRL1_GC_TBB_BOOST_W<30> {
+        GAIN_CTRL1_GC_TBB_BOOST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -341,11 +184,10 @@ impl crate::Readable for TBB_GAIN_INDEX1_SPEC {
 #[doc = "`write(|w| ..)` method takes [tbb_gain_index1::W](W) writer structure"]
 impl crate::Writable for TBB_GAIN_INDEX1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets tbb_gain_index1 to value 0"]
 impl crate::Resettable for TBB_GAIN_INDEX1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
