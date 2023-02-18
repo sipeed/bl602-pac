@@ -370,34 +370,62 @@ impl core::fmt::Debug for L1C {
 }
 #[doc = "Cache control"]
 pub mod l1c;
-#[doc = "UART control"]
-pub struct UART {
+#[doc = "UART0 control"]
+pub struct UART0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for UART {}
-impl UART {
+unsafe impl Send for UART0 {}
+impl UART0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const uart::RegisterBlock = 0x4000_a000 as *const _;
+    pub const PTR: *const uart0::RegisterBlock = 0x4000_a000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const uart::RegisterBlock {
+    pub const fn ptr() -> *const uart0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for UART {
-    type Target = uart::RegisterBlock;
+impl Deref for UART0 {
+    type Target = uart0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for UART {
+impl core::fmt::Debug for UART0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UART").finish()
+        f.debug_struct("UART0").finish()
     }
 }
-#[doc = "UART control"]
-pub mod uart;
+#[doc = "UART0 control"]
+pub mod uart0;
+#[doc = "UART1 control"]
+pub struct UART1 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for UART1 {}
+impl UART1 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const uart0::RegisterBlock = 0x4000_a100 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const uart0::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for UART1 {
+    type Target = uart0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for UART1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART1").finish()
+    }
+}
+#[doc = "UART1 control"]
+pub use self::uart0 as uart1;
 #[doc = "SPI master / slave control"]
 pub struct SPI {
     _marker: PhantomData<*const ()>,
@@ -735,8 +763,10 @@ pub struct Peripherals {
     pub CCI: CCI,
     #[doc = "L1C"]
     pub L1C: L1C,
-    #[doc = "UART"]
-    pub UART: UART,
+    #[doc = "UART0"]
+    pub UART0: UART0,
+    #[doc = "UART1"]
+    pub UART1: UART1,
     #[doc = "SPI"]
     pub SPI: SPI,
     #[doc = "I2C"]
@@ -817,7 +847,10 @@ impl Peripherals {
             L1C: L1C {
                 _marker: PhantomData,
             },
-            UART: UART {
+            UART0: UART0 {
+                _marker: PhantomData,
+            },
+            UART1: UART1 {
                 _marker: PhantomData,
             },
             SPI: SPI {
