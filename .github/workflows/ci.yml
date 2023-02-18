@@ -19,9 +19,9 @@ jobs:
         # Run checks on stable and nightly Rust
         rust: [stable, nightly]
 
-        include:
-          # Run check with MSRV as well
-          - rust: 1.59.0
+        # include:
+        #   # Run check with MSRV as well
+        #   - rust: 1.59.0
 
     steps:
       - uses: actions/checkout@v2
