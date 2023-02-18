@@ -7,25 +7,14 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<UART_FIFO_RDATA_SPEC>> for R {
+impl From<crate::R<UART_FIFO_RDATA_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<UART_FIFO_RDATA_SPEC>) -> Self {
         R(reader)
     }
 }
 #[doc = "Field `uart_fifo_rdata` reader - "]
-pub struct UART_FIFO_RDATA_R(crate::FieldReader<u8, u8>);
-impl UART_FIFO_RDATA_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        UART_FIFO_RDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_FIFO_RDATA_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_FIFO_RDATA_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -44,8 +33,5 @@ impl crate::Readable for UART_FIFO_RDATA_SPEC {
 }
 #[doc = "`reset()` method sets uart_fifo_rdata to value 0"]
 impl crate::Resettable for UART_FIFO_RDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

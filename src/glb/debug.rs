@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DEBUG_SPEC>> for R {
+impl From<crate::R<DEBUG_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DEBUG_SPEC>) -> Self {
         R(reader)
     }
@@ -27,80 +28,39 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DEBUG_SPEC>> for W {
+impl From<crate::W<DEBUG_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DEBUG_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `debug_i` reader - "]
-pub struct DEBUG_I_R(crate::FieldReader<u32, u32>);
-impl DEBUG_I_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        DEBUG_I_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEBUG_I_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `debug_oe` reader - "]
-pub struct DEBUG_OE_R(crate::FieldReader<bool, bool>);
-impl DEBUG_OE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        DEBUG_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEBUG_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEBUG_OE_R = crate::BitReader<bool>;
 #[doc = "Field `debug_oe` writer - "]
-pub struct DEBUG_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DEBUG_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type DEBUG_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_SPEC, bool, O>;
+#[doc = "Field `debug_i` reader - "]
+pub type DEBUG_I_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bits 1:31"]
-    #[inline(always)]
-    pub fn debug_i(&self) -> DEBUG_I_R {
-        DEBUG_I_R::new(((self.bits >> 1) & 0x7fff_ffff) as u32)
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn debug_oe(&self) -> DEBUG_OE_R {
-        DEBUG_OE_R::new((self.bits & 0x01) != 0)
+        DEBUG_OE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:31"]
+    #[inline(always)]
+    pub fn debug_i(&self) -> DEBUG_I_R {
+        DEBUG_I_R::new((self.bits >> 1) & 0x7fff_ffff)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn debug_oe(&mut self) -> DEBUG_OE_W {
-        DEBUG_OE_W { w: self }
+    #[must_use]
+    pub fn debug_oe(&mut self) -> DEBUG_OE_W<0> {
+        DEBUG_OE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -118,11 +78,10 @@ impl crate::Readable for DEBUG_SPEC {
 #[doc = "`write(|w| ..)` method takes [debug::W](W) writer structure"]
 impl crate::Writable for DEBUG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets debug to value 0"]
 impl crate::Resettable for DEBUG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

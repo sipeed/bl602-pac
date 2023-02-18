@@ -1,21 +1,22 @@
 #[doc = "Register `DMA_SoftLBReq` reader"]
-pub struct R(crate::R<DMA_SOFTLBREQ_SPEC>);
+pub struct R(crate::R<DMA_SOFT_LBREQ_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<DMA_SOFTLBREQ_SPEC>;
+    type Target = crate::R<DMA_SOFT_LBREQ_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DMA_SOFTLBREQ_SPEC>> for R {
-    fn from(reader: crate::R<DMA_SOFTLBREQ_SPEC>) -> Self {
+impl From<crate::R<DMA_SOFT_LBREQ_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<DMA_SOFT_LBREQ_SPEC>) -> Self {
         R(reader)
     }
 }
 #[doc = "Register `DMA_SoftLBReq` writer"]
-pub struct W(crate::W<DMA_SOFTLBREQ_SPEC>);
+pub struct W(crate::W<DMA_SOFT_LBREQ_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<DMA_SOFTLBREQ_SPEC>;
+    type Target = crate::W<DMA_SOFT_LBREQ_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -27,73 +28,54 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DMA_SOFTLBREQ_SPEC>> for W {
-    fn from(writer: crate::W<DMA_SOFTLBREQ_SPEC>) -> Self {
+impl From<crate::W<DMA_SOFT_LBREQ_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<DMA_SOFT_LBREQ_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `SoftLBReq` reader - "]
-pub struct SOFTLBREQ_R(crate::FieldReader<u32, u32>);
-impl SOFTLBREQ_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        SOFTLBREQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOFTLBREQ_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOFT_LBREQ_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SoftLBReq` writer - "]
-pub struct SOFTLBREQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SOFTLBREQ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type SOFT_LBREQ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DMA_SOFT_LBREQ_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn soft_lbreq(&self) -> SOFTLBREQ_R {
-        SOFTLBREQ_R::new((self.bits & 0xffff_ffff) as u32)
+    pub fn soft_lbreq(&self) -> SOFT_LBREQ_R {
+        SOFT_LBREQ_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn soft_lbreq(&mut self) -> SOFTLBREQ_W {
-        SOFTLBREQ_W { w: self }
+    #[must_use]
+    pub fn soft_lbreq(&mut self) -> SOFT_LBREQ_W<0> {
+        SOFT_LBREQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
     }
 }
 #[doc = "DMA_SoftLBReq.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_soft_lbreq](index.html) module"]
-pub struct DMA_SOFTLBREQ_SPEC;
-impl crate::RegisterSpec for DMA_SOFTLBREQ_SPEC {
+pub struct DMA_SOFT_LBREQ_SPEC;
+impl crate::RegisterSpec for DMA_SOFT_LBREQ_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [dma_soft_lbreq::R](R) reader structure"]
-impl crate::Readable for DMA_SOFTLBREQ_SPEC {
+impl crate::Readable for DMA_SOFT_LBREQ_SPEC {
     type Reader = R;
 }
 #[doc = "`write(|w| ..)` method takes [dma_soft_lbreq::W](W) writer structure"]
-impl crate::Writable for DMA_SOFTLBREQ_SPEC {
+impl crate::Writable for DMA_SOFT_LBREQ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_SoftLBReq to value 0"]
-impl crate::Resettable for DMA_SOFTLBREQ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+impl crate::Resettable for DMA_SOFT_LBREQ_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

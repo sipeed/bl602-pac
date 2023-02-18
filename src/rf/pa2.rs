@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<PA2_SPEC>> for R {
+impl From<crate::R<PA2_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<PA2_SPEC>) -> Self {
         R(reader)
     }
@@ -27,261 +28,107 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<PA2_SPEC>> for W {
+impl From<crate::W<PA2_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<PA2_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `pa_ib_fix_hw` reader - "]
-pub struct PA_IB_FIX_HW_R(crate::FieldReader<bool, bool>);
-impl PA_IB_FIX_HW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PA_IB_FIX_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_IB_FIX_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pa_ib_fix_hw` writer - "]
-pub struct PA_IB_FIX_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_IB_FIX_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
-        self.w
-    }
-}
-#[doc = "Field `pa_half_on_hw` reader - "]
-pub struct PA_HALF_ON_HW_R(crate::FieldReader<bool, bool>);
-impl PA_HALF_ON_HW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PA_HALF_ON_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_HALF_ON_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pa_half_on_hw` writer - "]
-pub struct PA_HALF_ON_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_HALF_ON_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Field `pa_vbcas_hw` reader - "]
-pub struct PA_VBCAS_HW_R(crate::FieldReader<u8, u8>);
-impl PA_VBCAS_HW_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        PA_VBCAS_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_VBCAS_HW_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pa_vbcas_hw` writer - "]
-pub struct PA_VBCAS_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_VBCAS_HW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
-        self.w
-    }
-}
-#[doc = "Field `pa_vbcore_hw` reader - "]
-pub struct PA_VBCORE_HW_R(crate::FieldReader<u8, u8>);
-impl PA_VBCORE_HW_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        PA_VBCORE_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_VBCORE_HW_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pa_vbcore_hw` writer - "]
-pub struct PA_VBCORE_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_VBCORE_HW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
-#[doc = "Field `pa_iet_hw` reader - "]
-pub struct PA_IET_HW_R(crate::FieldReader<u8, u8>);
-impl PA_IET_HW_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        PA_IET_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_IET_HW_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pa_iet_hw` writer - "]
-pub struct PA_IET_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_IET_HW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
 #[doc = "Field `pa_etb_en_hw` reader - "]
-pub struct PA_ETB_EN_HW_R(crate::FieldReader<bool, bool>);
-impl PA_ETB_EN_HW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PA_ETB_EN_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_ETB_EN_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PA_ETB_EN_HW_R = crate::BitReader<bool>;
 #[doc = "Field `pa_etb_en_hw` writer - "]
-pub struct PA_ETB_EN_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_ETB_EN_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PA_ETB_EN_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PA2_SPEC, bool, O>;
+#[doc = "Field `pa_iet_hw` reader - "]
+pub type PA_IET_HW_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `pa_iet_hw` writer - "]
+pub type PA_IET_HW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PA2_SPEC, u8, u8, 4, O>;
+#[doc = "Field `pa_vbcore_hw` reader - "]
+pub type PA_VBCORE_HW_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `pa_vbcore_hw` writer - "]
+pub type PA_VBCORE_HW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PA2_SPEC, u8, u8, 4, O>;
+#[doc = "Field `pa_vbcas_hw` reader - "]
+pub type PA_VBCAS_HW_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `pa_vbcas_hw` writer - "]
+pub type PA_VBCAS_HW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PA2_SPEC, u8, u8, 3, O>;
+#[doc = "Field `pa_half_on_hw` reader - "]
+pub type PA_HALF_ON_HW_R = crate::BitReader<bool>;
+#[doc = "Field `pa_half_on_hw` writer - "]
+pub type PA_HALF_ON_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PA2_SPEC, bool, O>;
+#[doc = "Field `pa_ib_fix_hw` reader - "]
+pub type PA_IB_FIX_HW_R = crate::BitReader<bool>;
+#[doc = "Field `pa_ib_fix_hw` writer - "]
+pub type PA_IB_FIX_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PA2_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 17"]
+    #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn pa_ib_fix_hw(&self) -> PA_IB_FIX_HW_R {
-        PA_IB_FIX_HW_R::new(((self.bits >> 17) & 0x01) != 0)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn pa_half_on_hw(&self) -> PA_HALF_ON_HW_R {
-        PA_HALF_ON_HW_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
-    #[doc = "Bits 12:14"]
-    #[inline(always)]
-    pub fn pa_vbcas_hw(&self) -> PA_VBCAS_HW_R {
-        PA_VBCAS_HW_R::new(((self.bits >> 12) & 0x07) as u8)
-    }
-    #[doc = "Bits 8:11"]
-    #[inline(always)]
-    pub fn pa_vbcore_hw(&self) -> PA_VBCORE_HW_R {
-        PA_VBCORE_HW_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn pa_etb_en_hw(&self) -> PA_ETB_EN_HW_R {
+        PA_ETB_EN_HW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     pub fn pa_iet_hw(&self) -> PA_IET_HW_R {
         PA_IET_HW_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn pa_etb_en_hw(&self) -> PA_ETB_EN_HW_R {
-        PA_ETB_EN_HW_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 17"]
-    #[inline(always)]
-    pub fn pa_ib_fix_hw(&mut self) -> PA_IB_FIX_HW_W {
-        PA_IB_FIX_HW_W { w: self }
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn pa_half_on_hw(&mut self) -> PA_HALF_ON_HW_W {
-        PA_HALF_ON_HW_W { w: self }
+    pub fn pa_vbcore_hw(&self) -> PA_VBCORE_HW_R {
+        PA_VBCORE_HW_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    pub fn pa_vbcas_hw(&mut self) -> PA_VBCAS_HW_W {
-        PA_VBCAS_HW_W { w: self }
+    pub fn pa_vbcas_hw(&self) -> PA_VBCAS_HW_R {
+        PA_VBCAS_HW_R::new(((self.bits >> 12) & 7) as u8)
     }
-    #[doc = "Bits 8:11"]
+    #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn pa_vbcore_hw(&mut self) -> PA_VBCORE_HW_W {
-        PA_VBCORE_HW_W { w: self }
+    pub fn pa_half_on_hw(&self) -> PA_HALF_ON_HW_R {
+        PA_HALF_ON_HW_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn pa_ib_fix_hw(&self) -> PA_IB_FIX_HW_R {
+        PA_IB_FIX_HW_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pa_etb_en_hw(&mut self) -> PA_ETB_EN_HW_W<3> {
+        PA_ETB_EN_HW_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn pa_iet_hw(&mut self) -> PA_IET_HW_W {
-        PA_IET_HW_W { w: self }
+    #[must_use]
+    pub fn pa_iet_hw(&mut self) -> PA_IET_HW_W<4> {
+        PA_IET_HW_W::new(self)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn pa_etb_en_hw(&mut self) -> PA_ETB_EN_HW_W {
-        PA_ETB_EN_HW_W { w: self }
+    #[must_use]
+    pub fn pa_vbcore_hw(&mut self) -> PA_VBCORE_HW_W<8> {
+        PA_VBCORE_HW_W::new(self)
+    }
+    #[doc = "Bits 12:14"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pa_vbcas_hw(&mut self) -> PA_VBCAS_HW_W<12> {
+        PA_VBCAS_HW_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pa_half_on_hw(&mut self) -> PA_HALF_ON_HW_W<16> {
+        PA_HALF_ON_HW_W::new(self)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pa_ib_fix_hw(&mut self) -> PA_IB_FIX_HW_W<17> {
+        PA_IB_FIX_HW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -299,11 +146,10 @@ impl crate::Readable for PA2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pa2::W](W) writer structure"]
 impl crate::Writable for PA2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets pa2 to value 0"]
 impl crate::Resettable for PA2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

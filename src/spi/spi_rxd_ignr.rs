@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SPI_RXD_IGNR_SPEC>> for R {
+impl From<crate::R<SPI_RXD_IGNR_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SPI_RXD_IGNR_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SPI_RXD_IGNR_SPEC>> for W {
+impl From<crate::W<SPI_RXD_IGNR_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SPI_RXD_IGNR_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `cr_spi_rxd_ignr_s` reader - "]
-pub struct CR_SPI_RXD_IGNR_S_R(crate::FieldReader<u8, u8>);
-impl CR_SPI_RXD_IGNR_S_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR_SPI_RXD_IGNR_S_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_SPI_RXD_IGNR_S_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_spi_rxd_ignr_s` writer - "]
-pub struct CR_SPI_RXD_IGNR_S_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_SPI_RXD_IGNR_S_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 16)) | ((value as u32 & 0x1f) << 16);
-        self.w
-    }
-}
 #[doc = "Field `cr_spi_rxd_ignr_p` reader - "]
-pub struct CR_SPI_RXD_IGNR_P_R(crate::FieldReader<u8, u8>);
-impl CR_SPI_RXD_IGNR_P_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR_SPI_RXD_IGNR_P_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_SPI_RXD_IGNR_P_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CR_SPI_RXD_IGNR_P_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `cr_spi_rxd_ignr_p` writer - "]
-pub struct CR_SPI_RXD_IGNR_P_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_SPI_RXD_IGNR_P_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type CR_SPI_RXD_IGNR_P_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SPI_RXD_IGNR_SPEC, u8, u8, 5, O>;
+#[doc = "Field `cr_spi_rxd_ignr_s` reader - "]
+pub type CR_SPI_RXD_IGNR_S_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_spi_rxd_ignr_s` writer - "]
+pub type CR_SPI_RXD_IGNR_S_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SPI_RXD_IGNR_SPEC, u8, u8, 5, O>;
 impl R {
-    #[doc = "Bits 16:20"]
-    #[inline(always)]
-    pub fn cr_spi_rxd_ignr_s(&self) -> CR_SPI_RXD_IGNR_S_R {
-        CR_SPI_RXD_IGNR_S_R::new(((self.bits >> 16) & 0x1f) as u8)
-    }
     #[doc = "Bits 0:4"]
     #[inline(always)]
     pub fn cr_spi_rxd_ignr_p(&self) -> CR_SPI_RXD_IGNR_P_R {
         CR_SPI_RXD_IGNR_P_R::new((self.bits & 0x1f) as u8)
     }
-}
-impl W {
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    pub fn cr_spi_rxd_ignr_s(&mut self) -> CR_SPI_RXD_IGNR_S_W {
-        CR_SPI_RXD_IGNR_S_W { w: self }
+    pub fn cr_spi_rxd_ignr_s(&self) -> CR_SPI_RXD_IGNR_S_R {
+        CR_SPI_RXD_IGNR_S_R::new(((self.bits >> 16) & 0x1f) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn cr_spi_rxd_ignr_p(&mut self) -> CR_SPI_RXD_IGNR_P_W {
-        CR_SPI_RXD_IGNR_P_W { w: self }
+    #[must_use]
+    pub fn cr_spi_rxd_ignr_p(&mut self) -> CR_SPI_RXD_IGNR_P_W<0> {
+        CR_SPI_RXD_IGNR_P_W::new(self)
+    }
+    #[doc = "Bits 16:20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_spi_rxd_ignr_s(&mut self) -> CR_SPI_RXD_IGNR_S_W<16> {
+        CR_SPI_RXD_IGNR_S_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for SPI_RXD_IGNR_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_rxd_ignr::W](W) writer structure"]
 impl crate::Writable for SPI_RXD_IGNR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets spi_rxd_ignr to value 0"]
 impl crate::Resettable for SPI_RXD_IGNR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

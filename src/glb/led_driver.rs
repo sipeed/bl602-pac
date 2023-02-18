@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<LED_DRIVER_SPEC>> for R {
+impl From<crate::R<LED_DRIVER_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<LED_DRIVER_SPEC>) -> Self {
         R(reader)
     }
@@ -27,271 +28,110 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<LED_DRIVER_SPEC>> for W {
+impl From<crate::W<LED_DRIVER_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<LED_DRIVER_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `pu_leddrv` reader - "]
-pub struct PU_LEDDRV_R(crate::FieldReader<bool, bool>);
-impl PU_LEDDRV_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PU_LEDDRV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PU_LEDDRV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `pu_leddrv` writer - "]
-pub struct PU_LEDDRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PU_LEDDRV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
-#[doc = "Field `ir_rx_gpio_sel` reader - "]
-pub struct IR_RX_GPIO_SEL_R(crate::FieldReader<u8, u8>);
-impl IR_RX_GPIO_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        IR_RX_GPIO_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IR_RX_GPIO_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ir_rx_gpio_sel` writer - "]
-pub struct IR_RX_GPIO_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IR_RX_GPIO_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
-        self.w
-    }
-}
-#[doc = "Field `leddrv_ibias` reader - "]
-pub struct LEDDRV_IBIAS_R(crate::FieldReader<u8, u8>);
-impl LEDDRV_IBIAS_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LEDDRV_IBIAS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LEDDRV_IBIAS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `leddrv_ibias` writer - "]
-pub struct LEDDRV_IBIAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LEDDRV_IBIAS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
-#[doc = "Field `led_din_polarity_sel` reader - "]
-pub struct LED_DIN_POLARITY_SEL_R(crate::FieldReader<bool, bool>);
-impl LED_DIN_POLARITY_SEL_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LED_DIN_POLARITY_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LED_DIN_POLARITY_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `led_din_polarity_sel` writer - "]
-pub struct LED_DIN_POLARITY_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LED_DIN_POLARITY_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `led_din_sel` reader - "]
-pub struct LED_DIN_SEL_R(crate::FieldReader<bool, bool>);
-impl LED_DIN_SEL_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LED_DIN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LED_DIN_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `led_din_sel` writer - "]
-pub struct LED_DIN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LED_DIN_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `led_din_reg` reader - "]
-pub struct LED_DIN_REG_R(crate::FieldReader<bool, bool>);
-impl LED_DIN_REG_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LED_DIN_REG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LED_DIN_REG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LED_DIN_REG_R = crate::BitReader<bool>;
 #[doc = "Field `led_din_reg` writer - "]
-pub struct LED_DIN_REG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LED_DIN_REG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LED_DIN_REG_W<'a, const O: u8> = crate::BitWriter<'a, u32, LED_DRIVER_SPEC, bool, O>;
+#[doc = "Field `led_din_sel` reader - "]
+pub type LED_DIN_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `led_din_sel` writer - "]
+pub type LED_DIN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LED_DRIVER_SPEC, bool, O>;
+#[doc = "Field `led_din_polarity_sel` reader - "]
+pub type LED_DIN_POLARITY_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `led_din_polarity_sel` writer - "]
+pub type LED_DIN_POLARITY_SEL_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, LED_DRIVER_SPEC, bool, O>;
+#[doc = "Field `leddrv_ibias` reader - "]
+pub type LEDDRV_IBIAS_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `leddrv_ibias` writer - "]
+pub type LEDDRV_IBIAS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LED_DRIVER_SPEC, u8, u8, 4, O>;
+#[doc = "Field `ir_rx_gpio_sel` reader - "]
+pub type IR_RX_GPIO_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ir_rx_gpio_sel` writer - "]
+pub type IR_RX_GPIO_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LED_DRIVER_SPEC, u8, u8, 2, O>;
+#[doc = "Field `pu_leddrv` reader - "]
+pub type PU_LEDDRV_R = crate::BitReader<bool>;
+#[doc = "Field `pu_leddrv` writer - "]
+pub type PU_LEDDRV_W<'a, const O: u8> = crate::BitWriter<'a, u32, LED_DRIVER_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 31"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pu_leddrv(&self) -> PU_LEDDRV_R {
-        PU_LEDDRV_R::new(((self.bits >> 31) & 0x01) != 0)
+    pub fn led_din_reg(&self) -> LED_DIN_REG_R {
+        LED_DIN_REG_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 8:9"]
+    #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn ir_rx_gpio_sel(&self) -> IR_RX_GPIO_SEL_R {
-        IR_RX_GPIO_SEL_R::new(((self.bits >> 8) & 0x03) as u8)
+    pub fn led_din_sel(&self) -> LED_DIN_SEL_R {
+        LED_DIN_SEL_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn led_din_polarity_sel(&self) -> LED_DIN_POLARITY_SEL_R {
+        LED_DIN_POLARITY_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     pub fn leddrv_ibias(&self) -> LEDDRV_IBIAS_R {
         LEDDRV_IBIAS_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn led_din_polarity_sel(&self) -> LED_DIN_POLARITY_SEL_R {
-        LED_DIN_POLARITY_SEL_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn ir_rx_gpio_sel(&self) -> IR_RX_GPIO_SEL_R {
+        IR_RX_GPIO_SEL_R::new(((self.bits >> 8) & 3) as u8)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn led_din_sel(&self) -> LED_DIN_SEL_R {
-        LED_DIN_SEL_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn led_din_reg(&self) -> LED_DIN_REG_R {
-        LED_DIN_REG_R::new((self.bits & 0x01) != 0)
+    pub fn pu_leddrv(&self) -> PU_LEDDRV_R {
+        PU_LEDDRV_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 31"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pu_leddrv(&mut self) -> PU_LEDDRV_W {
-        PU_LEDDRV_W { w: self }
-    }
-    #[doc = "Bits 8:9"]
-    #[inline(always)]
-    pub fn ir_rx_gpio_sel(&mut self) -> IR_RX_GPIO_SEL_W {
-        IR_RX_GPIO_SEL_W { w: self }
-    }
-    #[doc = "Bits 4:7"]
-    #[inline(always)]
-    pub fn leddrv_ibias(&mut self) -> LEDDRV_IBIAS_W {
-        LEDDRV_IBIAS_W { w: self }
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn led_din_polarity_sel(&mut self) -> LED_DIN_POLARITY_SEL_W {
-        LED_DIN_POLARITY_SEL_W { w: self }
+    #[must_use]
+    pub fn led_din_reg(&mut self) -> LED_DIN_REG_W<0> {
+        LED_DIN_REG_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn led_din_sel(&mut self) -> LED_DIN_SEL_W {
-        LED_DIN_SEL_W { w: self }
+    #[must_use]
+    pub fn led_din_sel(&mut self) -> LED_DIN_SEL_W<1> {
+        LED_DIN_SEL_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn led_din_reg(&mut self) -> LED_DIN_REG_W {
-        LED_DIN_REG_W { w: self }
+    #[must_use]
+    pub fn led_din_polarity_sel(&mut self) -> LED_DIN_POLARITY_SEL_W<2> {
+        LED_DIN_POLARITY_SEL_W::new(self)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn leddrv_ibias(&mut self) -> LEDDRV_IBIAS_W<4> {
+        LEDDRV_IBIAS_W::new(self)
+    }
+    #[doc = "Bits 8:9"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ir_rx_gpio_sel(&mut self) -> IR_RX_GPIO_SEL_W<8> {
+        IR_RX_GPIO_SEL_W::new(self)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pu_leddrv(&mut self) -> PU_LEDDRV_W<31> {
+        PU_LEDDRV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -309,11 +149,10 @@ impl crate::Readable for LED_DRIVER_SPEC {
 #[doc = "`write(|w| ..)` method takes [led_driver::W](W) writer structure"]
 impl crate::Writable for LED_DRIVER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets led_driver to value 0x80"]
 impl crate::Resettable for LED_DRIVER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

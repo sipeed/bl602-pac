@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<WMER_SPEC>> for R {
+impl From<crate::R<WMER_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<WMER_SPEC>) -> Self {
         R(reader)
     }
@@ -27,107 +28,47 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<WMER_SPEC>> for W {
+impl From<crate::W<WMER_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<WMER_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `wrie` reader - "]
-pub struct WRIE_R(crate::FieldReader<bool, bool>);
-impl WRIE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        WRIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WRIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `wrie` writer - "]
-pub struct WRIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WRIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `we` reader - "]
-pub struct WE_R(crate::FieldReader<bool, bool>);
-impl WE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        WE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WE_R = crate::BitReader<bool>;
 #[doc = "Field `we` writer - "]
-pub struct WE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type WE_W<'a, const O: u8> = crate::BitWriter<'a, u32, WMER_SPEC, bool, O>;
+#[doc = "Field `wrie` reader - "]
+pub type WRIE_R = crate::BitReader<bool>;
+#[doc = "Field `wrie` writer - "]
+pub type WRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, WMER_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn wrie(&self) -> WRIE_R {
-        WRIE_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn we(&self) -> WE_R {
-        WE_R::new((self.bits & 0x01) != 0)
+        WE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn wrie(&self) -> WRIE_R {
+        WRIE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn wrie(&mut self) -> WRIE_W {
-        WRIE_W { w: self }
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn we(&mut self) -> WE_W {
-        WE_W { w: self }
+    #[must_use]
+    pub fn we(&mut self) -> WE_W<0> {
+        WE_W::new(self)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wrie(&mut self) -> WRIE_W<1> {
+        WRIE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -145,11 +86,10 @@ impl crate::Readable for WMER_SPEC {
 #[doc = "`write(|w| ..)` method takes [wmer::W](W) writer structure"]
 impl crate::Writable for WMER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WMER to value 0"]
 impl crate::Resettable for WMER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

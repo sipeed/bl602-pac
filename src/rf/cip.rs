@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<CIP_SPEC>> for R {
+impl From<crate::R<CIP_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<CIP_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,47 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<CIP_SPEC>> for W {
+impl From<crate::W<CIP_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<CIP_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `vg13_sel` reader - "]
-pub struct VG13_SEL_R(crate::FieldReader<u8, u8>);
-impl VG13_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        VG13_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VG13_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `vg13_sel` writer - "]
-pub struct VG13_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VG13_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
 #[doc = "Field `vg11_sel` reader - "]
-pub struct VG11_SEL_R(crate::FieldReader<u8, u8>);
-impl VG11_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        VG11_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VG11_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VG11_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `vg11_sel` writer - "]
-pub struct VG11_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VG11_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type VG11_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CIP_SPEC, u8, u8, 2, O>;
+#[doc = "Field `vg13_sel` reader - "]
+pub type VG13_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `vg13_sel` writer - "]
+pub type VG13_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CIP_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 2:3"]
-    #[inline(always)]
-    pub fn vg13_sel(&self) -> VG13_SEL_R {
-        VG13_SEL_R::new(((self.bits >> 2) & 0x03) as u8)
-    }
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn vg11_sel(&self) -> VG11_SEL_R {
-        VG11_SEL_R::new((self.bits & 0x03) as u8)
+        VG11_SEL_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    pub fn vg13_sel(&self) -> VG13_SEL_R {
+        VG13_SEL_R::new(((self.bits >> 2) & 3) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 2:3"]
-    #[inline(always)]
-    pub fn vg13_sel(&mut self) -> VG13_SEL_W {
-        VG13_SEL_W { w: self }
-    }
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn vg11_sel(&mut self) -> VG11_SEL_W {
-        VG11_SEL_W { w: self }
+    #[must_use]
+    pub fn vg11_sel(&mut self) -> VG11_SEL_W<0> {
+        VG11_SEL_W::new(self)
+    }
+    #[doc = "Bits 2:3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn vg13_sel(&mut self) -> VG13_SEL_W<2> {
+        VG13_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +86,10 @@ impl crate::Readable for CIP_SPEC {
 #[doc = "`write(|w| ..)` method takes [cip::W](W) writer structure"]
 impl crate::Writable for CIP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets cip to value 0"]
 impl crate::Resettable for CIP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<GPIO_INT_MASK1_SPEC>> for R {
+impl From<crate::R<GPIO_INT_MASK1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<GPIO_INT_MASK1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,2712 +28,1815 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<GPIO_INT_MASK1_SPEC>> for W {
+impl From<crate::W<GPIO_INT_MASK1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<GPIO_INT_MASK1_SPEC>) -> Self {
         W(writer)
     }
 }
+#[doc = "Field `reg_gpio_0_mask` reader - Mask register for GPIO0."]
+pub type REG_GPIO_0_MASK_R = crate::BitReader<GPIO0MASK_A>;
 #[doc = "Mask register for GPIO0.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_0_MASK_A {
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO0MASK_A {
     #[doc = "0: `0`"]
     UNMASKED = 0,
     #[doc = "1: `1`"]
     MASKED = 1,
 }
-impl From<REG_GPIO_0_MASK_A> for bool {
+impl From<GPIO0MASK_A> for bool {
     #[inline(always)]
-    fn from(variant: REG_GPIO_0_MASK_A) -> Self {
+    fn from(variant: GPIO0MASK_A) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `reg_gpio_0_mask` reader - Mask register for GPIO0."]
-pub struct REG_GPIO_0_MASK_R(crate::FieldReader<bool, REG_GPIO_0_MASK_A>);
 impl REG_GPIO_0_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_0_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_0_MASK_A {
+    pub fn variant(&self) -> GPIO0MASK_A {
         match self.bits {
-            false => REG_GPIO_0_MASK_A::UNMASKED,
-            true => REG_GPIO_0_MASK_A::MASKED,
+            false => GPIO0MASK_A::UNMASKED,
+            true => GPIO0MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_0_MASK_A::UNMASKED
+        *self == GPIO0MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_0_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_0_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_0_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO0MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_0_mask` writer - Mask register for GPIO0."]
-pub struct REG_GPIO_0_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_0_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_0_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_0_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO0MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_0_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_0_MASK_A::UNMASKED)
+        self.variant(GPIO0MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_0_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO1.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_1_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_1_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_1_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO0MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_1_mask` reader - Mask register for GPIO1."]
-pub struct REG_GPIO_1_MASK_R(crate::FieldReader<bool, REG_GPIO_1_MASK_A>);
-impl REG_GPIO_1_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_1_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_1_MASK_R = crate::BitReader<GPIO1MASK_A>;
+#[doc = "Mask register for GPIO1.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO1MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO1MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_1_MASK_A {
+    fn from(variant: GPIO1MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_1_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO1MASK_A {
         match self.bits {
-            false => REG_GPIO_1_MASK_A::UNMASKED,
-            true => REG_GPIO_1_MASK_A::MASKED,
+            false => GPIO1MASK_A::UNMASKED,
+            true => GPIO1MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_1_MASK_A::UNMASKED
+        *self == GPIO1MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_1_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_1_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_1_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO1MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_1_mask` writer - Mask register for GPIO1."]
-pub struct REG_GPIO_1_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_1_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_1_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_1_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO1MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_1_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_1_MASK_A::UNMASKED)
+        self.variant(GPIO1MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_1_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO2.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_2_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_2_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_2_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO1MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_2_mask` reader - Mask register for GPIO2."]
-pub struct REG_GPIO_2_MASK_R(crate::FieldReader<bool, REG_GPIO_2_MASK_A>);
-impl REG_GPIO_2_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_2_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_2_MASK_R = crate::BitReader<GPIO2MASK_A>;
+#[doc = "Mask register for GPIO2.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO2MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO2MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_2_MASK_A {
+    fn from(variant: GPIO2MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_2_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO2MASK_A {
         match self.bits {
-            false => REG_GPIO_2_MASK_A::UNMASKED,
-            true => REG_GPIO_2_MASK_A::MASKED,
+            false => GPIO2MASK_A::UNMASKED,
+            true => GPIO2MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_2_MASK_A::UNMASKED
+        *self == GPIO2MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_2_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_2_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_2_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO2MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_2_mask` writer - Mask register for GPIO2."]
-pub struct REG_GPIO_2_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_2_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_2_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_2_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO2MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_2_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_2_MASK_A::UNMASKED)
+        self.variant(GPIO2MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_2_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO3.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_3_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_3_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_3_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO2MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_3_mask` reader - Mask register for GPIO3."]
-pub struct REG_GPIO_3_MASK_R(crate::FieldReader<bool, REG_GPIO_3_MASK_A>);
-impl REG_GPIO_3_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_3_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_3_MASK_R = crate::BitReader<GPIO3MASK_A>;
+#[doc = "Mask register for GPIO3.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO3MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO3MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_3_MASK_A {
+    fn from(variant: GPIO3MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_3_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO3MASK_A {
         match self.bits {
-            false => REG_GPIO_3_MASK_A::UNMASKED,
-            true => REG_GPIO_3_MASK_A::MASKED,
+            false => GPIO3MASK_A::UNMASKED,
+            true => GPIO3MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_3_MASK_A::UNMASKED
+        *self == GPIO3MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_3_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_3_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_3_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO3MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_3_mask` writer - Mask register for GPIO3."]
-pub struct REG_GPIO_3_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_3_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_3_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_3_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO3MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_3_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_3_MASK_A::UNMASKED)
+        self.variant(GPIO3MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_3_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO4.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_4_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_4_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_4_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO3MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_4_mask` reader - Mask register for GPIO4."]
-pub struct REG_GPIO_4_MASK_R(crate::FieldReader<bool, REG_GPIO_4_MASK_A>);
-impl REG_GPIO_4_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_4_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_4_MASK_R = crate::BitReader<GPIO4MASK_A>;
+#[doc = "Mask register for GPIO4.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO4MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO4MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_4_MASK_A {
+    fn from(variant: GPIO4MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_4_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO4MASK_A {
         match self.bits {
-            false => REG_GPIO_4_MASK_A::UNMASKED,
-            true => REG_GPIO_4_MASK_A::MASKED,
+            false => GPIO4MASK_A::UNMASKED,
+            true => GPIO4MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_4_MASK_A::UNMASKED
+        *self == GPIO4MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_4_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_4_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_4_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO4MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_4_mask` writer - Mask register for GPIO4."]
-pub struct REG_GPIO_4_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_4_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_4_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_4_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO4MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_4_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_4_MASK_A::UNMASKED)
+        self.variant(GPIO4MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_4_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO5.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_5_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_5_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_5_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO4MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_5_mask` reader - Mask register for GPIO5."]
-pub struct REG_GPIO_5_MASK_R(crate::FieldReader<bool, REG_GPIO_5_MASK_A>);
-impl REG_GPIO_5_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_5_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_5_MASK_R = crate::BitReader<GPIO5MASK_A>;
+#[doc = "Mask register for GPIO5.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO5MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO5MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_5_MASK_A {
+    fn from(variant: GPIO5MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_5_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO5MASK_A {
         match self.bits {
-            false => REG_GPIO_5_MASK_A::UNMASKED,
-            true => REG_GPIO_5_MASK_A::MASKED,
+            false => GPIO5MASK_A::UNMASKED,
+            true => GPIO5MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_5_MASK_A::UNMASKED
+        *self == GPIO5MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_5_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_5_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_5_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO5MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_5_mask` writer - Mask register for GPIO5."]
-pub struct REG_GPIO_5_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_5_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_5_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_5_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO5MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_5_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_5_MASK_A::UNMASKED)
+        self.variant(GPIO5MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_5_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO6.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_6_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_6_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_6_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO5MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_6_mask` reader - Mask register for GPIO6."]
-pub struct REG_GPIO_6_MASK_R(crate::FieldReader<bool, REG_GPIO_6_MASK_A>);
-impl REG_GPIO_6_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_6_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_6_MASK_R = crate::BitReader<GPIO6MASK_A>;
+#[doc = "Mask register for GPIO6.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO6MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO6MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_6_MASK_A {
+    fn from(variant: GPIO6MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_6_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO6MASK_A {
         match self.bits {
-            false => REG_GPIO_6_MASK_A::UNMASKED,
-            true => REG_GPIO_6_MASK_A::MASKED,
+            false => GPIO6MASK_A::UNMASKED,
+            true => GPIO6MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_6_MASK_A::UNMASKED
+        *self == GPIO6MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_6_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_6_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_6_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO6MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_6_mask` writer - Mask register for GPIO6."]
-pub struct REG_GPIO_6_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_6_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_6_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_6_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO6MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_6_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_6_MASK_A::UNMASKED)
+        self.variant(GPIO6MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_6_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO7.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_7_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_7_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_7_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO6MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_7_mask` reader - Mask register for GPIO7."]
-pub struct REG_GPIO_7_MASK_R(crate::FieldReader<bool, REG_GPIO_7_MASK_A>);
-impl REG_GPIO_7_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_7_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_7_MASK_R = crate::BitReader<GPIO7MASK_A>;
+#[doc = "Mask register for GPIO7.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO7MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO7MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_7_MASK_A {
+    fn from(variant: GPIO7MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_7_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO7MASK_A {
         match self.bits {
-            false => REG_GPIO_7_MASK_A::UNMASKED,
-            true => REG_GPIO_7_MASK_A::MASKED,
+            false => GPIO7MASK_A::UNMASKED,
+            true => GPIO7MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_7_MASK_A::UNMASKED
+        *self == GPIO7MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_7_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_7_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_7_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO7MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_7_mask` writer - Mask register for GPIO7."]
-pub struct REG_GPIO_7_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_7_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_7_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_7_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO7MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_7_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_7_MASK_A::UNMASKED)
+        self.variant(GPIO7MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_7_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO8.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_8_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_8_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_8_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO7MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_8_mask` reader - Mask register for GPIO8."]
-pub struct REG_GPIO_8_MASK_R(crate::FieldReader<bool, REG_GPIO_8_MASK_A>);
-impl REG_GPIO_8_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_8_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_8_MASK_R = crate::BitReader<GPIO8MASK_A>;
+#[doc = "Mask register for GPIO8.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO8MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO8MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_8_MASK_A {
+    fn from(variant: GPIO8MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_8_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO8MASK_A {
         match self.bits {
-            false => REG_GPIO_8_MASK_A::UNMASKED,
-            true => REG_GPIO_8_MASK_A::MASKED,
+            false => GPIO8MASK_A::UNMASKED,
+            true => GPIO8MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_8_MASK_A::UNMASKED
+        *self == GPIO8MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_8_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_8_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_8_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO8MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_8_mask` writer - Mask register for GPIO8."]
-pub struct REG_GPIO_8_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_8_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_8_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_8_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO8MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_8_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_8_MASK_A::UNMASKED)
+        self.variant(GPIO8MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_8_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO9.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_9_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_9_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_9_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO8MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_9_mask` reader - Mask register for GPIO9."]
-pub struct REG_GPIO_9_MASK_R(crate::FieldReader<bool, REG_GPIO_9_MASK_A>);
-impl REG_GPIO_9_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_9_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_9_MASK_R = crate::BitReader<GPIO9MASK_A>;
+#[doc = "Mask register for GPIO9.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO9MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO9MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_9_MASK_A {
+    fn from(variant: GPIO9MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_9_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO9MASK_A {
         match self.bits {
-            false => REG_GPIO_9_MASK_A::UNMASKED,
-            true => REG_GPIO_9_MASK_A::MASKED,
+            false => GPIO9MASK_A::UNMASKED,
+            true => GPIO9MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_9_MASK_A::UNMASKED
+        *self == GPIO9MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_9_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_9_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_9_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO9MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_9_mask` writer - Mask register for GPIO9."]
-pub struct REG_GPIO_9_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_9_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_9_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_9_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO9MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_9_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_9_MASK_A::UNMASKED)
+        self.variant(GPIO9MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_9_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO10.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_10_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_10_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_10_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO9MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_10_mask` reader - Mask register for GPIO10."]
-pub struct REG_GPIO_10_MASK_R(crate::FieldReader<bool, REG_GPIO_10_MASK_A>);
-impl REG_GPIO_10_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_10_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_10_MASK_R = crate::BitReader<GPIO10MASK_A>;
+#[doc = "Mask register for GPIO10.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO10MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO10MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_10_MASK_A {
+    fn from(variant: GPIO10MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_10_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO10MASK_A {
         match self.bits {
-            false => REG_GPIO_10_MASK_A::UNMASKED,
-            true => REG_GPIO_10_MASK_A::MASKED,
+            false => GPIO10MASK_A::UNMASKED,
+            true => GPIO10MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_10_MASK_A::UNMASKED
+        *self == GPIO10MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_10_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_10_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_10_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO10MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_10_mask` writer - Mask register for GPIO10."]
-pub struct REG_GPIO_10_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_10_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_10_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_10_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO10MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_10_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_10_MASK_A::UNMASKED)
+        self.variant(GPIO10MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_10_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO11.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_11_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_11_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_11_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO10MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_11_mask` reader - Mask register for GPIO11."]
-pub struct REG_GPIO_11_MASK_R(crate::FieldReader<bool, REG_GPIO_11_MASK_A>);
-impl REG_GPIO_11_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_11_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_11_MASK_R = crate::BitReader<GPIO11MASK_A>;
+#[doc = "Mask register for GPIO11.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO11MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO11MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_11_MASK_A {
+    fn from(variant: GPIO11MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_11_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO11MASK_A {
         match self.bits {
-            false => REG_GPIO_11_MASK_A::UNMASKED,
-            true => REG_GPIO_11_MASK_A::MASKED,
+            false => GPIO11MASK_A::UNMASKED,
+            true => GPIO11MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_11_MASK_A::UNMASKED
+        *self == GPIO11MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_11_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_11_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_11_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO11MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_11_mask` writer - Mask register for GPIO11."]
-pub struct REG_GPIO_11_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_11_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_11_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_11_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO11MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_11_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_11_MASK_A::UNMASKED)
+        self.variant(GPIO11MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_11_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO12.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_12_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_12_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_12_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO11MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_12_mask` reader - Mask register for GPIO12."]
-pub struct REG_GPIO_12_MASK_R(crate::FieldReader<bool, REG_GPIO_12_MASK_A>);
-impl REG_GPIO_12_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_12_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_12_MASK_R = crate::BitReader<GPIO12MASK_A>;
+#[doc = "Mask register for GPIO12.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO12MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO12MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_12_MASK_A {
+    fn from(variant: GPIO12MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_12_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO12MASK_A {
         match self.bits {
-            false => REG_GPIO_12_MASK_A::UNMASKED,
-            true => REG_GPIO_12_MASK_A::MASKED,
+            false => GPIO12MASK_A::UNMASKED,
+            true => GPIO12MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_12_MASK_A::UNMASKED
+        *self == GPIO12MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_12_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_12_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_12_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO12MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_12_mask` writer - Mask register for GPIO12."]
-pub struct REG_GPIO_12_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_12_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_12_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_12_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO12MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_12_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_12_MASK_A::UNMASKED)
+        self.variant(GPIO12MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_12_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO13.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_13_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_13_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_13_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO12MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_13_mask` reader - Mask register for GPIO13."]
-pub struct REG_GPIO_13_MASK_R(crate::FieldReader<bool, REG_GPIO_13_MASK_A>);
-impl REG_GPIO_13_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_13_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_13_MASK_R = crate::BitReader<GPIO13MASK_A>;
+#[doc = "Mask register for GPIO13.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO13MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO13MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_13_MASK_A {
+    fn from(variant: GPIO13MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_13_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO13MASK_A {
         match self.bits {
-            false => REG_GPIO_13_MASK_A::UNMASKED,
-            true => REG_GPIO_13_MASK_A::MASKED,
+            false => GPIO13MASK_A::UNMASKED,
+            true => GPIO13MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_13_MASK_A::UNMASKED
+        *self == GPIO13MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_13_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_13_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_13_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO13MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_13_mask` writer - Mask register for GPIO13."]
-pub struct REG_GPIO_13_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_13_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_13_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_13_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO13MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_13_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_13_MASK_A::UNMASKED)
+        self.variant(GPIO13MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_13_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO14.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_14_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_14_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_14_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO13MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_14_mask` reader - Mask register for GPIO14."]
-pub struct REG_GPIO_14_MASK_R(crate::FieldReader<bool, REG_GPIO_14_MASK_A>);
-impl REG_GPIO_14_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_14_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_14_MASK_R = crate::BitReader<GPIO14MASK_A>;
+#[doc = "Mask register for GPIO14.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO14MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO14MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_14_MASK_A {
+    fn from(variant: GPIO14MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_14_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO14MASK_A {
         match self.bits {
-            false => REG_GPIO_14_MASK_A::UNMASKED,
-            true => REG_GPIO_14_MASK_A::MASKED,
+            false => GPIO14MASK_A::UNMASKED,
+            true => GPIO14MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_14_MASK_A::UNMASKED
+        *self == GPIO14MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_14_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_14_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_14_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO14MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_14_mask` writer - Mask register for GPIO14."]
-pub struct REG_GPIO_14_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_14_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_14_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_14_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO14MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_14_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_14_MASK_A::UNMASKED)
+        self.variant(GPIO14MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_14_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO15.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_15_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_15_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_15_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO14MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_15_mask` reader - Mask register for GPIO15."]
-pub struct REG_GPIO_15_MASK_R(crate::FieldReader<bool, REG_GPIO_15_MASK_A>);
-impl REG_GPIO_15_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_15_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_15_MASK_R = crate::BitReader<GPIO15MASK_A>;
+#[doc = "Mask register for GPIO15.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO15MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO15MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_15_MASK_A {
+    fn from(variant: GPIO15MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_15_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO15MASK_A {
         match self.bits {
-            false => REG_GPIO_15_MASK_A::UNMASKED,
-            true => REG_GPIO_15_MASK_A::MASKED,
+            false => GPIO15MASK_A::UNMASKED,
+            true => GPIO15MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_15_MASK_A::UNMASKED
+        *self == GPIO15MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_15_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_15_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_15_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO15MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_15_mask` writer - Mask register for GPIO15."]
-pub struct REG_GPIO_15_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_15_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_15_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_15_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO15MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_15_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_15_MASK_A::UNMASKED)
+        self.variant(GPIO15MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_15_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO16.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_16_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_16_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_16_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO15MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_16_mask` reader - Mask register for GPIO16."]
-pub struct REG_GPIO_16_MASK_R(crate::FieldReader<bool, REG_GPIO_16_MASK_A>);
-impl REG_GPIO_16_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_16_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_16_MASK_R = crate::BitReader<GPIO16MASK_A>;
+#[doc = "Mask register for GPIO16.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO16MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO16MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_16_MASK_A {
+    fn from(variant: GPIO16MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_16_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO16MASK_A {
         match self.bits {
-            false => REG_GPIO_16_MASK_A::UNMASKED,
-            true => REG_GPIO_16_MASK_A::MASKED,
+            false => GPIO16MASK_A::UNMASKED,
+            true => GPIO16MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_16_MASK_A::UNMASKED
+        *self == GPIO16MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_16_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_16_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_16_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO16MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_16_mask` writer - Mask register for GPIO16."]
-pub struct REG_GPIO_16_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_16_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_16_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_16_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO16MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_16_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_16_MASK_A::UNMASKED)
+        self.variant(GPIO16MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_16_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO17.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_17_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_17_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_17_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO16MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_17_mask` reader - Mask register for GPIO17."]
-pub struct REG_GPIO_17_MASK_R(crate::FieldReader<bool, REG_GPIO_17_MASK_A>);
-impl REG_GPIO_17_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_17_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_17_MASK_R = crate::BitReader<GPIO17MASK_A>;
+#[doc = "Mask register for GPIO17.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO17MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO17MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_17_MASK_A {
+    fn from(variant: GPIO17MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_17_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO17MASK_A {
         match self.bits {
-            false => REG_GPIO_17_MASK_A::UNMASKED,
-            true => REG_GPIO_17_MASK_A::MASKED,
+            false => GPIO17MASK_A::UNMASKED,
+            true => GPIO17MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_17_MASK_A::UNMASKED
+        *self == GPIO17MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_17_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_17_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_17_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO17MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_17_mask` writer - Mask register for GPIO17."]
-pub struct REG_GPIO_17_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_17_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_17_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_17_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO17MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_17_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_17_MASK_A::UNMASKED)
+        self.variant(GPIO17MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_17_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO18.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_18_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_18_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_18_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO17MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_18_mask` reader - Mask register for GPIO18."]
-pub struct REG_GPIO_18_MASK_R(crate::FieldReader<bool, REG_GPIO_18_MASK_A>);
-impl REG_GPIO_18_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_18_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_18_MASK_R = crate::BitReader<GPIO18MASK_A>;
+#[doc = "Mask register for GPIO18.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO18MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO18MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_18_MASK_A {
+    fn from(variant: GPIO18MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_18_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO18MASK_A {
         match self.bits {
-            false => REG_GPIO_18_MASK_A::UNMASKED,
-            true => REG_GPIO_18_MASK_A::MASKED,
+            false => GPIO18MASK_A::UNMASKED,
+            true => GPIO18MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_18_MASK_A::UNMASKED
+        *self == GPIO18MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_18_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_18_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_18_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO18MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_18_mask` writer - Mask register for GPIO18."]
-pub struct REG_GPIO_18_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_18_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_18_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_18_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO18MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_18_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_18_MASK_A::UNMASKED)
+        self.variant(GPIO18MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_18_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO19.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_19_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_19_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_19_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO18MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_19_mask` reader - Mask register for GPIO19."]
-pub struct REG_GPIO_19_MASK_R(crate::FieldReader<bool, REG_GPIO_19_MASK_A>);
-impl REG_GPIO_19_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_19_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_19_MASK_R = crate::BitReader<GPIO19MASK_A>;
+#[doc = "Mask register for GPIO19.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO19MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO19MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_19_MASK_A {
+    fn from(variant: GPIO19MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_19_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO19MASK_A {
         match self.bits {
-            false => REG_GPIO_19_MASK_A::UNMASKED,
-            true => REG_GPIO_19_MASK_A::MASKED,
+            false => GPIO19MASK_A::UNMASKED,
+            true => GPIO19MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_19_MASK_A::UNMASKED
+        *self == GPIO19MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_19_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_19_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_19_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO19MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_19_mask` writer - Mask register for GPIO19."]
-pub struct REG_GPIO_19_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_19_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_19_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_19_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO19MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_19_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_19_MASK_A::UNMASKED)
+        self.variant(GPIO19MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_19_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO20.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_20_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_20_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_20_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO19MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_20_mask` reader - Mask register for GPIO20."]
-pub struct REG_GPIO_20_MASK_R(crate::FieldReader<bool, REG_GPIO_20_MASK_A>);
-impl REG_GPIO_20_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_20_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_20_MASK_R = crate::BitReader<GPIO20MASK_A>;
+#[doc = "Mask register for GPIO20.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO20MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO20MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_20_MASK_A {
+    fn from(variant: GPIO20MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_20_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO20MASK_A {
         match self.bits {
-            false => REG_GPIO_20_MASK_A::UNMASKED,
-            true => REG_GPIO_20_MASK_A::MASKED,
+            false => GPIO20MASK_A::UNMASKED,
+            true => GPIO20MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_20_MASK_A::UNMASKED
+        *self == GPIO20MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_20_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_20_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_20_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO20MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_20_mask` writer - Mask register for GPIO20."]
-pub struct REG_GPIO_20_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_20_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_20_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_20_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO20MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_20_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_20_MASK_A::UNMASKED)
+        self.variant(GPIO20MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_20_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO21.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_21_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_21_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_21_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO20MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_21_mask` reader - Mask register for GPIO21."]
-pub struct REG_GPIO_21_MASK_R(crate::FieldReader<bool, REG_GPIO_21_MASK_A>);
-impl REG_GPIO_21_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_21_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_21_MASK_R = crate::BitReader<GPIO21MASK_A>;
+#[doc = "Mask register for GPIO21.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO21MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO21MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_21_MASK_A {
+    fn from(variant: GPIO21MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_21_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO21MASK_A {
         match self.bits {
-            false => REG_GPIO_21_MASK_A::UNMASKED,
-            true => REG_GPIO_21_MASK_A::MASKED,
+            false => GPIO21MASK_A::UNMASKED,
+            true => GPIO21MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_21_MASK_A::UNMASKED
+        *self == GPIO21MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_21_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_21_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_21_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO21MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_21_mask` writer - Mask register for GPIO21."]
-pub struct REG_GPIO_21_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_21_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_21_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_21_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO21MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_21_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_21_MASK_A::UNMASKED)
+        self.variant(GPIO21MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_21_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO22.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_22_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_22_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_22_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO21MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_22_mask` reader - Mask register for GPIO22."]
-pub struct REG_GPIO_22_MASK_R(crate::FieldReader<bool, REG_GPIO_22_MASK_A>);
-impl REG_GPIO_22_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_22_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_22_MASK_R = crate::BitReader<GPIO22MASK_A>;
+#[doc = "Mask register for GPIO22.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO22MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO22MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_22_MASK_A {
+    fn from(variant: GPIO22MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_22_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO22MASK_A {
         match self.bits {
-            false => REG_GPIO_22_MASK_A::UNMASKED,
-            true => REG_GPIO_22_MASK_A::MASKED,
+            false => GPIO22MASK_A::UNMASKED,
+            true => GPIO22MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_22_MASK_A::UNMASKED
+        *self == GPIO22MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_22_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_22_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_22_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO22MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_22_mask` writer - Mask register for GPIO22."]
-pub struct REG_GPIO_22_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_22_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_22_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_22_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO22MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_22_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_22_MASK_A::UNMASKED)
+        self.variant(GPIO22MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_22_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO23.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_23_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_23_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_23_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO22MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_23_mask` reader - Mask register for GPIO23."]
-pub struct REG_GPIO_23_MASK_R(crate::FieldReader<bool, REG_GPIO_23_MASK_A>);
-impl REG_GPIO_23_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_23_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_23_MASK_R = crate::BitReader<GPIO23MASK_A>;
+#[doc = "Mask register for GPIO23.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO23MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO23MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_23_MASK_A {
+    fn from(variant: GPIO23MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_23_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO23MASK_A {
         match self.bits {
-            false => REG_GPIO_23_MASK_A::UNMASKED,
-            true => REG_GPIO_23_MASK_A::MASKED,
+            false => GPIO23MASK_A::UNMASKED,
+            true => GPIO23MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_23_MASK_A::UNMASKED
+        *self == GPIO23MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_23_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_23_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_23_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO23MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_23_mask` writer - Mask register for GPIO23."]
-pub struct REG_GPIO_23_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_23_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_23_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_23_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO23MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_23_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_23_MASK_A::UNMASKED)
+        self.variant(GPIO23MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_23_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO24.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_24_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_24_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_24_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO23MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_24_mask` reader - Mask register for GPIO24."]
-pub struct REG_GPIO_24_MASK_R(crate::FieldReader<bool, REG_GPIO_24_MASK_A>);
-impl REG_GPIO_24_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_24_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_24_MASK_R = crate::BitReader<GPIO24MASK_A>;
+#[doc = "Mask register for GPIO24.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO24MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO24MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_24_MASK_A {
+    fn from(variant: GPIO24MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_24_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO24MASK_A {
         match self.bits {
-            false => REG_GPIO_24_MASK_A::UNMASKED,
-            true => REG_GPIO_24_MASK_A::MASKED,
+            false => GPIO24MASK_A::UNMASKED,
+            true => GPIO24MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_24_MASK_A::UNMASKED
+        *self == GPIO24MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_24_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_24_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_24_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO24MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_24_mask` writer - Mask register for GPIO24."]
-pub struct REG_GPIO_24_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_24_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_24_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_24_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO24MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_24_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_24_MASK_A::UNMASKED)
+        self.variant(GPIO24MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_24_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO25.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_25_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_25_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_25_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO24MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_25_mask` reader - Mask register for GPIO25."]
-pub struct REG_GPIO_25_MASK_R(crate::FieldReader<bool, REG_GPIO_25_MASK_A>);
-impl REG_GPIO_25_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_25_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_25_MASK_R = crate::BitReader<GPIO25MASK_A>;
+#[doc = "Mask register for GPIO25.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO25MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO25MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_25_MASK_A {
+    fn from(variant: GPIO25MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_25_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO25MASK_A {
         match self.bits {
-            false => REG_GPIO_25_MASK_A::UNMASKED,
-            true => REG_GPIO_25_MASK_A::MASKED,
+            false => GPIO25MASK_A::UNMASKED,
+            true => GPIO25MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_25_MASK_A::UNMASKED
+        *self == GPIO25MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_25_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_25_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_25_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO25MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_25_mask` writer - Mask register for GPIO25."]
-pub struct REG_GPIO_25_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_25_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_25_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_25_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO25MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_25_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_25_MASK_A::UNMASKED)
+        self.variant(GPIO25MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_25_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO26.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_26_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_26_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_26_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO25MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_26_mask` reader - Mask register for GPIO26."]
-pub struct REG_GPIO_26_MASK_R(crate::FieldReader<bool, REG_GPIO_26_MASK_A>);
-impl REG_GPIO_26_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_26_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+pub type REG_GPIO_26_MASK_R = crate::BitReader<GPIO26MASK_A>;
+#[doc = "Mask register for GPIO26.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO26MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO26MASK_A> for bool {
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_26_MASK_A {
+    fn from(variant: GPIO26MASK_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REG_GPIO_26_MASK_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> GPIO26MASK_A {
         match self.bits {
-            false => REG_GPIO_26_MASK_A::UNMASKED,
-            true => REG_GPIO_26_MASK_A::MASKED,
+            false => GPIO26MASK_A::UNMASKED,
+            true => GPIO26MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_26_MASK_A::UNMASKED
+        *self == GPIO26MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_26_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_26_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_26_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == GPIO26MASK_A::MASKED
     }
 }
 #[doc = "Field `reg_gpio_26_mask` writer - Mask register for GPIO26."]
-pub struct REG_GPIO_26_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_26_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_26_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type REG_GPIO_26_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO26MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_26_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_26_MASK_A::UNMASKED)
+        self.variant(GPIO26MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_26_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO27.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_27_MASK_A {
-    #[doc = "0: `0`"]
-    UNMASKED = 0,
-    #[doc = "1: `1`"]
-    MASKED = 1,
-}
-impl From<REG_GPIO_27_MASK_A> for bool {
-    #[inline(always)]
-    fn from(variant: REG_GPIO_27_MASK_A) -> Self {
-        variant as u8 != 0
+        self.variant(GPIO26MASK_A::MASKED)
     }
 }
 #[doc = "Field `reg_gpio_27_mask` reader - Mask register for GPIO27."]
-pub struct REG_GPIO_27_MASK_R(crate::FieldReader<bool, REG_GPIO_27_MASK_A>);
-impl REG_GPIO_27_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_27_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_27_MASK_A {
-        match self.bits {
-            false => REG_GPIO_27_MASK_A::UNMASKED,
-            true => REG_GPIO_27_MASK_A::MASKED,
-        }
-    }
-    #[doc = "Checks if the value of the field is `UNMASKED`"]
-    #[inline(always)]
-    pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_27_MASK_A::UNMASKED
-    }
-    #[doc = "Checks if the value of the field is `MASKED`"]
-    #[inline(always)]
-    pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_27_MASK_A::MASKED
-    }
-}
-impl core::ops::Deref for REG_GPIO_27_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_27_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `reg_gpio_27_mask` writer - Mask register for GPIO27."]
-pub struct REG_GPIO_27_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_27_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_27_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
-    #[doc = "`0`"]
-    #[inline(always)]
-    pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_27_MASK_A::UNMASKED)
-    }
-    #[doc = "`1`"]
-    #[inline(always)]
-    pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_27_MASK_A::MASKED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
-        self.w
-    }
-}
-#[doc = "Mask register for GPIO28.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum REG_GPIO_28_MASK_A {
+pub type REG_GPIO_27_MASK_R = crate::BitReader<GPIO27MASK_A>;
+#[doc = "Mask register for GPIO27.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO27MASK_A {
     #[doc = "0: `0`"]
     UNMASKED = 0,
     #[doc = "1: `1`"]
     MASKED = 1,
 }
-impl From<REG_GPIO_28_MASK_A> for bool {
+impl From<GPIO27MASK_A> for bool {
     #[inline(always)]
-    fn from(variant: REG_GPIO_28_MASK_A) -> Self {
+    fn from(variant: GPIO27MASK_A) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `reg_gpio_28_mask` reader - Mask register for GPIO28."]
-pub struct REG_GPIO_28_MASK_R(crate::FieldReader<bool, REG_GPIO_28_MASK_A>);
-impl REG_GPIO_28_MASK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        REG_GPIO_28_MASK_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+impl REG_GPIO_27_MASK_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> REG_GPIO_28_MASK_A {
+    pub fn variant(&self) -> GPIO27MASK_A {
         match self.bits {
-            false => REG_GPIO_28_MASK_A::UNMASKED,
-            true => REG_GPIO_28_MASK_A::MASKED,
+            false => GPIO27MASK_A::UNMASKED,
+            true => GPIO27MASK_A::MASKED,
         }
     }
     #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
     pub fn is_unmasked(&self) -> bool {
-        **self == REG_GPIO_28_MASK_A::UNMASKED
+        *self == GPIO27MASK_A::UNMASKED
     }
     #[doc = "Checks if the value of the field is `MASKED`"]
     #[inline(always)]
     pub fn is_masked(&self) -> bool {
-        **self == REG_GPIO_28_MASK_A::MASKED
+        *self == GPIO27MASK_A::MASKED
     }
 }
-impl core::ops::Deref for REG_GPIO_28_MASK_R {
-    type Target = crate::FieldReader<bool, REG_GPIO_28_MASK_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `reg_gpio_28_mask` writer - Mask register for GPIO28."]
-pub struct REG_GPIO_28_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_GPIO_28_MASK_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: REG_GPIO_28_MASK_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+#[doc = "Field `reg_gpio_27_mask` writer - Mask register for GPIO27."]
+pub type REG_GPIO_27_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO27MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_27_MASK_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn unmasked(self) -> &'a mut W {
-        self.variant(REG_GPIO_28_MASK_A::UNMASKED)
+        self.variant(GPIO27MASK_A::UNMASKED)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn masked(self) -> &'a mut W {
-        self.variant(REG_GPIO_28_MASK_A::MASKED)
+        self.variant(GPIO27MASK_A::MASKED)
     }
-    #[doc = r"Sets the field bit"]
+}
+#[doc = "Field `reg_gpio_28_mask` reader - Mask register for GPIO28."]
+pub type REG_GPIO_28_MASK_R = crate::BitReader<GPIO28MASK_A>;
+#[doc = "Mask register for GPIO28.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum GPIO28MASK_A {
+    #[doc = "0: `0`"]
+    UNMASKED = 0,
+    #[doc = "1: `1`"]
+    MASKED = 1,
+}
+impl From<GPIO28MASK_A> for bool {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
+    fn from(variant: GPIO28MASK_A) -> Self {
+        variant as u8 != 0
     }
-    #[doc = r"Clears the field bit"]
+}
+impl REG_GPIO_28_MASK_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
+    pub fn variant(&self) -> GPIO28MASK_A {
+        match self.bits {
+            false => GPIO28MASK_A::UNMASKED,
+            true => GPIO28MASK_A::MASKED,
+        }
     }
-    #[doc = r"Writes raw bits to the field"]
+    #[doc = "Checks if the value of the field is `UNMASKED`"]
     #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
-        self.w
+    pub fn is_unmasked(&self) -> bool {
+        *self == GPIO28MASK_A::UNMASKED
+    }
+    #[doc = "Checks if the value of the field is `MASKED`"]
+    #[inline(always)]
+    pub fn is_masked(&self) -> bool {
+        *self == GPIO28MASK_A::MASKED
+    }
+}
+#[doc = "Field `reg_gpio_28_mask` writer - Mask register for GPIO28."]
+pub type REG_GPIO_28_MASK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, GPIO_INT_MASK1_SPEC, GPIO28MASK_A, O>;
+impl<'a, const O: u8> REG_GPIO_28_MASK_W<'a, O> {
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn unmasked(self) -> &'a mut W {
+        self.variant(GPIO28MASK_A::UNMASKED)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn masked(self) -> &'a mut W {
+        self.variant(GPIO28MASK_A::MASKED)
     }
 }
 impl R {
     #[doc = "Bit 0 - Mask register for GPIO0."]
     #[inline(always)]
     pub fn reg_gpio_0_mask(&self) -> REG_GPIO_0_MASK_R {
-        REG_GPIO_0_MASK_R::new((self.bits & 0x01) != 0)
+        REG_GPIO_0_MASK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Mask register for GPIO1."]
     #[inline(always)]
     pub fn reg_gpio_1_mask(&self) -> REG_GPIO_1_MASK_R {
-        REG_GPIO_1_MASK_R::new(((self.bits >> 1) & 0x01) != 0)
+        REG_GPIO_1_MASK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Mask register for GPIO2."]
     #[inline(always)]
     pub fn reg_gpio_2_mask(&self) -> REG_GPIO_2_MASK_R {
-        REG_GPIO_2_MASK_R::new(((self.bits >> 2) & 0x01) != 0)
+        REG_GPIO_2_MASK_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Mask register for GPIO3."]
     #[inline(always)]
     pub fn reg_gpio_3_mask(&self) -> REG_GPIO_3_MASK_R {
-        REG_GPIO_3_MASK_R::new(((self.bits >> 3) & 0x01) != 0)
+        REG_GPIO_3_MASK_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Mask register for GPIO4."]
     #[inline(always)]
     pub fn reg_gpio_4_mask(&self) -> REG_GPIO_4_MASK_R {
-        REG_GPIO_4_MASK_R::new(((self.bits >> 4) & 0x01) != 0)
+        REG_GPIO_4_MASK_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Mask register for GPIO5."]
     #[inline(always)]
     pub fn reg_gpio_5_mask(&self) -> REG_GPIO_5_MASK_R {
-        REG_GPIO_5_MASK_R::new(((self.bits >> 5) & 0x01) != 0)
+        REG_GPIO_5_MASK_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Mask register for GPIO6."]
     #[inline(always)]
     pub fn reg_gpio_6_mask(&self) -> REG_GPIO_6_MASK_R {
-        REG_GPIO_6_MASK_R::new(((self.bits >> 6) & 0x01) != 0)
+        REG_GPIO_6_MASK_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Mask register for GPIO7."]
     #[inline(always)]
     pub fn reg_gpio_7_mask(&self) -> REG_GPIO_7_MASK_R {
-        REG_GPIO_7_MASK_R::new(((self.bits >> 7) & 0x01) != 0)
+        REG_GPIO_7_MASK_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Mask register for GPIO8."]
     #[inline(always)]
     pub fn reg_gpio_8_mask(&self) -> REG_GPIO_8_MASK_R {
-        REG_GPIO_8_MASK_R::new(((self.bits >> 8) & 0x01) != 0)
+        REG_GPIO_8_MASK_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Mask register for GPIO9."]
     #[inline(always)]
     pub fn reg_gpio_9_mask(&self) -> REG_GPIO_9_MASK_R {
-        REG_GPIO_9_MASK_R::new(((self.bits >> 9) & 0x01) != 0)
+        REG_GPIO_9_MASK_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Mask register for GPIO10."]
     #[inline(always)]
     pub fn reg_gpio_10_mask(&self) -> REG_GPIO_10_MASK_R {
-        REG_GPIO_10_MASK_R::new(((self.bits >> 10) & 0x01) != 0)
+        REG_GPIO_10_MASK_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Mask register for GPIO11."]
     #[inline(always)]
     pub fn reg_gpio_11_mask(&self) -> REG_GPIO_11_MASK_R {
-        REG_GPIO_11_MASK_R::new(((self.bits >> 11) & 0x01) != 0)
+        REG_GPIO_11_MASK_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Mask register for GPIO12."]
     #[inline(always)]
     pub fn reg_gpio_12_mask(&self) -> REG_GPIO_12_MASK_R {
-        REG_GPIO_12_MASK_R::new(((self.bits >> 12) & 0x01) != 0)
+        REG_GPIO_12_MASK_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Mask register for GPIO13."]
     #[inline(always)]
     pub fn reg_gpio_13_mask(&self) -> REG_GPIO_13_MASK_R {
-        REG_GPIO_13_MASK_R::new(((self.bits >> 13) & 0x01) != 0)
+        REG_GPIO_13_MASK_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Mask register for GPIO14."]
     #[inline(always)]
     pub fn reg_gpio_14_mask(&self) -> REG_GPIO_14_MASK_R {
-        REG_GPIO_14_MASK_R::new(((self.bits >> 14) & 0x01) != 0)
+        REG_GPIO_14_MASK_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Mask register for GPIO15."]
     #[inline(always)]
     pub fn reg_gpio_15_mask(&self) -> REG_GPIO_15_MASK_R {
-        REG_GPIO_15_MASK_R::new(((self.bits >> 15) & 0x01) != 0)
+        REG_GPIO_15_MASK_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Mask register for GPIO16."]
     #[inline(always)]
     pub fn reg_gpio_16_mask(&self) -> REG_GPIO_16_MASK_R {
-        REG_GPIO_16_MASK_R::new(((self.bits >> 16) & 0x01) != 0)
+        REG_GPIO_16_MASK_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Mask register for GPIO17."]
     #[inline(always)]
     pub fn reg_gpio_17_mask(&self) -> REG_GPIO_17_MASK_R {
-        REG_GPIO_17_MASK_R::new(((self.bits >> 17) & 0x01) != 0)
+        REG_GPIO_17_MASK_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Mask register for GPIO18."]
     #[inline(always)]
     pub fn reg_gpio_18_mask(&self) -> REG_GPIO_18_MASK_R {
-        REG_GPIO_18_MASK_R::new(((self.bits >> 18) & 0x01) != 0)
+        REG_GPIO_18_MASK_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Mask register for GPIO19."]
     #[inline(always)]
     pub fn reg_gpio_19_mask(&self) -> REG_GPIO_19_MASK_R {
-        REG_GPIO_19_MASK_R::new(((self.bits >> 19) & 0x01) != 0)
+        REG_GPIO_19_MASK_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Mask register for GPIO20."]
     #[inline(always)]
     pub fn reg_gpio_20_mask(&self) -> REG_GPIO_20_MASK_R {
-        REG_GPIO_20_MASK_R::new(((self.bits >> 20) & 0x01) != 0)
+        REG_GPIO_20_MASK_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Mask register for GPIO21."]
     #[inline(always)]
     pub fn reg_gpio_21_mask(&self) -> REG_GPIO_21_MASK_R {
-        REG_GPIO_21_MASK_R::new(((self.bits >> 21) & 0x01) != 0)
+        REG_GPIO_21_MASK_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Mask register for GPIO22."]
     #[inline(always)]
     pub fn reg_gpio_22_mask(&self) -> REG_GPIO_22_MASK_R {
-        REG_GPIO_22_MASK_R::new(((self.bits >> 22) & 0x01) != 0)
+        REG_GPIO_22_MASK_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Mask register for GPIO23."]
     #[inline(always)]
     pub fn reg_gpio_23_mask(&self) -> REG_GPIO_23_MASK_R {
-        REG_GPIO_23_MASK_R::new(((self.bits >> 23) & 0x01) != 0)
+        REG_GPIO_23_MASK_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Mask register for GPIO24."]
     #[inline(always)]
     pub fn reg_gpio_24_mask(&self) -> REG_GPIO_24_MASK_R {
-        REG_GPIO_24_MASK_R::new(((self.bits >> 24) & 0x01) != 0)
+        REG_GPIO_24_MASK_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Mask register for GPIO25."]
     #[inline(always)]
     pub fn reg_gpio_25_mask(&self) -> REG_GPIO_25_MASK_R {
-        REG_GPIO_25_MASK_R::new(((self.bits >> 25) & 0x01) != 0)
+        REG_GPIO_25_MASK_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Mask register for GPIO26."]
     #[inline(always)]
     pub fn reg_gpio_26_mask(&self) -> REG_GPIO_26_MASK_R {
-        REG_GPIO_26_MASK_R::new(((self.bits >> 26) & 0x01) != 0)
+        REG_GPIO_26_MASK_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Mask register for GPIO27."]
     #[inline(always)]
     pub fn reg_gpio_27_mask(&self) -> REG_GPIO_27_MASK_R {
-        REG_GPIO_27_MASK_R::new(((self.bits >> 27) & 0x01) != 0)
+        REG_GPIO_27_MASK_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Mask register for GPIO28."]
     #[inline(always)]
     pub fn reg_gpio_28_mask(&self) -> REG_GPIO_28_MASK_R {
-        REG_GPIO_28_MASK_R::new(((self.bits >> 28) & 0x01) != 0)
+        REG_GPIO_28_MASK_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Mask register for GPIO0."]
     #[inline(always)]
-    pub fn reg_gpio_0_mask(&mut self) -> REG_GPIO_0_MASK_W {
-        REG_GPIO_0_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_0_mask(&mut self) -> REG_GPIO_0_MASK_W<0> {
+        REG_GPIO_0_MASK_W::new(self)
     }
     #[doc = "Bit 1 - Mask register for GPIO1."]
     #[inline(always)]
-    pub fn reg_gpio_1_mask(&mut self) -> REG_GPIO_1_MASK_W {
-        REG_GPIO_1_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_1_mask(&mut self) -> REG_GPIO_1_MASK_W<1> {
+        REG_GPIO_1_MASK_W::new(self)
     }
     #[doc = "Bit 2 - Mask register for GPIO2."]
     #[inline(always)]
-    pub fn reg_gpio_2_mask(&mut self) -> REG_GPIO_2_MASK_W {
-        REG_GPIO_2_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_2_mask(&mut self) -> REG_GPIO_2_MASK_W<2> {
+        REG_GPIO_2_MASK_W::new(self)
     }
     #[doc = "Bit 3 - Mask register for GPIO3."]
     #[inline(always)]
-    pub fn reg_gpio_3_mask(&mut self) -> REG_GPIO_3_MASK_W {
-        REG_GPIO_3_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_3_mask(&mut self) -> REG_GPIO_3_MASK_W<3> {
+        REG_GPIO_3_MASK_W::new(self)
     }
     #[doc = "Bit 4 - Mask register for GPIO4."]
     #[inline(always)]
-    pub fn reg_gpio_4_mask(&mut self) -> REG_GPIO_4_MASK_W {
-        REG_GPIO_4_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_4_mask(&mut self) -> REG_GPIO_4_MASK_W<4> {
+        REG_GPIO_4_MASK_W::new(self)
     }
     #[doc = "Bit 5 - Mask register for GPIO5."]
     #[inline(always)]
-    pub fn reg_gpio_5_mask(&mut self) -> REG_GPIO_5_MASK_W {
-        REG_GPIO_5_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_5_mask(&mut self) -> REG_GPIO_5_MASK_W<5> {
+        REG_GPIO_5_MASK_W::new(self)
     }
     #[doc = "Bit 6 - Mask register for GPIO6."]
     #[inline(always)]
-    pub fn reg_gpio_6_mask(&mut self) -> REG_GPIO_6_MASK_W {
-        REG_GPIO_6_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_6_mask(&mut self) -> REG_GPIO_6_MASK_W<6> {
+        REG_GPIO_6_MASK_W::new(self)
     }
     #[doc = "Bit 7 - Mask register for GPIO7."]
     #[inline(always)]
-    pub fn reg_gpio_7_mask(&mut self) -> REG_GPIO_7_MASK_W {
-        REG_GPIO_7_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_7_mask(&mut self) -> REG_GPIO_7_MASK_W<7> {
+        REG_GPIO_7_MASK_W::new(self)
     }
     #[doc = "Bit 8 - Mask register for GPIO8."]
     #[inline(always)]
-    pub fn reg_gpio_8_mask(&mut self) -> REG_GPIO_8_MASK_W {
-        REG_GPIO_8_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_8_mask(&mut self) -> REG_GPIO_8_MASK_W<8> {
+        REG_GPIO_8_MASK_W::new(self)
     }
     #[doc = "Bit 9 - Mask register for GPIO9."]
     #[inline(always)]
-    pub fn reg_gpio_9_mask(&mut self) -> REG_GPIO_9_MASK_W {
-        REG_GPIO_9_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_9_mask(&mut self) -> REG_GPIO_9_MASK_W<9> {
+        REG_GPIO_9_MASK_W::new(self)
     }
     #[doc = "Bit 10 - Mask register for GPIO10."]
     #[inline(always)]
-    pub fn reg_gpio_10_mask(&mut self) -> REG_GPIO_10_MASK_W {
-        REG_GPIO_10_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_10_mask(&mut self) -> REG_GPIO_10_MASK_W<10> {
+        REG_GPIO_10_MASK_W::new(self)
     }
     #[doc = "Bit 11 - Mask register for GPIO11."]
     #[inline(always)]
-    pub fn reg_gpio_11_mask(&mut self) -> REG_GPIO_11_MASK_W {
-        REG_GPIO_11_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_11_mask(&mut self) -> REG_GPIO_11_MASK_W<11> {
+        REG_GPIO_11_MASK_W::new(self)
     }
     #[doc = "Bit 12 - Mask register for GPIO12."]
     #[inline(always)]
-    pub fn reg_gpio_12_mask(&mut self) -> REG_GPIO_12_MASK_W {
-        REG_GPIO_12_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_12_mask(&mut self) -> REG_GPIO_12_MASK_W<12> {
+        REG_GPIO_12_MASK_W::new(self)
     }
     #[doc = "Bit 13 - Mask register for GPIO13."]
     #[inline(always)]
-    pub fn reg_gpio_13_mask(&mut self) -> REG_GPIO_13_MASK_W {
-        REG_GPIO_13_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_13_mask(&mut self) -> REG_GPIO_13_MASK_W<13> {
+        REG_GPIO_13_MASK_W::new(self)
     }
     #[doc = "Bit 14 - Mask register for GPIO14."]
     #[inline(always)]
-    pub fn reg_gpio_14_mask(&mut self) -> REG_GPIO_14_MASK_W {
-        REG_GPIO_14_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_14_mask(&mut self) -> REG_GPIO_14_MASK_W<14> {
+        REG_GPIO_14_MASK_W::new(self)
     }
     #[doc = "Bit 15 - Mask register for GPIO15."]
     #[inline(always)]
-    pub fn reg_gpio_15_mask(&mut self) -> REG_GPIO_15_MASK_W {
-        REG_GPIO_15_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_15_mask(&mut self) -> REG_GPIO_15_MASK_W<15> {
+        REG_GPIO_15_MASK_W::new(self)
     }
     #[doc = "Bit 16 - Mask register for GPIO16."]
     #[inline(always)]
-    pub fn reg_gpio_16_mask(&mut self) -> REG_GPIO_16_MASK_W {
-        REG_GPIO_16_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_16_mask(&mut self) -> REG_GPIO_16_MASK_W<16> {
+        REG_GPIO_16_MASK_W::new(self)
     }
     #[doc = "Bit 17 - Mask register for GPIO17."]
     #[inline(always)]
-    pub fn reg_gpio_17_mask(&mut self) -> REG_GPIO_17_MASK_W {
-        REG_GPIO_17_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_17_mask(&mut self) -> REG_GPIO_17_MASK_W<17> {
+        REG_GPIO_17_MASK_W::new(self)
     }
     #[doc = "Bit 18 - Mask register for GPIO18."]
     #[inline(always)]
-    pub fn reg_gpio_18_mask(&mut self) -> REG_GPIO_18_MASK_W {
-        REG_GPIO_18_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_18_mask(&mut self) -> REG_GPIO_18_MASK_W<18> {
+        REG_GPIO_18_MASK_W::new(self)
     }
     #[doc = "Bit 19 - Mask register for GPIO19."]
     #[inline(always)]
-    pub fn reg_gpio_19_mask(&mut self) -> REG_GPIO_19_MASK_W {
-        REG_GPIO_19_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_19_mask(&mut self) -> REG_GPIO_19_MASK_W<19> {
+        REG_GPIO_19_MASK_W::new(self)
     }
     #[doc = "Bit 20 - Mask register for GPIO20."]
     #[inline(always)]
-    pub fn reg_gpio_20_mask(&mut self) -> REG_GPIO_20_MASK_W {
-        REG_GPIO_20_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_20_mask(&mut self) -> REG_GPIO_20_MASK_W<20> {
+        REG_GPIO_20_MASK_W::new(self)
     }
     #[doc = "Bit 21 - Mask register for GPIO21."]
     #[inline(always)]
-    pub fn reg_gpio_21_mask(&mut self) -> REG_GPIO_21_MASK_W {
-        REG_GPIO_21_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_21_mask(&mut self) -> REG_GPIO_21_MASK_W<21> {
+        REG_GPIO_21_MASK_W::new(self)
     }
     #[doc = "Bit 22 - Mask register for GPIO22."]
     #[inline(always)]
-    pub fn reg_gpio_22_mask(&mut self) -> REG_GPIO_22_MASK_W {
-        REG_GPIO_22_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_22_mask(&mut self) -> REG_GPIO_22_MASK_W<22> {
+        REG_GPIO_22_MASK_W::new(self)
     }
     #[doc = "Bit 23 - Mask register for GPIO23."]
     #[inline(always)]
-    pub fn reg_gpio_23_mask(&mut self) -> REG_GPIO_23_MASK_W {
-        REG_GPIO_23_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_23_mask(&mut self) -> REG_GPIO_23_MASK_W<23> {
+        REG_GPIO_23_MASK_W::new(self)
     }
     #[doc = "Bit 24 - Mask register for GPIO24."]
     #[inline(always)]
-    pub fn reg_gpio_24_mask(&mut self) -> REG_GPIO_24_MASK_W {
-        REG_GPIO_24_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_24_mask(&mut self) -> REG_GPIO_24_MASK_W<24> {
+        REG_GPIO_24_MASK_W::new(self)
     }
     #[doc = "Bit 25 - Mask register for GPIO25."]
     #[inline(always)]
-    pub fn reg_gpio_25_mask(&mut self) -> REG_GPIO_25_MASK_W {
-        REG_GPIO_25_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_25_mask(&mut self) -> REG_GPIO_25_MASK_W<25> {
+        REG_GPIO_25_MASK_W::new(self)
     }
     #[doc = "Bit 26 - Mask register for GPIO26."]
     #[inline(always)]
-    pub fn reg_gpio_26_mask(&mut self) -> REG_GPIO_26_MASK_W {
-        REG_GPIO_26_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_26_mask(&mut self) -> REG_GPIO_26_MASK_W<26> {
+        REG_GPIO_26_MASK_W::new(self)
     }
     #[doc = "Bit 27 - Mask register for GPIO27."]
     #[inline(always)]
-    pub fn reg_gpio_27_mask(&mut self) -> REG_GPIO_27_MASK_W {
-        REG_GPIO_27_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_27_mask(&mut self) -> REG_GPIO_27_MASK_W<27> {
+        REG_GPIO_27_MASK_W::new(self)
     }
     #[doc = "Bit 28 - Mask register for GPIO28."]
     #[inline(always)]
-    pub fn reg_gpio_28_mask(&mut self) -> REG_GPIO_28_MASK_W {
-        REG_GPIO_28_MASK_W { w: self }
+    #[must_use]
+    pub fn reg_gpio_28_mask(&mut self) -> REG_GPIO_28_MASK_W<28> {
+        REG_GPIO_28_MASK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -2750,11 +1854,10 @@ impl crate::Readable for GPIO_INT_MASK1_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_int_mask1::W](W) writer structure"]
 impl crate::Writable for GPIO_INT_MASK1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_INT_MASK1 to value 0xffff_ffff"]
 impl crate::Resettable for GPIO_INT_MASK1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_9_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_9_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_9_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_9_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_9_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_9_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `rx_pm_iqacc_q` reader - "]
-pub struct RX_PM_IQACC_Q_R(crate::FieldReader<u32, u32>);
-impl RX_PM_IQACC_Q_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        RX_PM_IQACC_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_IQACC_Q_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PM_IQACC_Q_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `rx_pm_iqacc_q` writer - "]
-pub struct RX_PM_IQACC_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_IQACC_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff_ffff) | (value as u32 & 0x01ff_ffff);
-        self.w
-    }
-}
+pub type RX_PM_IQACC_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_9_SPEC, u32, u32, 25, O>;
 impl R {
     #[doc = "Bits 0:24"]
     #[inline(always)]
     pub fn rx_pm_iqacc_q(&self) -> RX_PM_IQACC_Q_R {
-        RX_PM_IQACC_Q_R::new((self.bits & 0x01ff_ffff) as u32)
+        RX_PM_IQACC_Q_R::new(self.bits & 0x01ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:24"]
     #[inline(always)]
-    pub fn rx_pm_iqacc_q(&mut self) -> RX_PM_IQACC_Q_W {
-        RX_PM_IQACC_Q_W { w: self }
+    #[must_use]
+    pub fn rx_pm_iqacc_q(&mut self) -> RX_PM_IQACC_Q_W<0> {
+        RX_PM_IQACC_Q_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for DFE_CTRL_9_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_9::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_9_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_9 to value 0"]
 impl crate::Resettable for DFE_CTRL_9_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

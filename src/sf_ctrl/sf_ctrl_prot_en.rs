@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SF_CTRL_PROT_EN_SPEC>> for R {
+impl From<crate::R<SF_CTRL_PROT_EN_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SF_CTRL_PROT_EN_SPEC>) -> Self {
         R(reader)
     }
@@ -27,153 +28,65 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SF_CTRL_PROT_EN_SPEC>> for W {
+impl From<crate::W<SF_CTRL_PROT_EN_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SF_CTRL_PROT_EN_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `sf_ctrl_id1_en` reader - "]
-pub struct SF_CTRL_ID1_EN_R(crate::FieldReader<bool, bool>);
-impl SF_CTRL_ID1_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SF_CTRL_ID1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_CTRL_ID1_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf_ctrl_id1_en` writer - "]
-pub struct SF_CTRL_ID1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_CTRL_ID1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `sf_ctrl_id0_en` reader - "]
-pub struct SF_CTRL_ID0_EN_R(crate::FieldReader<bool, bool>);
-impl SF_CTRL_ID0_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SF_CTRL_ID0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_CTRL_ID0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf_ctrl_id0_en` writer - "]
-pub struct SF_CTRL_ID0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_CTRL_ID0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `sf_ctrl_prot_en` reader - "]
-pub struct SF_CTRL_PROT_EN_R(crate::FieldReader<bool, bool>);
-impl SF_CTRL_PROT_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SF_CTRL_PROT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF_CTRL_PROT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SF_CTRL_PROT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `sf_ctrl_prot_en` writer - "]
-pub struct SF_CTRL_PROT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF_CTRL_PROT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SF_CTRL_PROT_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SF_CTRL_PROT_EN_SPEC, bool, O>;
+#[doc = "Field `sf_ctrl_id0_en` reader - "]
+pub type SF_CTRL_ID0_EN_R = crate::BitReader<bool>;
+#[doc = "Field `sf_ctrl_id0_en` writer - "]
+pub type SF_CTRL_ID0_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SF_CTRL_PROT_EN_SPEC, bool, O>;
+#[doc = "Field `sf_ctrl_id1_en` reader - "]
+pub type SF_CTRL_ID1_EN_R = crate::BitReader<bool>;
+#[doc = "Field `sf_ctrl_id1_en` writer - "]
+pub type SF_CTRL_ID1_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SF_CTRL_PROT_EN_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sf_ctrl_id1_en(&self) -> SF_CTRL_ID1_EN_R {
-        SF_CTRL_ID1_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn sf_ctrl_prot_en(&self) -> SF_CTRL_PROT_EN_R {
+        SF_CTRL_PROT_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn sf_ctrl_id0_en(&self) -> SF_CTRL_ID0_EN_R {
-        SF_CTRL_ID0_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        SF_CTRL_ID0_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn sf_ctrl_prot_en(&self) -> SF_CTRL_PROT_EN_R {
-        SF_CTRL_PROT_EN_R::new((self.bits & 0x01) != 0)
+    pub fn sf_ctrl_id1_en(&self) -> SF_CTRL_ID1_EN_R {
+        SF_CTRL_ID1_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sf_ctrl_id1_en(&mut self) -> SF_CTRL_ID1_EN_W {
-        SF_CTRL_ID1_EN_W { w: self }
+    #[must_use]
+    pub fn sf_ctrl_prot_en(&mut self) -> SF_CTRL_PROT_EN_W<0> {
+        SF_CTRL_PROT_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sf_ctrl_id0_en(&mut self) -> SF_CTRL_ID0_EN_W {
-        SF_CTRL_ID0_EN_W { w: self }
+    #[must_use]
+    pub fn sf_ctrl_id0_en(&mut self) -> SF_CTRL_ID0_EN_W<1> {
+        SF_CTRL_ID0_EN_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn sf_ctrl_prot_en(&mut self) -> SF_CTRL_PROT_EN_W {
-        SF_CTRL_PROT_EN_W { w: self }
+    #[must_use]
+    pub fn sf_ctrl_id1_en(&mut self) -> SF_CTRL_ID1_EN_W<2> {
+        SF_CTRL_ID1_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -191,11 +104,10 @@ impl crate::Readable for SF_CTRL_PROT_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [sf_ctrl_prot_en::W](W) writer structure"]
 impl crate::Writable for SF_CTRL_PROT_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sf_ctrl_prot_en to value 0x07"]
 impl crate::Resettable for SF_CTRL_PROT_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07
-    }
+    const RESET_VALUE: Self::Ux = 0x07;
 }

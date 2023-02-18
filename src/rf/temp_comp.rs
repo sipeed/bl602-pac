@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TEMP_COMP_SPEC>> for R {
+impl From<crate::R<TEMP_COMP_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TEMP_COMP_SPEC>) -> Self {
         R(reader)
     }
@@ -27,133 +28,62 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TEMP_COMP_SPEC>> for W {
+impl From<crate::W<TEMP_COMP_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TEMP_COMP_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `temp_comp_en` reader - "]
-pub struct TEMP_COMP_EN_R(crate::FieldReader<bool, bool>);
-impl TEMP_COMP_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TEMP_COMP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TEMP_COMP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `temp_comp_en` writer - "]
-pub struct TEMP_COMP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEMP_COMP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Field `const_fcal` reader - "]
-pub struct CONST_FCAL_R(crate::FieldReader<u8, u8>);
-impl CONST_FCAL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CONST_FCAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONST_FCAL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `const_fcal` writer - "]
-pub struct CONST_FCAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONST_FCAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
 #[doc = "Field `const_acal` reader - "]
-pub struct CONST_ACAL_R(crate::FieldReader<u8, u8>);
-impl CONST_ACAL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CONST_ACAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONST_ACAL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONST_ACAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `const_acal` writer - "]
-pub struct CONST_ACAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONST_ACAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type CONST_ACAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TEMP_COMP_SPEC, u8, u8, 8, O>;
+#[doc = "Field `const_fcal` reader - "]
+pub type CONST_FCAL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `const_fcal` writer - "]
+pub type CONST_FCAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TEMP_COMP_SPEC, u8, u8, 8, O>;
+#[doc = "Field `temp_comp_en` reader - "]
+pub type TEMP_COMP_EN_R = crate::BitReader<bool>;
+#[doc = "Field `temp_comp_en` writer - "]
+pub type TEMP_COMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEMP_COMP_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 16"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn temp_comp_en(&self) -> TEMP_COMP_EN_R {
-        TEMP_COMP_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+    pub fn const_acal(&self) -> CONST_ACAL_R {
+        CONST_ACAL_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn const_fcal(&self) -> CONST_FCAL_R {
         CONST_FCAL_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn const_acal(&self) -> CONST_ACAL_R {
-        CONST_ACAL_R::new((self.bits & 0xff) as u8)
+    pub fn temp_comp_en(&self) -> TEMP_COMP_EN_R {
+        TEMP_COMP_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 16"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn temp_comp_en(&mut self) -> TEMP_COMP_EN_W {
-        TEMP_COMP_EN_W { w: self }
+    #[must_use]
+    pub fn const_acal(&mut self) -> CONST_ACAL_W<0> {
+        CONST_ACAL_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn const_fcal(&mut self) -> CONST_FCAL_W {
-        CONST_FCAL_W { w: self }
+    #[must_use]
+    pub fn const_fcal(&mut self) -> CONST_FCAL_W<8> {
+        CONST_FCAL_W::new(self)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn const_acal(&mut self) -> CONST_ACAL_W {
-        CONST_ACAL_W { w: self }
+    #[must_use]
+    pub fn temp_comp_en(&mut self) -> TEMP_COMP_EN_W<16> {
+        TEMP_COMP_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -171,11 +101,10 @@ impl crate::Readable for TEMP_COMP_SPEC {
 #[doc = "`write(|w| ..)` method takes [temp_comp::W](W) writer structure"]
 impl crate::Writable for TEMP_COMP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets temp_comp to value 0"]
 impl crate::Resettable for TEMP_COMP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

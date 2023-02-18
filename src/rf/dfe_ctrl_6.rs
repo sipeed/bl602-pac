@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_6_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_6_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_6_SPEC>) -> Self {
         R(reader)
     }
@@ -27,225 +28,95 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_6_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_6_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_6_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `rx_pm_in_sel` reader - "]
-pub struct RX_PM_IN_SEL_R(crate::FieldReader<u8, u8>);
-impl RX_PM_IN_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_PM_IN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_IN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pm_in_sel` writer - "]
-pub struct RX_PM_IN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_IN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
-        self.w
-    }
-}
-#[doc = "Field `rx_pm_en` reader - "]
-pub struct RX_PM_EN_R(crate::FieldReader<bool, bool>);
-impl RX_PM_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_PM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pm_en` writer - "]
-pub struct RX_PM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
-        self.w
-    }
-}
-#[doc = "Field `rx_pm_done` reader - "]
-pub struct RX_PM_DONE_R(crate::FieldReader<bool, bool>);
-impl RX_PM_DONE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_PM_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pm_done` writer - "]
-pub struct RX_PM_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
-        self.w
-    }
-}
-#[doc = "Field `rx_pm_freqshift_en` reader - "]
-pub struct RX_PM_FREQSHIFT_EN_R(crate::FieldReader<bool, bool>);
-impl RX_PM_FREQSHIFT_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_PM_FREQSHIFT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_FREQSHIFT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pm_freqshift_en` writer - "]
-pub struct RX_PM_FREQSHIFT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_FREQSHIFT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
-        self.w
-    }
-}
 #[doc = "Field `rx_pm_freqshift_cw` reader - "]
-pub struct RX_PM_FREQSHIFT_CW_R(crate::FieldReader<u32, u32>);
-impl RX_PM_FREQSHIFT_CW_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        RX_PM_FREQSHIFT_CW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_FREQSHIFT_CW_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PM_FREQSHIFT_CW_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `rx_pm_freqshift_cw` writer - "]
-pub struct RX_PM_FREQSHIFT_CW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_FREQSHIFT_CW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type RX_PM_FREQSHIFT_CW_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_6_SPEC, u32, u32, 20, O>;
+#[doc = "Field `rx_pm_freqshift_en` reader - "]
+pub type RX_PM_FREQSHIFT_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rx_pm_freqshift_en` writer - "]
+pub type RX_PM_FREQSHIFT_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, DFE_CTRL_6_SPEC, bool, O>;
+#[doc = "Field `rx_pm_done` reader - "]
+pub type RX_PM_DONE_R = crate::BitReader<bool>;
+#[doc = "Field `rx_pm_done` writer - "]
+pub type RX_PM_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_6_SPEC, bool, O>;
+#[doc = "Field `rx_pm_en` reader - "]
+pub type RX_PM_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rx_pm_en` writer - "]
+pub type RX_PM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_6_SPEC, bool, O>;
+#[doc = "Field `rx_pm_in_sel` reader - "]
+pub type RX_PM_IN_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `rx_pm_in_sel` writer - "]
+pub type RX_PM_IN_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_6_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 30:31"]
+    #[doc = "Bits 0:19"]
     #[inline(always)]
-    pub fn rx_pm_in_sel(&self) -> RX_PM_IN_SEL_R {
-        RX_PM_IN_SEL_R::new(((self.bits >> 30) & 0x03) as u8)
-    }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn rx_pm_en(&self) -> RX_PM_EN_R {
-        RX_PM_EN_R::new(((self.bits >> 29) & 0x01) != 0)
-    }
-    #[doc = "Bit 28"]
-    #[inline(always)]
-    pub fn rx_pm_done(&self) -> RX_PM_DONE_R {
-        RX_PM_DONE_R::new(((self.bits >> 28) & 0x01) != 0)
+    pub fn rx_pm_freqshift_cw(&self) -> RX_PM_FREQSHIFT_CW_R {
+        RX_PM_FREQSHIFT_CW_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn rx_pm_freqshift_en(&self) -> RX_PM_FREQSHIFT_EN_R {
-        RX_PM_FREQSHIFT_EN_R::new(((self.bits >> 20) & 0x01) != 0)
-    }
-    #[doc = "Bits 0:19"]
-    #[inline(always)]
-    pub fn rx_pm_freqshift_cw(&self) -> RX_PM_FREQSHIFT_CW_R {
-        RX_PM_FREQSHIFT_CW_R::new((self.bits & 0x000f_ffff) as u32)
-    }
-}
-impl W {
-    #[doc = "Bits 30:31"]
-    #[inline(always)]
-    pub fn rx_pm_in_sel(&mut self) -> RX_PM_IN_SEL_W {
-        RX_PM_IN_SEL_W { w: self }
-    }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn rx_pm_en(&mut self) -> RX_PM_EN_W {
-        RX_PM_EN_W { w: self }
+        RX_PM_FREQSHIFT_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn rx_pm_done(&mut self) -> RX_PM_DONE_W {
-        RX_PM_DONE_W { w: self }
+    pub fn rx_pm_done(&self) -> RX_PM_DONE_R {
+        RX_PM_DONE_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn rx_pm_en(&self) -> RX_PM_EN_R {
+        RX_PM_EN_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    pub fn rx_pm_in_sel(&self) -> RX_PM_IN_SEL_R {
+        RX_PM_IN_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_pm_freqshift_cw(&mut self) -> RX_PM_FREQSHIFT_CW_W<0> {
+        RX_PM_FREQSHIFT_CW_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn rx_pm_freqshift_en(&mut self) -> RX_PM_FREQSHIFT_EN_W {
-        RX_PM_FREQSHIFT_EN_W { w: self }
+    #[must_use]
+    pub fn rx_pm_freqshift_en(&mut self) -> RX_PM_FREQSHIFT_EN_W<20> {
+        RX_PM_FREQSHIFT_EN_W::new(self)
     }
-    #[doc = "Bits 0:19"]
+    #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn rx_pm_freqshift_cw(&mut self) -> RX_PM_FREQSHIFT_CW_W {
-        RX_PM_FREQSHIFT_CW_W { w: self }
+    #[must_use]
+    pub fn rx_pm_done(&mut self) -> RX_PM_DONE_W<28> {
+        RX_PM_DONE_W::new(self)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_pm_en(&mut self) -> RX_PM_EN_W<29> {
+        RX_PM_EN_W::new(self)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_pm_in_sel(&mut self) -> RX_PM_IN_SEL_W<30> {
+        RX_PM_IN_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -263,11 +134,10 @@ impl crate::Readable for DFE_CTRL_6_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_6::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_6 to value 0"]
 impl crate::Resettable for DFE_CTRL_6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

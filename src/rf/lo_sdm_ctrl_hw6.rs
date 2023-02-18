@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<LO_SDM_CTRL_HW6_SPEC>> for R {
+impl From<crate::R<LO_SDM_CTRL_HW6_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<LO_SDM_CTRL_HW6_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<LO_SDM_CTRL_HW6_SPEC>> for W {
+impl From<crate::W<LO_SDM_CTRL_HW6_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<LO_SDM_CTRL_HW6_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `lo_sdmin_center` reader - "]
-pub struct LO_SDMIN_CENTER_R(crate::FieldReader<u32, u32>);
-impl LO_SDMIN_CENTER_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        LO_SDMIN_CENTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDMIN_CENTER_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LO_SDMIN_CENTER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `lo_sdmin_center` writer - "]
-pub struct LO_SDMIN_CENTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDMIN_CENTER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1fff_ffff) | (value as u32 & 0x1fff_ffff);
-        self.w
-    }
-}
+pub type LO_SDMIN_CENTER_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LO_SDM_CTRL_HW6_SPEC, u32, u32, 29, O>;
 impl R {
     #[doc = "Bits 0:28"]
     #[inline(always)]
     pub fn lo_sdmin_center(&self) -> LO_SDMIN_CENTER_R {
-        LO_SDMIN_CENTER_R::new((self.bits & 0x1fff_ffff) as u32)
+        LO_SDMIN_CENTER_R::new(self.bits & 0x1fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:28"]
     #[inline(always)]
-    pub fn lo_sdmin_center(&mut self) -> LO_SDMIN_CENTER_W {
-        LO_SDMIN_CENTER_W { w: self }
+    #[must_use]
+    pub fn lo_sdmin_center(&mut self) -> LO_SDMIN_CENTER_W<0> {
+        LO_SDMIN_CENTER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for LO_SDM_CTRL_HW6_SPEC {
 #[doc = "`write(|w| ..)` method takes [lo_sdm_ctrl_hw6::W](W) writer structure"]
 impl crate::Writable for LO_SDM_CTRL_HW6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets lo_sdm_ctrl_hw6 to value 0"]
 impl crate::Resettable for LO_SDM_CTRL_HW6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

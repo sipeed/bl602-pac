@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<I2C_BUS_BUSY_SPEC>> for R {
+impl From<crate::R<I2C_BUS_BUSY_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<I2C_BUS_BUSY_SPEC>) -> Self {
         R(reader)
     }
@@ -27,80 +28,40 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<I2C_BUS_BUSY_SPEC>> for W {
+impl From<crate::W<I2C_BUS_BUSY_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<I2C_BUS_BUSY_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `cr_i2c_bus_busy_clr` reader - "]
-pub struct CR_I2C_BUS_BUSY_CLR_R(crate::FieldReader<bool, bool>);
-impl CR_I2C_BUS_BUSY_CLR_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_I2C_BUS_BUSY_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_I2C_BUS_BUSY_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_i2c_bus_busy_clr` writer - "]
-pub struct CR_I2C_BUS_BUSY_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_I2C_BUS_BUSY_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `sts_i2c_bus_busy` reader - "]
-pub struct STS_I2C_BUS_BUSY_R(crate::FieldReader<bool, bool>);
-impl STS_I2C_BUS_BUSY_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        STS_I2C_BUS_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STS_I2C_BUS_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STS_I2C_BUS_BUSY_R = crate::BitReader<bool>;
+#[doc = "Field `cr_i2c_bus_busy_clr` reader - "]
+pub type CR_I2C_BUS_BUSY_CLR_R = crate::BitReader<bool>;
+#[doc = "Field `cr_i2c_bus_busy_clr` writer - "]
+pub type CR_I2C_BUS_BUSY_CLR_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, I2C_BUS_BUSY_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn cr_i2c_bus_busy_clr(&self) -> CR_I2C_BUS_BUSY_CLR_R {
-        CR_I2C_BUS_BUSY_CLR_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sts_i2c_bus_busy(&self) -> STS_I2C_BUS_BUSY_R {
-        STS_I2C_BUS_BUSY_R::new((self.bits & 0x01) != 0)
+        STS_I2C_BUS_BUSY_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn cr_i2c_bus_busy_clr(&self) -> CR_I2C_BUS_BUSY_CLR_R {
+        CR_I2C_BUS_BUSY_CLR_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_i2c_bus_busy_clr(&mut self) -> CR_I2C_BUS_BUSY_CLR_W {
-        CR_I2C_BUS_BUSY_CLR_W { w: self }
+    #[must_use]
+    pub fn cr_i2c_bus_busy_clr(&mut self) -> CR_I2C_BUS_BUSY_CLR_W<1> {
+        CR_I2C_BUS_BUSY_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -118,11 +79,10 @@ impl crate::Readable for I2C_BUS_BUSY_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2c_bus_busy::W](W) writer structure"]
 impl crate::Writable for I2C_BUS_BUSY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets i2c_bus_busy to value 0"]
 impl crate::Resettable for I2C_BUS_BUSY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

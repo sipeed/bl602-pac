@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<LO_CAL_CTRL_HW11_SPEC>> for R {
+impl From<crate::R<LO_CAL_CTRL_HW11_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<LO_CAL_CTRL_HW11_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<LO_CAL_CTRL_HW11_SPEC>> for W {
+impl From<crate::W<LO_CAL_CTRL_HW11_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<LO_CAL_CTRL_HW11_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `lo_vco_freq_cw_2484` reader - "]
-pub struct LO_VCO_FREQ_CW_2484_R(crate::FieldReader<u8, u8>);
-impl LO_VCO_FREQ_CW_2484_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_VCO_FREQ_CW_2484_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_VCO_FREQ_CW_2484_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_vco_freq_cw_2484` writer - "]
-pub struct LO_VCO_FREQ_CW_2484_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_VCO_FREQ_CW_2484_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
 #[doc = "Field `lo_vco_idac_cw_2484` reader - "]
-pub struct LO_VCO_IDAC_CW_2484_R(crate::FieldReader<u8, u8>);
-impl LO_VCO_IDAC_CW_2484_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_VCO_IDAC_CW_2484_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_VCO_IDAC_CW_2484_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LO_VCO_IDAC_CW_2484_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `lo_vco_idac_cw_2484` writer - "]
-pub struct LO_VCO_IDAC_CW_2484_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_VCO_IDAC_CW_2484_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type LO_VCO_IDAC_CW_2484_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LO_CAL_CTRL_HW11_SPEC, u8, u8, 5, O>;
+#[doc = "Field `lo_vco_freq_cw_2484` reader - "]
+pub type LO_VCO_FREQ_CW_2484_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `lo_vco_freq_cw_2484` writer - "]
+pub type LO_VCO_FREQ_CW_2484_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LO_CAL_CTRL_HW11_SPEC, u8, u8, 8, O>;
 impl R {
-    #[doc = "Bits 8:15"]
-    #[inline(always)]
-    pub fn lo_vco_freq_cw_2484(&self) -> LO_VCO_FREQ_CW_2484_R {
-        LO_VCO_FREQ_CW_2484_R::new(((self.bits >> 8) & 0xff) as u8)
-    }
     #[doc = "Bits 0:4"]
     #[inline(always)]
     pub fn lo_vco_idac_cw_2484(&self) -> LO_VCO_IDAC_CW_2484_R {
         LO_VCO_IDAC_CW_2484_R::new((self.bits & 0x1f) as u8)
     }
-}
-impl W {
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn lo_vco_freq_cw_2484(&mut self) -> LO_VCO_FREQ_CW_2484_W {
-        LO_VCO_FREQ_CW_2484_W { w: self }
+    pub fn lo_vco_freq_cw_2484(&self) -> LO_VCO_FREQ_CW_2484_R {
+        LO_VCO_FREQ_CW_2484_R::new(((self.bits >> 8) & 0xff) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn lo_vco_idac_cw_2484(&mut self) -> LO_VCO_IDAC_CW_2484_W {
-        LO_VCO_IDAC_CW_2484_W { w: self }
+    #[must_use]
+    pub fn lo_vco_idac_cw_2484(&mut self) -> LO_VCO_IDAC_CW_2484_W<0> {
+        LO_VCO_IDAC_CW_2484_W::new(self)
+    }
+    #[doc = "Bits 8:15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_vco_freq_cw_2484(&mut self) -> LO_VCO_FREQ_CW_2484_W<8> {
+        LO_VCO_FREQ_CW_2484_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for LO_CAL_CTRL_HW11_SPEC {
 #[doc = "`write(|w| ..)` method takes [lo_cal_ctrl_hw11::W](W) writer structure"]
 impl crate::Writable for LO_CAL_CTRL_HW11_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets lo_cal_ctrl_hw11 to value 0"]
 impl crate::Resettable for LO_CAL_CTRL_HW11_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

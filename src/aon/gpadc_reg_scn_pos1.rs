@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<GPADC_REG_SCN_POS1_SPEC>> for R {
+impl From<crate::R<GPADC_REG_SCN_POS1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<GPADC_REG_SCN_POS1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,231 +28,113 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<GPADC_REG_SCN_POS1_SPEC>> for W {
+impl From<crate::W<GPADC_REG_SCN_POS1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<GPADC_REG_SCN_POS1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `gpadc_scan_pos_5` reader - "]
-pub struct GPADC_SCAN_POS_5_R(crate::FieldReader<u8, u8>);
-impl GPADC_SCAN_POS_5_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPADC_SCAN_POS_5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPADC_SCAN_POS_5_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpadc_scan_pos_5` writer - "]
-pub struct GPADC_SCAN_POS_5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_SCAN_POS_5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 25)) | ((value as u32 & 0x1f) << 25);
-        self.w
-    }
-}
-#[doc = "Field `gpadc_scan_pos_4` reader - "]
-pub struct GPADC_SCAN_POS_4_R(crate::FieldReader<u8, u8>);
-impl GPADC_SCAN_POS_4_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPADC_SCAN_POS_4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPADC_SCAN_POS_4_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpadc_scan_pos_4` writer - "]
-pub struct GPADC_SCAN_POS_4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_SCAN_POS_4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 20)) | ((value as u32 & 0x1f) << 20);
-        self.w
-    }
-}
-#[doc = "Field `gpadc_scan_pos_3` reader - "]
-pub struct GPADC_SCAN_POS_3_R(crate::FieldReader<u8, u8>);
-impl GPADC_SCAN_POS_3_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPADC_SCAN_POS_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPADC_SCAN_POS_3_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpadc_scan_pos_3` writer - "]
-pub struct GPADC_SCAN_POS_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_SCAN_POS_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 15)) | ((value as u32 & 0x1f) << 15);
-        self.w
-    }
-}
-#[doc = "Field `gpadc_scan_pos_2` reader - "]
-pub struct GPADC_SCAN_POS_2_R(crate::FieldReader<u8, u8>);
-impl GPADC_SCAN_POS_2_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPADC_SCAN_POS_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPADC_SCAN_POS_2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpadc_scan_pos_2` writer - "]
-pub struct GPADC_SCAN_POS_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_SCAN_POS_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 10)) | ((value as u32 & 0x1f) << 10);
-        self.w
-    }
-}
-#[doc = "Field `gpadc_scan_pos_1` reader - "]
-pub struct GPADC_SCAN_POS_1_R(crate::FieldReader<u8, u8>);
-impl GPADC_SCAN_POS_1_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPADC_SCAN_POS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPADC_SCAN_POS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `gpadc_scan_pos_1` writer - "]
-pub struct GPADC_SCAN_POS_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_SCAN_POS_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 5)) | ((value as u32 & 0x1f) << 5);
-        self.w
-    }
-}
 #[doc = "Field `gpadc_scan_pos_0` reader - "]
-pub struct GPADC_SCAN_POS_0_R(crate::FieldReader<u8, u8>);
-impl GPADC_SCAN_POS_0_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        GPADC_SCAN_POS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPADC_SCAN_POS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPADC_SCAN_POS_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `gpadc_scan_pos_0` writer - "]
-pub struct GPADC_SCAN_POS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPADC_SCAN_POS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type GPADC_SCAN_POS_0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gpadc_scan_pos_1` reader - "]
+pub type GPADC_SCAN_POS_1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_scan_pos_1` writer - "]
+pub type GPADC_SCAN_POS_1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gpadc_scan_pos_2` reader - "]
+pub type GPADC_SCAN_POS_2_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_scan_pos_2` writer - "]
+pub type GPADC_SCAN_POS_2_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gpadc_scan_pos_3` reader - "]
+pub type GPADC_SCAN_POS_3_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_scan_pos_3` writer - "]
+pub type GPADC_SCAN_POS_3_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gpadc_scan_pos_4` reader - "]
+pub type GPADC_SCAN_POS_4_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_scan_pos_4` writer - "]
+pub type GPADC_SCAN_POS_4_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `gpadc_scan_pos_5` reader - "]
+pub type GPADC_SCAN_POS_5_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `gpadc_scan_pos_5` writer - "]
+pub type GPADC_SCAN_POS_5_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS1_SPEC, u8, u8, 5, O>;
 impl R {
-    #[doc = "Bits 25:29"]
+    #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_5(&self) -> GPADC_SCAN_POS_5_R {
-        GPADC_SCAN_POS_5_R::new(((self.bits >> 25) & 0x1f) as u8)
-    }
-    #[doc = "Bits 20:24"]
-    #[inline(always)]
-    pub fn gpadc_scan_pos_4(&self) -> GPADC_SCAN_POS_4_R {
-        GPADC_SCAN_POS_4_R::new(((self.bits >> 20) & 0x1f) as u8)
-    }
-    #[doc = "Bits 15:19"]
-    #[inline(always)]
-    pub fn gpadc_scan_pos_3(&self) -> GPADC_SCAN_POS_3_R {
-        GPADC_SCAN_POS_3_R::new(((self.bits >> 15) & 0x1f) as u8)
-    }
-    #[doc = "Bits 10:14"]
-    #[inline(always)]
-    pub fn gpadc_scan_pos_2(&self) -> GPADC_SCAN_POS_2_R {
-        GPADC_SCAN_POS_2_R::new(((self.bits >> 10) & 0x1f) as u8)
+    pub fn gpadc_scan_pos_0(&self) -> GPADC_SCAN_POS_0_R {
+        GPADC_SCAN_POS_0_R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
     pub fn gpadc_scan_pos_1(&self) -> GPADC_SCAN_POS_1_R {
         GPADC_SCAN_POS_1_R::new(((self.bits >> 5) & 0x1f) as u8)
     }
-    #[doc = "Bits 0:4"]
+    #[doc = "Bits 10:14"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_0(&self) -> GPADC_SCAN_POS_0_R {
-        GPADC_SCAN_POS_0_R::new((self.bits & 0x1f) as u8)
-    }
-}
-impl W {
-    #[doc = "Bits 25:29"]
-    #[inline(always)]
-    pub fn gpadc_scan_pos_5(&mut self) -> GPADC_SCAN_POS_5_W {
-        GPADC_SCAN_POS_5_W { w: self }
-    }
-    #[doc = "Bits 20:24"]
-    #[inline(always)]
-    pub fn gpadc_scan_pos_4(&mut self) -> GPADC_SCAN_POS_4_W {
-        GPADC_SCAN_POS_4_W { w: self }
+    pub fn gpadc_scan_pos_2(&self) -> GPADC_SCAN_POS_2_R {
+        GPADC_SCAN_POS_2_R::new(((self.bits >> 10) & 0x1f) as u8)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_3(&mut self) -> GPADC_SCAN_POS_3_W {
-        GPADC_SCAN_POS_3_W { w: self }
+    pub fn gpadc_scan_pos_3(&self) -> GPADC_SCAN_POS_3_R {
+        GPADC_SCAN_POS_3_R::new(((self.bits >> 15) & 0x1f) as u8)
     }
-    #[doc = "Bits 10:14"]
+    #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_2(&mut self) -> GPADC_SCAN_POS_2_W {
-        GPADC_SCAN_POS_2_W { w: self }
+    pub fn gpadc_scan_pos_4(&self) -> GPADC_SCAN_POS_4_R {
+        GPADC_SCAN_POS_4_R::new(((self.bits >> 20) & 0x1f) as u8)
+    }
+    #[doc = "Bits 25:29"]
+    #[inline(always)]
+    pub fn gpadc_scan_pos_5(&self) -> GPADC_SCAN_POS_5_R {
+        GPADC_SCAN_POS_5_R::new(((self.bits >> 25) & 0x1f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_scan_pos_0(&mut self) -> GPADC_SCAN_POS_0_W<0> {
+        GPADC_SCAN_POS_0_W::new(self)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_1(&mut self) -> GPADC_SCAN_POS_1_W {
-        GPADC_SCAN_POS_1_W { w: self }
+    #[must_use]
+    pub fn gpadc_scan_pos_1(&mut self) -> GPADC_SCAN_POS_1_W<5> {
+        GPADC_SCAN_POS_1_W::new(self)
     }
-    #[doc = "Bits 0:4"]
+    #[doc = "Bits 10:14"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_0(&mut self) -> GPADC_SCAN_POS_0_W {
-        GPADC_SCAN_POS_0_W { w: self }
+    #[must_use]
+    pub fn gpadc_scan_pos_2(&mut self) -> GPADC_SCAN_POS_2_W<10> {
+        GPADC_SCAN_POS_2_W::new(self)
+    }
+    #[doc = "Bits 15:19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_scan_pos_3(&mut self) -> GPADC_SCAN_POS_3_W<15> {
+        GPADC_SCAN_POS_3_W::new(self)
+    }
+    #[doc = "Bits 20:24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_scan_pos_4(&mut self) -> GPADC_SCAN_POS_4_W<20> {
+        GPADC_SCAN_POS_4_W::new(self)
+    }
+    #[doc = "Bits 25:29"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gpadc_scan_pos_5(&mut self) -> GPADC_SCAN_POS_5_W<25> {
+        GPADC_SCAN_POS_5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -269,11 +152,10 @@ impl crate::Readable for GPADC_REG_SCN_POS1_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpadc_reg_scn_pos1::W](W) writer structure"]
 impl crate::Writable for GPADC_REG_SCN_POS1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets gpadc_reg_scn_pos1 to value 0x1ef7_bdef"]
 impl crate::Resettable for GPADC_REG_SCN_POS1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1ef7_bdef
-    }
+    const RESET_VALUE: Self::Ux = 0x1ef7_bdef;
 }

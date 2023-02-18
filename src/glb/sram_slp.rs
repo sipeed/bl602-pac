@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SRAM_SLP_SPEC>> for R {
+impl From<crate::R<SRAM_SLP_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SRAM_SLP_SPEC>) -> Self {
         R(reader)
     }
@@ -27,51 +28,33 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SRAM_SLP_SPEC>> for W {
+impl From<crate::W<SRAM_SLP_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SRAM_SLP_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `reg_sram_slp` reader - "]
-pub struct REG_SRAM_SLP_R(crate::FieldReader<u32, u32>);
-impl REG_SRAM_SLP_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        REG_SRAM_SLP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REG_SRAM_SLP_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REG_SRAM_SLP_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `reg_sram_slp` writer - "]
-pub struct REG_SRAM_SLP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_SRAM_SLP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type REG_SRAM_SLP_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SRAM_SLP_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn reg_sram_slp(&self) -> REG_SRAM_SLP_R {
-        REG_SRAM_SLP_R::new((self.bits & 0xffff_ffff) as u32)
+        REG_SRAM_SLP_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_sram_slp(&mut self) -> REG_SRAM_SLP_W {
-        REG_SRAM_SLP_W { w: self }
+    #[must_use]
+    pub fn reg_sram_slp(&mut self) -> REG_SRAM_SLP_W<0> {
+        REG_SRAM_SLP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for SRAM_SLP_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_slp::W](W) writer structure"]
 impl crate::Writable for SRAM_SLP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sram_slp to value 0"]
 impl crate::Resettable for SRAM_SLP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

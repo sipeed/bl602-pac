@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TCER_SPEC>> for R {
+impl From<crate::R<TCER_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TCER_SPEC>) -> Self {
         R(reader)
     }
@@ -27,107 +28,47 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TCER_SPEC>> for W {
+impl From<crate::W<TCER_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TCER_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `timer3_en` reader - "]
-pub struct TIMER3_EN_R(crate::FieldReader<bool, bool>);
-impl TIMER3_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER3_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER3_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `timer3_en` writer - "]
-pub struct TIMER3_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER3_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
 #[doc = "Field `timer2_en` reader - "]
-pub struct TIMER2_EN_R(crate::FieldReader<bool, bool>);
-impl TIMER2_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `timer2_en` writer - "]
-pub struct TIMER2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type TIMER2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCER_SPEC, bool, O>;
+#[doc = "Field `timer3_en` reader - "]
+pub type TIMER3_EN_R = crate::BitReader<bool>;
+#[doc = "Field `timer3_en` writer - "]
+pub type TIMER3_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCER_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn timer3_en(&self) -> TIMER3_EN_R {
-        TIMER3_EN_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn timer2_en(&self) -> TIMER2_EN_R {
-        TIMER2_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        TIMER2_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn timer3_en(&self) -> TIMER3_EN_R {
+        TIMER3_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn timer3_en(&mut self) -> TIMER3_EN_W {
-        TIMER3_EN_W { w: self }
-    }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn timer2_en(&mut self) -> TIMER2_EN_W {
-        TIMER2_EN_W { w: self }
+    #[must_use]
+    pub fn timer2_en(&mut self) -> TIMER2_EN_W<1> {
+        TIMER2_EN_W::new(self)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn timer3_en(&mut self) -> TIMER3_EN_W<2> {
+        TIMER3_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -145,11 +86,10 @@ impl crate::Readable for TCER_SPEC {
 #[doc = "`write(|w| ..)` method takes [tcer::W](W) writer structure"]
 impl crate::Writable for TCER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TCER to value 0"]
 impl crate::Resettable for TCER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

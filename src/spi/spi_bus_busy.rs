@@ -7,30 +7,19 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SPI_BUS_BUSY_SPEC>> for R {
+impl From<crate::R<SPI_BUS_BUSY_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SPI_BUS_BUSY_SPEC>) -> Self {
         R(reader)
     }
 }
 #[doc = "Field `sts_spi_bus_busy` reader - "]
-pub struct STS_SPI_BUS_BUSY_R(crate::FieldReader<bool, bool>);
-impl STS_SPI_BUS_BUSY_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        STS_SPI_BUS_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STS_SPI_BUS_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STS_SPI_BUS_BUSY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sts_spi_bus_busy(&self) -> STS_SPI_BUS_BUSY_R {
-        STS_SPI_BUS_BUSY_R::new((self.bits & 0x01) != 0)
+        STS_SPI_BUS_BUSY_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "spi_bus_busy.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_bus_busy](index.html) module"]
@@ -44,8 +33,5 @@ impl crate::Readable for SPI_BUS_BUSY_SPEC {
 }
 #[doc = "`reset()` method sets spi_bus_busy to value 0"]
 impl crate::Resettable for SPI_BUS_BUSY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_14_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_14_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_14_SPEC>) -> Self {
         R(reader)
     }
@@ -27,159 +28,81 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_14_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_14_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_14_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `tx_dvga_gain_qdb_gc11` reader - "]
-pub struct TX_DVGA_GAIN_QDB_GC11_R(crate::FieldReader<u8, u8>);
-impl TX_DVGA_GAIN_QDB_GC11_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_DVGA_GAIN_QDB_GC11_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DVGA_GAIN_QDB_GC11_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_dvga_gain_qdb_gc11` writer - "]
-pub struct TX_DVGA_GAIN_QDB_GC11_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DVGA_GAIN_QDB_GC11_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 24)) | ((value as u32 & 0x7f) << 24);
-        self.w
-    }
-}
-#[doc = "Field `tx_dvga_gain_qdb_gc10` reader - "]
-pub struct TX_DVGA_GAIN_QDB_GC10_R(crate::FieldReader<u8, u8>);
-impl TX_DVGA_GAIN_QDB_GC10_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_DVGA_GAIN_QDB_GC10_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DVGA_GAIN_QDB_GC10_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_dvga_gain_qdb_gc10` writer - "]
-pub struct TX_DVGA_GAIN_QDB_GC10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DVGA_GAIN_QDB_GC10_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 16)) | ((value as u32 & 0x7f) << 16);
-        self.w
-    }
-}
-#[doc = "Field `tx_dvga_gain_qdb_gc9` reader - "]
-pub struct TX_DVGA_GAIN_QDB_GC9_R(crate::FieldReader<u8, u8>);
-impl TX_DVGA_GAIN_QDB_GC9_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_DVGA_GAIN_QDB_GC9_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DVGA_GAIN_QDB_GC9_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_dvga_gain_qdb_gc9` writer - "]
-pub struct TX_DVGA_GAIN_QDB_GC9_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DVGA_GAIN_QDB_GC9_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 8)) | ((value as u32 & 0x7f) << 8);
-        self.w
-    }
-}
 #[doc = "Field `tx_dvga_gain_qdb_gc8` reader - "]
-pub struct TX_DVGA_GAIN_QDB_GC8_R(crate::FieldReader<u8, u8>);
-impl TX_DVGA_GAIN_QDB_GC8_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_DVGA_GAIN_QDB_GC8_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DVGA_GAIN_QDB_GC8_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DVGA_GAIN_QDB_GC8_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `tx_dvga_gain_qdb_gc8` writer - "]
-pub struct TX_DVGA_GAIN_QDB_GC8_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DVGA_GAIN_QDB_GC8_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type TX_DVGA_GAIN_QDB_GC8_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_14_SPEC, u8, u8, 7, O>;
+#[doc = "Field `tx_dvga_gain_qdb_gc9` reader - "]
+pub type TX_DVGA_GAIN_QDB_GC9_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tx_dvga_gain_qdb_gc9` writer - "]
+pub type TX_DVGA_GAIN_QDB_GC9_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_14_SPEC, u8, u8, 7, O>;
+#[doc = "Field `tx_dvga_gain_qdb_gc10` reader - "]
+pub type TX_DVGA_GAIN_QDB_GC10_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tx_dvga_gain_qdb_gc10` writer - "]
+pub type TX_DVGA_GAIN_QDB_GC10_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_14_SPEC, u8, u8, 7, O>;
+#[doc = "Field `tx_dvga_gain_qdb_gc11` reader - "]
+pub type TX_DVGA_GAIN_QDB_GC11_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `tx_dvga_gain_qdb_gc11` writer - "]
+pub type TX_DVGA_GAIN_QDB_GC11_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_14_SPEC, u8, u8, 7, O>;
 impl R {
-    #[doc = "Bits 24:30"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc11(&self) -> TX_DVGA_GAIN_QDB_GC11_R {
-        TX_DVGA_GAIN_QDB_GC11_R::new(((self.bits >> 24) & 0x7f) as u8)
-    }
-    #[doc = "Bits 16:22"]
-    #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc10(&self) -> TX_DVGA_GAIN_QDB_GC10_R {
-        TX_DVGA_GAIN_QDB_GC10_R::new(((self.bits >> 16) & 0x7f) as u8)
+    pub fn tx_dvga_gain_qdb_gc8(&self) -> TX_DVGA_GAIN_QDB_GC8_R {
+        TX_DVGA_GAIN_QDB_GC8_R::new((self.bits & 0x7f) as u8)
     }
     #[doc = "Bits 8:14"]
     #[inline(always)]
     pub fn tx_dvga_gain_qdb_gc9(&self) -> TX_DVGA_GAIN_QDB_GC9_R {
         TX_DVGA_GAIN_QDB_GC9_R::new(((self.bits >> 8) & 0x7f) as u8)
     }
-    #[doc = "Bits 0:6"]
+    #[doc = "Bits 16:22"]
     #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc8(&self) -> TX_DVGA_GAIN_QDB_GC8_R {
-        TX_DVGA_GAIN_QDB_GC8_R::new((self.bits & 0x7f) as u8)
+    pub fn tx_dvga_gain_qdb_gc10(&self) -> TX_DVGA_GAIN_QDB_GC10_R {
+        TX_DVGA_GAIN_QDB_GC10_R::new(((self.bits >> 16) & 0x7f) as u8)
+    }
+    #[doc = "Bits 24:30"]
+    #[inline(always)]
+    pub fn tx_dvga_gain_qdb_gc11(&self) -> TX_DVGA_GAIN_QDB_GC11_R {
+        TX_DVGA_GAIN_QDB_GC11_R::new(((self.bits >> 24) & 0x7f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 24:30"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc11(&mut self) -> TX_DVGA_GAIN_QDB_GC11_W {
-        TX_DVGA_GAIN_QDB_GC11_W { w: self }
-    }
-    #[doc = "Bits 16:22"]
-    #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc10(&mut self) -> TX_DVGA_GAIN_QDB_GC10_W {
-        TX_DVGA_GAIN_QDB_GC10_W { w: self }
+    #[must_use]
+    pub fn tx_dvga_gain_qdb_gc8(&mut self) -> TX_DVGA_GAIN_QDB_GC8_W<0> {
+        TX_DVGA_GAIN_QDB_GC8_W::new(self)
     }
     #[doc = "Bits 8:14"]
     #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc9(&mut self) -> TX_DVGA_GAIN_QDB_GC9_W {
-        TX_DVGA_GAIN_QDB_GC9_W { w: self }
+    #[must_use]
+    pub fn tx_dvga_gain_qdb_gc9(&mut self) -> TX_DVGA_GAIN_QDB_GC9_W<8> {
+        TX_DVGA_GAIN_QDB_GC9_W::new(self)
     }
-    #[doc = "Bits 0:6"]
+    #[doc = "Bits 16:22"]
     #[inline(always)]
-    pub fn tx_dvga_gain_qdb_gc8(&mut self) -> TX_DVGA_GAIN_QDB_GC8_W {
-        TX_DVGA_GAIN_QDB_GC8_W { w: self }
+    #[must_use]
+    pub fn tx_dvga_gain_qdb_gc10(&mut self) -> TX_DVGA_GAIN_QDB_GC10_W<16> {
+        TX_DVGA_GAIN_QDB_GC10_W::new(self)
+    }
+    #[doc = "Bits 24:30"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_dvga_gain_qdb_gc11(&mut self) -> TX_DVGA_GAIN_QDB_GC11_W<24> {
+        TX_DVGA_GAIN_QDB_GC11_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -197,11 +120,10 @@ impl crate::Readable for DFE_CTRL_14_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_14::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_14_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_14 to value 0"]
 impl crate::Resettable for DFE_CTRL_14_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

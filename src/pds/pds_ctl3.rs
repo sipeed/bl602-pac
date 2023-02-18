@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<PDS_CTL3_SPEC>> for R {
+impl From<crate::R<PDS_CTL3_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<PDS_CTL3_SPEC>) -> Self {
         R(reader)
     }
@@ -27,383 +28,142 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<PDS_CTL3_SPEC>> for W {
+impl From<crate::W<PDS_CTL3_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<PDS_CTL3_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `cr_pds_misc_iso_en` reader - "]
-pub struct CR_PDS_MISC_ISO_EN_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_MISC_ISO_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_MISC_ISO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_MISC_ISO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_misc_iso_en` writer - "]
-pub struct CR_PDS_MISC_ISO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_MISC_ISO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
-        self.w
-    }
-}
-#[doc = "Field `cr_pds_wb_iso_en` reader - "]
-pub struct CR_PDS_WB_ISO_EN_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_WB_ISO_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_WB_ISO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_WB_ISO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_wb_iso_en` writer - "]
-pub struct CR_PDS_WB_ISO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_WB_ISO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
-        self.w
-    }
-}
-#[doc = "Field `cr_pds_np_iso_en` reader - "]
-pub struct CR_PDS_NP_ISO_EN_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_NP_ISO_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_NP_ISO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_NP_ISO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_np_iso_en` writer - "]
-pub struct CR_PDS_NP_ISO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_NP_ISO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
-        self.w
-    }
-}
-#[doc = "Field `cr_pds_force_misc_gate_clk` reader - "]
-pub struct CR_PDS_FORCE_MISC_GATE_CLK_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_FORCE_MISC_GATE_CLK_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_FORCE_MISC_GATE_CLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_FORCE_MISC_GATE_CLK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_force_misc_gate_clk` writer - "]
-pub struct CR_PDS_FORCE_MISC_GATE_CLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_FORCE_MISC_GATE_CLK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
-        self.w
-    }
-}
-#[doc = "Field `cr_pds_force_misc_mem_stby` reader - "]
-pub struct CR_PDS_FORCE_MISC_MEM_STBY_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_FORCE_MISC_MEM_STBY_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_FORCE_MISC_MEM_STBY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_FORCE_MISC_MEM_STBY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_force_misc_mem_stby` writer - "]
-pub struct CR_PDS_FORCE_MISC_MEM_STBY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_FORCE_MISC_MEM_STBY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Field `cr_pds_force_misc_pds_rst` reader - "]
-pub struct CR_PDS_FORCE_MISC_PDS_RST_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_FORCE_MISC_PDS_RST_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_FORCE_MISC_PDS_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_FORCE_MISC_PDS_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_force_misc_pds_rst` writer - "]
-pub struct CR_PDS_FORCE_MISC_PDS_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_FORCE_MISC_PDS_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `cr_pds_force_misc_iso_en` reader - "]
-pub struct CR_PDS_FORCE_MISC_ISO_EN_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_FORCE_MISC_ISO_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_FORCE_MISC_ISO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_FORCE_MISC_ISO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_pds_force_misc_iso_en` writer - "]
-pub struct CR_PDS_FORCE_MISC_ISO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_FORCE_MISC_ISO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
 #[doc = "Field `cr_pds_force_misc_pwr_off` reader - "]
-pub struct CR_PDS_FORCE_MISC_PWR_OFF_R(crate::FieldReader<bool, bool>);
-impl CR_PDS_FORCE_MISC_PWR_OFF_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CR_PDS_FORCE_MISC_PWR_OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_PDS_FORCE_MISC_PWR_OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CR_PDS_FORCE_MISC_PWR_OFF_R = crate::BitReader<bool>;
 #[doc = "Field `cr_pds_force_misc_pwr_off` writer - "]
-pub struct CR_PDS_FORCE_MISC_PWR_OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_PDS_FORCE_MISC_PWR_OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type CR_PDS_FORCE_MISC_PWR_OFF_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_force_misc_iso_en` reader - "]
+pub type CR_PDS_FORCE_MISC_ISO_EN_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_force_misc_iso_en` writer - "]
+pub type CR_PDS_FORCE_MISC_ISO_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_force_misc_pds_rst` reader - "]
+pub type CR_PDS_FORCE_MISC_PDS_RST_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_force_misc_pds_rst` writer - "]
+pub type CR_PDS_FORCE_MISC_PDS_RST_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_force_misc_mem_stby` reader - "]
+pub type CR_PDS_FORCE_MISC_MEM_STBY_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_force_misc_mem_stby` writer - "]
+pub type CR_PDS_FORCE_MISC_MEM_STBY_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_force_misc_gate_clk` reader - "]
+pub type CR_PDS_FORCE_MISC_GATE_CLK_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_force_misc_gate_clk` writer - "]
+pub type CR_PDS_FORCE_MISC_GATE_CLK_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_np_iso_en` reader - "]
+pub type CR_PDS_NP_ISO_EN_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_np_iso_en` writer - "]
+pub type CR_PDS_NP_ISO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_wb_iso_en` reader - "]
+pub type CR_PDS_WB_ISO_EN_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_wb_iso_en` writer - "]
+pub type CR_PDS_WB_ISO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+#[doc = "Field `cr_pds_misc_iso_en` reader - "]
+pub type CR_PDS_MISC_ISO_EN_R = crate::BitReader<bool>;
+#[doc = "Field `cr_pds_misc_iso_en` writer - "]
+pub type CR_PDS_MISC_ISO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 30"]
+    #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_pds_misc_iso_en(&self) -> CR_PDS_MISC_ISO_EN_R {
-        CR_PDS_MISC_ISO_EN_R::new(((self.bits >> 30) & 0x01) != 0)
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn cr_pds_wb_iso_en(&self) -> CR_PDS_WB_ISO_EN_R {
-        CR_PDS_WB_ISO_EN_R::new(((self.bits >> 27) & 0x01) != 0)
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    pub fn cr_pds_np_iso_en(&self) -> CR_PDS_NP_ISO_EN_R {
-        CR_PDS_NP_ISO_EN_R::new(((self.bits >> 24) & 0x01) != 0)
-    }
-    #[doc = "Bit 13"]
-    #[inline(always)]
-    pub fn cr_pds_force_misc_gate_clk(&self) -> CR_PDS_FORCE_MISC_GATE_CLK_R {
-        CR_PDS_FORCE_MISC_GATE_CLK_R::new(((self.bits >> 13) & 0x01) != 0)
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    pub fn cr_pds_force_misc_mem_stby(&self) -> CR_PDS_FORCE_MISC_MEM_STBY_R {
-        CR_PDS_FORCE_MISC_MEM_STBY_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    pub fn cr_pds_force_misc_pds_rst(&self) -> CR_PDS_FORCE_MISC_PDS_RST_R {
-        CR_PDS_FORCE_MISC_PDS_RST_R::new(((self.bits >> 7) & 0x01) != 0)
+    pub fn cr_pds_force_misc_pwr_off(&self) -> CR_PDS_FORCE_MISC_PWR_OFF_R {
+        CR_PDS_FORCE_MISC_PWR_OFF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn cr_pds_force_misc_iso_en(&self) -> CR_PDS_FORCE_MISC_ISO_EN_R {
-        CR_PDS_FORCE_MISC_ISO_EN_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn cr_pds_force_misc_pwr_off(&self) -> CR_PDS_FORCE_MISC_PWR_OFF_R {
-        CR_PDS_FORCE_MISC_PWR_OFF_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn cr_pds_misc_iso_en(&mut self) -> CR_PDS_MISC_ISO_EN_W {
-        CR_PDS_MISC_ISO_EN_W { w: self }
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn cr_pds_wb_iso_en(&mut self) -> CR_PDS_WB_ISO_EN_W {
-        CR_PDS_WB_ISO_EN_W { w: self }
-    }
-    #[doc = "Bit 24"]
-    #[inline(always)]
-    pub fn cr_pds_np_iso_en(&mut self) -> CR_PDS_NP_ISO_EN_W {
-        CR_PDS_NP_ISO_EN_W { w: self }
-    }
-    #[doc = "Bit 13"]
-    #[inline(always)]
-    pub fn cr_pds_force_misc_gate_clk(&mut self) -> CR_PDS_FORCE_MISC_GATE_CLK_W {
-        CR_PDS_FORCE_MISC_GATE_CLK_W { w: self }
-    }
-    #[doc = "Bit 10"]
-    #[inline(always)]
-    pub fn cr_pds_force_misc_mem_stby(&mut self) -> CR_PDS_FORCE_MISC_MEM_STBY_W {
-        CR_PDS_FORCE_MISC_MEM_STBY_W { w: self }
+        CR_PDS_FORCE_MISC_ISO_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_pds_rst(&mut self) -> CR_PDS_FORCE_MISC_PDS_RST_W {
-        CR_PDS_FORCE_MISC_PDS_RST_W { w: self }
+    pub fn cr_pds_force_misc_pds_rst(&self) -> CR_PDS_FORCE_MISC_PDS_RST_R {
+        CR_PDS_FORCE_MISC_PDS_RST_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn cr_pds_force_misc_mem_stby(&self) -> CR_PDS_FORCE_MISC_MEM_STBY_R {
+        CR_PDS_FORCE_MISC_MEM_STBY_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn cr_pds_force_misc_gate_clk(&self) -> CR_PDS_FORCE_MISC_GATE_CLK_R {
+        CR_PDS_FORCE_MISC_GATE_CLK_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn cr_pds_np_iso_en(&self) -> CR_PDS_NP_ISO_EN_R {
+        CR_PDS_NP_ISO_EN_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn cr_pds_wb_iso_en(&self) -> CR_PDS_WB_ISO_EN_R {
+        CR_PDS_WB_ISO_EN_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn cr_pds_misc_iso_en(&self) -> CR_PDS_MISC_ISO_EN_R {
+        CR_PDS_MISC_ISO_EN_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_force_misc_pwr_off(&mut self) -> CR_PDS_FORCE_MISC_PWR_OFF_W<1> {
+        CR_PDS_FORCE_MISC_PWR_OFF_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_iso_en(&mut self) -> CR_PDS_FORCE_MISC_ISO_EN_W {
-        CR_PDS_FORCE_MISC_ISO_EN_W { w: self }
+    #[must_use]
+    pub fn cr_pds_force_misc_iso_en(&mut self) -> CR_PDS_FORCE_MISC_ISO_EN_W<4> {
+        CR_PDS_FORCE_MISC_ISO_EN_W::new(self)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_pwr_off(&mut self) -> CR_PDS_FORCE_MISC_PWR_OFF_W {
-        CR_PDS_FORCE_MISC_PWR_OFF_W { w: self }
+    #[must_use]
+    pub fn cr_pds_force_misc_pds_rst(&mut self) -> CR_PDS_FORCE_MISC_PDS_RST_W<7> {
+        CR_PDS_FORCE_MISC_PDS_RST_W::new(self)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_force_misc_mem_stby(&mut self) -> CR_PDS_FORCE_MISC_MEM_STBY_W<10> {
+        CR_PDS_FORCE_MISC_MEM_STBY_W::new(self)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_force_misc_gate_clk(&mut self) -> CR_PDS_FORCE_MISC_GATE_CLK_W<13> {
+        CR_PDS_FORCE_MISC_GATE_CLK_W::new(self)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_np_iso_en(&mut self) -> CR_PDS_NP_ISO_EN_W<24> {
+        CR_PDS_NP_ISO_EN_W::new(self)
+    }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_wb_iso_en(&mut self) -> CR_PDS_WB_ISO_EN_W<27> {
+        CR_PDS_WB_ISO_EN_W::new(self)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_pds_misc_iso_en(&mut self) -> CR_PDS_MISC_ISO_EN_W<30> {
+        CR_PDS_MISC_ISO_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -421,11 +181,10 @@ impl crate::Readable for PDS_CTL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [pds_ctl3::W](W) writer structure"]
 impl crate::Writable for PDS_CTL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PDS_CTL3 to value 0x4900_0000"]
 impl crate::Resettable for PDS_CTL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4900_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4900_0000;
 }

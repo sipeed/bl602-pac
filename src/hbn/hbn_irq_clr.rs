@@ -13,30 +13,24 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<HBN_IRQ_CLR_SPEC>> for W {
+impl From<crate::W<HBN_IRQ_CLR_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<HBN_IRQ_CLR_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `irq_clr` writer - "]
-pub struct IRQ_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRQ_CLR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
-        self.w
-    }
-}
+pub type IRQ_CLR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, HBN_IRQ_CLR_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn irq_clr(&mut self) -> IRQ_CLR_W {
-        IRQ_CLR_W { w: self }
+    #[must_use]
+    pub fn irq_clr(&mut self) -> IRQ_CLR_W<0> {
+        IRQ_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -50,11 +44,10 @@ impl crate::RegisterSpec for HBN_IRQ_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [hbn_irq_clr::W](W) writer structure"]
 impl crate::Writable for HBN_IRQ_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HBN_IRQ_CLR to value 0"]
 impl crate::Resettable for HBN_IRQ_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

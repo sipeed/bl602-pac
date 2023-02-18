@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<I2C_PRD_STOP_SPEC>> for R {
+impl From<crate::R<I2C_PRD_STOP_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<I2C_PRD_STOP_SPEC>) -> Self {
         R(reader)
     }
@@ -27,159 +28,81 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<I2C_PRD_STOP_SPEC>> for W {
+impl From<crate::W<I2C_PRD_STOP_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<I2C_PRD_STOP_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `cr_i2c_prd_p_ph_3` reader - "]
-pub struct CR_I2C_PRD_P_PH_3_R(crate::FieldReader<u8, u8>);
-impl CR_I2C_PRD_P_PH_3_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR_I2C_PRD_P_PH_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_I2C_PRD_P_PH_3_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_i2c_prd_p_ph_3` writer - "]
-pub struct CR_I2C_PRD_P_PH_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_I2C_PRD_P_PH_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
-#[doc = "Field `cr_i2c_prd_p_ph_2` reader - "]
-pub struct CR_I2C_PRD_P_PH_2_R(crate::FieldReader<u8, u8>);
-impl CR_I2C_PRD_P_PH_2_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR_I2C_PRD_P_PH_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_I2C_PRD_P_PH_2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_i2c_prd_p_ph_2` writer - "]
-pub struct CR_I2C_PRD_P_PH_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_I2C_PRD_P_PH_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
-#[doc = "Field `cr_i2c_prd_p_ph_1` reader - "]
-pub struct CR_I2C_PRD_P_PH_1_R(crate::FieldReader<u8, u8>);
-impl CR_I2C_PRD_P_PH_1_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR_I2C_PRD_P_PH_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_I2C_PRD_P_PH_1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_i2c_prd_p_ph_1` writer - "]
-pub struct CR_I2C_PRD_P_PH_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_I2C_PRD_P_PH_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
 #[doc = "Field `cr_i2c_prd_p_ph_0` reader - "]
-pub struct CR_I2C_PRD_P_PH_0_R(crate::FieldReader<u8, u8>);
-impl CR_I2C_PRD_P_PH_0_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        CR_I2C_PRD_P_PH_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_I2C_PRD_P_PH_0_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CR_I2C_PRD_P_PH_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `cr_i2c_prd_p_ph_0` writer - "]
-pub struct CR_I2C_PRD_P_PH_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_I2C_PRD_P_PH_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type CR_I2C_PRD_P_PH_0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2C_PRD_STOP_SPEC, u8, u8, 8, O>;
+#[doc = "Field `cr_i2c_prd_p_ph_1` reader - "]
+pub type CR_I2C_PRD_P_PH_1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_i2c_prd_p_ph_1` writer - "]
+pub type CR_I2C_PRD_P_PH_1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2C_PRD_STOP_SPEC, u8, u8, 8, O>;
+#[doc = "Field `cr_i2c_prd_p_ph_2` reader - "]
+pub type CR_I2C_PRD_P_PH_2_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_i2c_prd_p_ph_2` writer - "]
+pub type CR_I2C_PRD_P_PH_2_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2C_PRD_STOP_SPEC, u8, u8, 8, O>;
+#[doc = "Field `cr_i2c_prd_p_ph_3` reader - "]
+pub type CR_I2C_PRD_P_PH_3_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `cr_i2c_prd_p_ph_3` writer - "]
+pub type CR_I2C_PRD_P_PH_3_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2C_PRD_STOP_SPEC, u8, u8, 8, O>;
 impl R {
-    #[doc = "Bits 24:31"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_3(&self) -> CR_I2C_PRD_P_PH_3_R {
-        CR_I2C_PRD_P_PH_3_R::new(((self.bits >> 24) & 0xff) as u8)
-    }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_2(&self) -> CR_I2C_PRD_P_PH_2_R {
-        CR_I2C_PRD_P_PH_2_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn cr_i2c_prd_p_ph_0(&self) -> CR_I2C_PRD_P_PH_0_R {
+        CR_I2C_PRD_P_PH_0_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn cr_i2c_prd_p_ph_1(&self) -> CR_I2C_PRD_P_PH_1_R {
         CR_I2C_PRD_P_PH_1_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_0(&self) -> CR_I2C_PRD_P_PH_0_R {
-        CR_I2C_PRD_P_PH_0_R::new((self.bits & 0xff) as u8)
+    pub fn cr_i2c_prd_p_ph_2(&self) -> CR_I2C_PRD_P_PH_2_R {
+        CR_I2C_PRD_P_PH_2_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    pub fn cr_i2c_prd_p_ph_3(&self) -> CR_I2C_PRD_P_PH_3_R {
+        CR_I2C_PRD_P_PH_3_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 24:31"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_3(&mut self) -> CR_I2C_PRD_P_PH_3_W {
-        CR_I2C_PRD_P_PH_3_W { w: self }
-    }
-    #[doc = "Bits 16:23"]
-    #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_2(&mut self) -> CR_I2C_PRD_P_PH_2_W {
-        CR_I2C_PRD_P_PH_2_W { w: self }
+    #[must_use]
+    pub fn cr_i2c_prd_p_ph_0(&mut self) -> CR_I2C_PRD_P_PH_0_W<0> {
+        CR_I2C_PRD_P_PH_0_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_1(&mut self) -> CR_I2C_PRD_P_PH_1_W {
-        CR_I2C_PRD_P_PH_1_W { w: self }
+    #[must_use]
+    pub fn cr_i2c_prd_p_ph_1(&mut self) -> CR_I2C_PRD_P_PH_1_W<8> {
+        CR_I2C_PRD_P_PH_1_W::new(self)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn cr_i2c_prd_p_ph_0(&mut self) -> CR_I2C_PRD_P_PH_0_W {
-        CR_I2C_PRD_P_PH_0_W { w: self }
+    #[must_use]
+    pub fn cr_i2c_prd_p_ph_2(&mut self) -> CR_I2C_PRD_P_PH_2_W<16> {
+        CR_I2C_PRD_P_PH_2_W::new(self)
+    }
+    #[doc = "Bits 24:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_i2c_prd_p_ph_3(&mut self) -> CR_I2C_PRD_P_PH_3_W<24> {
+        CR_I2C_PRD_P_PH_3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -197,11 +120,10 @@ impl crate::Readable for I2C_PRD_STOP_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2c_prd_stop::W](W) writer structure"]
 impl crate::Writable for I2C_PRD_STOP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets i2c_prd_stop to value 0x0f0f_0f0f"]
 impl crate::Resettable for I2C_PRD_STOP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f0f_0f0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f0f_0f0f;
 }

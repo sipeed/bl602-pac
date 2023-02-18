@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_7_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_7_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_7_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_7_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_7_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_7_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `rx_pm_acc_len` reader - "]
-pub struct RX_PM_ACC_LEN_R(crate::FieldReader<u16, u16>);
-impl RX_PM_ACC_LEN_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RX_PM_ACC_LEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_ACC_LEN_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pm_acc_len` writer - "]
-pub struct RX_PM_ACC_LEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_ACC_LEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `rx_pm_start_ofs` reader - "]
-pub struct RX_PM_START_OFS_R(crate::FieldReader<u16, u16>);
-impl RX_PM_START_OFS_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RX_PM_START_OFS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PM_START_OFS_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PM_START_OFS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `rx_pm_start_ofs` writer - "]
-pub struct RX_PM_START_OFS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PM_START_OFS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type RX_PM_START_OFS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_7_SPEC, u16, u16, 16, O>;
+#[doc = "Field `rx_pm_acc_len` reader - "]
+pub type RX_PM_ACC_LEN_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `rx_pm_acc_len` writer - "]
+pub type RX_PM_ACC_LEN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_7_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    pub fn rx_pm_acc_len(&self) -> RX_PM_ACC_LEN_R {
-        RX_PM_ACC_LEN_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn rx_pm_start_ofs(&self) -> RX_PM_START_OFS_R {
         RX_PM_START_OFS_R::new((self.bits & 0xffff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn rx_pm_acc_len(&mut self) -> RX_PM_ACC_LEN_W {
-        RX_PM_ACC_LEN_W { w: self }
+    pub fn rx_pm_acc_len(&self) -> RX_PM_ACC_LEN_R {
+        RX_PM_ACC_LEN_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn rx_pm_start_ofs(&mut self) -> RX_PM_START_OFS_W {
-        RX_PM_START_OFS_W { w: self }
+    #[must_use]
+    pub fn rx_pm_start_ofs(&mut self) -> RX_PM_START_OFS_W<0> {
+        RX_PM_START_OFS_W::new(self)
+    }
+    #[doc = "Bits 16:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_pm_acc_len(&mut self) -> RX_PM_ACC_LEN_W<16> {
+        RX_PM_ACC_LEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for DFE_CTRL_7_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_7::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_7 to value 0"]
 impl crate::Resettable for DFE_CTRL_7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

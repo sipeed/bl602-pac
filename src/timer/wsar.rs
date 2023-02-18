@@ -13,30 +13,23 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<WSAR_SPEC>> for W {
+impl From<crate::W<WSAR_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<WSAR_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `wsar` writer - "]
-pub struct WSAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WSAR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type WSAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WSAR_SPEC, u16, u16, 16, O>;
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn wsar(&mut self) -> WSAR_W {
-        WSAR_W { w: self }
+    #[must_use]
+    pub fn wsar(&mut self) -> WSAR_W<0> {
+        WSAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -50,11 +43,10 @@ impl crate::RegisterSpec for WSAR_SPEC {
 #[doc = "`write(|w| ..)` method takes [wsar::W](W) writer structure"]
 impl crate::Writable for WSAR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WSAR to value 0"]
 impl crate::Resettable for WSAR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

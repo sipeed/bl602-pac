@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SF3_IF_IO_DLY_1_SPEC>> for R {
+impl From<crate::R<SF3_IF_IO_DLY_1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SF3_IF_IO_DLY_1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,123 +28,65 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SF3_IF_IO_DLY_1_SPEC>> for W {
+impl From<crate::W<SF3_IF_IO_DLY_1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SF3_IF_IO_DLY_1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `sf3_io_0_do_dly_sel` reader - "]
-pub struct SF3_IO_0_DO_DLY_SEL_R(crate::FieldReader<u8, u8>);
-impl SF3_IO_0_DO_DLY_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SF3_IO_0_DO_DLY_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF3_IO_0_DO_DLY_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf3_io_0_do_dly_sel` writer - "]
-pub struct SF3_IO_0_DO_DLY_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF3_IO_0_DO_DLY_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
-        self.w
-    }
-}
-#[doc = "Field `sf3_io_0_di_dly_sel` reader - "]
-pub struct SF3_IO_0_DI_DLY_SEL_R(crate::FieldReader<u8, u8>);
-impl SF3_IO_0_DI_DLY_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SF3_IO_0_DI_DLY_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF3_IO_0_DI_DLY_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `sf3_io_0_di_dly_sel` writer - "]
-pub struct SF3_IO_0_DI_DLY_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF3_IO_0_DI_DLY_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
-        self.w
-    }
-}
 #[doc = "Field `sf3_io_0_oe_dly_sel` reader - "]
-pub struct SF3_IO_0_OE_DLY_SEL_R(crate::FieldReader<u8, u8>);
-impl SF3_IO_0_OE_DLY_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SF3_IO_0_OE_DLY_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SF3_IO_0_OE_DLY_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SF3_IO_0_OE_DLY_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `sf3_io_0_oe_dly_sel` writer - "]
-pub struct SF3_IO_0_OE_DLY_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SF3_IO_0_OE_DLY_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type SF3_IO_0_OE_DLY_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF3_IF_IO_DLY_1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `sf3_io_0_di_dly_sel` reader - "]
+pub type SF3_IO_0_DI_DLY_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `sf3_io_0_di_dly_sel` writer - "]
+pub type SF3_IO_0_DI_DLY_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF3_IF_IO_DLY_1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `sf3_io_0_do_dly_sel` reader - "]
+pub type SF3_IO_0_DO_DLY_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `sf3_io_0_do_dly_sel` writer - "]
+pub type SF3_IO_0_DO_DLY_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SF3_IF_IO_DLY_1_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 16:17"]
+    #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn sf3_io_0_do_dly_sel(&self) -> SF3_IO_0_DO_DLY_SEL_R {
-        SF3_IO_0_DO_DLY_SEL_R::new(((self.bits >> 16) & 0x03) as u8)
+    pub fn sf3_io_0_oe_dly_sel(&self) -> SF3_IO_0_OE_DLY_SEL_R {
+        SF3_IO_0_OE_DLY_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn sf3_io_0_di_dly_sel(&self) -> SF3_IO_0_DI_DLY_SEL_R {
-        SF3_IO_0_DI_DLY_SEL_R::new(((self.bits >> 8) & 0x03) as u8)
+        SF3_IO_0_DI_DLY_SEL_R::new(((self.bits >> 8) & 3) as u8)
     }
-    #[doc = "Bits 0:1"]
+    #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn sf3_io_0_oe_dly_sel(&self) -> SF3_IO_0_OE_DLY_SEL_R {
-        SF3_IO_0_OE_DLY_SEL_R::new((self.bits & 0x03) as u8)
+    pub fn sf3_io_0_do_dly_sel(&self) -> SF3_IO_0_DO_DLY_SEL_R {
+        SF3_IO_0_DO_DLY_SEL_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 16:17"]
+    #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn sf3_io_0_do_dly_sel(&mut self) -> SF3_IO_0_DO_DLY_SEL_W {
-        SF3_IO_0_DO_DLY_SEL_W { w: self }
+    #[must_use]
+    pub fn sf3_io_0_oe_dly_sel(&mut self) -> SF3_IO_0_OE_DLY_SEL_W<0> {
+        SF3_IO_0_OE_DLY_SEL_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn sf3_io_0_di_dly_sel(&mut self) -> SF3_IO_0_DI_DLY_SEL_W {
-        SF3_IO_0_DI_DLY_SEL_W { w: self }
+    #[must_use]
+    pub fn sf3_io_0_di_dly_sel(&mut self) -> SF3_IO_0_DI_DLY_SEL_W<8> {
+        SF3_IO_0_DI_DLY_SEL_W::new(self)
     }
-    #[doc = "Bits 0:1"]
+    #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn sf3_io_0_oe_dly_sel(&mut self) -> SF3_IO_0_OE_DLY_SEL_W {
-        SF3_IO_0_OE_DLY_SEL_W { w: self }
+    #[must_use]
+    pub fn sf3_io_0_do_dly_sel(&mut self) -> SF3_IO_0_DO_DLY_SEL_W<16> {
+        SF3_IO_0_DO_DLY_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -161,11 +104,10 @@ impl crate::Readable for SF3_IF_IO_DLY_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sf3_if_io_dly_1::W](W) writer structure"]
 impl crate::Writable for SF3_IF_IO_DLY_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sf3_if_io_dly_1 to value 0"]
 impl crate::Resettable for SF3_IF_IO_DLY_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

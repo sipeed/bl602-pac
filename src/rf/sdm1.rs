@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SDM1_SPEC>> for R {
+impl From<crate::R<SDM1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SDM1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,317 +28,124 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SDM1_SPEC>> for W {
+impl From<crate::W<SDM1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SDM1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `lo_sdm_flag` reader - "]
-pub struct LO_SDM_FLAG_R(crate::FieldReader<bool, bool>);
-impl LO_SDM_FLAG_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_SDM_FLAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_FLAG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_flag` writer - "]
-pub struct LO_SDM_FLAG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_FLAG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
-        self.w
-    }
-}
-#[doc = "Field `lo_sdm_rstb_hw` reader - "]
-pub struct LO_SDM_RSTB_HW_R(crate::FieldReader<bool, bool>);
-impl LO_SDM_RSTB_HW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_SDM_RSTB_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_RSTB_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_rstb_hw` writer - "]
-pub struct LO_SDM_RSTB_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_RSTB_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
-        self.w
-    }
-}
-#[doc = "Field `lo_sdm_rstb` reader - "]
-pub struct LO_SDM_RSTB_R(crate::FieldReader<bool, bool>);
-impl LO_SDM_RSTB_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_SDM_RSTB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_RSTB_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_rstb` writer - "]
-pub struct LO_SDM_RSTB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_RSTB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Field `lo_sdm_bypass` reader - "]
-pub struct LO_SDM_BYPASS_R(crate::FieldReader<bool, bool>);
-impl LO_SDM_BYPASS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_SDM_BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_bypass` writer - "]
-pub struct LO_SDM_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_BYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `lo_sdm_dither_sel` reader - "]
-pub struct LO_SDM_DITHER_SEL_R(crate::FieldReader<u8, u8>);
-impl LO_SDM_DITHER_SEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_SDM_DITHER_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_DITHER_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_dither_sel` writer - "]
-pub struct LO_SDM_DITHER_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_DITHER_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
-        self.w
-    }
-}
-#[doc = "Field `lo_sdm_bypass_hw` reader - "]
-pub struct LO_SDM_BYPASS_HW_R(crate::FieldReader<bool, bool>);
-impl LO_SDM_BYPASS_HW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        LO_SDM_BYPASS_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_BYPASS_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_bypass_hw` writer - "]
-pub struct LO_SDM_BYPASS_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_BYPASS_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
 #[doc = "Field `lo_sdm_dither_sel_hw` reader - "]
-pub struct LO_SDM_DITHER_SEL_HW_R(crate::FieldReader<u8, u8>);
-impl LO_SDM_DITHER_SEL_HW_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_SDM_DITHER_SEL_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_DITHER_SEL_HW_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LO_SDM_DITHER_SEL_HW_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `lo_sdm_dither_sel_hw` writer - "]
-pub struct LO_SDM_DITHER_SEL_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_DITHER_SEL_HW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type LO_SDM_DITHER_SEL_HW_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SDM1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `lo_sdm_bypass_hw` reader - "]
+pub type LO_SDM_BYPASS_HW_R = crate::BitReader<bool>;
+#[doc = "Field `lo_sdm_bypass_hw` writer - "]
+pub type LO_SDM_BYPASS_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDM1_SPEC, bool, O>;
+#[doc = "Field `lo_sdm_dither_sel` reader - "]
+pub type LO_SDM_DITHER_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `lo_sdm_dither_sel` writer - "]
+pub type LO_SDM_DITHER_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SDM1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `lo_sdm_bypass` reader - "]
+pub type LO_SDM_BYPASS_R = crate::BitReader<bool>;
+#[doc = "Field `lo_sdm_bypass` writer - "]
+pub type LO_SDM_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDM1_SPEC, bool, O>;
+#[doc = "Field `lo_sdm_rstb` reader - "]
+pub type LO_SDM_RSTB_R = crate::BitReader<bool>;
+#[doc = "Field `lo_sdm_rstb` writer - "]
+pub type LO_SDM_RSTB_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDM1_SPEC, bool, O>;
+#[doc = "Field `lo_sdm_rstb_hw` reader - "]
+pub type LO_SDM_RSTB_HW_R = crate::BitReader<bool>;
+#[doc = "Field `lo_sdm_rstb_hw` writer - "]
+pub type LO_SDM_RSTB_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDM1_SPEC, bool, O>;
+#[doc = "Field `lo_sdm_flag` reader - "]
+pub type LO_SDM_FLAG_R = crate::BitReader<bool>;
+#[doc = "Field `lo_sdm_flag` writer - "]
+pub type LO_SDM_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDM1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 20"]
+    #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn lo_sdm_flag(&self) -> LO_SDM_FLAG_R {
-        LO_SDM_FLAG_R::new(((self.bits >> 20) & 0x01) != 0)
-    }
-    #[doc = "Bit 17"]
-    #[inline(always)]
-    pub fn lo_sdm_rstb_hw(&self) -> LO_SDM_RSTB_HW_R {
-        LO_SDM_RSTB_HW_R::new(((self.bits >> 17) & 0x01) != 0)
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn lo_sdm_rstb(&self) -> LO_SDM_RSTB_R {
-        LO_SDM_RSTB_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn lo_sdm_bypass(&self) -> LO_SDM_BYPASS_R {
-        LO_SDM_BYPASS_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bits 8:9"]
-    #[inline(always)]
-    pub fn lo_sdm_dither_sel(&self) -> LO_SDM_DITHER_SEL_R {
-        LO_SDM_DITHER_SEL_R::new(((self.bits >> 8) & 0x03) as u8)
+    pub fn lo_sdm_dither_sel_hw(&self) -> LO_SDM_DITHER_SEL_HW_R {
+        LO_SDM_DITHER_SEL_HW_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn lo_sdm_bypass_hw(&self) -> LO_SDM_BYPASS_HW_R {
-        LO_SDM_BYPASS_HW_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bits 0:1"]
-    #[inline(always)]
-    pub fn lo_sdm_dither_sel_hw(&self) -> LO_SDM_DITHER_SEL_HW_R {
-        LO_SDM_DITHER_SEL_HW_R::new((self.bits & 0x03) as u8)
-    }
-}
-impl W {
-    #[doc = "Bit 20"]
-    #[inline(always)]
-    pub fn lo_sdm_flag(&mut self) -> LO_SDM_FLAG_W {
-        LO_SDM_FLAG_W { w: self }
-    }
-    #[doc = "Bit 17"]
-    #[inline(always)]
-    pub fn lo_sdm_rstb_hw(&mut self) -> LO_SDM_RSTB_HW_W {
-        LO_SDM_RSTB_HW_W { w: self }
-    }
-    #[doc = "Bit 16"]
-    #[inline(always)]
-    pub fn lo_sdm_rstb(&mut self) -> LO_SDM_RSTB_W {
-        LO_SDM_RSTB_W { w: self }
-    }
-    #[doc = "Bit 12"]
-    #[inline(always)]
-    pub fn lo_sdm_bypass(&mut self) -> LO_SDM_BYPASS_W {
-        LO_SDM_BYPASS_W { w: self }
+        LO_SDM_BYPASS_HW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn lo_sdm_dither_sel(&mut self) -> LO_SDM_DITHER_SEL_W {
-        LO_SDM_DITHER_SEL_W { w: self }
+    pub fn lo_sdm_dither_sel(&self) -> LO_SDM_DITHER_SEL_R {
+        LO_SDM_DITHER_SEL_R::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn lo_sdm_bypass(&self) -> LO_SDM_BYPASS_R {
+        LO_SDM_BYPASS_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn lo_sdm_rstb(&self) -> LO_SDM_RSTB_R {
+        LO_SDM_RSTB_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn lo_sdm_rstb_hw(&self) -> LO_SDM_RSTB_HW_R {
+        LO_SDM_RSTB_HW_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn lo_sdm_flag(&self) -> LO_SDM_FLAG_R {
+        LO_SDM_FLAG_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_sdm_dither_sel_hw(&mut self) -> LO_SDM_DITHER_SEL_HW_W<0> {
+        LO_SDM_DITHER_SEL_HW_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn lo_sdm_bypass_hw(&mut self) -> LO_SDM_BYPASS_HW_W {
-        LO_SDM_BYPASS_HW_W { w: self }
+    #[must_use]
+    pub fn lo_sdm_bypass_hw(&mut self) -> LO_SDM_BYPASS_HW_W<4> {
+        LO_SDM_BYPASS_HW_W::new(self)
     }
-    #[doc = "Bits 0:1"]
+    #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn lo_sdm_dither_sel_hw(&mut self) -> LO_SDM_DITHER_SEL_HW_W {
-        LO_SDM_DITHER_SEL_HW_W { w: self }
+    #[must_use]
+    pub fn lo_sdm_dither_sel(&mut self) -> LO_SDM_DITHER_SEL_W<8> {
+        LO_SDM_DITHER_SEL_W::new(self)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_sdm_bypass(&mut self) -> LO_SDM_BYPASS_W<12> {
+        LO_SDM_BYPASS_W::new(self)
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_sdm_rstb(&mut self) -> LO_SDM_RSTB_W<16> {
+        LO_SDM_RSTB_W::new(self)
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_sdm_rstb_hw(&mut self) -> LO_SDM_RSTB_HW_W<17> {
+        LO_SDM_RSTB_HW_W::new(self)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_sdm_flag(&mut self) -> LO_SDM_FLAG_W<20> {
+        LO_SDM_FLAG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -355,11 +163,10 @@ impl crate::Readable for SDM1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sdm1::W](W) writer structure"]
 impl crate::Writable for SDM1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets sdm1 to value 0"]
 impl crate::Resettable for SDM1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -13,40 +13,23 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<WCR_SPEC>> for W {
+impl From<crate::W<WCR_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<WCR_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `wcr` writer - "]
-pub struct WCR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WCR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type WCR_W<'a, const O: u8> = crate::BitWriter<'a, u32, WCR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn wcr(&mut self) -> WCR_W {
-        WCR_W { w: self }
+    #[must_use]
+    pub fn wcr(&mut self) -> WCR_W<0> {
+        WCR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -60,11 +43,10 @@ impl crate::RegisterSpec for WCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [wcr::W](W) writer structure"]
 impl crate::Writable for WCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WCR to value 0"]
 impl crate::Resettable for WCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

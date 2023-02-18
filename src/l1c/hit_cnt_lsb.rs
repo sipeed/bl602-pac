@@ -7,30 +7,19 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<HIT_CNT_LSB_SPEC>> for R {
+impl From<crate::R<HIT_CNT_LSB_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<HIT_CNT_LSB_SPEC>) -> Self {
         R(reader)
     }
 }
 #[doc = "Field `hit_cnt_lsb` reader - "]
-pub struct HIT_CNT_LSB_R(crate::FieldReader<u32, u32>);
-impl HIT_CNT_LSB_R {
-    pub(crate) fn new(bits: u32) -> Self {
-        HIT_CNT_LSB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HIT_CNT_LSB_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HIT_CNT_LSB_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn hit_cnt_lsb(&self) -> HIT_CNT_LSB_R {
-        HIT_CNT_LSB_R::new((self.bits & 0xffff_ffff) as u32)
+        HIT_CNT_LSB_R::new(self.bits)
     }
 }
 #[doc = "hit_cnt_lsb.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hit_cnt_lsb](index.html) module"]
@@ -44,8 +33,5 @@ impl crate::Readable for HIT_CNT_LSB_SPEC {
 }
 #[doc = "`reset()` method sets hit_cnt_lsb to value 0"]
 impl crate::Resettable for HIT_CNT_LSB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

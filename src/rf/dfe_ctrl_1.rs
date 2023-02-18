@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_1_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,179 +28,79 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_1_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `tx_dac_iq_swap` reader - "]
-pub struct TX_DAC_IQ_SWAP_R(crate::FieldReader<bool, bool>);
-impl TX_DAC_IQ_SWAP_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DAC_IQ_SWAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DAC_IQ_SWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_dac_iq_swap` writer - "]
-pub struct TX_DAC_IQ_SWAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DAC_IQ_SWAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
-#[doc = "Field `tx_dac_dat_format` reader - "]
-pub struct TX_DAC_DAT_FORMAT_R(crate::FieldReader<bool, bool>);
-impl TX_DAC_DAT_FORMAT_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DAC_DAT_FORMAT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DAC_DAT_FORMAT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_dac_dat_format` writer - "]
-pub struct TX_DAC_DAT_FORMAT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DAC_DAT_FORMAT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
-        self.w
-    }
-}
-#[doc = "Field `tx_dac_os_q` reader - "]
-pub struct TX_DAC_OS_Q_R(crate::FieldReader<u16, u16>);
-impl TX_DAC_OS_Q_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        TX_DAC_OS_Q_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DAC_OS_Q_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tx_dac_os_q` writer - "]
-pub struct TX_DAC_OS_Q_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DAC_OS_Q_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `tx_dac_os_i` reader - "]
-pub struct TX_DAC_OS_I_R(crate::FieldReader<u16, u16>);
-impl TX_DAC_OS_I_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        TX_DAC_OS_I_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DAC_OS_I_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DAC_OS_I_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `tx_dac_os_i` writer - "]
-pub struct TX_DAC_OS_I_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DAC_OS_I_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type TX_DAC_OS_I_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_1_SPEC, u16, u16, 12, O>;
+#[doc = "Field `tx_dac_os_q` reader - "]
+pub type TX_DAC_OS_Q_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `tx_dac_os_q` writer - "]
+pub type TX_DAC_OS_Q_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_1_SPEC, u16, u16, 12, O>;
+#[doc = "Field `tx_dac_dat_format` reader - "]
+pub type TX_DAC_DAT_FORMAT_R = crate::BitReader<bool>;
+#[doc = "Field `tx_dac_dat_format` writer - "]
+pub type TX_DAC_DAT_FORMAT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_1_SPEC, bool, O>;
+#[doc = "Field `tx_dac_iq_swap` reader - "]
+pub type TX_DAC_IQ_SWAP_R = crate::BitReader<bool>;
+#[doc = "Field `tx_dac_iq_swap` writer - "]
+pub type TX_DAC_IQ_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 31"]
+    #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn tx_dac_iq_swap(&self) -> TX_DAC_IQ_SWAP_R {
-        TX_DAC_IQ_SWAP_R::new(((self.bits >> 31) & 0x01) != 0)
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn tx_dac_dat_format(&self) -> TX_DAC_DAT_FORMAT_R {
-        TX_DAC_DAT_FORMAT_R::new(((self.bits >> 30) & 0x01) != 0)
+    pub fn tx_dac_os_i(&self) -> TX_DAC_OS_I_R {
+        TX_DAC_OS_I_R::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     pub fn tx_dac_os_q(&self) -> TX_DAC_OS_Q_R {
         TX_DAC_OS_Q_R::new(((self.bits >> 16) & 0x0fff) as u16)
     }
-    #[doc = "Bits 0:11"]
+    #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn tx_dac_os_i(&self) -> TX_DAC_OS_I_R {
-        TX_DAC_OS_I_R::new((self.bits & 0x0fff) as u16)
+    pub fn tx_dac_dat_format(&self) -> TX_DAC_DAT_FORMAT_R {
+        TX_DAC_DAT_FORMAT_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn tx_dac_iq_swap(&self) -> TX_DAC_IQ_SWAP_R {
+        TX_DAC_IQ_SWAP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 31"]
+    #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn tx_dac_iq_swap(&mut self) -> TX_DAC_IQ_SWAP_W {
-        TX_DAC_IQ_SWAP_W { w: self }
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn tx_dac_dat_format(&mut self) -> TX_DAC_DAT_FORMAT_W {
-        TX_DAC_DAT_FORMAT_W { w: self }
+    #[must_use]
+    pub fn tx_dac_os_i(&mut self) -> TX_DAC_OS_I_W<0> {
+        TX_DAC_OS_I_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
-    pub fn tx_dac_os_q(&mut self) -> TX_DAC_OS_Q_W {
-        TX_DAC_OS_Q_W { w: self }
+    #[must_use]
+    pub fn tx_dac_os_q(&mut self) -> TX_DAC_OS_Q_W<16> {
+        TX_DAC_OS_Q_W::new(self)
     }
-    #[doc = "Bits 0:11"]
+    #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn tx_dac_os_i(&mut self) -> TX_DAC_OS_I_W {
-        TX_DAC_OS_I_W { w: self }
+    #[must_use]
+    pub fn tx_dac_dat_format(&mut self) -> TX_DAC_DAT_FORMAT_W<30> {
+        TX_DAC_DAT_FORMAT_W::new(self)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_dac_iq_swap(&mut self) -> TX_DAC_IQ_SWAP_W<31> {
+        TX_DAC_IQ_SWAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -217,11 +118,10 @@ impl crate::Readable for DFE_CTRL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_1::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_1 to value 0"]
 impl crate::Resettable for DFE_CTRL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

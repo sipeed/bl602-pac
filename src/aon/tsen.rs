@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<TSEN_SPEC>> for R {
+impl From<crate::R<TSEN_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<TSEN_SPEC>) -> Self {
         R(reader)
     }
@@ -27,188 +28,87 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<TSEN_SPEC>> for W {
+impl From<crate::W<TSEN_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<TSEN_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `xtal_rdy_int_sel_aon` reader - "]
-pub struct XTAL_RDY_INT_SEL_AON_R(crate::FieldReader<u8, u8>);
-impl XTAL_RDY_INT_SEL_AON_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        XTAL_RDY_INT_SEL_AON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTAL_RDY_INT_SEL_AON_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `xtal_rdy_int_sel_aon` writer - "]
-pub struct XTAL_RDY_INT_SEL_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTAL_RDY_INT_SEL_AON_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
-        self.w
-    }
-}
-#[doc = "Field `xtal_inn_cfg_en_aon` reader - "]
-pub struct XTAL_INN_CFG_EN_AON_R(crate::FieldReader<bool, bool>);
-impl XTAL_INN_CFG_EN_AON_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        XTAL_INN_CFG_EN_AON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTAL_INN_CFG_EN_AON_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `xtal_inn_cfg_en_aon` writer - "]
-pub struct XTAL_INN_CFG_EN_AON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTAL_INN_CFG_EN_AON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
-        self.w
-    }
-}
-#[doc = "Field `xtal_rdy` reader - "]
-pub struct XTAL_RDY_R(crate::FieldReader<bool, bool>);
-impl XTAL_RDY_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        XTAL_RDY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTAL_RDY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tsen_refcode_rfcal` reader - "]
-pub struct TSEN_REFCODE_RFCAL_R(crate::FieldReader<u16, u16>);
-impl TSEN_REFCODE_RFCAL_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        TSEN_REFCODE_RFCAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSEN_REFCODE_RFCAL_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `tsen_refcode_rfcal` writer - "]
-pub struct TSEN_REFCODE_RFCAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSEN_REFCODE_RFCAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `tsen_refcode_corner` reader - "]
-pub struct TSEN_REFCODE_CORNER_R(crate::FieldReader<u16, u16>);
-impl TSEN_REFCODE_CORNER_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        TSEN_REFCODE_CORNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSEN_REFCODE_CORNER_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSEN_REFCODE_CORNER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `tsen_refcode_corner` writer - "]
-pub struct TSEN_REFCODE_CORNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSEN_REFCODE_CORNER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type TSEN_REFCODE_CORNER_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSEN_SPEC, u16, u16, 12, O>;
+#[doc = "Field `tsen_refcode_rfcal` reader - "]
+pub type TSEN_REFCODE_RFCAL_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `tsen_refcode_rfcal` writer - "]
+pub type TSEN_REFCODE_RFCAL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSEN_SPEC, u16, u16, 12, O>;
+#[doc = "Field `xtal_rdy` reader - "]
+pub type XTAL_RDY_R = crate::BitReader<bool>;
+#[doc = "Field `xtal_inn_cfg_en_aon` reader - "]
+pub type XTAL_INN_CFG_EN_AON_R = crate::BitReader<bool>;
+#[doc = "Field `xtal_inn_cfg_en_aon` writer - "]
+pub type XTAL_INN_CFG_EN_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSEN_SPEC, bool, O>;
+#[doc = "Field `xtal_rdy_int_sel_aon` reader - "]
+pub type XTAL_RDY_INT_SEL_AON_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `xtal_rdy_int_sel_aon` writer - "]
+pub type XTAL_RDY_INT_SEL_AON_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TSEN_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 30:31"]
+    #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn xtal_rdy_int_sel_aon(&self) -> XTAL_RDY_INT_SEL_AON_R {
-        XTAL_RDY_INT_SEL_AON_R::new(((self.bits >> 30) & 0x03) as u8)
-    }
-    #[doc = "Bit 29"]
-    #[inline(always)]
-    pub fn xtal_inn_cfg_en_aon(&self) -> XTAL_INN_CFG_EN_AON_R {
-        XTAL_INN_CFG_EN_AON_R::new(((self.bits >> 29) & 0x01) != 0)
-    }
-    #[doc = "Bit 28"]
-    #[inline(always)]
-    pub fn xtal_rdy(&self) -> XTAL_RDY_R {
-        XTAL_RDY_R::new(((self.bits >> 28) & 0x01) != 0)
+    pub fn tsen_refcode_corner(&self) -> TSEN_REFCODE_CORNER_R {
+        TSEN_REFCODE_CORNER_R::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     pub fn tsen_refcode_rfcal(&self) -> TSEN_REFCODE_RFCAL_R {
         TSEN_REFCODE_RFCAL_R::new(((self.bits >> 16) & 0x0fff) as u16)
     }
-    #[doc = "Bits 0:11"]
+    #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn tsen_refcode_corner(&self) -> TSEN_REFCODE_CORNER_R {
-        TSEN_REFCODE_CORNER_R::new((self.bits & 0x0fff) as u16)
-    }
-}
-impl W {
-    #[doc = "Bits 30:31"]
-    #[inline(always)]
-    pub fn xtal_rdy_int_sel_aon(&mut self) -> XTAL_RDY_INT_SEL_AON_W {
-        XTAL_RDY_INT_SEL_AON_W { w: self }
+    pub fn xtal_rdy(&self) -> XTAL_RDY_R {
+        XTAL_RDY_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn xtal_inn_cfg_en_aon(&mut self) -> XTAL_INN_CFG_EN_AON_W {
-        XTAL_INN_CFG_EN_AON_W { w: self }
+    pub fn xtal_inn_cfg_en_aon(&self) -> XTAL_INN_CFG_EN_AON_R {
+        XTAL_INN_CFG_EN_AON_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    pub fn xtal_rdy_int_sel_aon(&self) -> XTAL_RDY_INT_SEL_AON_R {
+        XTAL_RDY_INT_SEL_AON_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tsen_refcode_corner(&mut self) -> TSEN_REFCODE_CORNER_W<0> {
+        TSEN_REFCODE_CORNER_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
-    pub fn tsen_refcode_rfcal(&mut self) -> TSEN_REFCODE_RFCAL_W {
-        TSEN_REFCODE_RFCAL_W { w: self }
+    #[must_use]
+    pub fn tsen_refcode_rfcal(&mut self) -> TSEN_REFCODE_RFCAL_W<16> {
+        TSEN_REFCODE_RFCAL_W::new(self)
     }
-    #[doc = "Bits 0:11"]
+    #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn tsen_refcode_corner(&mut self) -> TSEN_REFCODE_CORNER_W {
-        TSEN_REFCODE_CORNER_W { w: self }
+    #[must_use]
+    pub fn xtal_inn_cfg_en_aon(&mut self) -> XTAL_INN_CFG_EN_AON_W<29> {
+        XTAL_INN_CFG_EN_AON_W::new(self)
+    }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn xtal_rdy_int_sel_aon(&mut self) -> XTAL_RDY_INT_SEL_AON_W<30> {
+        XTAL_RDY_INT_SEL_AON_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -226,11 +126,10 @@ impl crate::Readable for TSEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [tsen::W](W) writer structure"]
 impl crate::Writable for TSEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets tsen to value 0x78ff_08ff"]
 impl crate::Resettable for TSEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x78ff_08ff
-    }
+    const RESET_VALUE: Self::Ux = 0x78ff_08ff;
 }

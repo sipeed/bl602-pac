@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<PUD_CTRL_HW_SPEC>> for R {
+impl From<crate::R<PUD_CTRL_HW_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<PUD_CTRL_HW_SPEC>) -> Self {
         R(reader)
     }
@@ -27,61 +28,32 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<PUD_CTRL_HW_SPEC>> for W {
+impl From<crate::W<PUD_CTRL_HW_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<PUD_CTRL_HW_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `pud_vco_hw` reader - "]
-pub struct PUD_VCO_HW_R(crate::FieldReader<bool, bool>);
-impl PUD_VCO_HW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        PUD_VCO_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUD_VCO_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUD_VCO_HW_R = crate::BitReader<bool>;
 #[doc = "Field `pud_vco_hw` writer - "]
-pub struct PUD_VCO_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUD_VCO_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
-        self.w
-    }
-}
+pub type PUD_VCO_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUD_CTRL_HW_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn pud_vco_hw(&self) -> PUD_VCO_HW_R {
-        PUD_VCO_HW_R::new(((self.bits >> 20) & 0x01) != 0)
+        PUD_VCO_HW_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn pud_vco_hw(&mut self) -> PUD_VCO_HW_W {
-        PUD_VCO_HW_W { w: self }
+    #[must_use]
+    pub fn pud_vco_hw(&mut self) -> PUD_VCO_HW_W<20> {
+        PUD_VCO_HW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -99,11 +71,10 @@ impl crate::Readable for PUD_CTRL_HW_SPEC {
 #[doc = "`write(|w| ..)` method takes [pud_ctrl_hw::W](W) writer structure"]
 impl crate::Writable for PUD_CTRL_HW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets pud_ctrl_hw to value 0"]
 impl crate::Resettable for PUD_CTRL_HW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

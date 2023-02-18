@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<LO_SDM_CTRL_HW5_SPEC>> for R {
+impl From<crate::R<LO_SDM_CTRL_HW5_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<LO_SDM_CTRL_HW5_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<LO_SDM_CTRL_HW5_SPEC>> for W {
+impl From<crate::W<LO_SDM_CTRL_HW5_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<LO_SDM_CTRL_HW5_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `lo_sdm_bypass_mode` reader - "]
-pub struct LO_SDM_BYPASS_MODE_R(crate::FieldReader<u8, u8>);
-impl LO_SDM_BYPASS_MODE_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        LO_SDM_BYPASS_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_SDM_BYPASS_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `lo_sdm_bypass_mode` writer - "]
-pub struct LO_SDM_BYPASS_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_SDM_BYPASS_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 12)) | ((value as u32 & 0x3f) << 12);
-        self.w
-    }
-}
 #[doc = "Field `lo_center_freq_mhz` reader - "]
-pub struct LO_CENTER_FREQ_MHZ_R(crate::FieldReader<u16, u16>);
-impl LO_CENTER_FREQ_MHZ_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        LO_CENTER_FREQ_MHZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LO_CENTER_FREQ_MHZ_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LO_CENTER_FREQ_MHZ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `lo_center_freq_mhz` writer - "]
-pub struct LO_CENTER_FREQ_MHZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LO_CENTER_FREQ_MHZ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type LO_CENTER_FREQ_MHZ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LO_SDM_CTRL_HW5_SPEC, u16, u16, 12, O>;
+#[doc = "Field `lo_sdm_bypass_mode` reader - "]
+pub type LO_SDM_BYPASS_MODE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `lo_sdm_bypass_mode` writer - "]
+pub type LO_SDM_BYPASS_MODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, LO_SDM_CTRL_HW5_SPEC, u8, u8, 6, O>;
 impl R {
-    #[doc = "Bits 12:17"]
-    #[inline(always)]
-    pub fn lo_sdm_bypass_mode(&self) -> LO_SDM_BYPASS_MODE_R {
-        LO_SDM_BYPASS_MODE_R::new(((self.bits >> 12) & 0x3f) as u8)
-    }
     #[doc = "Bits 0:11"]
     #[inline(always)]
     pub fn lo_center_freq_mhz(&self) -> LO_CENTER_FREQ_MHZ_R {
         LO_CENTER_FREQ_MHZ_R::new((self.bits & 0x0fff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 12:17"]
     #[inline(always)]
-    pub fn lo_sdm_bypass_mode(&mut self) -> LO_SDM_BYPASS_MODE_W {
-        LO_SDM_BYPASS_MODE_W { w: self }
+    pub fn lo_sdm_bypass_mode(&self) -> LO_SDM_BYPASS_MODE_R {
+        LO_SDM_BYPASS_MODE_R::new(((self.bits >> 12) & 0x3f) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn lo_center_freq_mhz(&mut self) -> LO_CENTER_FREQ_MHZ_W {
-        LO_CENTER_FREQ_MHZ_W { w: self }
+    #[must_use]
+    pub fn lo_center_freq_mhz(&mut self) -> LO_CENTER_FREQ_MHZ_W<0> {
+        LO_CENTER_FREQ_MHZ_W::new(self)
+    }
+    #[doc = "Bits 12:17"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lo_sdm_bypass_mode(&mut self) -> LO_SDM_BYPASS_MODE_W<12> {
+        LO_SDM_BYPASS_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for LO_SDM_CTRL_HW5_SPEC {
 #[doc = "`write(|w| ..)` method takes [lo_sdm_ctrl_hw5::W](W) writer structure"]
 impl crate::Writable for LO_SDM_CTRL_HW5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets lo_sdm_ctrl_hw5 to value 0"]
 impl crate::Resettable for LO_SDM_CTRL_HW5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

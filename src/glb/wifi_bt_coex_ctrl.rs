@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<WIFI_BT_COEX_CTRL_SPEC>> for R {
+impl From<crate::R<WIFI_BT_COEX_CTRL_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<WIFI_BT_COEX_CTRL_SPEC>) -> Self {
         R(reader)
     }
@@ -27,179 +28,80 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<WIFI_BT_COEX_CTRL_SPEC>> for W {
+impl From<crate::W<WIFI_BT_COEX_CTRL_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<WIFI_BT_COEX_CTRL_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `en_gpio_bt_coex` reader - "]
-pub struct EN_GPIO_BT_COEX_R(crate::FieldReader<bool, bool>);
-impl EN_GPIO_BT_COEX_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_GPIO_BT_COEX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_GPIO_BT_COEX_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `en_gpio_bt_coex` writer - "]
-pub struct EN_GPIO_BT_COEX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_GPIO_BT_COEX_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `coex_bt_bw` reader - "]
-pub struct COEX_BT_BW_R(crate::FieldReader<bool, bool>);
-impl COEX_BT_BW_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        COEX_BT_BW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COEX_BT_BW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `coex_bt_bw` writer - "]
-pub struct COEX_BT_BW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COEX_BT_BW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Field `coex_bt_pti` reader - "]
-pub struct COEX_BT_PTI_R(crate::FieldReader<u8, u8>);
-impl COEX_BT_PTI_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        COEX_BT_PTI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COEX_BT_PTI_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `coex_bt_pti` writer - "]
-pub struct COEX_BT_PTI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COEX_BT_PTI_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 7)) | ((value as u32 & 0x0f) << 7);
-        self.w
-    }
-}
 #[doc = "Field `coex_bt_channel` reader - "]
-pub struct COEX_BT_CHANNEL_R(crate::FieldReader<u8, u8>);
-impl COEX_BT_CHANNEL_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        COEX_BT_CHANNEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COEX_BT_CHANNEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COEX_BT_CHANNEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `coex_bt_channel` writer - "]
-pub struct COEX_BT_CHANNEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COEX_BT_CHANNEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type COEX_BT_CHANNEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, WIFI_BT_COEX_CTRL_SPEC, u8, u8, 7, O>;
+#[doc = "Field `coex_bt_pti` reader - "]
+pub type COEX_BT_PTI_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `coex_bt_pti` writer - "]
+pub type COEX_BT_PTI_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, WIFI_BT_COEX_CTRL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `coex_bt_bw` reader - "]
+pub type COEX_BT_BW_R = crate::BitReader<bool>;
+#[doc = "Field `coex_bt_bw` writer - "]
+pub type COEX_BT_BW_W<'a, const O: u8> = crate::BitWriter<'a, u32, WIFI_BT_COEX_CTRL_SPEC, bool, O>;
+#[doc = "Field `en_gpio_bt_coex` reader - "]
+pub type EN_GPIO_BT_COEX_R = crate::BitReader<bool>;
+#[doc = "Field `en_gpio_bt_coex` writer - "]
+pub type EN_GPIO_BT_COEX_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, WIFI_BT_COEX_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 12"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn en_gpio_bt_coex(&self) -> EN_GPIO_BT_COEX_R {
-        EN_GPIO_BT_COEX_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 11"]
-    #[inline(always)]
-    pub fn coex_bt_bw(&self) -> COEX_BT_BW_R {
-        COEX_BT_BW_R::new(((self.bits >> 11) & 0x01) != 0)
+    pub fn coex_bt_channel(&self) -> COEX_BT_CHANNEL_R {
+        COEX_BT_CHANNEL_R::new((self.bits & 0x7f) as u8)
     }
     #[doc = "Bits 7:10"]
     #[inline(always)]
     pub fn coex_bt_pti(&self) -> COEX_BT_PTI_R {
         COEX_BT_PTI_R::new(((self.bits >> 7) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:6"]
+    #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn coex_bt_channel(&self) -> COEX_BT_CHANNEL_R {
-        COEX_BT_CHANNEL_R::new((self.bits & 0x7f) as u8)
+    pub fn coex_bt_bw(&self) -> COEX_BT_BW_R {
+        COEX_BT_BW_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn en_gpio_bt_coex(&self) -> EN_GPIO_BT_COEX_R {
+        EN_GPIO_BT_COEX_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 12"]
+    #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn en_gpio_bt_coex(&mut self) -> EN_GPIO_BT_COEX_W {
-        EN_GPIO_BT_COEX_W { w: self }
-    }
-    #[doc = "Bit 11"]
-    #[inline(always)]
-    pub fn coex_bt_bw(&mut self) -> COEX_BT_BW_W {
-        COEX_BT_BW_W { w: self }
+    #[must_use]
+    pub fn coex_bt_channel(&mut self) -> COEX_BT_CHANNEL_W<0> {
+        COEX_BT_CHANNEL_W::new(self)
     }
     #[doc = "Bits 7:10"]
     #[inline(always)]
-    pub fn coex_bt_pti(&mut self) -> COEX_BT_PTI_W {
-        COEX_BT_PTI_W { w: self }
+    #[must_use]
+    pub fn coex_bt_pti(&mut self) -> COEX_BT_PTI_W<7> {
+        COEX_BT_PTI_W::new(self)
     }
-    #[doc = "Bits 0:6"]
+    #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn coex_bt_channel(&mut self) -> COEX_BT_CHANNEL_W {
-        COEX_BT_CHANNEL_W { w: self }
+    #[must_use]
+    pub fn coex_bt_bw(&mut self) -> COEX_BT_BW_W<11> {
+        COEX_BT_BW_W::new(self)
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    #[must_use]
+    pub fn en_gpio_bt_coex(&mut self) -> EN_GPIO_BT_COEX_W<12> {
+        EN_GPIO_BT_COEX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -217,11 +119,10 @@ impl crate::Readable for WIFI_BT_COEX_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [wifi_bt_coex_ctrl::W](W) writer structure"]
 impl crate::Writable for WIFI_BT_COEX_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WIFI_BT_COEX_CTRL to value 0"]
 impl crate::Resettable for WIFI_BT_COEX_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

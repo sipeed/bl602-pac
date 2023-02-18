@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<SE_PKA_0_CTRL_1_SPEC>> for R {
+impl From<crate::R<SE_PKA_0_CTRL_1_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<SE_PKA_0_CTRL_1_SPEC>) -> Self {
         R(reader)
     }
@@ -27,97 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<SE_PKA_0_CTRL_1_SPEC>> for W {
+impl From<crate::W<SE_PKA_0_CTRL_1_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<SE_PKA_0_CTRL_1_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `se_pka_0_hbypass` reader - "]
-pub struct SE_PKA_0_HBYPASS_R(crate::FieldReader<bool, bool>);
-impl SE_PKA_0_HBYPASS_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SE_PKA_0_HBYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SE_PKA_0_HBYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `se_pka_0_hbypass` writer - "]
-pub struct SE_PKA_0_HBYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_PKA_0_HBYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
 #[doc = "Field `se_pka_0_hburst` reader - "]
-pub struct SE_PKA_0_HBURST_R(crate::FieldReader<u8, u8>);
-impl SE_PKA_0_HBURST_R {
-    pub(crate) fn new(bits: u8) -> Self {
-        SE_PKA_0_HBURST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SE_PKA_0_HBURST_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SE_PKA_0_HBURST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `se_pka_0_hburst` writer - "]
-pub struct SE_PKA_0_HBURST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SE_PKA_0_HBURST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
-}
+pub type SE_PKA_0_HBURST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SE_PKA_0_CTRL_1_SPEC, u8, u8, 3, O>;
+#[doc = "Field `se_pka_0_hbypass` reader - "]
+pub type SE_PKA_0_HBYPASS_R = crate::BitReader<bool>;
+#[doc = "Field `se_pka_0_hbypass` writer - "]
+pub type SE_PKA_0_HBYPASS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, SE_PKA_0_CTRL_1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn se_pka_0_hbypass(&self) -> SE_PKA_0_HBYPASS_R {
-        SE_PKA_0_HBYPASS_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn se_pka_0_hburst(&self) -> SE_PKA_0_HBURST_R {
-        SE_PKA_0_HBURST_R::new((self.bits & 0x07) as u8)
+        SE_PKA_0_HBURST_R::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn se_pka_0_hbypass(&self) -> SE_PKA_0_HBYPASS_R {
+        SE_PKA_0_HBYPASS_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn se_pka_0_hbypass(&mut self) -> SE_PKA_0_HBYPASS_W {
-        SE_PKA_0_HBYPASS_W { w: self }
-    }
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn se_pka_0_hburst(&mut self) -> SE_PKA_0_HBURST_W {
-        SE_PKA_0_HBURST_W { w: self }
+    #[must_use]
+    pub fn se_pka_0_hburst(&mut self) -> SE_PKA_0_HBURST_W<0> {
+        SE_PKA_0_HBURST_W::new(self)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn se_pka_0_hbypass(&mut self) -> SE_PKA_0_HBYPASS_W<3> {
+        SE_PKA_0_HBYPASS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -135,11 +88,10 @@ impl crate::Readable for SE_PKA_0_CTRL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [se_pka_0_ctrl_1::W](W) writer structure"]
 impl crate::Writable for SE_PKA_0_CTRL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets se_pka_0_ctrl_1 to value 0x05"]
 impl crate::Resettable for SE_PKA_0_CTRL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x05
-    }
+    const RESET_VALUE: Self::Ux = 0x05;
 }

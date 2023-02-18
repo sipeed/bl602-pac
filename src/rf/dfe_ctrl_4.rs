@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<DFE_CTRL_4_SPEC>> for R {
+impl From<crate::R<DFE_CTRL_4_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<DFE_CTRL_4_SPEC>) -> Self {
         R(reader)
     }
@@ -27,179 +28,79 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<DFE_CTRL_4_SPEC>> for W {
+impl From<crate::W<DFE_CTRL_4_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<DFE_CTRL_4_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `rx_pf_i_en` reader - "]
-pub struct RX_PF_I_EN_R(crate::FieldReader<bool, bool>);
-impl RX_PF_I_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_PF_I_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PF_I_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pf_i_en` writer - "]
-pub struct RX_PF_I_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PF_I_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
-#[doc = "Field `rx_pf_q_en` reader - "]
-pub struct RX_PF_Q_EN_R(crate::FieldReader<bool, bool>);
-impl RX_PF_Q_EN_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_PF_Q_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PF_Q_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pf_q_en` writer - "]
-pub struct RX_PF_Q_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PF_Q_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
-        self.w
-    }
-}
-#[doc = "Field `rx_pf_th1` reader - "]
-pub struct RX_PF_TH1_R(crate::FieldReader<u16, u16>);
-impl RX_PF_TH1_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RX_PF_TH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PF_TH1_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `rx_pf_th1` writer - "]
-pub struct RX_PF_TH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PF_TH1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | ((value as u32 & 0x03ff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `rx_pf_th2` reader - "]
-pub struct RX_PF_TH2_R(crate::FieldReader<u16, u16>);
-impl RX_PF_TH2_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RX_PF_TH2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PF_TH2_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PF_TH2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `rx_pf_th2` writer - "]
-pub struct RX_PF_TH2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PF_TH2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type RX_PF_TH2_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_4_SPEC, u16, u16, 10, O>;
+#[doc = "Field `rx_pf_th1` reader - "]
+pub type RX_PF_TH1_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `rx_pf_th1` writer - "]
+pub type RX_PF_TH1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DFE_CTRL_4_SPEC, u16, u16, 10, O>;
+#[doc = "Field `rx_pf_q_en` reader - "]
+pub type RX_PF_Q_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rx_pf_q_en` writer - "]
+pub type RX_PF_Q_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_4_SPEC, bool, O>;
+#[doc = "Field `rx_pf_i_en` reader - "]
+pub type RX_PF_I_EN_R = crate::BitReader<bool>;
+#[doc = "Field `rx_pf_i_en` writer - "]
+pub type RX_PF_I_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_4_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 31"]
+    #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn rx_pf_i_en(&self) -> RX_PF_I_EN_R {
-        RX_PF_I_EN_R::new(((self.bits >> 31) & 0x01) != 0)
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn rx_pf_q_en(&self) -> RX_PF_Q_EN_R {
-        RX_PF_Q_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+    pub fn rx_pf_th2(&self) -> RX_PF_TH2_R {
+        RX_PF_TH2_R::new((self.bits & 0x03ff) as u16)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
     pub fn rx_pf_th1(&self) -> RX_PF_TH1_R {
         RX_PF_TH1_R::new(((self.bits >> 16) & 0x03ff) as u16)
     }
-    #[doc = "Bits 0:9"]
+    #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn rx_pf_th2(&self) -> RX_PF_TH2_R {
-        RX_PF_TH2_R::new((self.bits & 0x03ff) as u16)
+    pub fn rx_pf_q_en(&self) -> RX_PF_Q_EN_R {
+        RX_PF_Q_EN_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn rx_pf_i_en(&self) -> RX_PF_I_EN_R {
+        RX_PF_I_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 31"]
+    #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn rx_pf_i_en(&mut self) -> RX_PF_I_EN_W {
-        RX_PF_I_EN_W { w: self }
-    }
-    #[doc = "Bit 30"]
-    #[inline(always)]
-    pub fn rx_pf_q_en(&mut self) -> RX_PF_Q_EN_W {
-        RX_PF_Q_EN_W { w: self }
+    #[must_use]
+    pub fn rx_pf_th2(&mut self) -> RX_PF_TH2_W<0> {
+        RX_PF_TH2_W::new(self)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    pub fn rx_pf_th1(&mut self) -> RX_PF_TH1_W {
-        RX_PF_TH1_W { w: self }
+    #[must_use]
+    pub fn rx_pf_th1(&mut self) -> RX_PF_TH1_W<16> {
+        RX_PF_TH1_W::new(self)
     }
-    #[doc = "Bits 0:9"]
+    #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn rx_pf_th2(&mut self) -> RX_PF_TH2_W {
-        RX_PF_TH2_W { w: self }
+    #[must_use]
+    pub fn rx_pf_q_en(&mut self) -> RX_PF_Q_EN_W<30> {
+        RX_PF_Q_EN_W::new(self)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_pf_i_en(&mut self) -> RX_PF_I_EN_W<31> {
+        RX_PF_I_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -217,11 +118,10 @@ impl crate::Readable for DFE_CTRL_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [dfe_ctrl_4::W](W) writer structure"]
 impl crate::Writable for DFE_CTRL_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets dfe_ctrl_4 to value 0"]
 impl crate::Resettable for DFE_CTRL_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

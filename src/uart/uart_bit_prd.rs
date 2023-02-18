@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<UART_BIT_PRD_SPEC>> for R {
+impl From<crate::R<UART_BIT_PRD_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<UART_BIT_PRD_SPEC>) -> Self {
         R(reader)
     }
@@ -27,87 +28,49 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<UART_BIT_PRD_SPEC>> for W {
+impl From<crate::W<UART_BIT_PRD_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<UART_BIT_PRD_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `cr_urx_bit_prd` reader - "]
-pub struct CR_URX_BIT_PRD_R(crate::FieldReader<u16, u16>);
-impl CR_URX_BIT_PRD_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        CR_URX_BIT_PRD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_URX_BIT_PRD_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `cr_urx_bit_prd` writer - "]
-pub struct CR_URX_BIT_PRD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_URX_BIT_PRD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `cr_utx_bit_prd` reader - "]
-pub struct CR_UTX_BIT_PRD_R(crate::FieldReader<u16, u16>);
-impl CR_UTX_BIT_PRD_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        CR_UTX_BIT_PRD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CR_UTX_BIT_PRD_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CR_UTX_BIT_PRD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `cr_utx_bit_prd` writer - "]
-pub struct CR_UTX_BIT_PRD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR_UTX_BIT_PRD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type CR_UTX_BIT_PRD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, UART_BIT_PRD_SPEC, u16, u16, 16, O>;
+#[doc = "Field `cr_urx_bit_prd` reader - "]
+pub type CR_URX_BIT_PRD_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `cr_urx_bit_prd` writer - "]
+pub type CR_URX_BIT_PRD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, UART_BIT_PRD_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    pub fn cr_urx_bit_prd(&self) -> CR_URX_BIT_PRD_R {
-        CR_URX_BIT_PRD_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn cr_utx_bit_prd(&self) -> CR_UTX_BIT_PRD_R {
         CR_UTX_BIT_PRD_R::new((self.bits & 0xffff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn cr_urx_bit_prd(&mut self) -> CR_URX_BIT_PRD_W {
-        CR_URX_BIT_PRD_W { w: self }
+    pub fn cr_urx_bit_prd(&self) -> CR_URX_BIT_PRD_R {
+        CR_URX_BIT_PRD_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn cr_utx_bit_prd(&mut self) -> CR_UTX_BIT_PRD_W {
-        CR_UTX_BIT_PRD_W { w: self }
+    #[must_use]
+    pub fn cr_utx_bit_prd(&mut self) -> CR_UTX_BIT_PRD_W<0> {
+        CR_UTX_BIT_PRD_W::new(self)
+    }
+    #[doc = "Bits 16:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr_urx_bit_prd(&mut self) -> CR_URX_BIT_PRD_W<16> {
+        CR_URX_BIT_PRD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -125,11 +88,10 @@ impl crate::Readable for UART_BIT_PRD_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart_bit_prd::W](W) writer structure"]
 impl crate::Writable for UART_BIT_PRD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets uart_bit_prd to value 0x00ff_00ff"]
 impl crate::Resettable for UART_BIT_PRD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00ff_00ff
-    }
+    const RESET_VALUE: Self::Ux = 0x00ff_00ff;
 }

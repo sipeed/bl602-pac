@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<RF_FSM_CTRL0_SPEC>> for R {
+impl From<crate::R<RF_FSM_CTRL0_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<RF_FSM_CTRL0_SPEC>) -> Self {
         R(reader)
     }
@@ -27,37 +28,17 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<RF_FSM_CTRL0_SPEC>> for W {
+impl From<crate::W<RF_FSM_CTRL0_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<RF_FSM_CTRL0_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `rf_ch_ind_wifi` reader - "]
-pub struct RF_CH_IND_WIFI_R(crate::FieldReader<u16, u16>);
-impl RF_CH_IND_WIFI_R {
-    pub(crate) fn new(bits: u16) -> Self {
-        RF_CH_IND_WIFI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RF_CH_IND_WIFI_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RF_CH_IND_WIFI_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `rf_ch_ind_wifi` writer - "]
-pub struct RF_CH_IND_WIFI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RF_CH_IND_WIFI_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type RF_CH_IND_WIFI_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RF_FSM_CTRL0_SPEC, u16, u16, 12, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -68,10 +49,12 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn rf_ch_ind_wifi(&mut self) -> RF_CH_IND_WIFI_W {
-        RF_CH_IND_WIFI_W { w: self }
+    #[must_use]
+    pub fn rf_ch_ind_wifi(&mut self) -> RF_CH_IND_WIFI_W<0> {
+        RF_CH_IND_WIFI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
@@ -89,11 +72,10 @@ impl crate::Readable for RF_FSM_CTRL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [rf_fsm_ctrl0::W](W) writer structure"]
 impl crate::Writable for RF_FSM_CTRL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets rf_fsm_ctrl0 to value 0"]
 impl crate::Resettable for RF_FSM_CTRL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
