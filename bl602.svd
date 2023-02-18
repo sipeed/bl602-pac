@@ -12,10 +12,10 @@
   MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
   See the Mulan PSL v2 for more details.
 -->
-<!-- 
+<!--
   bl602.svd: handwritten SVD file for svd2rust to generate PAC crate code.
   This file is for svd2rust to generate, but not intended for debugging using SVD tools.
-  If you want to debug a program using the PAC crate, debug on target ELF file 
+  If you want to debug a program using the PAC crate, debug on target ELF file
   the PAC, HAL and your application are compiled into.
 -->
 <device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
@@ -38,7 +38,7 @@
       <description>GLB (todo)</description>
       <baseAddress>0x40000000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -48,7 +48,7 @@
       <description>RF (todo)</description>
       <baseAddress>0x40001000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -58,7 +58,7 @@
       <description>GPIP (todo)</description>
       <baseAddress>0x40002000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -68,7 +68,7 @@
       <description>SEC_DBG (todo)</description>
       <baseAddress>0x40003000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -78,7 +78,7 @@
       <description>SEC_ENG (todo)</description>
       <baseAddress>0x40004000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -88,7 +88,7 @@
       <description>TZC_SEC (todo)</description>
       <baseAddress>0x40005000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -98,7 +98,7 @@
       <description>TZC_NSEC (todo)</description>
       <baseAddress>0x40006000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -108,7 +108,7 @@
       <description>EF_DATA (todo)</description>
       <baseAddress>0x40007000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -118,7 +118,7 @@
       <description>EF_CTRL (todo)</description>
       <baseAddress>0x40007000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -128,7 +128,7 @@
       <description>CCI (todo)</description>
       <baseAddress>0x40008000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -138,7 +138,7 @@
       <description>L1C (todo)</description>
       <baseAddress>0x40009000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -149,7 +149,7 @@
       <groupName>UART</groupName>
       <baseAddress>0x4000A000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -167,7 +167,7 @@
       <description>SPI (todo)</description>
       <baseAddress>0x4000A200</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -177,7 +177,7 @@
       <description>I2C (todo)</description>
       <baseAddress>0x4000A300</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -187,7 +187,7 @@
       <description>PWM (todo)</description>
       <baseAddress>0x4000A400</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -197,7 +197,7 @@
       <description>TIMER (todo)</description>
       <baseAddress>0x4000A500</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -207,7 +207,7 @@
       <description>IR (todo)</description>
       <baseAddress>0x4000A600</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -217,7 +217,7 @@
       <description>SF_CTRL (todo)</description>
       <baseAddress>0x4000B000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -227,7 +227,7 @@
       <description>SF_CTRL_BUF (todo)</description>
       <baseAddress>0x4000B700</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -237,7 +237,7 @@
       <description>DMA (todo)</description>
       <baseAddress>0x4000C000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -247,7 +247,7 @@
       <description>SDU (todo)</description>
       <baseAddress>0x4000D000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -257,7 +257,7 @@
       <description>PDS (todo)</description>
       <baseAddress>0x4000E000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -267,7 +267,7 @@
       <description>HBN (todo)</description>
       <baseAddress>0x4000F000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -277,7 +277,7 @@
       <description>AON (todo)</description>
       <baseAddress>0x4000F000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -287,7 +287,7 @@
       <description>HBN_RAM (todo)</description>
       <baseAddress>0x40010000</baseAddress>
       <registers>
-        
+
       </registers>
     </peripheral>
 
@@ -340,6 +340,6 @@
     <!-- PLIC -->
 
     <!-- TODO: all peripherals -->
-    
+
   </peripherals>
 </device>

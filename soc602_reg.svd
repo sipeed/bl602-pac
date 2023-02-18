@@ -18982,8 +18982,8 @@
 				</registers>
 			</peripheral>
 			<peripheral>
-				<name>UART</name>
-				<description>UART control</description>
+				<name>UART0</name>
+				<description>UART0 control</description>
 				<baseAddress>0x4000A000</baseAddress>
 				<groupName>UART</groupName>
 				<size>32</size>
@@ -19554,6 +19554,12 @@
 						</fields>
 					</register>
 				</registers>
+			</peripheral>
+			<peripheral derivedFrom="UART0">
+				<name>UART1</name>
+				<description>UART1 control</description>
+				<baseAddress>0x4000A100</baseAddress>
+				<groupName>UART</groupName>
 			</peripheral>
 			<peripheral>
 				<name>SPI</name>
