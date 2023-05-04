@@ -30,49 +30,17 @@ pub struct RegisterBlock {
     #[doc = "0x34 - DMA_Sync."]
     pub dma_sync: DMA_SYNC,
     _reserved14: [u8; 0xc8],
-    #[doc = "0x100 - DMA_C0SrcAddr."]
-    pub dma_c0src_addr: DMA_C0SRC_ADDR,
-    #[doc = "0x104 - DMA_C0DstAddr."]
-    pub dma_c0dst_addr: DMA_C0DST_ADDR,
-    #[doc = "0x108 - DMA_C0LLI."]
-    pub dma_c0lli: DMA_C0LLI,
-    #[doc = "0x10c - DMA_C0Control."]
-    pub dma_c0control: DMA_C0CONTROL,
-    #[doc = "0x110 - DMA_C0Config."]
-    pub dma_c0config: DMA_C0CONFIG,
-    _reserved19: [u8; 0xec],
-    #[doc = "0x200 - DMA_C1SrcAddr."]
-    pub dma_c1src_addr: DMA_C1SRC_ADDR,
-    #[doc = "0x204 - DMA_C1DstAddr."]
-    pub dma_c1dst_addr: DMA_C1DST_ADDR,
-    #[doc = "0x208 - DMA_C1LLI."]
-    pub dma_c1lli: DMA_C1LLI,
-    #[doc = "0x20c - DMA_C1Control."]
-    pub dma_c1control: DMA_C1CONTROL,
-    #[doc = "0x210 - DMA_C1Config."]
-    pub dma_c1config: DMA_C1CONFIG,
-    _reserved24: [u8; 0xec],
-    #[doc = "0x300 - DMA_C2SrcAddr."]
-    pub dma_c2src_addr: DMA_C2SRC_ADDR,
-    #[doc = "0x304 - DMA_C2DstAddr."]
-    pub dma_c2dst_addr: DMA_C2DST_ADDR,
-    #[doc = "0x308 - DMA_C2LLI."]
-    pub dma_c2lli: DMA_C2LLI,
-    #[doc = "0x30c - DMA_C2Control."]
-    pub dma_c2control: DMA_C2CONTROL,
-    #[doc = "0x310 - DMA_C2Config."]
-    pub dma_c2config: DMA_C2CONFIG,
-    _reserved29: [u8; 0xec],
-    #[doc = "0x400 - DMA_C3SrcAddr."]
-    pub dma_c3src_addr: DMA_C3SRC_ADDR,
-    #[doc = "0x404 - DMA_C3DstAddr."]
-    pub dma_c3dst_addr: DMA_C3DST_ADDR,
-    #[doc = "0x408 - DMA_C3LLI."]
-    pub dma_c3lli: DMA_C3LLI,
-    #[doc = "0x40c - DMA_C3Control."]
-    pub dma_c3control: DMA_C3CONTROL,
-    #[doc = "0x410 - DMA_C3Config."]
-    pub dma_c3config: DMA_C3CONFIG,
+    #[doc = "0x100..0x114 - Cluster CH%s, containing SrcAddr, DstAddr, LLI, Control, Config"]
+    pub ch0: CH,
+    _reserved15: [u8; 0xec],
+    #[doc = "0x200..0x214 - Cluster CH%s, containing SrcAddr, DstAddr, LLI, Control, Config"]
+    pub ch1: CH,
+    _reserved16: [u8; 0xec],
+    #[doc = "0x300..0x314 - Cluster CH%s, containing SrcAddr, DstAddr, LLI, Control, Config"]
+    pub ch2: CH,
+    _reserved17: [u8; 0xec],
+    #[doc = "0x400..0x414 - Cluster CH%s, containing SrcAddr, DstAddr, LLI, Control, Config"]
+    pub ch3: CH,
 }
 #[doc = "DMA_IntStatus (rw) register accessor: an alias for `Reg<DMA_INT_STATUS_SPEC>`"]
 pub type DMA_INT_STATUS = crate::Reg<dma_int_status::DMA_INT_STATUS_SPEC>;
@@ -131,83 +99,8 @@ pub mod dma_top_config;
 pub type DMA_SYNC = crate::Reg<dma_sync::DMA_SYNC_SPEC>;
 #[doc = "DMA_Sync."]
 pub mod dma_sync;
-#[doc = "DMA_C0SrcAddr (rw) register accessor: an alias for `Reg<DMA_C0SRC_ADDR_SPEC>`"]
-pub type DMA_C0SRC_ADDR = crate::Reg<dma_c0src_addr::DMA_C0SRC_ADDR_SPEC>;
-#[doc = "DMA_C0SrcAddr."]
-pub mod dma_c0src_addr;
-#[doc = "DMA_C0DstAddr (rw) register accessor: an alias for `Reg<DMA_C0DST_ADDR_SPEC>`"]
-pub type DMA_C0DST_ADDR = crate::Reg<dma_c0dst_addr::DMA_C0DST_ADDR_SPEC>;
-#[doc = "DMA_C0DstAddr."]
-pub mod dma_c0dst_addr;
-#[doc = "DMA_C0LLI (rw) register accessor: an alias for `Reg<DMA_C0LLI_SPEC>`"]
-pub type DMA_C0LLI = crate::Reg<dma_c0lli::DMA_C0LLI_SPEC>;
-#[doc = "DMA_C0LLI."]
-pub mod dma_c0lli;
-#[doc = "DMA_C0Control (rw) register accessor: an alias for `Reg<DMA_C0CONTROL_SPEC>`"]
-pub type DMA_C0CONTROL = crate::Reg<dma_c0control::DMA_C0CONTROL_SPEC>;
-#[doc = "DMA_C0Control."]
-pub mod dma_c0control;
-#[doc = "DMA_C0Config (rw) register accessor: an alias for `Reg<DMA_C0CONFIG_SPEC>`"]
-pub type DMA_C0CONFIG = crate::Reg<dma_c0config::DMA_C0CONFIG_SPEC>;
-#[doc = "DMA_C0Config."]
-pub mod dma_c0config;
-#[doc = "DMA_C1SrcAddr (rw) register accessor: an alias for `Reg<DMA_C1SRC_ADDR_SPEC>`"]
-pub type DMA_C1SRC_ADDR = crate::Reg<dma_c1src_addr::DMA_C1SRC_ADDR_SPEC>;
-#[doc = "DMA_C1SrcAddr."]
-pub mod dma_c1src_addr;
-#[doc = "DMA_C1DstAddr (rw) register accessor: an alias for `Reg<DMA_C1DST_ADDR_SPEC>`"]
-pub type DMA_C1DST_ADDR = crate::Reg<dma_c1dst_addr::DMA_C1DST_ADDR_SPEC>;
-#[doc = "DMA_C1DstAddr."]
-pub mod dma_c1dst_addr;
-#[doc = "DMA_C1LLI (rw) register accessor: an alias for `Reg<DMA_C1LLI_SPEC>`"]
-pub type DMA_C1LLI = crate::Reg<dma_c1lli::DMA_C1LLI_SPEC>;
-#[doc = "DMA_C1LLI."]
-pub mod dma_c1lli;
-#[doc = "DMA_C1Control (rw) register accessor: an alias for `Reg<DMA_C1CONTROL_SPEC>`"]
-pub type DMA_C1CONTROL = crate::Reg<dma_c1control::DMA_C1CONTROL_SPEC>;
-#[doc = "DMA_C1Control."]
-pub mod dma_c1control;
-#[doc = "DMA_C1Config (rw) register accessor: an alias for `Reg<DMA_C1CONFIG_SPEC>`"]
-pub type DMA_C1CONFIG = crate::Reg<dma_c1config::DMA_C1CONFIG_SPEC>;
-#[doc = "DMA_C1Config."]
-pub mod dma_c1config;
-#[doc = "DMA_C2SrcAddr (rw) register accessor: an alias for `Reg<DMA_C2SRC_ADDR_SPEC>`"]
-pub type DMA_C2SRC_ADDR = crate::Reg<dma_c2src_addr::DMA_C2SRC_ADDR_SPEC>;
-#[doc = "DMA_C2SrcAddr."]
-pub mod dma_c2src_addr;
-#[doc = "DMA_C2DstAddr (rw) register accessor: an alias for `Reg<DMA_C2DST_ADDR_SPEC>`"]
-pub type DMA_C2DST_ADDR = crate::Reg<dma_c2dst_addr::DMA_C2DST_ADDR_SPEC>;
-#[doc = "DMA_C2DstAddr."]
-pub mod dma_c2dst_addr;
-#[doc = "DMA_C2LLI (rw) register accessor: an alias for `Reg<DMA_C2LLI_SPEC>`"]
-pub type DMA_C2LLI = crate::Reg<dma_c2lli::DMA_C2LLI_SPEC>;
-#[doc = "DMA_C2LLI."]
-pub mod dma_c2lli;
-#[doc = "DMA_C2Control (rw) register accessor: an alias for `Reg<DMA_C2CONTROL_SPEC>`"]
-pub type DMA_C2CONTROL = crate::Reg<dma_c2control::DMA_C2CONTROL_SPEC>;
-#[doc = "DMA_C2Control."]
-pub mod dma_c2control;
-#[doc = "DMA_C2Config (rw) register accessor: an alias for `Reg<DMA_C2CONFIG_SPEC>`"]
-pub type DMA_C2CONFIG = crate::Reg<dma_c2config::DMA_C2CONFIG_SPEC>;
-#[doc = "DMA_C2Config."]
-pub mod dma_c2config;
-#[doc = "DMA_C3SrcAddr (rw) register accessor: an alias for `Reg<DMA_C3SRC_ADDR_SPEC>`"]
-pub type DMA_C3SRC_ADDR = crate::Reg<dma_c3src_addr::DMA_C3SRC_ADDR_SPEC>;
-#[doc = "DMA_C3SrcAddr."]
-pub mod dma_c3src_addr;
-#[doc = "DMA_C3DstAddr (rw) register accessor: an alias for `Reg<DMA_C3DST_ADDR_SPEC>`"]
-pub type DMA_C3DST_ADDR = crate::Reg<dma_c3dst_addr::DMA_C3DST_ADDR_SPEC>;
-#[doc = "DMA_C3DstAddr."]
-pub mod dma_c3dst_addr;
-#[doc = "DMA_C3LLI (rw) register accessor: an alias for `Reg<DMA_C3LLI_SPEC>`"]
-pub type DMA_C3LLI = crate::Reg<dma_c3lli::DMA_C3LLI_SPEC>;
-#[doc = "DMA_C3LLI."]
-pub mod dma_c3lli;
-#[doc = "DMA_C3Control (rw) register accessor: an alias for `Reg<DMA_C3CONTROL_SPEC>`"]
-pub type DMA_C3CONTROL = crate::Reg<dma_c3control::DMA_C3CONTROL_SPEC>;
-#[doc = "DMA_C3Control."]
-pub mod dma_c3control;
-#[doc = "DMA_C3Config (rw) register accessor: an alias for `Reg<DMA_C3CONFIG_SPEC>`"]
-pub type DMA_C3CONFIG = crate::Reg<dma_c3config::DMA_C3CONFIG_SPEC>;
-#[doc = "DMA_C3Config."]
-pub mod dma_c3config;
+#[doc = "Cluster CH%s, containing SrcAddr, DstAddr, LLI, Control, Config"]
+pub use self::ch::CH;
+#[doc = r"Cluster"]
+#[doc = "Cluster CH%s, containing SrcAddr, DstAddr, LLI, Control, Config"]
+pub mod ch;

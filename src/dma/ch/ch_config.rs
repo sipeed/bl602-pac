@@ -1,22 +1,22 @@
-#[doc = "Register `DMA_C2Config` reader"]
-pub struct R(crate::R<DMA_C2CONFIG_SPEC>);
+#[doc = "Register `CH_CONFIG` reader"]
+pub struct R(crate::R<CH_CONFIG_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<DMA_C2CONFIG_SPEC>;
+    type Target = crate::R<CH_CONFIG_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<DMA_C2CONFIG_SPEC>> for R {
+impl From<crate::R<CH_CONFIG_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<DMA_C2CONFIG_SPEC>) -> Self {
+    fn from(reader: crate::R<CH_CONFIG_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `DMA_C2Config` writer"]
-pub struct W(crate::W<DMA_C2CONFIG_SPEC>);
+#[doc = "Register `CH_CONFIG` writer"]
+pub struct W(crate::W<CH_CONFIG_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<DMA_C2CONFIG_SPEC>;
+    type Target = crate::W<CH_CONFIG_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,49 +28,50 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<DMA_C2CONFIG_SPEC>> for W {
+impl From<crate::W<CH_CONFIG_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<DMA_C2CONFIG_SPEC>) -> Self {
+    fn from(writer: crate::W<CH_CONFIG_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `E` reader - "]
 pub type E_R = crate::BitReader<bool>;
 #[doc = "Field `E` writer - "]
-pub type E_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C2CONFIG_SPEC, bool, O>;
+pub type E_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
 #[doc = "Field `SrcPeripheral` reader - "]
 pub type SRC_PERIPHERAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SrcPeripheral` writer - "]
 pub type SRC_PERIPHERAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_C2CONFIG_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, u32, CH_CONFIG_SPEC, u8, u8, 5, O>;
 #[doc = "Field `DstPeripheral` reader - "]
 pub type DST_PERIPHERAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DstPeripheral` writer - "]
 pub type DST_PERIPHERAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_C2CONFIG_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, u32, CH_CONFIG_SPEC, u8, u8, 5, O>;
 #[doc = "Field `FlowCntrl` reader - "]
 pub type FLOW_CNTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FlowCntrl` writer - "]
-pub type FLOW_CNTRL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_C2CONFIG_SPEC, u8, u8, 3, O>;
+pub type FLOW_CNTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONFIG_SPEC, u8, u8, 3, O>;
 #[doc = "Field `IE` reader - "]
 pub type IE_R = crate::BitReader<bool>;
 #[doc = "Field `IE` writer - "]
-pub type IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C2CONFIG_SPEC, bool, O>;
+pub type IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
 #[doc = "Field `ITC` reader - "]
 pub type ITC_R = crate::BitReader<bool>;
 #[doc = "Field `ITC` writer - "]
-pub type ITC_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C2CONFIG_SPEC, bool, O>;
+pub type ITC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
 #[doc = "Field `L` reader - "]
 pub type L_R = crate::BitReader<bool>;
 #[doc = "Field `L` writer - "]
-pub type L_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C2CONFIG_SPEC, bool, O>;
+pub type L_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
 #[doc = "Field `A` reader - "]
 pub type A_R = crate::BitReader<bool>;
 #[doc = "Field `H` reader - "]
 pub type H_R = crate::BitReader<bool>;
 #[doc = "Field `H` writer - "]
-pub type H_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C2CONFIG_SPEC, bool, O>;
+pub type H_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
+#[doc = "Field `LLICounter` reader - "]
+pub type LLICOUNTER_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -116,6 +117,11 @@ impl R {
     #[inline(always)]
     pub fn h(&self) -> H_R {
         H_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bits 20:29"]
+    #[inline(always)]
+    pub fn llicounter(&self) -> LLICOUNTER_R {
+        LLICOUNTER_R::new(((self.bits >> 20) & 0x03ff) as u16)
     }
 }
 impl W {
@@ -174,22 +180,22 @@ impl W {
         self
     }
 }
-#[doc = "DMA_C2Config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_c2config](index.html) module"]
-pub struct DMA_C2CONFIG_SPEC;
-impl crate::RegisterSpec for DMA_C2CONFIG_SPEC {
+#[doc = "DMA channel config\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_config](index.html) module"]
+pub struct CH_CONFIG_SPEC;
+impl crate::RegisterSpec for CH_CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_c2config::R](R) reader structure"]
-impl crate::Readable for DMA_C2CONFIG_SPEC {
+#[doc = "`read()` method returns [ch_config::R](R) reader structure"]
+impl crate::Readable for CH_CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_c2config::W](W) writer structure"]
-impl crate::Writable for DMA_C2CONFIG_SPEC {
+#[doc = "`write(|w| ..)` method takes [ch_config::W](W) writer structure"]
+impl crate::Writable for CH_CONFIG_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets DMA_C2Config to value 0"]
-impl crate::Resettable for DMA_C2CONFIG_SPEC {
+#[doc = "`reset()` method sets CH_CONFIG to value 0"]
+impl crate::Resettable for CH_CONFIG_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

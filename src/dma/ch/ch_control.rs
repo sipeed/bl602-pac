@@ -1,22 +1,22 @@
-#[doc = "Register `DMA_C1Control` reader"]
-pub struct R(crate::R<DMA_C1CONTROL_SPEC>);
+#[doc = "Register `CH_CONTROL` reader"]
+pub struct R(crate::R<CH_CONTROL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<DMA_C1CONTROL_SPEC>;
+    type Target = crate::R<CH_CONTROL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<DMA_C1CONTROL_SPEC>> for R {
+impl From<crate::R<CH_CONTROL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<DMA_C1CONTROL_SPEC>) -> Self {
+    fn from(reader: crate::R<CH_CONTROL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `DMA_C1Control` writer"]
-pub struct W(crate::W<DMA_C1CONTROL_SPEC>);
+#[doc = "Register `CH_CONTROL` writer"]
+pub struct W(crate::W<CH_CONTROL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<DMA_C1CONTROL_SPEC>;
+    type Target = crate::W<CH_CONTROL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<DMA_C1CONTROL_SPEC>> for W {
+impl From<crate::W<CH_CONTROL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<DMA_C1CONTROL_SPEC>) -> Self {
+    fn from(writer: crate::W<CH_CONTROL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -38,39 +38,43 @@ impl From<crate::W<DMA_C1CONTROL_SPEC>> for W {
 pub type TRANSFER_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TransferSize` writer - "]
 pub type TRANSFER_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_C1CONTROL_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, u32, CH_CONTROL_SPEC, u16, u16, 12, O>;
 #[doc = "Field `SBSize` reader - "]
 pub type SBSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SBSize` writer - "]
-pub type SBSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMA_C1CONTROL_SPEC, u8, u8, 3, O>;
+pub type SBSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONTROL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `DBSize` reader - "]
 pub type DBSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DBSize` writer - "]
-pub type DBSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMA_C1CONTROL_SPEC, u8, u8, 3, O>;
+pub type DBSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONTROL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `SWidth` reader - "]
 pub type SWIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SWidth` writer - "]
-pub type SWIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMA_C1CONTROL_SPEC, u8, u8, 3, O>;
+pub type SWIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONTROL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `DWidth` reader - "]
 pub type DWIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DWidth` writer - "]
-pub type DWIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMA_C1CONTROL_SPEC, u8, u8, 3, O>;
+pub type DWIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONTROL_SPEC, u8, u8, 3, O>;
+#[doc = "Field `SLargerD` reader - "]
+pub type SLARGER_D_R = crate::BitReader<bool>;
+#[doc = "Field `SLargerD` writer - "]
+pub type SLARGER_D_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONTROL_SPEC, bool, O>;
 #[doc = "Field `SI` reader - "]
 pub type SI_R = crate::BitReader<bool>;
 #[doc = "Field `SI` writer - "]
-pub type SI_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C1CONTROL_SPEC, bool, O>;
+pub type SI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONTROL_SPEC, bool, O>;
 #[doc = "Field `DI` reader - "]
 pub type DI_R = crate::BitReader<bool>;
 #[doc = "Field `DI` writer - "]
-pub type DI_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C1CONTROL_SPEC, bool, O>;
+pub type DI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONTROL_SPEC, bool, O>;
 #[doc = "Field `Prot` reader - "]
 pub type PROT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `Prot` writer - "]
-pub type PROT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMA_C1CONTROL_SPEC, u8, u8, 3, O>;
+pub type PROT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONTROL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `I` reader - "]
 pub type I_R = crate::BitReader<bool>;
 #[doc = "Field `I` writer - "]
-pub type I_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_C1CONTROL_SPEC, bool, O>;
+pub type I_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONTROL_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -96,6 +100,11 @@ impl R {
     #[inline(always)]
     pub fn dwidth(&self) -> DWIDTH_R {
         DWIDTH_R::new(((self.bits >> 21) & 7) as u8)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn slarger_d(&self) -> SLARGER_D_R {
+        SLARGER_D_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
@@ -149,6 +158,12 @@ impl W {
     pub fn dwidth(&mut self) -> DWIDTH_W<21> {
         DWIDTH_W::new(self)
     }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    #[must_use]
+    pub fn slarger_d(&mut self) -> SLARGER_D_W<24> {
+        SLARGER_D_W::new(self)
+    }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
@@ -180,22 +195,22 @@ impl W {
         self
     }
 }
-#[doc = "DMA_C1Control.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_c1control](index.html) module"]
-pub struct DMA_C1CONTROL_SPEC;
-impl crate::RegisterSpec for DMA_C1CONTROL_SPEC {
+#[doc = "DMA channel control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_control](index.html) module"]
+pub struct CH_CONTROL_SPEC;
+impl crate::RegisterSpec for CH_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_c1control::R](R) reader structure"]
-impl crate::Readable for DMA_C1CONTROL_SPEC {
+#[doc = "`read()` method returns [ch_control::R](R) reader structure"]
+impl crate::Readable for CH_CONTROL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_c1control::W](W) writer structure"]
-impl crate::Writable for DMA_C1CONTROL_SPEC {
+#[doc = "`write(|w| ..)` method takes [ch_control::W](W) writer structure"]
+impl crate::Writable for CH_CONTROL_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets DMA_C1Control to value 0x0c48_9000"]
-impl crate::Resettable for DMA_C1CONTROL_SPEC {
+#[doc = "`reset()` method sets CH_CONTROL to value 0x0c48_9000"]
+impl crate::Resettable for CH_CONTROL_SPEC {
     const RESET_VALUE: Self::Ux = 0x0c48_9000;
 }
